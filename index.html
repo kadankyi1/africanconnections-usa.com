@@ -46,7 +46,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <form id="popupform">
+            <form id="popupform" action="serverside/joinlist.php">
               <p><strong>Let us send you information on travel discount offers.</strong></p>
               <br>
               <div class="form-group" style="display:none;">
@@ -246,29 +246,6 @@
         <div class="container">
           <h3 class="oh-desktop"><span class="d-inline-block wow slideInDown">Trending Tours</span></h3>
           <div class="row row-sm row-40 row-md-50">
-            <div class="col-sm-6 col-md-12 wow fadeInRight">
-              <!-- Product Big-->
-              <article class="product-big">
-                <div class="unit flex-column flex-md-row align-items-md-stretch">
-                  <div class="unit-left"><a class="product-big-figure" href="#"><img src="img/home/1hottours.jpg" alt="" width="600" height="366"/></a></div>
-                  <div class="unit-body">
-                    <div class="product-big-body">
-                      <h5 class="product-big-title"><a href="#">PANAFEST, African Heritage Tour</a></h5>
-                        <div class="group-sm group-middle justify-content-start">
-                        <div class="product-big-rating"><a class="product-big-reviews" href="#">July 23rd - August 2nd 2023</a></div>
-                      </div>
-                      <p class="product-big-text">
-                        The Pan African Historical Theatre Festival (PANAFEST) is a biennial cultural festival of art and culture attended by people of African descent who convene in Ghana from all over the continent, the United States, the Caribbean and the entire African diaspora, to celebrate the music, art and theatre of the African experience.
-
-                      </p>
-                      <a class="button button-black-outline button-ujarak" href="https://square.link/u/T758e8mM">Buy This Tour</a>
-                      <a class="button button-secondary-outline button-pipaluk" href="panafest.html">Read More</a>
-                      <div class="product-big-price-wrap"><span class="product-big-price">$2,950</span></div>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </div>
             <div class="col-sm-6 col-md-12 wow fadeInLeft">
               <!-- Product Big-->
               <article class="product-big">
@@ -285,6 +262,32 @@
                       
                       <a class="button button-black-outline button-ujarak" href="https://square.link/u/T758e8mM">Buy This Tour</a>
                       <a class="button button-secondary-outline button-pipaluk" href="returntomotherland.html">Read More</a>
+
+                      <div class="product-big-price-wrap"><span class="product-big-price">$3,399</span></div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-md-12 wow fadeInLeft">
+              <!-- Product Big-->
+              <article class="product-big">
+                <div class="unit flex-column flex-md-row align-items-md-stretch">
+                  <div class="unit-left"><a class="product-big-figure" href="blackhistory.html"><img src="img/tours/blackhistorymonth.jpg" alt="" width="600" height="366"/></a></div>
+                  <div class="unit-body">
+                    <div class="product-big-body">
+                      <h5 class="product-big-title"><a href="blackhistory.html">Black History Month,<br>Return To The Motherland Tour</a></h5>
+                      <div class="group-sm group-middle justify-content-start">
+                        <div class="product-big-rating"><a class="product-big-reviews" href="blackhistory.html">13th - 24th February 2024</a></div>
+                      </div>
+                      <p class="product-big-text">
+                        February is Black History Month and as we all know; Black History begins in Africa! We invite you to come to Ghana to explore this country’s unique links to African-American history.
+                         Our Black History Month Tour is coupled with our Return to the Motherland
+                      </p>
+                      
+                      <a class="button button-black-outline button-ujarak" href="https://square.link/u/T758e8mM">Buy This Tour</a>
+                      <a class="button button-secondary-outline button-pipaluk" href="blackhistory.html" target="_blank">Read More</a>
 
                       <div class="product-big-price-wrap"><span class="product-big-price">$3,399</span></div>
                     </div>
@@ -469,7 +472,8 @@
         if($('#joineremail').val().trim() != ""){
 		      document.getElementById('popupclosebtn').click('popupclosebtn');
           localStorage.setItem("popupclosed", "yes");
-          addToMailList('popupform');
+          $("popupform").submit();
+          //addToMailList('popupform');
         } else {
               alert("Please complete the form");
         }

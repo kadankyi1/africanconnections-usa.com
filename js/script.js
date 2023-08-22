@@ -1395,7 +1395,7 @@
 $(document).ready(function(){
 
 	setTimeout(function () {
-		//localStorage.setItem("popupclosed", "no"); // comment out
+		localStorage.setItem("popupclosed", "no"); // comment out
 		var popup_closed_status = localStorage.getItem("popupclosed");
 		console.log("popup_closed_status: " + popup_closed_status);
 		if(popup_closed_status != "yes"){

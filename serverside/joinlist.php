@@ -73,7 +73,9 @@ if (
     //$headers .= 'Cc: myboss@example.com' . "\r\n";
     mail($to,$subject,$message,$headers);
 
-    echo "\n\n EMAIL SENT";
+    //echo "\n\n EMAIL SENT";
+    header("Location: ../email-list-thankyou.html");
+    die();
   }
 
 }
