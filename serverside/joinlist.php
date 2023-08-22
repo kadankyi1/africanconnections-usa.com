@@ -44,38 +44,57 @@ if (
     $conn = new mysqli($servername, $username, $password, $dbname);
     // Check connection
     if ($conn->connect_error) {
-      die("Connection failed: " . $conn->connect_error);
+      $conn->close();
+      //die("Connection failed: " . $conn->connect_error);
+
+      //**********************************************//
+      //**********************************************//
+      $to = "info@africanconnections-usa.com";
+      $subject = "ERROR 1 IN NEWSLETTER SIGNUP";
+      $message = "\n\n Someone tried to signup and had a database error. EMAIL: $joineremail";
+      $headers = "MIME-Version: 1.0" . "\r\n";
+      $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+      $headers .= "From: <$to>";
+      mail($to,$subject,$message,$headers);
+      //**********************************************//
+      //**********************************************//
+      
+      header("Location: ../email-list-thankyou.html");
+      die();
     } else {
       $dbinput = filter_var($joineremail, FILTER_SANITIZE_EMAIL);
-
       $sql = "INSERT INTO subscribers (subscriber_email) VALUES ('$dbinput')";
   
       if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
+        $conn->close();
+        //**********************************************//
+        //**********************************************//
+        $to = "info@africanconnections-usa.com"; //$to = "annodankyikwaku@gmail.com";
+        $subject = "SOMEONE NEW JOINED MAILING LIST FOR AC USA WEBSITE";
+        $message = "\n\n EMAIL: $joineremail";
+        $headers = "MIME-Version: 1.0" . "\r\n";
+        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+        $headers .= "From: <$to>";
+        mail($to,$subject,$message,$headers);
+        header("Location: ../email-list-thankyou.html");
+        die();
+        //**********************************************//
+        //**********************************************//
       } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        $conn->close();
+        //**********************************************//
+        //**********************************************//
+        $to = "info@africanconnections-usa.com";
+        $subject = "ERROR 2 IN NEWSLETTER SIGNUP";
+        $message = "\n\n Someone tried to signup and had a database error. EMAIL: $joineremail";
+        $headers = "MIME-Version: 1.0" . "\r\n";
+        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+        $headers .= "From: <$to>";
+        mail($to,$subject,$message,$headers);
+        //**********************************************//
+        //**********************************************//
       }
-  
-      $conn->close();
     }
-
-    
-    $to = "info@africanconnections-usa.com";
-    //$to = "annodankyikwaku@gmail.com";
-    $subject = "SOMEONE NEW JOINED MAILING LIST FOR AC USA WEBSITE";
-    $message = "\n\n EMAIL: $joineremail";
-
-    $headers = "MIME-Version: 1.0" . "\r\n";
-    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-
-    // More headers
-    $headers .= "From: <$to>";
-    //$headers .= 'Cc: myboss@example.com' . "\r\n";
-    mail($to,$subject,$message,$headers);
-
-    //echo "\n\n EMAIL SENT";
-    header("Location: ../email-list-thankyou.html");
-    die();
   }
 
 }

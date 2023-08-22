@@ -92,6 +92,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </li>
                     <li class="rd-nav-item"><a class="rd-nav-link" href="tours.html">Tours</a>
                     </li>
+                    <li class="rd-nav-item">
+                      <a class="rd-nav-link" href="about.html">Why Choose Us</a>
+                    </li>
                     <li class="rd-nav-item active"><a class="rd-nav-link" href="payment.php">Make A Payment</a>
                     </li>
                     <li class="rd-nav-item">

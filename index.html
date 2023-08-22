@@ -46,7 +46,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <form id="popupform" action="serverside/joinlist.php">
+            <form id="popupform" action="serverside/joinlist.php" method="post">
               <p><strong>Let us send you information on travel discount offers.</strong></p>
               <br>
               <div class="form-group" style="display:none;">
@@ -140,6 +140,9 @@
                     </li>
                     <li class="rd-nav-item">
                       <a class="rd-nav-link" href="tours.html">Tours</a>
+                    </li>
+                    <li class="rd-nav-item">
+                      <a class="rd-nav-link" href="about.html">Why Choose Us</a>
                     </li>
                     <li class="rd-nav-item">
                       <a class="rd-nav-link" href="https://square.link/u/T758e8mM">Make A Payment</a>
@@ -472,7 +475,8 @@
         if($('#joineremail').val().trim() != ""){
 		      document.getElementById('popupclosebtn').click('popupclosebtn');
           localStorage.setItem("popupclosed", "yes");
-          $("popupform").submit();
+          $("#popupform").submit();
+		      console.log("form submitted");
           //addToMailList('popupform');
         } else {
               alert("Please complete the form");
