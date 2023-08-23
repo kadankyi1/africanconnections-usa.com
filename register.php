@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
   <head>
+  <?php if(isset($_GET["transactionId"]) && trim($_GET["transactionId"])){ ?>
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TKNXWNL');</script>
-<!-- End Google Tag Manager -->
-    <title>Register</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11128211156"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){window.dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('event', 'conversion', {
+        'send_to': 'AW-11128211156/BZSRCPLbg9YYENSNrLop',
+        'value': 100.0,
+        'currency': 'USD',
+        'transaction_id': ''
+      });
+    </script>
+    <!-- End Google Tag Manager -->
+  <?php } ?>
+
+
+  <title>Register</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,10 +35,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKNXWNL"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->      
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <!--
     <div class="preloader">
@@ -97,6 +105,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </li>
                     <li class="rd-nav-item">
                       <a class="rd-nav-link" href="about.html">Why Choose Us</a>
+                    </li>
+                    <li class="rd-nav-item">
+                      <a class="rd-nav-link" href="reviews.html">Reviews</a>
                     </li>
                     <li class="rd-nav-item"><a class="rd-nav-link" href="https://square.link/u/T758e8mM">Make A Payment</a>
                     </li>
