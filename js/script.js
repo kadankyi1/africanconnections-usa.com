@@ -819,12 +819,14 @@
 		}
 
 		// UI To Top
+		/*
 		if (isDesktop && !isNoviBuilder) {
 			$().UItoTop({
 				easingType:     'easeOutQuad',
 				containerClass: 'ui-to-top fa fa-angle-up'
 			});
 		}
+		*/
 
 		// Owl carousel
 		if (plugins.owl.length) {
