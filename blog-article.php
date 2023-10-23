@@ -1,3 +1,54 @@
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+if(!empty($_GET["id"]) && intval($_GET["id"]) > 0){
+  $article_id = intval($_GET["id"]);
+  include_once("db/connect.php");
+  if ($conn->connect_error) {
+    $conn->close();
+    $error = true;
+    die();
+  } else {
+    $sql = "SELECT * FROM articles WHERE id = " . strval($article_id);
+    $result = mysqli_query($conn, $sql);
+
+    if (mysqli_num_rows($result) > 0) {
+      // output data of each row
+      while($row = mysqli_fetch_assoc($result)) {
+        $article_title = $row["article_title"];
+        $article_intro_text = $row["article_intro_text"];
+        $article_text = $row["article_text"];
+        $article_date = $row["article_date"];
+        $article_author = $row["article_author"];
+        $article_small_image = $row["article_small_image"];
+        $article_big_image = $row["article_big_image"];
+      }
+    } else {
+      $error = true;
+    }  
+
+    $sql = "SELECT article_title, article_date FROM articles ORDER BY id DESC LIMIT 3";
+    $result = mysqli_query($conn, $sql);
+
+    $other_articles_array = array();
+    if (mysqli_num_rows($result) > 0) {
+      // output data of each row
+      while($row = mysqli_fetch_assoc($result)) {
+        array_push($other_articles_array, [$row["article_title"], $row["article_date"]]);
+      }
+
+    } 
+
+    $conn->close();
+  }
+
+  //var_dump($other_articles_array);
+} else {
+  $error = true;
+}
+?>
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
   <head>
@@ -97,13 +148,16 @@
                   <ul class="rd-navbar-nav">
                     <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a>
                     </li>
-                    <li class="rd-nav-item active"><a class="rd-nav-link" href="tours.html">Tours</a>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="tours.html">Tours</a>
                     </li>
                     <li class="rd-nav-item">
                       <a class="rd-nav-link" href="about.html">Why Choose Us</a>
                     </li>
                     <li class="rd-nav-item">
                       <a class="rd-nav-link" href="reviews.html">Reviews</a>
+                    </li>
+                    <li class="rd-nav-item active">
+                      <a class="rd-nav-link" href="blog-list.php">Blog</a>
                     </li>
                     <li class="rd-nav-item"><a class="rd-nav-link" href="https://square.link/u/T758e8mM">Make A Payment</a>
                     </li>
@@ -120,6 +174,7 @@
         </div>
       </header>
 
+    <?php if(!empty($article_intro_text) && empty($error)){ ?>
     <section class="blog-posts grid-system">
       <div class="container">
         <div class="row">
@@ -129,79 +184,16 @@
                 <div class="col-lg-12">
                   <div class="blog-post">
                     <div class="blog-thumb">
-                      <img src="/img/blog/article_1_banner.jpg" alt="">
+                      <img src="<?php echo $article_big_image; ?>" alt="">
                     </div>
                     <div class="down-content">
-                      <a href="blog-details.html"><h4>Journey Back in Time: Exploring the Profound History of Assin Manso Slave River</h4></a>
+                      <a><h4><?php echo $article_title; ?></h4></a>
                       <ul class="post-info">
-                        <li><a href="#">African Connections</a></li>
-                        <li><a href="#">10.10.2023 10:20</a></li>
+                        <li><a><?php echo $article_author; ?></a></li>
+                        <li><a><?php echo $article_date; ?></a></li>
                       </ul>
                       <p>
-                        
-                      My journey to Assin Manso Slave River was a profoundly moving experience. This
-                        historically significant site, nestled in the heart of Ghana, holds the keys to unraveling the
-                        harrowing past of the transatlantic slave trade.
-
-                        <br><br><strong>A Glimpse into the Past</strong><br>
-                        Assin Manso, located in the central region of Ghana, served as a major slave market and
-                        transit point during the height of the transatlantic slave trade. It was here that captured
-                        Africans were held, awaiting their perilous journey to the Americas. The Assin Manso Slave
-                        River, flowing gently through this somber landscape, once witnessed the agony and despair
-                        of countless souls torn from their homes.
-
-                        <br><br><strong>The &quot;Last Bath&quot; Ritual</strong><br>
-                        One of the most poignant aspects of the Assin Manso experience is the &quot;Last Bath&quot; ritual.
-                        This ritual, performed by the African descendants of those who were once enslaved, is a
-                        solemn commemoration of the final moments of these individuals on African soil. Visitors to
-                        Assin Manso are invited to take part in this emotional ceremony.
-
-                        <br><br><strong>As I waded into the waters of the Assin Manso Slave River, I couldn&#39;t help but imagine
-                        the stories of the brave souls who had once stood at this very spot, knowing that they
-                        were about to embark on a perilous and unknown journey across the ocean.</strong>
-
-                        <br><br><strong>The Donkor Nsuo (Slave River)</strong><br>
-                        The Slave River, also known as Donkor Nsuo in the Akan language, is a place of deep
-                        reflection. It&#39;s here that enslaved Africans would take their final bath on African soil before
-                        being sold into the horrors of the transatlantic slave trade. The waters, once a source of
-                        purification and spiritual connection to the land, became a symbol of the heart-wrenching
-                        separation from their homeland.
-
-                        
-                        <br><br><strong>Standing on the banks of the Slave River, it was impossible not to feel the weight of
-                        history. The tranquil surroundings offer a stark contrast to the anguish that once filled
-                        these shores. It&#39;s a place where the past collides with the present, reminding us of the
-                        resilience of the human spirit.</strong>
-                        
-                        
-                        <br><br><strong>The Heritage and Cultural Center</strong><br>
-                        In addition to the river, Assin Manso boasts a Heritage and Cultural Center. This center is a
-                        treasure trove of information about the transatlantic slave trade and the history of the Assin
-                        Manso region. Knowledgeable guides provide insightful commentary, and the center offers a
-                        range of artifacts and exhibits that shed light on the profound impact of this dark chapter in
-                        history.
-                        
-                        
-                        <br><br><strong>Visiting the Heritage and Cultural Center allowed me to gain a deeper understanding of
-                        the slave trade&#39;s impact on both Africa and the Americas. It&#39;s a reminder of the
-                        strength of the human spirit, resilience, and the importance of remembering and
-                        learning from our history.</strong>
-
-                        
-                        <br><br><strong>Conclusion: A Journey of Remembrance and Reflection</strong><br>
-                        Assin Manso Slave River is a place where history comes alive, where the past becomes
-                        palpable. It&#39;s not a typical tourist destination, but rather a sacred site that serves as a poignant
-                        reminder of the horrors of the transatlantic slave trade. For me, this journey was not just
-                        about sightseeing; it was a pilgrimage, a journey of remembrance and reflection.
-                        
-                        <br><br><strong>Visiting Assin Manso was a humbling experience, a stark reminder of the resilience of
-                        the human spirit in the face of unimaginable adversity. It&#39;s a place where we pay our
-                        respects to the countless lives forever changed by the transatlantic slave trade, and a
-                        place where we honor their memory.</strong><br><br>
-                        If you ever have the opportunity to visit Ghana, I urge you to make the journey to Assin
-                        Manso. It&#39;s a place that will touch your heart, challenge your perspective, and leave you with
-                        a profound appreciation for the strength of the human spirit and the importance of preserving
-                        and sharing our history.                    
+                      <?php echo $article_text; ?>
                       </p>
                       <div class="post-options">
                         <div class="row">
@@ -232,22 +224,18 @@
                 <div class="col-lg-12">
                   <div class="sidebar-item recent-posts mt-0">
                     <div class="sidebar-heading mt-0">
-                      <h2>Recent Posts</h2>
+                      <h2>Other Posts</h2>
                     </div>
                     <div class="content">
                       <ul>
-                        <li><a href="blog-details.html">
-                          <h5>Vestibulum id turpis porttitor sapien facilisis scelerisque</h5>
-                          <span>May 31, 2020</span>
-                        </a></li>
-                        <li><a href="blog-details.html">
-                          <h5>Suspendisse et metus nec libero ultrices varius eget in risus</h5>
-                          <span>May 28, 2020</span>
-                        </a></li>
-                        <li><a href="blog-details.html">
-                          <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, numquam.</h5>
-                          <span>May 14, 2020</span>
-                        </a></li>
+                        <?php for ($i=0; $i < count($other_articles_array); $i++) { ?>
+                        <li>
+                          <a href="blog-details.html">
+                            <h5><?php echo $other_articles_array[$i][0] ?></h5>
+                            <span><?php echo $other_articles_array[$i][1] ?></span>
+                          </a>
+                        </li>
+                        <?php } ?>
                       </ul>
                     </div>
                   </div>
@@ -258,6 +246,16 @@
         </div>
       </div>
     </section>
+    <?php } else { ?>
+
+    <section class="section section-sm bg-default">
+      <div class="container" style="height: 250px;">
+        <br><br>
+        <h3 class="oh-desktop"><span class="d-inline-block wow slideInDown">Article Not Found</span></h3>
+      </div>
+    </section>
+
+    <?php } ?>
       
       <!-- Different People-->
       <!-- Discover New Horizons-->

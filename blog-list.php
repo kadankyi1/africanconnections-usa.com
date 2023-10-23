@@ -102,7 +102,7 @@
                       <a class="rd-nav-link" href="reviews.html">Reviews</a>
                     </li>
                     <li class="rd-nav-item active">
-                      <a class="rd-nav-link" href="blog/list.php">Blog</a>
+                      <a class="rd-nav-link" href="blog-list.php">Blog</a>
                     </li>
                     <li class="rd-nav-item"><a class="rd-nav-link" href="https://square.link/u/T758e8mM">Make A Payment</a>
                     </li>
@@ -126,26 +126,74 @@
 
               <div class="col-md-4 col-sm-6">
                 <div class="blog-post">
-                  <a href="blog-article.php">
+                  <a href="blog-article.php?id=1">
                     <div class="blog-thumb">
-                      <img src="https://demo.phpjabbers.com/free-web-templates/blog-website-template-172/assets/images/blog-4-720x480.jpg" alt="">
+                      <img src="/img/blog/bloglist_article_1_banner.jpg" alt="">
                     </div>
                   </a>
                   <div class="down-content">
-                    <a href="blog-article.php">
-                      <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h4>
+                    <a href="blog-article.php?id=1">
+                      <h4>Journey Back In Time: Exploring The Profound History Of Assin Manso Slave River</h4>
                       
-                      <p style="color: black;">Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.</p>
+                      <p style="color: black;">
+                        My journey to Assin Manso Slave River was a profoundly moving experience. Located in the central region of Ghana...
+                      </p>
                     </a>
                     <ul class="post-info">
-                      <li>John Doe</li>
-                      <li>10.07.2020 10:20</li>
+                      <li>African Connections</li>
+                      <li>10.10.2023 10:20</li>
                       
                     </ul>
                   </div>
                 </div>
               </div>
               
+              <div class="col-md-4 col-sm-6">
+                <div class="blog-post">
+                  <a href="blog-article.php?id=2">
+                    <div class="blog-thumb">
+                      <img src="/img/blog/bloglist_article_2_banner.jpg" alt="">
+                    </div>
+                  </a>
+                  <div class="down-content">
+                    <a href="blog-article.php?id=2">
+                      <h4>Cultural Soirees: A Kaleidoscope of Welcome and Farewell Dinners Unveiled</h4>
+                      
+                      <p style="color: black;">As the golden sun dips below the horizon, casting a warm amber glow, a journey unfolds...</p>
+                    </a>
+                    <ul class="post-info">
+                      <li>African Connections</li>
+                      <li>10.16.2023 10:20</li>
+                      
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-4 col-sm-6">
+                <div class="blog-post">
+                  <a href="blog-article.php?id=3">
+                    <div class="blog-thumb">
+                      <img src="/img/blog/bloglist_article_3_banner.jpg" alt="">
+                    </div>
+                  </a>
+                  <div class="down-content">
+                    <a href="blog-article.php?id=3">
+                      <h4>Birth of a New Identity: My Journey through a Traditional Asante Naming Ceremony</h4>
+                      
+                      <p style="color: black;">I stood at the threshold of an extraordinary cultural experience: a
+                        Traditional Asante Naming Ceremony...</p>
+                    </a>
+                    <ul class="post-info">
+                      <li>African Connections</li>
+                      <li>10.19.2023 10:20</li>
+                      
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!--
               <div class="col-md-4 col-sm-6">
                 <div class="blog-post">
                   <a href="blog-article.php">
@@ -228,54 +276,11 @@
                     <ul class="post-info">
                       <li>John Doe</li>
                       <li>10.07.2020 10:20</li>
-                      
                     </ul>
                   </div>
                 </div>
               </div>
-              
-              <div class="col-md-4 col-sm-6">
-                <div class="blog-post">
-                  <a href="blog-article.php">
-                    <div class="blog-thumb">
-                      <img src="https://demo.phpjabbers.com/free-web-templates/blog-website-template-172/assets/images/blog-4-720x480.jpg" alt="">
-                    </div>
-                  </a>
-                  <div class="down-content">
-                    <a href="blog-article.php">
-                      <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h4>
-                      
-                      <p style="color: black;">Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.</p>
-                    </a>
-                    <ul class="post-info">
-                      <li>John Doe</li>
-                      <li>10.07.2020 10:20</li>
-                      
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="col-md-4 col-sm-6">
-                <div class="blog-post">
-                  <a href="blog-article.php">
-                    <div class="blog-thumb">
-                      <img src="https://demo.phpjabbers.com/free-web-templates/blog-website-template-172/assets/images/blog-4-720x480.jpg" alt="">
-                    </div>
-                  </a>
-                  <div class="down-content">
-                    <a href="blog-article.php">
-                      <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h4>
-                      
-                      <p style="color: black;">Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.</p>
-                    </a>
-                    <ul class="post-info">
-                      <li>John Doe</li>
-                      <li>10.07.2020 10:20</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              -->
               
               
             </div>
