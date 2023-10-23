@@ -1,3 +1,30 @@
+<?php
+//INCLUDES
+include("db/connect.php");
+
+// VARIABLES
+$articles_array = array();
+
+if ($conn->connect_error) {
+  $conn->close();
+  $error = true;
+  die();
+} else {
+  $sql = "SELECT id, article_title, article_intro_text, article_small_image, article_date, article_author FROM articles ORDER BY id DESC LIMIT 3";
+  $result = mysqli_query($conn, $sql);
+
+  if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) {
+      array_push($articles_array, [$row["id"], $row["article_title"], $row["article_intro_text"], $row["article_small_image"], $row["article_date"], $row["article_author"]]);
+    }
+    
+  } 
+  $conn->close();
+
+  //var_dump($articles_array);
+}
+?>
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
   <head>
@@ -124,30 +151,39 @@
         <div class="container">
             <div class="row">
 
+            <?php for ($i=0; $i < count($articles_array); $i++) { ?>
               <div class="col-md-4 col-sm-6">
                 <div class="blog-post">
-                  <a href="blog-article.php?id=1">
+                  <a href="blog-article.php?id=<?php echo $articles_array[$i][0];?>">
                     <div class="blog-thumb">
-                      <img src="/img/blog/bloglist_article_1_banner.jpg" alt="">
+                      <img src="<?php echo $articles_array[$i][3];?>" alt="">
                     </div>
                   </a>
                   <div class="down-content">
-                    <a href="blog-article.php?id=1">
-                      <h4>Journey Back In Time: Exploring The Profound History Of Assin Manso Slave River</h4>
+                    <a href="blog-article.php?id=<?php echo $articles_array[$i][0];?>">
+                      <h4><?php echo $articles_array[$i][1];?></h4>
                       
                       <p style="color: black;">
-                        My journey to Assin Manso Slave River was a profoundly moving experience. Located in the central region of Ghana...
+                        <?php echo $articles_array[$i][2];?>
                       </p>
                     </a>
                     <ul class="post-info">
-                      <li>African Connections</li>
-                      <li>10.10.2023 10:20</li>
+                      <li><?php echo $articles_array[$i][5];?></li>
+                      <li>
+                        <?php 
+                          $date=date_create($articles_array[$i][4]);
+                          echo date_format($date,"m.d.Y H:i");
+                        ?>
+                      </li>
                       
                     </ul>
                   </div>
                 </div>
               </div>
-              
+            <?php } ?>
+
+            
+              <!--
               <div class="col-md-4 col-sm-6">
                 <div class="blog-post">
                   <a href="blog-article.php?id=2">
@@ -192,8 +228,6 @@
                   </div>
                 </div>
               </div>
-            
-              <!--
               <div class="col-md-4 col-sm-6">
                 <div class="blog-post">
                   <a href="blog-article.php">

@@ -3,9 +3,12 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
+// VARIABLES
+$other_articles_array = array();
+
 if(!empty($_GET["id"]) && intval($_GET["id"]) > 0){
   $article_id = intval($_GET["id"]);
-  include_once("db/connect.php");
+  include("db/connect.php");
   if ($conn->connect_error) {
     $conn->close();
     $error = true;
@@ -32,7 +35,6 @@ if(!empty($_GET["id"]) && intval($_GET["id"]) > 0){
     $sql = "SELECT article_title, article_date FROM articles ORDER BY id DESC LIMIT 3";
     $result = mysqli_query($conn, $sql);
 
-    $other_articles_array = array();
     if (mysqli_num_rows($result) > 0) {
       // output data of each row
       while($row = mysqli_fetch_assoc($result)) {
@@ -67,7 +69,7 @@ if(!empty($_GET["id"]) && intval($_GET["id"]) > 0){
     </script>
     <!-- End Google Tag Manager -->
 
-    <title>Black History Month, Return To The Motherland Tour</title>
+    <title><?php echo $article_title ?></title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
