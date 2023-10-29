@@ -32,13 +32,13 @@ if(!empty($_GET["id"]) && intval($_GET["id"]) > 0){
       $error = true;
     }  
 
-    $sql = "SELECT article_title, article_date FROM articles ORDER BY id DESC LIMIT 3";
+    $sql = "SELECT article_title, article_date, id FROM articles ORDER BY id DESC LIMIT 3";
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0) {
       // output data of each row
       while($row = mysqli_fetch_assoc($result)) {
-        array_push($other_articles_array, [$row["article_title"], $row["article_date"]]);
+        array_push($other_articles_array, [$row["article_title"], $row["article_date"], $row["id"]]);
       }
 
     } 
@@ -240,7 +240,7 @@ if(!empty($_GET["id"]) && intval($_GET["id"]) > 0){
                       <ul>
                         <?php for ($i=0; $i < count($other_articles_array); $i++) { ?>
                         <li>
-                          <a href="blog-details.html">
+                          <a href="blog-article.php?id=<?php echo $other_articles_array[$i][2] ?>">
                             <h5><?php echo $other_articles_array[$i][0] ?></h5>
                             <span><?php echo $other_articles_array[$i][1] ?></span>
                           </a>
