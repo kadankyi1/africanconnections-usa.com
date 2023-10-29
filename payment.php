@@ -201,7 +201,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       <li>
                         <div class="unit">
                           <div class="unit-left"><span class="icon fa fa-facebook"></span></div>
-                          <div class="unit-body"><a class="link-aemail" target="_blank" href="https://facebook.com/AfricanConnectionsUSA">AfricaConnectionsUSA</a></div>
+                          <div class="unit-body"><a class="link-aemail" target="_blank" href="https://facebook.com/AfricanConnectionsUSA">AfricanConnectionsUSA</a></div>
                         </div>
                       </li>
                       <li>

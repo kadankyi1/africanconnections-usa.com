@@ -192,7 +192,15 @@ if(!empty($_GET["id"]) && intval($_GET["id"]) > 0){
                       <a><h4><?php echo $article_title; ?></h4></a>
                       <ul class="post-info">
                         <li><a><?php echo $article_author; ?></a></li>
-                        <li><a><?php echo $article_date; ?></a></li>
+                        <li>
+                          <a>
+                            <?php 
+                            $date=date_create($article_date);
+                            echo date_format($date,"m.d.Y H:i");
+
+                            ?>
+                          </a>
+                        </li>
                       </ul>
                       <p>
                       <?php echo $article_text; ?>
@@ -314,7 +322,7 @@ if(!empty($_GET["id"]) && intval($_GET["id"]) > 0){
                       <li>
                         <div class="unit">
                           <div class="unit-left"><span class="icon fa fa-facebook"></span></div>
-                          <div class="unit-body"><a class="link-aemail" target="_blank" href="https://facebook.com/AfricanConnectionsUSA">AfricaConnectionsUSA</a></div>
+                          <div class="unit-body"><a class="link-aemail" target="_blank" href="https://facebook.com/AfricanConnectionsUSA">AfricanConnectionsUSA</a></div>
                         </div>
                       </li>
                       <li>
