@@ -8,7 +8,6 @@ if (
   session_start();
   $captchaResponse = $_POST["g-recaptcha-response"];
   
-  echo "here 1";
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -95,10 +94,10 @@ if (
         } else {
           $subject = "NEW INQUIRY FOR " . $tourname_filled;
           $message = "\n\n TOUR NAME: $tourname_filled";
-          $message = "\n\n LEAD NAME: $fullname_filled";
-          $message = "\n\n LEAD PHONE NUMBER: $phone_filled";
-          $message = "\n\n LEAD EMAIL: $joineremail";
-          $message = "\n\n MESSAGE: $msg_filled";
+          $message = $message . "\n\n<br><br> LEAD NAME: $fullname_filled";
+          $message = $message . "\n\n<br><br> LEAD PHONE NUMBER: $phone_filled";
+          $message = $message . "\n\n<br><br> LEAD EMAIL: $joineremail";
+          $message = $message . "\n\n<br><br> MESSAGE: $msg_filled";
           mail($to,$subject,$message,$headers);
         }
   
@@ -119,6 +118,7 @@ if (
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
         $headers .= "From: <$to>";
         mail($to,$subject,$message,$headers);
+        header("Location: ../email-list-thankyou.html");
         //**********************************************//
         //**********************************************//
       }
