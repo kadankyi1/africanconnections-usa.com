@@ -310,6 +310,9 @@
 
               <form id="inquiry_form" action="serverside/joinlist.php" method="post" style="padding: 10px;">
                 <input type="hidden" id="tourname_filled" readonly value="BLACK HISTORY MONTH, RETURN TO THE MOTHERLAND TOUR"/>
+                <div class="form-group" style="display:none;">
+                  <input type="text" name="wtf" id="wtf">
+                </div>
 
                 <div class="relative">
                   <input type="text" id="fullname_filled" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
@@ -336,7 +339,7 @@
                 <div class="g-recaptcha" data-sitekey="6LfI2pwlAAAAAImVmPrhyV0B1zxmnHQIXO79vC6A"></div>
               </div>
                 <div class="relative">
-                  <span onclick="validateRecaptcha();" class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900">Send</button>
+                  <span style="cursor: pointer;" onclick="validateRecaptcha();" class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900">Send</button>
                 </div>
               </form>
             </div>
@@ -497,12 +500,12 @@
         if(
           $('#fullname_filled').val().trim() != "" 
           && $('#phone_filled').val().trim() != "" 
-          && $('#email_filled').val().trim() != "" 
+          && $('#joineremail').val().trim() != "" 
           && $('#msg_filled').val().trim() != ""
           ){
-          $("#inquiry_form").submit();
+          //$("#inquiry_form").submit();
+          addToMailList('popupform');
 		      console.log("form submitted");
-          //addToMailList('popupform');
         } else {
               alert("Please complete the form");
         }

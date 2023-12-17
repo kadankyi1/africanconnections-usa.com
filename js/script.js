@@ -1412,21 +1412,21 @@ $(document).ready(function(){
 function addToMailList(form_id) {
 
 	var values = $('#'+form_id).serialize();
-	//console.log("values");
-	//console.log(values);
+	console.log("values");
+	console.log(values);
 
 	$.ajax({
         url: "serverside/joinlist.php",
         type: "post",
         data: values ,
         success: function (response) {
-			//console.log("response");
-			//console.log(response);
+			console.log("response");
+			console.log(response);
            // You will get response from your PHP page (what you echo or print)
         },
         error: function(jqXHR, textStatus, errorThrown) {
-			//console.log("errorThrown");
-           //console.log(textStatus, errorThrown);
+			console.log("errorThrown");
+           	console.log(errorThrown);
         }
     });
 }

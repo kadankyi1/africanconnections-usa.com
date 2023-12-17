@@ -8,6 +8,7 @@ if (
   session_start();
   $captchaResponse = $_POST["g-recaptcha-response"];
   
+  echo "here 1";
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -83,9 +84,14 @@ if (
         $to = "annodankyikwaku@gmail.com";
 
 
-        if(!empty($tourname_filled) || !empty($fullname_filled) || !empty($phone_filled) || !empty($msg_filled)) {
+        $headers = "MIME-Version: 1.0" . "\r\n";
+        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+        $headers .= "From: <$to>";
+        if(empty($tourname_filled) || empty($fullname_filled) || empty($phone_filled) || empty($msg_filled)) {
           $subject = "SOMEONE NEW JOINED MAILING LIST FOR AC USA WEBSITE";
           $message = "\n\n EMAIL: $joineremail";
+          mail($to,$subject,$message,$headers);
+          header("Location: ../email-list-thankyou.html");
         } else {
           $subject = "NEW INQUIRY FOR " . $tourname_filled;
           $message = "\n\n TOUR NAME: $tourname_filled";
@@ -93,13 +99,9 @@ if (
           $message = "\n\n LEAD PHONE NUMBER: $phone_filled";
           $message = "\n\n LEAD EMAIL: $joineremail";
           $message = "\n\n MESSAGE: $msg_filled";
+          mail($to,$subject,$message,$headers);
         }
   
-        $headers = "MIME-Version: 1.0" . "\r\n";
-        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-        $headers .= "From: <$to>";
-        mail($to,$subject,$message,$headers);
-        header("Location: ../email-list-thankyou.html");
         die();
         //**********************************************//
         //**********************************************//
