@@ -27,8 +27,12 @@
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7CPoppins:400%7CTeko:300,400">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
     <!-- Meta Pixel Code -->
     <script>
@@ -153,7 +157,7 @@
       <section class="section section-sm section-first bg-default text-md-left">
         <div class="container">
           <div class="row">
-              <div class="col-sm-12 col-md-12 col-lg-12 wow fadeInRight" data-wow-delay=".1s">
+              <div class="col-sm-12 col-md-12 col-lg-9 wow fadeInRight" data-wow-delay=".1s">
                 <h3>BLACK HISTORY MONTH,<br>RETURN TO THE MOTHERLAND TOUR</h3>
                 <!-- Bootstrap tabs-->
                 <div class="tabs-custom tabs-horizontal tabs-line tabs-line-big tabs-line-style-2 text-center text-md-left" id="tabs-7">
@@ -297,6 +301,44 @@
 
                   </div>
                 </div>
+            </div>
+
+            <div class="col-sm-12 col-md-3 col-lg-3 wow fadeInRight" data-wow-delay=".1s" style="border-color: gray; border: 1px solid #d7dce3; padding: 0px;">
+              <div class="form-head" style="background-color: #cc6600; border-color: #cc6600;">
+                <p style="width: 100%; text-align: center; font: 16px; font-weight: 500;">INQUIRY</p>
+              </div>
+
+              <form id="inquiry_form" action="serverside/joinlist.php" method="post" style="padding: 10px;">
+                <input type="hidden" id="tourname_filled" readonly value="BLACK HISTORY MONTH, RETURN TO THE MOTHERLAND TOUR"/>
+
+                <div class="relative">
+                  <input type="text" id="fullname_filled" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                  <label for="fullname_filled" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Your Name</label>
+                </div>
+                <br>
+                <div class="relative">
+                  <input type="text" id="phone_filled" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                  <label for="phone_filled" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Phone</label>
+                </div>
+                <br>
+                <div class="relative">
+                  <input type="email" id="joineremail" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                  <label for="joineremail" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Email</label>
+                </div>
+                <br>
+                <div class="relative">
+                  <input type="text" id="msg_filled" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                  <label for="msg_filled" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Message</label>
+                </div>
+                <br>
+
+              <div class="form-group">
+                <div class="g-recaptcha" data-sitekey="6LfI2pwlAAAAAImVmPrhyV0B1zxmnHQIXO79vC6A"></div>
+              </div>
+                <div class="relative">
+                  <span onclick="validateRecaptcha();" class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900">Send</button>
+                </div>
+              </form>
             </div>
 
             <!--
@@ -443,6 +485,32 @@
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script type="text/javascript">
+      function validateRecaptcha() {
+        var response = grecaptcha.getResponse();
+        if (response.length === 0) {
+            alert("Please check that you are not a rebot");
+            return false;
+        } else {
+            //alert("validated");
+               
+        if(
+          $('#fullname_filled').val().trim() != "" 
+          && $('#phone_filled').val().trim() != "" 
+          && $('#email_filled').val().trim() != "" 
+          && $('#msg_filled').val().trim() != ""
+          ){
+          $("#inquiry_form").submit();
+		      console.log("form submitted");
+          //addToMailList('popupform');
+        } else {
+              alert("Please complete the form");
+        }
+            return true;
+        }
+    }
+
+    </script>
     <div class="elfsight-app-56c0baaf-15bf-4139-ae0f-952721a02fab"></div>
 
   </body>

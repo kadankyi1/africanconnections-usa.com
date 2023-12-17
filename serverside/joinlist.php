@@ -34,6 +34,15 @@ if (
 
   if($result->success && $_SERVER['SERVER_NAME'] == $result->hostname) {
     $joineremail = $_POST["joineremail"];
+    $tourname_filled = "";
+    $fullname_filled = "";
+    $phone_filled = "";
+    $msg_filled = "";
+    
+    if(!empty($_POST["tourname_filled"])){$tourname_filled = $_POST["tourname_filled"];}
+    if(!empty($_POST["fullname_filled"])){$fullname_filled = $_POST["fullname_filled"];}
+    if(!empty($_POST["phone_filled"])){$phone_filled = $_POST["phone_filled"];}
+    if(!empty($_POST["msg_filled"])){$msg_filled = $_POST["msg_filled"];}
 
     $servername = "localhost";
     $username = "african1_aclistu";
@@ -63,15 +72,29 @@ if (
       die();
     } else {
       $dbinput = filter_var($joineremail, FILTER_SANITIZE_EMAIL);
+
       $sql = "INSERT INTO subscribers (subscriber_email) VALUES ('$dbinput')";
   
       if ($conn->query($sql) === TRUE) {
         $conn->close();
         //**********************************************//
         //**********************************************//
-        $to = "info@africanconnections-usa.com"; //$to = "annodankyikwaku@gmail.com";
-        $subject = "SOMEONE NEW JOINED MAILING LIST FOR AC USA WEBSITE";
-        $message = "\n\n EMAIL: $joineremail";
+        //$to = "info@africanconnections-usa.com"; 
+        $to = "annodankyikwaku@gmail.com";
+
+
+        if(!empty($tourname_filled) || !empty($fullname_filled) || !empty($phone_filled) || !empty($msg_filled)) {
+          $subject = "SOMEONE NEW JOINED MAILING LIST FOR AC USA WEBSITE";
+          $message = "\n\n EMAIL: $joineremail";
+        } else {
+          $subject = "NEW INQUIRY FOR " . $tourname_filled;
+          $message = "\n\n TOUR NAME: $tourname_filled";
+          $message = "\n\n LEAD NAME: $fullname_filled";
+          $message = "\n\n LEAD PHONE NUMBER: $phone_filled";
+          $message = "\n\n LEAD EMAIL: $joineremail";
+          $message = "\n\n MESSAGE: $msg_filled";
+        }
+  
         $headers = "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
         $headers .= "From: <$to>";
@@ -84,9 +107,12 @@ if (
         $conn->close();
         //**********************************************//
         //**********************************************//
-        $to = "info@africanconnections-usa.com";
+        //$to = "info@africanconnections-usa.com";
+        $to = "annodankyikwaku@gmail.com";
+
         $subject = "ERROR 2 IN NEWSLETTER SIGNUP";
         $message = "\n\n Someone tried to signup and had a database error. EMAIL: $joineremail";
+
         $headers = "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
         $headers .= "From: <$to>";

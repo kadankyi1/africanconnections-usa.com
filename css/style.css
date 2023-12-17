@@ -24955,3 +24955,13 @@ img.mfp-img {
 	border-color: #f48840;
 	color: #fff;
 }
+
+.form-head {
+    padding: 17px 20px;
+    background: var(--main-color, #5191FA);
+    border: 1px solid var(--main-color, #5191FA);
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    font-size: 12px;
+    color: #fff;
+}
