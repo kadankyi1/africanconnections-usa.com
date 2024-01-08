@@ -79,8 +79,8 @@ if (
         $conn->close();
         //**********************************************//
         //**********************************************//
-        //$to = "info@africanconnections-usa.com"; 
-        $to = "annodankyikwaku@gmail.com";
+        $to = "info@africanconnections-usa.com"; 
+        //$to = "annodankyikwaku@gmail.com";
 
 
         $headers = "MIME-Version: 1.0" . "\r\n";
@@ -92,7 +92,7 @@ if (
           mail($to,$subject,$message,$headers);
           header("Location: ../email-list-thankyou.html");
         } else {
-          $subject = "NEW INQUIRY FOR " . $tourname_filled;
+          $subject = "NEW INQUIRY ON " . $tourname_filled;
           $message = "\n\n TOUR NAME: $tourname_filled";
           $message = $message . "\n\n<br><br> LEAD NAME: $fullname_filled";
           $message = $message . "\n\n<br><br> LEAD PHONE NUMBER: $phone_filled";
@@ -108,8 +108,8 @@ if (
         $conn->close();
         //**********************************************//
         //**********************************************//
-        //$to = "info@africanconnections-usa.com";
-        $to = "annodankyikwaku@gmail.com";
+        $to = "info@africanconnections-usa.com";
+        //$to = "annodankyikwaku@gmail.com";
 
         $subject = "ERROR 2 IN NEWSLETTER SIGNUP";
         $message = "\n\n Someone tried to signup and had a database error. EMAIL: $joineremail";

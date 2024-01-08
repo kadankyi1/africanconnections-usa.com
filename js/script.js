@@ -1436,3 +1436,29 @@ function addToMailList(form_id, response_msg_holder_id) {
     });
 }
 
+function sendForm(this_url, form_id, response_msg_holder_id) {
+
+	var values = $('#'+form_id).serialize();
+	$('#'+form_id).trigger('reset');
+	console.log("values");
+	console.log(values);
+
+	$.ajax({
+        url: "serverside/" + this_url + ".php",
+        type: "post",
+        data: values ,
+        success: function (response) {
+			console.log("response");
+			console.log(response);
+			$('#'+response_msg_holder_id).text('Message sent');
+			$('#'+response_msg_holder_id).show();
+           // You will get response from your PHP page (what you echo or print)
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+			$('#'+response_msg_holder_id).text('Failed. Please reload page and try again');
+			$('#'+response_msg_holder_id).show();
+			console.log("errorThrown");
+           	console.log(errorThrown);
+        }
+    });
+}

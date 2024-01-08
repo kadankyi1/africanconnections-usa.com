@@ -122,7 +122,7 @@ if ($conn->connect_error) {
                       </div>
                     </li>
                   </ul>
-                  <a class="button button-md button-default-outline-2 button-ujarak" href="mailto:info@africanconnections-usa.com">Request A Quote</a>
+                  <a class="button button-md button-default-outline-2 button-ujarak" href="customize.html">Customize A Tour</a>                                  
                 </div>
               </div>
             </div>
@@ -164,11 +164,11 @@ if ($conn->connect_error) {
       
       <section class="blog-posts grid-system">
         <div class="container">
-            <div class="row">
+          <div class="row">
 
             <?php for ($i=0; $i < count($articles_array); $i++) { ?>
-              <div class="col-md-4 col-sm-6">
-                <div class="blog-post">
+              <div class="col-md-4 col-sm-12">
+                <div class="blog-post" style="margin-top: 0px;">
                   <a href="blog-article.php?id=<?php echo $articles_array[$i][0];?>">
                     <div class="blog-thumb">
                       <img src="<?php echo $articles_array[$i][3];?>" alt="">
@@ -195,144 +195,9 @@ if ($conn->connect_error) {
                   </div>
                 </div>
               </div>
-            <?php } ?>
-
-            
-              <!--
-              <div class="col-md-4 col-sm-6">
-                <div class="blog-post">
-                  <a href="blog-article.php?id=2">
-                    <div class="blog-thumb">
-                      <img src="/img/blog/bloglist_article_2_banner.jpg" alt="">
-                    </div>
-                  </a>
-                  <div class="down-content">
-                    <a href="blog-article.php?id=2">
-                      <h4>Cultural Soirees: A Kaleidoscope of Welcome and Farewell Dinners Unveiled</h4>
-                      
-                      <p style="color: black;">As the golden sun dips below the horizon, casting a warm amber glow, a journey unfolds...</p>
-                    </a>
-                    <ul class="post-info">
-                      <li>African Connections</li>
-                      <li>10.16.2023 10:20</li>
-                      
-                    </ul>
-                  </div>
-                </div>
-              </div>
+            <?php } ?>              
               
-              <div class="col-md-4 col-sm-6">
-                <div class="blog-post">
-                  <a href="blog-article.php?id=3">
-                    <div class="blog-thumb">
-                      <img src="/img/blog/bloglist_article_3_banner.jpg" alt="">
-                    </div>
-                  </a>
-                  <div class="down-content">
-                    <a href="blog-article.php?id=3">
-                      <h4>Birth of a New Identity: My Journey through a Traditional Asante Naming Ceremony</h4>
-                      
-                      <p style="color: black;">I stood at the threshold of an extraordinary cultural experience: a
-                        Traditional Asante Naming Ceremony...</p>
-                    </a>
-                    <ul class="post-info">
-                      <li>African Connections</li>
-                      <li>10.19.2023 10:20</li>
-                      
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6">
-                <div class="blog-post">
-                  <a href="blog-article.php">
-                    <div class="blog-thumb">
-                      <img src="https://demo.phpjabbers.com/free-web-templates/blog-website-template-172/assets/images/blog-4-720x480.jpg" alt="">
-                    </div>
-                  </a>
-                  <div class="down-content">
-                    <a href="blog-article.php">
-                      <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h4>
-                      
-                      <p style="color: black;">Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.</p>
-                    </a>
-                    <ul class="post-info">
-                      <li>John Doe</li>
-                      <li>10.07.2020 10:20</li>
-                      
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="col-md-4 col-sm-6">
-                <div class="blog-post">
-                  <a href="blog-article.php">
-                    <div class="blog-thumb">
-                      <img src="https://demo.phpjabbers.com/free-web-templates/blog-website-template-172/assets/images/blog-4-720x480.jpg" alt="">
-                    </div>
-                  </a>
-                  <div class="down-content">
-                    <a href="blog-article.php">
-                      <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h4>
-                      
-                      <p style="color: black;">Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.</p>
-                    </a>
-                    <ul class="post-info">
-                      <li>John Doe</li>
-                      <li>10.07.2020 10:20</li>
-                      
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="col-md-4 col-sm-6">
-                <div class="blog-post">
-                  <a href="blog-article.php">
-                    <div class="blog-thumb">
-                      <img src="https://demo.phpjabbers.com/free-web-templates/blog-website-template-172/assets/images/blog-4-720x480.jpg" alt="">
-                    </div>
-                  </a>
-                  <div class="down-content">
-                    <a href="blog-article.php">
-                      <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h4>
-                      
-                      <p style="color: black;">Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.</p>
-                    </a>
-                    <ul class="post-info">
-                      <li>John Doe</li>
-                      <li>10.07.2020 10:20</li>
-                      
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="col-md-4 col-sm-6">
-                <div class="blog-post">
-                  <a href="blog-article.php">
-                    <div class="blog-thumb">
-                      <img src="https://demo.phpjabbers.com/free-web-templates/blog-website-template-172/assets/images/blog-4-720x480.jpg" alt="">
-                    </div>
-                  </a>
-                  <div class="down-content">
-                    <a href="blog-article.php">
-                      <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h4>
-                      
-                      <p style="color: black;">Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.</p>
-                    </a>
-                    <ul class="post-info">
-                      <li>John Doe</li>
-                      <li>10.07.2020 10:20</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              -->
-              
-              
-            </div>
+          </div>
         </div>
       </section>
       <!-- Discover New Horizons-->
@@ -344,21 +209,12 @@ if ($conn->connect_error) {
               <div class="col-sm-6 col-md-12 col-lg-3 col-xl-4">
                 <div class="oh-desktop">
                   <div class="wow slideInRight" data-wow-delay="0s">
-                    <h6 class="text-spacing-100 text-uppercase">Contact</h6>
+                  <h6 class="text-spacing-100 text-uppercase">You Can Trust Us</h6>
                     <ul class="footer-contacts d-inline-block d-sm-block">
                       <li>
                         <div class="unit">
-                          <div class="unit-left"><span class="icon fa fa-phone"></span></div>
                           <div class="unit-body">
-                            <a class="link-phone" href="tel:+18478939304"> +1 (847) 893-9304</a>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="unit">
-                          <div class="unit-left"><span class="icon fa fa-envelope"></span></div>
-                          <div class="unit-body">
-                            <a class="link-aemail" href="mailto:info@africanconnections-usa.com">info@africanconnections-usa.com</a>
+                            <a href="https://www.bbb.org/us/il/bartlett/profile/tour-operators/african-connections-north-america-inc-0654-1000098865"><img src="img/general/bbb/bbb.png"/></a>
                           </div>
                         </div>
                       </li>
@@ -384,8 +240,24 @@ if ($conn->connect_error) {
               <div class="col-sm-6 col-md-12 col-lg-3 col-xl-4">
                 <div class="oh-desktop">
                   <div class="wow slideInRight" data-wow-delay="0s">
-                    <h6 class="text-spacing-100 text-uppercase">Social</h6>
+                    <h6 class="text-spacing-100 text-uppercase">Contact</h6>
                     <ul class="footer-contacts d-inline-block d-sm-block">
+                    <li>
+                        <div class="unit">
+                          <div class="unit-left"><span class="icon fa fa-phone"></span></div>
+                          <div class="unit-body">
+                            <a class="link-phone" href="tel:+18478939304"> +1 (847) 893-9304</a>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="unit">
+                          <div class="unit-left"><span class="icon fa fa-envelope"></span></div>
+                          <div class="unit-body">
+                            <a class="link-aemail" href="mailto:info@africanconnections-usa.com?subject=Tour Enquiry&body=Hi,I would like to know more about....">info@africanconnections-usa.com</a>
+                          </div>
+                        </div>
+                      </li>
                       <li>
                         <div class="unit">
                           <div class="unit-left"><span class="icon fa fa-facebook"></span></div>
@@ -446,7 +318,7 @@ if ($conn->connect_error) {
                 <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>African Connections North America.</span>. All Rights Reserved.</p>
               </div>
               <div class="col-sm-6 col-md-4 text-md-right">
-                <p class="rights"><a href="https://www.africanconnections.biz/new/travel/_1terms.php" target="_blank">Terms & Conditions</a></p>
+                <p class="rights"><a href="https://www.africanconnections.biz/archive/new/travel/_1terms.php" target="_blank">Terms & Conditions</a></p>
               </div>
             </div>
           </div>
