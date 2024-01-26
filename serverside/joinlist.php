@@ -4,6 +4,7 @@ if (
   $_SERVER["REQUEST_METHOD"] == "POST" 
   && isset($_POST["wtf"]) && empty($_POST["wtf"])
   && isset($_POST["joineremail"]) && !empty($_POST["joineremail"])
+  && isset($_POST["fullname_filled"]) && !empty($_POST["fullname_filled"])
   && isset($_POST["g-recaptcha-response"]) && !empty($_POST["g-recaptcha-response"])){
   session_start();
   $captchaResponse = $_POST["g-recaptcha-response"];
@@ -34,13 +35,12 @@ if (
 
   if($result->success && $_SERVER['SERVER_NAME'] == $result->hostname) {
     $joineremail = $_POST["joineremail"];
+    $fullname_filled = $_POST["fullname_filled"];
     $tourname_filled = "";
-    $fullname_filled = "";
     $phone_filled = "";
     $msg_filled = "";
     
     if(!empty($_POST["tourname_filled"])){$tourname_filled = $_POST["tourname_filled"];}
-    if(!empty($_POST["fullname_filled"])){$fullname_filled = $_POST["fullname_filled"];}
     if(!empty($_POST["phone_filled"])){$phone_filled = $_POST["phone_filled"];}
     if(!empty($_POST["msg_filled"])){$msg_filled = $_POST["msg_filled"];}
 
@@ -49,11 +49,12 @@ if (
     $password = "Sk1n!sK1n.~";
     $dbname = "african1_aclist";
 
+
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
+
     // Check connection
     if ($conn->connect_error) {
-      $conn->close();
       //die("Connection failed: " . $conn->connect_error);
 
       //**********************************************//
@@ -71,11 +72,14 @@ if (
       header("Location: ../email-list-thankyou.html");
       die();
     } else {
-      $dbinput = filter_var($joineremail, FILTER_SANITIZE_EMAIL);
+      // prepare and bind
+      $stmt = $conn->prepare("INSERT INTO subscribers (subscriber_name, subscriber_email) VALUES (?, ?)");
+      $stmt->bind_param("ss", $fullname_filled, $joineremail);
+      
 
-      $sql = "INSERT INTO subscribers (subscriber_email) VALUES ('$dbinput')";
-  
-      if ($conn->query($sql) === TRUE) {
+      if ($stmt->execute() === TRUE) {
+        //echo "here 1"; exit;
+        $stmt->close();
         $conn->close();
         //**********************************************//
         //**********************************************//
@@ -88,7 +92,8 @@ if (
         $headers .= "From: <$to>";
         if(empty($tourname_filled) || empty($fullname_filled) || empty($phone_filled) || empty($msg_filled)) {
           $subject = "SOMEONE NEW JOINED MAILING LIST FOR AC USA WEBSITE";
-          $message = "\n\n EMAIL: $joineremail";
+          $message = "\n\n FIRST NAME: $fullname_filled";
+          $message = $message . "\n\n<br><br> EMAIL: $joineremail";
           mail($to,$subject,$message,$headers);
           header("Location: ../email-list-thankyou.html");
         } else {
@@ -106,6 +111,7 @@ if (
         //**********************************************//
       } else {
         $conn->close();
+        echo "here 2"; exit;
         //**********************************************//
         //**********************************************//
         $to = "info@africanconnections-usa.com";

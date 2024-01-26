@@ -61,6 +61,7 @@ if (
 
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
+
     // Check connection
     if ($conn->connect_error) {
       $conn->close();
@@ -69,6 +70,7 @@ if (
       //**********************************************//
       //**********************************************//
       $to = "info@africanconnections-usa.com";
+      //$to = "annodankyikwaku@gmail.com";
       $subject = "ERROR 1 IN NEWSLETTER SIGNUP";
       $message = "\n\n Someone tried to signup and had a database error. EMAIL: $joineremail";
       $headers = "MIME-Version: 1.0" . "\r\n";
@@ -81,14 +83,16 @@ if (
       header("Location: ../email-list-thankyou.html");
       die();
     } else {
-      $dbinput = filter_var($joineremail, FILTER_SANITIZE_EMAIL);
 
-      $sql = "INSERT INTO subscribers (subscriber_email) VALUES ('$dbinput')";
-      $conn->query($sql);
-      $conn->close();
+      // prepare and bind
+      $stmt = $conn->prepare("INSERT INTO subscribers (subscriber_name, subscriber_email) VALUES (?, ?)");
+      $stmt->bind_param("ss", $fullname_filled, $joineremail);
+      $stmt->execute();
+
         //**********************************************//
         //**********************************************//
         $to = "info@africanconnections-usa.com"; 
+        //$to = "annodankyikwaku@gmail.com";
 
 
         $headers = "MIME-Version: 1.0" . "\r\n";
