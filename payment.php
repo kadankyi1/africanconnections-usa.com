@@ -94,7 +94,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li>
                       <div class="unit unit-spacing-xs">
                         <div class="unit-left"><span class="icon fa fa-phone"></span></div>
-                        <div class="unit-body"><a class="link-phone" href="tel:+18478939304">+1 (847) 893-9304</a></div>
+                        <div class="unit-body"><a class="link-phone" href="tel:+18479563319">+1 (847) 956-3319</a></div>
                       </div>
                     </li>
                   </ul>
@@ -149,7 +149,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="box-contacts-body">
                   <div class="box-contacts-icon fl-bigmug-line-cellphone55"></div>
                   <div class="box-contacts-decor"></div>
-                  <p class="box-contacts-link"><a href="tel:+18478939304">+1 (847) 893-9304</a></p>
+                  <p class="box-contacts-link"><a href="tel:+18479563319">+1 (847) 956-3319</a></p>
                 </div>
               </article>
             </div>
@@ -158,7 +158,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="box-contacts-body">
                   <div class="box-contacts-icon fl-bigmug-line-up104"></div>
                   <div class="box-contacts-decor"></div>
-                  <p class="box-contacts-link"><a>160 Bartlett Plaza Number 8428 Bartlett, Illinois 60103</a></p>
+                  <p class="box-contacts-link"><a>1600 Golf Road, Suite 1200 Rolling Meadows, Illinois 60008</a></p>
                 </div>
               </article>
             </div>
@@ -203,8 +203,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <ul class="footer-contacts d-inline-block d-sm-block">
                         <div class="unit">
                           <div class="unit-left"><span class="icon fa fa-location-arrow"></span></div>
-                          <div class="unit-body"><a class="link-location" href="#">160 Bartlett Plaza Number 8428
-                            <br>Bartlett, Illinois 60103</a></div>
+                          <div class="unit-body"><a class="link-location" href="#">1600 Golf Road, Suite 1200
+                            <br>Rolling Meadows, Illinois 60008</a></div>
                         </div>
                       </li>
                     </ul>
@@ -220,7 +220,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="unit">
                           <div class="unit-left"><span class="icon fa fa-phone"></span></div>
                           <div class="unit-body">
-                            <a class="link-phone" href="tel:+18478939304"> +1 (847) 893-9304</a>
+                            <a class="link-phone" href="tel:+18479563319"> +1 (847) 956-3319</a>
                           </div>
                         </div>
                       </li>
@@ -237,7 +237,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="unit">
                           <div class="unit-left"><span class="icon fa fa-phone"></span></div>
                           <div class="unit-body">
-                            <a class="link-phone" href="tel:+18478939304"> +1 (847) 893-9304</a>
+                            <a class="link-phone" href="tel:+18479563319"> +1 (847) 956-3319</a>
                           </div>
                         </div>
                       </li>
@@ -306,10 +306,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
               <div class="col-sm-6 col-md-4 order-sm-first">
                 <!-- Rights-->
-                <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>African Connections North America.</span>. All Rights Reserved.</p>
+                <p class="rights" style="color: white;"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>African Connections North America.</span>. All Rights Reserved.</p>
               </div>
               <div class="col-sm-6 col-md-4 text-md-right">
-                <p class="rights"><a href="https://www.africanconnections.biz/archive/new/travel/_1terms.php" target="_blank">Terms & Conditions</a></p>
+                <p class="rights" style="color: white;"><a href="https://www.africanconnections.biz/archive/new/travel/_1terms.php" target="_blank">Terms & Conditions</a></p>
               </div>
             </div>
           </div>
