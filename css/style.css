@@ -13037,6 +13037,11 @@ p.rights a:hover {
 	z-index: -1;
 }
 
+.box-position2 {
+	background-size: cover;
+	z-index: -1;
+}
+
 @keyframes bgPos {
 	25% {
 		transform: translate3d(-150px, -150px, 0) rotate(0.001deg);
@@ -25040,4 +25045,73 @@ body {
     grid-template-columns: 1fr;
     grid-gap: 1rem;
   }
+}
+
+
+/***********************************************************************************/
+/***********************************************************************************/
+/***********************************************************************************/
+/***********************************************************************************/
+
+
+/* Default Design */
+.gfg-div {
+	background-image: url("../img/returntomotherland/dollar_500_promo.png"); /* The image used */
+	background-color: whitesmoke; /* Used if the image is unavailable */
+	height: 500px; /* You must set a specified height */
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover; /* Resize the background image to cover the entire container*/
+
+}
+
+/* For Desktop View */
+@media screen and (min-width: 1024px) {
+	.gfg-div {
+		background-image: url("../img/returntomotherland/dollar_500_promo.png"); /* The image used */
+		background-color: whitesmoke; /* Used if the image is unavailable */
+		height: 500px; /* You must set a specified height */
+		background-position: center; /* Center the image */
+		background-repeat: no-repeat; /* Do not repeat the image */
+		background-size: cover; /* Resize the background image to cover the entire container*/
+	}
+}
+
+/* For Tablet View */
+@media screen and (min-device-width: 768px) 
+	and (max-device-width: 1024px) {
+	.gfg-div {
+		background-image: url("../img/returntomotherland/dollar_500_promo.png"); /* The image used */
+		background-color: whitesmoke; /* Used if the image is unavailable */
+		height: 500px; /* You must set a specified height */
+		background-position: center; /* Center the image */
+		background-repeat: no-repeat; /* Do not repeat the image */
+		background-size: cover; /* Resize the background image to cover the entire container*/
+	}
+}
+
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px) 
+	and (orientation: portrait) {
+	.gfg-div {
+		background-image: url("../img/returntomotherland/dollar_500_promo_portrait.png"); /* The image used */
+		background-color: whitesmoke; /* Used if the image is unavailable */
+		height: 500px; /* You must set a specified height */
+		background-position: center; /* Center the image */
+		background-repeat: no-repeat; /* Do not repeat the image */
+		background-size: cover; /* Resize the background image to cover the entire container*/
+	}
+}
+
+/* For Mobile Landscape View */
+@media screen and (max-device-width: 640px) 
+	and (orientation: landscape) {
+	.gfg-div {
+		background-image: url("../img/returntomotherland/dollar_500_promo.png"); /* The image used */
+		background-color: whitesmoke; /* Used if the image is unavailable */
+		height: 500px; /* You must set a specified height */
+		background-position: center; /* Center the image */
+		background-repeat: no-repeat; /* Do not repeat the image */
+		background-size: cover; /* Resize the background image to cover the entire container*/	
+	}
 }

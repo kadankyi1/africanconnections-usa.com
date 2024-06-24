@@ -24,24 +24,36 @@
       gtag('js', new Date());
 
       gtag('config', 'G-TP9NBVZQRL');
+      gtag('config', 'AW-16541429838');
     </script>
     <!-- End Google Tag Manager -->
   <?php } ?>
 
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-TKNXWNL');</script>
+      <!-- End Google Tag Manager -->
 
   <title>Register</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-    <meta name="keywords" content="African Connections,African Connections USA, Travel To Ghana, Ghana Tour, Experience the wonder of Ghana, Prepare to be amazed in Ghana, Join African Festival Tour, Experience African culture, Join Black history month tour, Book now, experience Ghana, Best prices, great service, Affordable tour packages, Book now don't miss these tour, Small deposit saves your space, Trace your roots in Ghana, Let's customize a tour for you, Return to the motherland, Trace your African heritage, See wildlife in Ghana, Join one of our tours and experience the amazement of Ghana, Our tours allow you to experience a traditional African festival and the culture of Ghana, Return to the motherland and explore your African heritage, Explore Ghana's unique connections to African American history">
+    <meta name="description" content="Register For A Tour With African Connections">
+    <meta name="keywords" content="Register Tour With African Connections, African Connections USA, Tours Ghana,  Tours to Ghana, Tour Operator Ghana,Tour Operators Ghana, Ghana Tour Agency, Ghana Tour Agencies, Travel To Ghana, Ghana Tour, Experience Ghana">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7CPoppins:400%7CTeko:300,400">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
     <!-- Meta Pixel Code -->
     <script>
@@ -60,6 +72,10 @@
     <!-- End Meta Pixel Code -->
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKNXWNL"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <!--
     <div class="preloader">
@@ -225,15 +241,17 @@
         <div class="footer-corporate-inset">
           <div class="container">
             <div class="row row-40 justify-content-lg-between">
-              <div class="col-sm-6 col-md-12 col-lg-3 col-xl-4">
+              <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
                 <div class="oh-desktop">
                   <div class="wow slideInRight" data-wow-delay="0s">
-                  <h6 class="text-spacing-100 text-uppercase">You Can Trust Us</h6>
+                    <h6 class="text-spacing-100 text-uppercase">You Can Trust Us</h6>
                     <ul class="footer-contacts d-inline-block d-sm-block">
                       <li>
                         <div class="unit">
                           <div class="unit-body">
-                            <a href="https://www.bbb.org/us/il/bartlett/profile/tour-operators/african-connections-north-america-inc-0654-1000098865"><img src="img/general/bbb/bbb.png"/></a>
+                            <a class="d-flex justify-content-center" href="https://www.bbb.org/us/il/bartlett/profile/tour-operators/african-connections-north-america-inc-0654-1000098865" >
+                              <img class="center-block" src="img/general/bbb/bbb.png" />
+                            </a>
                           </div>
                         </div>
                       </li>
@@ -241,27 +259,19 @@
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-12 col-lg-3 col-xl-4">
+              <div class="col-sm-12 col-md-12 col-lg-3 col-xl-4">
                 <div class="oh-desktop">
                   <div class="wow slideInRight" data-wow-delay="0s">
                     <h6 class="text-spacing-100 text-uppercase">Address</h6>
                     <ul class="footer-contacts d-inline-block d-sm-block">
-                        <div class="unit">
-                          <div class="unit-left"><span class="icon fa fa-location-arrow"></span></div>
-                          <div class="unit-body"><a class="link-location" href="#">1600 Golf Road, Suite 1200
+                        <li>
+                          <div class="unit">
+                            <div class="unit-left"><span class="icon fa fa-location-arrow"></span></div>
+                            <div class="unit-body"><a class="link-location" href="#">1600 Golf Road, Suite 1200
                             <br>Rolling Meadows, Illinois 60008</a></div>
-                        </div>
+                          </div>
                       </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-12 col-lg-3 col-xl-4">
-                <div class="oh-desktop">
-                  <div class="wow slideInRight" data-wow-delay="0s">
-                    <h6 class="text-spacing-100 text-uppercase">Contact</h6>
-                    <ul class="footer-contacts d-inline-block d-sm-block">
-                    <li>
+                      <li>
                         <div class="unit">
                           <div class="unit-left"><span class="icon fa fa-phone"></span></div>
                           <div class="unit-body">
@@ -277,7 +287,6 @@
                           </div>
                         </div>
                       </li>
-
                       <li>
                         <div class="unit">
                           <div class="unit-left"><span class="icon fa fa-facebook"></span></div>
@@ -291,6 +300,36 @@
                         </div>
                       </li>
                     </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-12 col-lg-3 col-xl-4">
+                <div class="oh-desktop">
+                  <div class="wow slideInRight" data-wow-delay="0s">
+                    <h6 class="text-spacing-100 text-uppercase">Subscribers List</h6>
+
+                    <p>                      <strong>Get $100 off any tour you book with us.</strong>
+                      <br>Join our Subscriber list, receive our Monthly Newsletter, special discounts, travel updates and more...
+                      <br><a href="terms.html#newsletterpromo" style="font-size: 13px; color: white;">Terms & Conditions Apply</a>
+</p>
+                    <form class="max-w-sm mx-auto" action="serverside/joinlist.php" method="POST" id="newsletter_form">
+                      <br>
+                      <div class="form-group" style="display:none;">
+                        <input type="text" name="wtf" id="wtf">
+                        <input type="text" name="g-recaptcha-2" id="g-recaptcha-2">
+                      </div>
+                      <div class="mb-2">
+                        <label for="newsletter_firstname" class="block mb-2 text-sm font-medium text-gray-50 dark:text-white">First Name</label>
+                        <input type="text" id="newsletter_firstname" name="fullname_filled" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="First Name" required />
+                      </div>
+                      <div class="mb-2 mt-4">
+                        <label for="newsletter_email" class="block mb-2 text-sm font-medium text-gray-50 dark:text-white">Email</label>
+                        <input type="email" id="newsletter_email" name="joineremail" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-gray-500 focus:border-gray-500 block w-full p-2.5" placeholder="name@yourmail.com" required />
+                      </div>
+                      <div class="g-recaptcha" style="visibility: hidden;" data-sitekey="6LebVZcpAAAAAM6qn9xfl2oa3wxeXLdVroT5z3Yq" data-callback="onSubmit" data-size="invisible"></div>
+                      <button onclick="validateRecaptchaNewsletter()" type="submit" class="button button-black-outline button-ujarak">Join</button>
+                    </form>
+                    
                   </div>
                 </div>
               </div>
@@ -338,7 +377,7 @@
                 <p class="rights" style="color: white;"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>African Connections North America.</span>. All Rights Reserved.</p>
               </div>
               <div class="col-sm-6 col-md-4 text-md-right">
-                <p class="rights" style="color: white;"><a href="https://www.africanconnections.biz/archive/new/travel/_1terms.php" target="_blank">Terms & Conditions</a></p>
+                <p class="rights" style="color: white;"><a href="terms.html" target="_blank">Terms & Conditions</a></p>
               </div>
             </div>
           </div>
@@ -350,6 +389,40 @@
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script type="text/javascript">
+      var form_used = "0";
+      //localStorage.setItem("popupclosed", "no");
+    function onSubmit(token) {
+      if(form_used.trim() == "1"){
+          console.log("1 token : " + token);
+          console.log("form submitted Popup");
+          localStorage.setItem("popupclosed", "yes");
+          //sendForm("joinlist", "popupform", "")
+          $("#g-recaptcha-1").val(token);
+          $("#popupform").submit();
+      } else if(form_used.trim() == "2"){
+          console.log("2 token : " + token);
+          console.log("form submitted Footer");
+          document.getElementById("g-recaptcha-2").value = token;
+          //$("#g-recaptcha-2").val(token);
+          $("#newsletter_form").submit();
+          //sendForm("joinlist", "newsletter_form", "")
+
+      }
+    }
+    
+    function validateRecaptchaNewsletter() {
+        form_used = "2";
+        event.preventDefault();
+        if($('#newsletter_email').val().trim() != "" && $('#newsletter_firstname').val().trim() != ""){
+          var response = grecaptcha.execute();
+          console.log(response);
+        } else {
+              alert("Please complete the form");
+        }
+    }
+    </script>
+
     <div class="elfsight-app-56c0baaf-15bf-4139-ae0f-952721a02fab"></div>
 
   </body>

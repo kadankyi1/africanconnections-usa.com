@@ -1,5 +1,4 @@
 <?php
-//var_dump($_POST);
 if (
   $_SERVER["REQUEST_METHOD"] == "POST" 
   && isset($_POST["wtf"]) && empty($_POST["wtf"])
@@ -10,17 +9,24 @@ if (
   && isset($_POST["fullname_filled"]) && !empty($_POST["fullname_filled"])
   && isset($_POST["phone_filled"]) && !empty($_POST["phone_filled"])
   && isset($_POST["joineremail"]) && !empty($_POST["joineremail"])
-  && isset($_POST["g-recaptcha-response"]) && !empty($_POST["g-recaptcha-response"])){
+  && (
+    (isset($_POST["g-recaptcha-response"]) && !empty($_POST["g-recaptcha-response"])) || (isset($_POST["g-recaptcha-2"]) && !empty($_POST["g-recaptcha-2"]))
+    )
+  ){
   session_start();
-  $captchaResponse = $_POST["g-recaptcha-response"];
-  
+  if(!empty($_POST["g-recaptcha-response"])){
+    $captchaResponse = $_POST["g-recaptcha-response"];
+  } else {
+    $captchaResponse = $_POST["g-recaptcha-2"];
+  }
+  //var_dump($_POST);
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////
   $url = 'https://www.google.com/recaptcha/api/siteverify';
   $data = array(
-      'secret' => "6LfI2pwlAAAAAN-kpDhdv7MmEx01TeHXsrbfMky7",
+      'secret' => "6LebVZcpAAAAAP18rLI2ZTwQsCJuDoPECL2xka9w",
       'response' => $captchaResponse,
   );
 

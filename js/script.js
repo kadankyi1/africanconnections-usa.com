@@ -1450,13 +1450,17 @@ function sendForm(this_url, form_id, response_msg_holder_id) {
         success: function (response) {
 			console.log("response");
 			console.log(response);
-			$('#'+response_msg_holder_id).text('Message sent');
-			$('#'+response_msg_holder_id).show();
+			if(response_msg_holder_id.trim() != ""){
+				$('#'+response_msg_holder_id).text('Message sent');
+				$('#'+response_msg_holder_id).show();
+			} 
            // You will get response from your PHP page (what you echo or print)
         },
         error: function(jqXHR, textStatus, errorThrown) {
-			$('#'+response_msg_holder_id).text('Failed. Please reload page and try again');
-			$('#'+response_msg_holder_id).show();
+			if(response_msg_holder_id.trim() != ""){
+				$('#'+response_msg_holder_id).text('Failed. Please reload page and try again');
+				$('#'+response_msg_holder_id).show();
+			}
 			console.log("errorThrown");
            	console.log(errorThrown);
         }
