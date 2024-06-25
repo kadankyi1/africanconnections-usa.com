@@ -118,7 +118,7 @@ if(!empty($_GET["id"]) && intval($_GET["id"]) > 0){
       fbq('init', '705561148188440');
       fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=705561148188440&ev=PageView&noscript=1"/></noscript>
+    <noscript><img  alt="facebook image" height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=705561148188440&ev=PageView&noscript=1"/></noscript>
     <!-- End Meta Pixel Code -->
   </head>
   <body>
@@ -151,7 +151,7 @@ if(!empty($_GET["id"]) && intval($_GET["id"]) > 0){
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!-- RD Navbar Brand-->
                   <div class="rd-navbar-brand">
-                    <!--Brand--><a class="brand" href="index.html"><img src="images/aclogo.png" style="height: 55px; width: 144px;" alt=""/></a>
+                    <!--Brand--><a class="brand" href="index.html"><img src="images/aclogo.png" alt="African Connections Logo" style="height: 55px; width: 144px;"/></a>
                   </div>
                 </div>
                 <div class="rd-navbar-aside-right rd-navbar-collapse">
@@ -227,10 +227,10 @@ if(!empty($_GET["id"]) && intval($_GET["id"]) > 0){
                 <div class="col-lg-12">
                   <div class="blog-post">
                     <div class="blog-thumb">
-                      <img src="<?php echo $article_big_image; ?>" alt="">
+                      <img src="<?php echo $article_big_image; ?>" alt="Blog Article Banner">
                     </div>
                     <div class="down-content">
-                      <a><h4><?php echo $article_title; ?></h4></a>
+                      <a><h1 style="font-size: 35px;"><strong><?php echo $article_title; ?></strong></h1></a>
                       <ul class="post-info">
                         <li><a><?php echo $article_author; ?></a></li>
                         <li>
@@ -324,7 +324,7 @@ if(!empty($_GET["id"]) && intval($_GET["id"]) > 0){
                         <div class="unit">
                           <div class="unit-body">
                             <a class="d-flex justify-content-center" href="https://www.bbb.org/us/il/bartlett/profile/tour-operators/african-connections-north-america-inc-0654-1000098865" >
-                              <img class="center-block" src="img/general/bbb/bbb.png" />
+                              <img class="center-block" src="img/general/bbb/bbb.png" alt="BBB Seal" />
                             </a>
                           </div>
                         </div>

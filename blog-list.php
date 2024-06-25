@@ -94,7 +94,7 @@ if ($conn->connect_error) {
       fbq('init', '705561148188440');
       fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=705561148188440&ev=PageView&noscript=1"/></noscript>
+    <noscript><img alt="facebook image" height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=705561148188440&ev=PageView&noscript=1"/></noscript>
     <!-- End Meta Pixel Code -->
   </head>
   <body>
@@ -127,7 +127,7 @@ if ($conn->connect_error) {
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!-- RD Navbar Brand-->
                   <div class="rd-navbar-brand">
-                    <!--Brand--><a class="brand" href="index.html"><img src="images/aclogo.png" style="height: 55px; width: 144px;" alt=""/></a>
+                    <!--Brand--><a class="brand" href="index.html"><img src="images/aclogo.png" alt="African Connections Logo" style="height: 55px; width: 144px;"/></a>
                   </div>
                 </div>
                 <div class="rd-navbar-aside-right rd-navbar-collapse">
@@ -190,6 +190,7 @@ if ($conn->connect_error) {
       <!-- Hot tours-->
       
       <section class="blog-posts grid-system">
+          <h1 style="font-size: 35px; display:none"><strong>Articles By African Connections</strong></h1>
         <div class="container">
           <div class="row">
 
@@ -198,7 +199,7 @@ if ($conn->connect_error) {
                 <div class="blog-post" style="margin-top: 0px;">
                   <a href="blog-article.php?id=<?php echo $articles_array[$i][0];?>">
                     <div class="blog-thumb">
-                      <img src="<?php echo $articles_array[$i][3];?>" alt="">
+                      <img src="<?php echo $articles_array[$i][3];?>" alt="Blog Article Banner">
                     </div>
                   </a>
                   <div class="down-content">
@@ -242,7 +243,7 @@ if ($conn->connect_error) {
                         <div class="unit">
                           <div class="unit-body">
                             <a class="d-flex justify-content-center" href="https://www.bbb.org/us/il/bartlett/profile/tour-operators/african-connections-north-america-inc-0654-1000098865" >
-                              <img class="center-block" src="img/general/bbb/bbb.png" />
+                              <img class="center-block" src="img/general/bbb/bbb.png" alt="BBB Seal" />
                             </a>
                           </div>
                         </div>

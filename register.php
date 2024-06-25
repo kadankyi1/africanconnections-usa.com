@@ -68,7 +68,7 @@
       fbq('init', '705561148188440');
       fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=705561148188440&ev=PageView&noscript=1"/></noscript>
+    <noscript><img alt="facebook image" height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=705561148188440&ev=PageView&noscript=1"/></noscript>
     <!-- End Meta Pixel Code -->
   </head>
   <body>
@@ -101,7 +101,7 @@
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!-- RD Navbar Brand-->
                   <div class="rd-navbar-brand">
-                    <!--Brand--><a class="brand" href="index.html"><img src="images/aclogo.png" style="height: 55px; width: 144px;" alt=""/></a>
+                    <!--Brand--><a class="brand" href="index.html"><img alt="African Connnections Logo" src="images/aclogo.png" style="height: 55px; width: 144px;"/></a>
                   </div>
                 </div>
                 <div class="rd-navbar-aside-right rd-navbar-collapse">
@@ -174,7 +174,9 @@
           <?php if(isset($_GET["transactionId"]) && trim($_GET["transactionId"])){ ?>
             <h2 class="breadcrumbs-custom-title">THANK YOU!!!</h2>
           <?php } else { ?>
-            <h2 class="breadcrumbs-custom-title">JOIN US ON A TOUR</h2>
+            <h1 class="breadcrumbs-custom-title"><strong>JOIN US</strong></h1>
+            <br>
+            <h2><strong>ON A TOUR</strong></h2>
           <?php } ?>
   
             <ul class="breadcrumbs-custom-path">
@@ -213,23 +215,6 @@
                   </div>
                 </div>
             </div>
-
-            <!--
-            <div class="col-sm-12 col-md-12 col-lg-4 text-center wow fadeInUp" style="height: 100px;">
-              <img src="images/index-3-556x382.jpg" alt="" width="556" height="382"/>
-                <article class="box-icon-classic" style="height: fit-content;">
-                  <div class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
-                    <div class="unit-left">
-                      <div class="box-icon-classic-icon fl-bigmug-line-equalization3"></div>
-                    </div>
-                    <div class="unit-body">
-                      <h5 class="box-icon-classic-title"><a href="#">Personalized Matching</a></h5>
-                      <p class="box-icon-classic-text">Our unique matching system lets you find just the tour you want for your next holiday.</p>
-                    </div>
-                  </div>
-                </article>
-            </div>
-          -->
           </div>
         </div>
       </section>
@@ -250,7 +235,7 @@
                         <div class="unit">
                           <div class="unit-body">
                             <a class="d-flex justify-content-center" href="https://www.bbb.org/us/il/bartlett/profile/tour-operators/african-connections-north-america-inc-0654-1000098865" >
-                              <img class="center-block" src="img/general/bbb/bbb.png" />
+                              <img class="center-block" src="img/general/bbb/bbb.png" alt="BBB Seal"/>
                             </a>
                           </div>
                         </div>
