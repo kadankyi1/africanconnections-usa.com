@@ -60,15 +60,13 @@ if ($conn->connect_error) {
       })(window,document,'script','dataLayer','GTM-TKNXWNL');</script>
       <!-- End Google Tag Manager -->
 
-    <title>Blog</title>
+    <title>Blog | African Connections</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-    <meta name="description" content="African Connection Blog Articles">
+    <meta name="description" content="Blog Articles By African Connections About Ghana, African Traditions, Tours And More...">
     <meta name="keywords" content="African Connections Blog Article, African Connections, African Connections USA, Travel To Ghana, Ghana Tour, Experience Ghana">
-    
-    <meta name="keywords" content="Tours Ghana, Tour Operator Ghana, African Connections,African Connections USA, Travel To Ghana, Ghana Tour, Experience the wonder of Ghana, Prepare to be amazed in Ghana, Join African Festival Tour, Experience African culture, Join Black history month tour, Book now, experience Ghana, Best prices, great service, Affordable tour packages, Book now don't miss these tour, Small deposit saves your space, Trace your roots in Ghana, Let's customize a tour for you, Return to the motherland, Trace your African heritage, See wildlife in Ghana, Join one of our tours and experience the amazement of Ghana, Our tours allow you to experience a traditional African festival and the culture of Ghana, Return to the motherland and explore your African heritage, Explore Ghana's unique connections to African American history">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7CPoppins:400%7CTeko:300,400">
@@ -94,13 +92,13 @@ if ($conn->connect_error) {
       fbq('init', '705561148188440');
       fbq('track', 'PageView');
     </script>
-    <noscript><img alt="facebook image" height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=705561148188440&ev=PageView&noscript=1"/></noscript>
+    <noscript><img alt="facebook image" height="1" width="1" class="hidecontent" src="https://www.facebook.com/tr?id=705561148188440&ev=PageView&noscript=1"/></noscript>
     <!-- End Meta Pixel Code -->
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKNXWNL"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  height="0" width="0" class="hidecontentandvisibility"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <!--
@@ -127,7 +125,7 @@ if ($conn->connect_error) {
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!-- RD Navbar Brand-->
                   <div class="rd-navbar-brand">
-                    <!--Brand--><a class="brand" href="index.html"><img src="images/aclogo.png" alt="African Connections Logo" style="height: 55px; width: 144px;"/></a>
+                    <!--Brand--><a class="brand" href="index.html"><img src="images/aclogo.png" alt="African Connections Logo" class="aclogo"/></a>
                   </div>
                 </div>
                 <div class="rd-navbar-aside-right rd-navbar-collapse">
@@ -164,8 +162,12 @@ if ($conn->connect_error) {
                     </li>
                     <li class="rd-nav-item"><a class="rd-nav-link" href="tours.html">Tours</a>
                     </li>
+                    
                     <li class="rd-nav-item">
                       <a class="rd-nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="rd-nav-item">
+                      <a class="rd-nav-link" href="youth-program.html">Youth Program</a>
                     </li>
                     <li class="rd-nav-item">
                       <a class="rd-nav-link" href="reviews.html">Reviews</a>
@@ -190,13 +192,13 @@ if ($conn->connect_error) {
       <!-- Hot tours-->
       
       <section class="blog-posts grid-system">
-          <h1 style="font-size: 35px; display:none"><strong>Articles By African Connections</strong></h1>
+          <h1 class="fontsize35 hidecontent"><strong>Articles By African Connections</strong></h1>
         <div class="container">
           <div class="row">
 
             <?php for ($i=0; $i < count($articles_array); $i++) { ?>
               <div class="col-md-4 col-sm-12">
-                <div class="blog-post" style="margin-top: 0px;">
+                <div class="blog-post mt-0">
                   <a href="blog-article.php?id=<?php echo $articles_array[$i][0];?>">
                     <div class="blog-thumb">
                       <img src="<?php echo $articles_array[$i][3];?>" alt="Blog Article Banner">
@@ -206,7 +208,7 @@ if ($conn->connect_error) {
                     <a href="blog-article.php?id=<?php echo $articles_array[$i][0];?>">
                       <h4><?php echo $articles_array[$i][1];?></h4>
                       
-                      <p style="color: black;">
+                      <p class="texttoblack">
                         <?php echo $articles_array[$i][2];?>
                       </p>
                     </a>
@@ -286,10 +288,17 @@ if ($conn->connect_error) {
                           <div class="unit-body"><a class="link-aemail" target="_blank" href="https://facebook.com/AfricanConnectionsUSA">AfricanConnectionsUSA</a></div>
                         </div>
                       </li>
+                      
                       <li>
                         <div class="unit">
                           <div class="unit-left"><span class="icon fa fa-instagram"></span></div>
                           <div class="unit-body"><a class="link-aemail" target="_blank" href="https://instagram.com/African_connections">African_connections</a></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="unit">
+                          <div class="unit-left"><span class="icon fa fa-youtube"></span></div>
+                          <div class="unit-body"><a class="link-aemail" target="_blank" href="https://www.youtube.com/channel/UCdd88jhlqg-85Ox2AAWEmtA">@AfricanConnections</a></div>
                         </div>
                       </li>
                     </ul>
@@ -303,11 +312,11 @@ if ($conn->connect_error) {
 
                     <p>                      <strong>Get $100 off any tour you book with us.</strong>
                       <br>Join our Subscriber list, receive our Monthly Newsletter, special discounts, travel updates and more...
-                      <br><a href="terms.html#newsletterpromo" style="font-size: 13px; color: white;">Terms & Conditions Apply</a>
+                      <br><a href="terms.html#newsletterpromo" class="tandcstext">Terms & Conditions Apply</a>
 </p>
                     <form class="max-w-sm mx-auto" action="serverside/joinlist.php" method="POST" id="newsletter_form">
                       <br>
-                      <div class="form-group" style="display:none;">
+                      <div class="form-group hidecontent">
                         <input type="text" name="wtf" id="wtf">
                         <input type="text" name="g-recaptcha-2" id="g-recaptcha-2">
                       </div>
@@ -319,7 +328,7 @@ if ($conn->connect_error) {
                         <label for="newsletter_email" class="block mb-2 text-sm font-medium text-gray-50 dark:text-white">Email</label>
                         <input type="email" id="newsletter_email" name="joineremail" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-gray-500 focus:border-gray-500 block w-full p-2.5" placeholder="name@yourmail.com" required />
                       </div>
-                      <div class="g-recaptcha" style="visibility: hidden;" data-sitekey="6LebVZcpAAAAAM6qn9xfl2oa3wxeXLdVroT5z3Yq" data-callback="onSubmit" data-size="invisible"></div>
+                      <div class="g-recaptcha hidevisibility" data-sitekey="6LebVZcpAAAAAM6qn9xfl2oa3wxeXLdVroT5z3Yq" data-callback="onSubmit" data-size="invisible"></div>
                       <button id="submit_newsletter_signup" onclick="validateRecaptchaNewsletter()" type="submit" class="button button-black-outline button-ujarak">Join</button>
                     </form>
                     
@@ -367,10 +376,10 @@ if ($conn->connect_error) {
               </div>
               <div class="col-sm-6 col-md-4 order-sm-first">
                 <!-- Rights-->
-                <p class="rights" style="color: white;"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>African Connections North America.</span>. All Rights Reserved.</p>
+                <p class="rights texttowhite"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>African Connections North America.</span>. All Rights Reserved.</p>
               </div>
               <div class="col-sm-6 col-md-4 text-md-right">
-                <p class="rights" style="color: white;"><a href="terms.html" target="_blank">Terms & Conditions</a></p>
+                <p class="rights texttowhite"><a href="terms.html" target="_blank">Terms & Conditions</a></p>
               </div>
             </div>
           </div>

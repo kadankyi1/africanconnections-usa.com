@@ -68,13 +68,13 @@
       fbq('init', '705561148188440');
       fbq('track', 'PageView');
     </script>
-    <noscript><img alt="facebook image" height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=705561148188440&ev=PageView&noscript=1"/></noscript>
+    <noscript><img alt="facebook image" height="1" width="1" class="hidecontent" src="https://www.facebook.com/tr?id=705561148188440&ev=PageView&noscript=1"/></noscript>
     <!-- End Meta Pixel Code -->
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKNXWNL"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  height="0" width="0" class="hidecontentandvisibility"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <!--
@@ -101,7 +101,7 @@
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!-- RD Navbar Brand-->
                   <div class="rd-navbar-brand">
-                    <!--Brand--><a class="brand" href="index.html"><img alt="African Connnections Logo" src="images/aclogo.png" style="height: 55px; width: 144px;"/></a>
+                    <!--Brand--><a class="brand" href="index.html"><img alt="African Connnections Logo" src="images/aclogo.png" class="aclogo"/></a>
                   </div>
                 </div>
                 <div class="rd-navbar-aside-right rd-navbar-collapse">
@@ -144,8 +144,12 @@
                     </li>
                     <li class="rd-nav-item"><a class="rd-nav-link" href="tours.html">Tours</a>
                     </li>
+                    
                     <li class="rd-nav-item">
                       <a class="rd-nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="rd-nav-item">
+                      <a class="rd-nav-link" href="youth-program.html">Youth Program</a>
                     </li>
                     <li class="rd-nav-item">
                       <a class="rd-nav-link" href="reviews.html">Reviews</a>
@@ -182,7 +186,7 @@
             <ul class="breadcrumbs-custom-path">
             </ul>
           </div>
-          <div class="box-position" style="background-image: url(img/about/bg.jpg);"></div>
+          <div class="box-position abtpagebanner"></div>
         </div>
       </section>
 
@@ -205,7 +209,7 @@
                   <div class="tab-content">
                     <div class="tab-pane fade show active" id="tabs-7-1">
                     <?php if(isset($_GET["transactionId"]) && trim($_GET["transactionId"])){ ?>
-                      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfxgFcolPRouU3Cau0EuBr9RFaYPKn8djGgKLZrb5f2U78kpg/viewform" style="border:none; width: 100%; height: 1000px;" title="Iframe Example"></iframe>
+                      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfxgFcolPRouU3Cau0EuBr9RFaYPKn8djGgKLZrb5f2U78kpg/viewform" class="registerform" title="Iframe Example"></iframe>
                     <?php } else { ?>
                       <strong>Please <a class="link-aemail" href="tours.html">click here</a> to view and register for our exciting tours.</strong>
                     <?php } ?>
@@ -278,10 +282,17 @@
                           <div class="unit-body"><a class="link-aemail" target="_blank" href="https://facebook.com/AfricanConnectionsUSA">AfricanConnectionsUSA</a></div>
                         </div>
                       </li>
+                      
                       <li>
                         <div class="unit">
                           <div class="unit-left"><span class="icon fa fa-instagram"></span></div>
                           <div class="unit-body"><a class="link-aemail" target="_blank" href="https://instagram.com/African_connections">African_connections</a></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="unit">
+                          <div class="unit-left"><span class="icon fa fa-youtube"></span></div>
+                          <div class="unit-body"><a class="link-aemail" target="_blank" href="https://www.youtube.com/channel/UCdd88jhlqg-85Ox2AAWEmtA">@AfricanConnections</a></div>
                         </div>
                       </li>
                     </ul>
@@ -295,11 +306,11 @@
 
                     <p>                      <strong>Get $100 off any tour you book with us.</strong>
                       <br>Join our Subscriber list, receive our Monthly Newsletter, special discounts, travel updates and more...
-                      <br><a href="terms.html#newsletterpromo" style="font-size: 13px; color: white;">Terms & Conditions Apply</a>
+                      <br><a href="terms.html#newsletterpromo" class="tandcstext">Terms & Conditions Apply</a>
 </p>
                     <form class="max-w-sm mx-auto" action="serverside/joinlist.php" method="POST" id="newsletter_form">
                       <br>
-                      <div class="form-group" style="display:none;">
+                      <div class="form-group hidecontent">
                         <input type="text" name="wtf" id="wtf">
                         <input type="text" name="g-recaptcha-2" id="g-recaptcha-2">
                       </div>
@@ -311,7 +322,7 @@
                         <label for="newsletter_email" class="block mb-2 text-sm font-medium text-gray-50 dark:text-white">Email</label>
                         <input type="email" id="newsletter_email" name="joineremail" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-gray-500 focus:border-gray-500 block w-full p-2.5" placeholder="name@yourmail.com" required />
                       </div>
-                      <div class="g-recaptcha" style="visibility: hidden;" data-sitekey="6LebVZcpAAAAAM6qn9xfl2oa3wxeXLdVroT5z3Yq" data-callback="onSubmit" data-size="invisible"></div>
+                      <div class="g-recaptcha hidevisibility" data-sitekey="6LebVZcpAAAAAM6qn9xfl2oa3wxeXLdVroT5z3Yq" data-callback="onSubmit" data-size="invisible"></div>
                       <button onclick="validateRecaptchaNewsletter()" type="submit" class="button button-black-outline button-ujarak">Join</button>
                     </form>
                     
@@ -359,10 +370,10 @@
               </div>
               <div class="col-sm-6 col-md-4 order-sm-first">
                 <!-- Rights-->
-                <p class="rights" style="color: white;"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>African Connections North America.</span>. All Rights Reserved.</p>
+                <p class="rights texttowhite"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>African Connections North America.</span>. All Rights Reserved.</p>
               </div>
               <div class="col-sm-6 col-md-4 text-md-right">
-                <p class="rights" style="color: white;"><a href="terms.html" target="_blank">Terms & Conditions</a></p>
+                <p class="rights texttowhite"><a href="terms.html" target="_blank">Terms & Conditions</a></p>
               </div>
             </div>
           </div>

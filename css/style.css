@@ -13991,7 +13991,7 @@ html.tablet .ui-to-top {
 	display: flex;
 	left: 0;
 	width: calc(100% + 1px);
-	max-width: 1170px;
+	max-width: 1300px;
 	padding: 40px 0;
 	background: #ffffff;
 }
@@ -15931,7 +15931,7 @@ html.rd-navbar-fixed-linked .page {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	max-width: 1170px;
+	max-width: 1300px;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 0 30px;
@@ -16541,7 +16541,7 @@ html.rd-navbar-fixed-linked .page {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	max-width: 1170px;
+	max-width: 1300px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -17040,7 +17040,7 @@ html.rd-navbar-fixed-linked .page {
 
 .rd-navbar-corporate.rd-navbar-static .rd-navbar-aside,
 .rd-navbar-corporate.rd-navbar-static .rd-navbar-main {
-	max-width: 1170px;
+	max-width: 1300px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -18298,8 +18298,14 @@ html.rd-navbar-fixed-linked .page {
 	}
 }
 
+/*
 .swiper-slider-corporate {
 	min-height: calc(100vh - 56px);
+}
+*/
+
+.swiper-slider-corporate {
+	
 }
 
 .swiper-slider-corporate.swiper-container-horizontal .swiper-pagination .swiper-pagination-bullet {
@@ -25053,10 +25059,237 @@ body {
 /***********************************************************************************/
 /***********************************************************************************/
 
+.aclogo{
+	height: 55px; 
+	width: 144px;
+}
+
+/** SOME OF THESE PAGE BANNERS ARE USED ON MULTIPLE PAGES. BE CAREFUL WHEN CHANGING THEM **/
+.abtpagebanner { 
+	background-image: url(../img/about/bg.jpg);
+}
+
+.sankofapagebanner { 
+	background-image: url(../img/youth-program/sankofa-banner-2.jpg);
+}
+
+.bhmpagebanner {
+	background-image: url(../img/bhm/bhm.png);
+}
+
+.egyptpagebanner {
+	background-image: url(../img/egypt/bg2.jpg);
+}
+
+.emailthankyoupagebanner {
+	background-image: url(../img/emailsignup-thankyou/banner.jpg);
+}
+
+.juneteenthpagebanner {
+	background-image: url(../img/juneteenth/banner.jpg);
+}
+
+.panafestpagebanner {
+	background-image: url(../img/panafest/banner.jpg);
+}
+
+.ghanatogobeninpagebanner {
+	background-image: url(../img/ghana_togo_benin/3sliderbeninn.jpg);
+}
+
+.ghanahomepagebanner {
+	background-image: url(../img/ghana-home/bg.jpg);
+}
+
+.senegalpagebanner {
+	background-image: url(../img/senegal/bg.jpg);
+}
+
+.travelinsurancepagebanner {
+	background-image: url(../img/travelinsurace/travelinsuracebanner.jpg);
+}
+
+.imagegalleryholder {
+	width: 100%; 
+	margin-right: 0px; 
+	margin-left: 0px; 
+	padding-left: 0px; 
+	padding-right: 0px;
+}
+
+.quickqinquiryform{
+	border-color: gray; 
+	border: 1px solid #d7dce3; 
+	padding: 0px; 
+	max-height: 750px;
+}
+
+.quickqinquiryformhead {
+	background-color: #cc6600; 
+	border-color: #cc6600;
+}
+
+.avatarheight {
+	height: 50px;
+}
+
+.howcanwehelptext {
+	width: 100%; 
+	font-size: 15px; 
+	font-weight: 500; 
+	margin-left: 10px;
+}
+
+.messagesenttext {
+	width: 100%; 
+	text-align: center; 
+	display: none;
+}
+
+.tandcstext {
+	font-size: 13px; 
+	color: white;
+}
+
+.height250px {
+	height: 250px;
+}
+
+.height500px {
+	height: 250px;
+}
+
+.registerform {
+	border:none; 
+	width: 100%; 
+	height: 1000px;
+}
+/***********************************************************************************/
+/***********************************************************************************/
+/***********************************************************************************/
+/***********************************************************************************/
+
+.width100percent {
+	width: 100%;
+}
+
+.minwidth100percent {
+	min-width: 100%;
+}
+
+.fontsize13 {
+	font-size: 13px; 
+}
+
+.fontsize14 {
+	font-size: 14px; 
+}
+
+.fontsize20 {
+	font-size: 20px; 
+}
+
+.fontsize35 {
+	font-size: 35px;
+}
+
+.fontsize2em{
+	font-size: 2em;
+}
+
+.texttoblack {
+	color: black;
+}
+
+.texttogray {
+	color: gray;
+}
+
+
+.texttowhite {
+	color: white;
+}
+
+.texttogreen {
+	color: #01b3a7
+}
+
+.textaligncenter {
+	text-align: center;
+}
+
+.textbolder {
+	font: bolder;
+}
+
+.textalignleft {
+	text-align: left;
+}
+
+.texttored {
+	color: red
+}
+
+.texttoleft {
+	float: left;
+}
+
+.textfloatright {
+	float: right;
+}
+
+.textstrikethrough {
+	text-decoration: line-through;
+}
+
+.maginallsides0px {
+	margin: 0px;
+}
+
+.paddingallsides10px {
+	padding: 10px;
+}
+
+.showcursor {
+	cursor: pointer;
+}
+
+.hidecontent {
+	display: none;
+}
+
+.hidevisibility {
+	visibility: hidden
+}
+
+.hidecontentandvisibility {
+	display: none;
+	visibility:hidden
+}
+
+.breakword {
+	word-wrap: break-word; 
+}
+
+.videomargin {
+	margin-top: 50px;
+}
+
+.ytvideo {
+	height: 300px; 
+	width: 100%;
+	margin-top: 50px;
+}
+
+/***********************************************************************************/
+/***********************************************************************************/
+/***********************************************************************************/
+/***********************************************************************************/
+
 
 /* Default Design */
 .gfg-div {
-	background-image: url("../img/returntomotherland/dollar_500_promo.png"); /* The image used */
+	background-image: url("../img/returntomotherland/returntomotherland2.jpg"); /* The image used */
 	background-color: whitesmoke; /* Used if the image is unavailable */
 	height: 500px; /* You must set a specified height */
 	background-position: center; /* Center the image */
@@ -25068,7 +25301,7 @@ body {
 /* For Desktop View */
 @media screen and (min-width: 1024px) {
 	.gfg-div {
-		background-image: url("../img/returntomotherland/dollar_500_promo.png"); /* The image used */
+		background-image: url("../img/returntomotherland/returntomotherland2.jpg"); /* The image used */
 		background-color: whitesmoke; /* Used if the image is unavailable */
 		height: 500px; /* You must set a specified height */
 		background-position: center; /* Center the image */
@@ -25081,7 +25314,7 @@ body {
 @media screen and (min-device-width: 768px) 
 	and (max-device-width: 1024px) {
 	.gfg-div {
-		background-image: url("../img/returntomotherland/dollar_500_promo.png"); /* The image used */
+		background-image: url("../img/returntomotherland/returntomotherland2.jpg"); /* The image used */
 		background-color: whitesmoke; /* Used if the image is unavailable */
 		height: 500px; /* You must set a specified height */
 		background-position: center; /* Center the image */
@@ -25094,7 +25327,7 @@ body {
 @media screen and (max-device-width: 480px) 
 	and (orientation: portrait) {
 	.gfg-div {
-		background-image: url("../img/returntomotherland/dollar_500_promo_portrait.png"); /* The image used */
+		background-image: url("../img/returntomotherland/returntomotherland2.jpg"); /* The image used */
 		background-color: whitesmoke; /* Used if the image is unavailable */
 		height: 500px; /* You must set a specified height */
 		background-position: center; /* Center the image */
@@ -25107,7 +25340,7 @@ body {
 @media screen and (max-device-width: 640px) 
 	and (orientation: landscape) {
 	.gfg-div {
-		background-image: url("../img/returntomotherland/dollar_500_promo.png"); /* The image used */
+		background-image: url("../img/returntomotherland/returntomotherland2.jpg"); /* The image used */
 		background-color: whitesmoke; /* Used if the image is unavailable */
 		height: 500px; /* You must set a specified height */
 		background-position: center; /* Center the image */
