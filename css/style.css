@@ -25271,6 +25271,9 @@ body {
 	word-wrap: break-word; 
 }
 
+.startpaddingtop {
+	padding-top: 20px;
+}
 .videomargin {
 	margin-top: 50px;
 }
