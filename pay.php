@@ -243,7 +243,7 @@ if(!empty($_GET["transactionId"]) && !empty($_GET["s"])){
                     <div class="select-wrapper mr-0 ml-0 mt-0 mb-0 pr-0 pl-0 pt-0 pb-0">
                       <select class="select" id="ordTour" name="refcode" required>
                         <option value="">Choose Tour</option>
-                        <option value="Chi Town Ghana Adventure November 2025">Chi Town Ghana Adventure November 2025</option>
+                        <option value="Chi Town Travelers Ghana 2025">Chi Town Travelers Ghana 2025</option>
                         <option value="Egypt October 2025">Egypt October 2025</option>
                         <option value="Juneteenth Ghana Tour 2025">Juneteenth Ghana Tour 2025</option>
                         <option value="Bradford Ghana July 2025 Tour">Bradford Ghana July 2025 Tour</option>
@@ -259,6 +259,9 @@ if(!empty($_GET["transactionId"]) && !empty($_GET["s"])){
                         <option value="Kenya, Tanzania, Zanzibar August 2026">Kenya, Tanzania, Zanzibar August 2026</option>
                         <option value="Ethiopia And Ghana September 2026">Ethiopia And Ghana September 2026</option>
                         <option value="Senegal September 2026">Senegal September 2026</option>
+                        <option value="3-G (Ghana, Grand and Glorious) 2026">3-G (Ghana, Grand and Glorious) 2026</option>
+                        <option value="Bucket List Options Ghana 2026">Bucket List Options Ghana 2026</option>
+                        <option value="Pan-Cultural Adventures Ghana 2027">Pan-Cultural Adventures Ghana 2027</option>
                         <option value="Other">Other</option>
                       </select>
                     </div>
