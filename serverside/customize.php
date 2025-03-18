@@ -65,42 +65,28 @@ if (
     $password = "Sk1n!sK1n.~";
     $dbname = "african1_aclist";
 
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Check connection
-    if ($conn->connect_error) {
-      $conn->close();
-      //die("Connection failed: " . $conn->connect_error);
-
-      //**********************************************//
-      //**********************************************//
       $to = "info@africanconnections-usa.com";
-      //$to = "annodankyikwaku@gmail.com";
-      $subject = "ERROR 1 IN NEWSLETTER SIGNUP";
-      $message = "\n\n Someone tried to signup and had a database error. EMAIL: $joineremail";
-      $headers = "MIME-Version: 1.0" . "\r\n";
-      $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-      $headers .= "From: <$to>";
-      mail($to,$subject,$message,$headers);
-      //**********************************************//
-      //**********************************************//
-      
-      header("Location: ../email-list-thankyou.html");
-      die();
-    } else {
 
-      // prepare and bind
-      $stmt = $conn->prepare("INSERT INTO subscribers (subscriber_name, subscriber_email) VALUES (?, ?)");
-      $stmt->bind_param("ss", $fullname_filled, $joineremail);
-      $stmt->execute();
-
-        //**********************************************//
-        //**********************************************//
-        $to = "info@africanconnections-usa.com"; 
-        //$to = "annodankyikwaku@gmail.com";
-
-
+    try {
+      $con =  new PDO("mysql:host=$servername;dbname=$dbname;", $username, $password);
+      $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      $stmt = $con->prepare("SELECT * FROM subscribers WHERE subscriber_email = ?");
+      $stmt->bindParam(1, $joineremail);
+      $stmt->execute(array($joineremail));
+      $result = $stmt->fetchAll();
+      //echo count($result);
+      if(count($result) <= 0){
+        $stmt = $con->prepare("INSERT INTO subscribers (subscriber_name, subscriber_email) VALUES (?, ?)");
+        $stmt->bindParam(1, $fullname_filled, PDO::PARAM_STR);
+        $stmt->bindParam(2, $joineremail, PDO::PARAM_STR);
+        //$stmt->bindParam("ss", $fullname_filled, $joineremail);
+        if ($stmt->execute() === TRUE) {
+          //echo "<br><br>here 1";
+        }
+        $stmt = null;
+        $con = null;
+      }
+    
         $headers = "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
         $headers .= "From: <$to>";
@@ -113,11 +99,29 @@ if (
         $message = $message . "\n\n<br><br> INQUIRER PHONE : $phone_filled";
         $message = $message . "\n\n<br><br> INQUIRER EMAIL: $joineremail";
         mail($to,$subject,$message,$headers);
-  
-        die();
-        //**********************************************//
-        //**********************************************//
+    
+    
+    } catch(PDOException $e){
+      //echo $e->getMessage();
+      //**********************************************//
+      //**********************************************//
+        $headers = "MIME-Version: 1.0" . "\r\n";
+        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+        $headers .= "From: <$to>";
+        $subject = "DATABASE ERROR - CUSTOMIZE A TOUR INQUIRY";
+        $message = $message . "\n\n<br><br> TRAVEL DATE: $traveldate_filled";
+        $message = $message . "\n\n<br><br> TRAVEL DURATION: $travelduration_filled";
+        $message = $message . "\n\n<br><br> TRAVEL GROUP SIZE: $travelersnumber_filled";
+        $message = $message . "\n\n<br><br> TRAVEL INTEREST: $interests_filled";
+        $message = $message . "\n\n<br><br> INQUIRER NAME : $fullname_filled";
+        $message = $message . "\n\n<br><br> INQUIRER PHONE : $phone_filled";
+        $message = $message . "\n\n<br><br> INQUIRER EMAIL: $joineremail";
+        mail($to,$subject,$message,$headers);
+      //**********************************************//
+      //**********************************************//
+      die();
     }
+
   }
 
 }

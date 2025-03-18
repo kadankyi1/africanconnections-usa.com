@@ -1,8 +1,4 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 // VARIABLES
 $other_articles_array = array();
 
@@ -86,14 +82,18 @@ if(!empty($_GET["id"]) && intval($_GET["id"]) > 0){
       })(window,document,'script','dataLayer','GTM-TKNXWNL');</script>
       <!-- End Google Tag Manager -->
 
-    <title>Blog Article | African Connections</title>
+    <title>Learn More | A Blog Article By African Connections USA</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-    <meta name="description" content="<?php echo $article_title; ?> | Blog Article By African Connections">
-    <meta name="keywords" content="<?php echo $article_title; ?>, African Connections Blog Article, African Connections, African Connections USA, Travel To Ghana, Ghana Tour, Experience Ghana">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <?php if(!empty($article_title)) { ?>
+      <meta name="description" content="<?php echo $article_title; ?> | Blog Article By African Connections">
+      <meta name="keywords" content="<?php echo $article_title; ?>, African Connections Blog Article, African Connections, African Connections USA, Travel To Ghana, Ghana Tour, Experience Ghana">
+      <link rel="canonical" href="https://africanconnections-usa.com/blog-article.php?id=<?php echo $article_id; ?>"/>
+    <?php } ?>
+
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7CPoppins:400%7CTeko:300,400">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
@@ -166,6 +166,11 @@ if(!empty($_GET["id"]) && intval($_GET["id"]) > 0){
                       </div>
                     </li>
                     -->
+                    <li>
+                      <div class="unit unit-spacing-xs">
+                        <div class="unit-body"><a class="link-phone" href="/referral-program.html">Referral Program</a></div>
+                      </div>
+                    </li>
                     <li>
                       <div class="unit unit-spacing-xs">
                         <div class="unit-left"><span class="icon fa fa-phone"></span></div>
@@ -355,14 +360,6 @@ if(!empty($_GET["id"]) && intval($_GET["id"]) > 0){
                           <div class="unit-left"><span class="icon fa fa-phone"></span></div>
                           <div class="unit-body">
                             <a class="link-phone" href="tel:+18479563319"> +1 (847) 956-3319</a>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="unit">
-                          <div class="unit-left"><span class="icon fa fa-envelope"></span></div>
-                          <div class="unit-body">
-                            <a class="link-aemail" href="mailto:info@africanconnections-usa.com?subject=Tour Enquiry&body=Hi,I would like to know more about....">info@africanconnections-usa.com</a>
                           </div>
                         </div>
                       </li>

@@ -1,7 +1,7 @@
 <?php 
 
 if(isset($_GET["transactionId"]) && isset($_GET["s"])){
-  $page_title = "Payment Received";
+  $page_title = "Thank You - African Connections";
 } else {
   $page_title = "What Our Customers Say";
 }
@@ -47,8 +47,9 @@ if(isset($_GET["transactionId"]) && isset($_GET["s"])){
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-    <meta name="keywords" content="Tours Ghana, Tour Operator Ghana, African Connections,African Connections USA, Travel To Ghana, Ghana Tour, Experience the wonder of Ghana, Prepare to be amazed in Ghana, Join African Festival Tour, Experience African culture, Join Black history month tour, Book now, experience Ghana, Best prices, great service, Affordable tour packages, Book now don't miss these tour, Small deposit saves your space, Trace your roots in Ghana, Let's customize a tour for you, Return to the motherland, Trace your African heritage, See wildlife in Ghana, Join one of our tours and experience the amazement of Ghana, Our tours allow you to experience a traditional African festival and the culture of Ghana, Return to the motherland and explore your African heritage, Explore Ghana's unique connections to African American history">
+    <meta name="keywords" content="">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="https://africanconnections-usa.com/payment-thankyou.php"/>
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7CPoppins:400%7CTeko:300,400">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
@@ -123,6 +124,11 @@ if(isset($_GET["transactionId"]) && isset($_GET["s"])){
                     -->
                     <li>
                       <div class="unit unit-spacing-xs">
+                        <div class="unit-body"><a class="link-phone" href="/referral-program.html">Referral Program</a></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="unit unit-spacing-xs">
                         <div class="unit-left"><span class="icon fa fa-phone"></span></div>
                         <div class="unit-body"><a class="link-phone" href="tel:+18479563319">+1 (847) 956-3319</a></div>
                       </div>
@@ -177,7 +183,7 @@ if(isset($_GET["transactionId"]) && isset($_GET["s"])){
       <section class="breadcrumbs-custom-inset">
         <div class="breadcrumbs-custom context-dark bg-overlay-60">
           <div class="container">
-            <h1 class="breadcrumbs-custom-title"><strong>PAYMENT RECEIVED</strong></h1>
+            <h1 class="breadcrumbs-custom-title"><strong></strong></h1>
             <ul class="breadcrumbs-custom-path">
             </ul>
           </div>
@@ -188,7 +194,7 @@ if(isset($_GET["transactionId"]) && isset($_GET["s"])){
       <section class="section section-sm bg-default">
         <div class="row row-30 justify-content-center mb-3">
             <h4 class="oh-desktop fontsize35 width100percent mb-0"><span class="d-inline-block wow slideInDown"><strong>Awesome.</strong></span></h4>
-            <p class="textaligncenter" style="font-size: 20px;">Your tour payment has been received and recorded. We look forward to hosting you in Africa.</p>
+            <p class="textaligncenter" style="font-size: 20px;">We look forward to hosting you in Africa.</p>
         </div>
         
         <div class="col-sm-6 col-md-12 wow fadeInRight">
@@ -246,14 +252,6 @@ if(isset($_GET["transactionId"]) && isset($_GET["s"])){
                           <div class="unit-left"><span class="icon fa fa-phone"></span></div>
                           <div class="unit-body">
                             <a class="link-phone" href="tel:+18479563319"> +1 (847) 956-3319</a>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="unit">
-                          <div class="unit-left"><span class="icon fa fa-envelope"></span></div>
-                          <div class="unit-body">
-                            <a class="link-aemail" href="mailto:info@africanconnections-usa.com?subject=Tour Enquiry&body=Hi,I would like to know more about....">info@africanconnections-usa.com</a>
                           </div>
                         </div>
                       </li>

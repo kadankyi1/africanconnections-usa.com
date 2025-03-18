@@ -25077,8 +25077,24 @@ body {
 	background-image: url(../img/bhm/bhm.png);
 }
 
+.moroccopagebanner {
+	background-image: url(../img/morocco/banner.jpg);
+}
+
 .egyptpagebanner {
 	background-image: url(../img/egypt/bg2.jpg);
+}
+
+.ethiopiaghanapagebanner {
+	background-image: url(../img/ethiopia_ghana/banner.jpg);
+}
+
+.kenyatanzaniazanzibarpagebanner {
+	background-image: url(../img/kenya_tanzania_zanzibar/banner.jpg);
+}
+
+.sapagebanner {
+	background-image: url(../img/south_africa/sa_banner.jpg);
 }
 
 .emailthankyoupagebanner {
@@ -25107,6 +25123,10 @@ body {
 
 .travelinsurancepagebanner {
 	background-image: url(../img/travelinsurace/travelinsuracebanner.jpg);
+}
+
+.referralbanner {
+	background-image: url(../img/referral/banner.jpg);
 }
 
 .imagegalleryholder {
@@ -25169,6 +25189,10 @@ body {
 /***********************************************************************************/
 /***********************************************************************************/
 
+.makeCursorPointer {
+	cursor: pointer;
+}
+
 .width100percent {
 	width: 100%;
 }
@@ -25226,6 +25250,11 @@ body {
 	text-align: left;
 }
 
+
+.textalignright {
+	text-align: right;
+}
+
 .texttored {
 	color: red
 }
@@ -25279,9 +25308,32 @@ body {
 }
 
 .ytvideo {
-	height: 300px; 
+	height: 400px; 
 	width: 100%;
 	margin-top: 50px;
+}
+
+.signaturePadDiv {
+	background-color: #f0edeb;
+	color: #3276bf;
+}
+
+.cancelSignatureDiv {
+	height: 50px;
+}
+
+.cancelSignature {
+	height: 50px;
+	width: 50px;
+	cursor: pointer;
+}
+
+.termsHolderRegistrationPage {
+	display: none;
+}
+
+.termsClickLink {
+	color: #01b3a7;
 }
 
 /***********************************************************************************/
@@ -25311,6 +25363,14 @@ body {
 		background-repeat: no-repeat; /* Do not repeat the image */
 		background-size: cover; /* Resize the background image to cover the entire container*/
 	}
+	.home-div {
+		background-image: url("../img/home/sliderghana.jpg"); /* The image used */
+		background-color: whitesmoke; /* Used if the image is unavailable */
+		height: 500px; /* You must set a specified height */
+		background-position: center; /* Center the image */
+		background-repeat: no-repeat; /* Do not repeat the image */
+		background-size: cover; /* Resize the background image to cover the entire container*/
+	}
 }
 
 /* For Tablet View */
@@ -25318,6 +25378,14 @@ body {
 	and (max-device-width: 1024px) {
 	.gfg-div {
 		background-image: url("../img/returntomotherland/returntomotherland2.jpg"); /* The image used */
+		background-color: whitesmoke; /* Used if the image is unavailable */
+		height: 500px; /* You must set a specified height */
+		background-position: center; /* Center the image */
+		background-repeat: no-repeat; /* Do not repeat the image */
+		background-size: cover; /* Resize the background image to cover the entire container*/
+	}
+	.home-div {
+		background-image: url("../img/home/sliderghana.jpg"); /* The image used */
 		background-color: whitesmoke; /* Used if the image is unavailable */
 		height: 500px; /* You must set a specified height */
 		background-position: center; /* Center the image */
@@ -25337,6 +25405,14 @@ body {
 		background-repeat: no-repeat; /* Do not repeat the image */
 		background-size: cover; /* Resize the background image to cover the entire container*/
 	}
+	.home-div {
+		background-image: url("../img/home/sliderghana.jpg"); /* The image used */
+		background-color: whitesmoke; /* Used if the image is unavailable */
+		height: 500px; /* You must set a specified height */
+		background-position: center; /* Center the image */
+		background-repeat: no-repeat; /* Do not repeat the image */
+		background-size: cover; /* Resize the background image to cover the entire container*/
+	}
 }
 
 /* For Mobile Landscape View */
@@ -25349,5 +25425,13 @@ body {
 		background-position: center; /* Center the image */
 		background-repeat: no-repeat; /* Do not repeat the image */
 		background-size: cover; /* Resize the background image to cover the entire container*/	
+	}
+	.home-div {
+		background-image: url("../img/home/sliderghana.jpg"); /* The image used */
+		background-color: whitesmoke; /* Used if the image is unavailable */
+		height: 500px; /* You must set a specified height */
+		background-position: center; /* Center the image */
+		background-repeat: no-repeat; /* Do not repeat the image */
+		background-size: cover; /* Resize the background image to cover the entire container*/
 	}
 }

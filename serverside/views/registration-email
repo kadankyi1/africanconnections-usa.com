@@ -1,0 +1,948 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="supported-color-schemes" content="light dark" />
+    <title></title>
+    <style type="text/css" rel="stylesheet" media="all">
+        @import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&display=swap");
+
+        body {
+            width: 100% !important;
+            height: 100%;
+            margin: 0;
+            -webkit-text-size-adjust: none;
+            background-color: white;
+        }
+
+        a {
+            color: #3869D4;
+        }
+
+        a img {
+            border: none;
+        }
+
+        td {
+            word-break: break-word;
+        }
+
+        .preheader {
+            display: none !important;
+            visibility: hidden;
+            mso-hide: all;
+            font-size: 1px;
+            line-height: 1px;
+            max-height: 0;
+            max-width: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+
+        body,
+        td,
+        th {
+            font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+        }
+
+        h1 {
+            margin-top: 0;
+            color: #333333;
+            font-size: 54px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #333333;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        h3 {
+            margin-top: 0;
+            color: #333333;
+            font-size: 26px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        td,
+        th {
+            font-size: 30px;
+        }
+
+        p,
+        ul,
+        ol,
+        blockquote {
+            margin: .4em 0 1.1875em;
+            font-size: 30px;
+            line-height: 1.625;
+        }
+
+        p.sub {
+            font-size: 24px;
+        }
+
+        .align-right {
+            text-align: right;
+        }
+
+        .align-left {
+            text-align: left;
+        }
+
+        .align-center {
+            text-align: center;
+        }
+
+        .u-margin-bottom-none {
+            margin-bottom: 0;
+        }
+
+        .button {
+            background-color: #3869D4;
+            border-top: 10px solid #3869D4;
+            border-right: 18px solid #3869D4;
+            border-bottom: 10px solid #3869D4;
+            border-left: 18px solid #3869D4;
+            display: inline-block;
+            color: #FFF;
+            text-decoration: none;
+            border-radius: 3px;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
+            -webkit-text-size-adjust: none;
+            box-sizing: border-box;
+        }
+
+        .button--green {
+            background-color: #22BC66;
+            border-top: 10px solid #22BC66;
+            border-right: 18px solid #22BC66;
+            border-bottom: 10px solid #22BC66;
+            border-left: 18px solid #22BC66;
+        }
+
+        .button--red {
+            background-color: #FF6136;
+            border-top: 10px solid #FF6136;
+            border-right: 18px solid #FF6136;
+            border-bottom: 10px solid #FF6136;
+            border-left: 18px solid #FF6136;
+        }
+
+        @media only screen and (max-width: 500px) {
+            .button {
+                width: 100% !important;
+                text-align: center !important;
+            }
+        }
+
+        .attributes {
+            margin: 0 0 21px;
+        }
+
+        .attributes_content {
+            background-color: #F4F4F7;
+            padding: 16px;
+        }
+
+        .attributes_item {
+            padding: 0;
+        }
+
+        .related {
+            width: 100%;
+            margin: 0;
+            padding: 25px 0 0 0;
+            -premailer-width: 100%;
+            -premailer-cellpadding: 0;
+            -premailer-cellspacing: 0;
+        }
+
+        .related_item {
+            padding: 10px 0;
+            color: #CBCCCF;
+            font-size: 28px;
+            line-height: 18px;
+        }
+
+        .related_item-title {
+            display: block;
+            margin: .5em 0 0;
+        }
+
+        .related_item-thumb {
+            display: block;
+            padding-bottom: 10px;
+        }
+
+        .related_heading {
+            border-top: 1px solid #CBCCCF;
+            text-align: center;
+            padding: 25px 0 10px;
+        }
+
+        .discount {
+            width: 100%;
+            margin: 0;
+            padding: 24px;
+            -premailer-width: 100%;
+            -premailer-cellpadding: 0;
+            -premailer-cellspacing: 0;
+            background-color: #F4F4F7;
+            border: 2px dashed #CBCCCF;
+        }
+
+        .discount_heading {
+            text-align: center;
+        }
+
+        .discount_body {
+            text-align: center;
+            font-size: 28px;
+        }
+
+        .social {
+            width: auto;
+        }
+
+        .social td {
+            padding: 0;
+            width: auto;
+        }
+
+        .social_icon {
+            height: 20px;
+            margin: 0 8px 10px 8px;
+            padding: 0;
+        }
+
+        .purchase {
+            width: 100%;
+            margin: 0;
+            padding: 35px 0;
+            -premailer-width: 100%;
+            -premailer-cellpadding: 0;
+            -premailer-cellspacing: 0;
+        }
+
+        .purchase_content {
+            width: 100%;
+            margin: 0;
+            padding: 25px 0 0 0;
+            -premailer-width: 100%;
+            -premailer-cellpadding: 0;
+            -premailer-cellspacing: 0;
+        }
+
+        .purchase_item {
+            padding: 10px 0;
+            color: #51545E;
+            font-size: 28px;
+            line-height: 18px;
+        }
+
+        .purchase_heading {
+            padding-bottom: 8px;
+            border-bottom: 1px solid #EAEAEC;
+        }
+
+        .purchase_heading p {
+            margin: 0;
+            color: #85878E;
+            font-size: 22px;
+        }
+
+        .purchase_footer {
+            padding-top: 15px;
+            border-top: 1px solid #EAEAEC;
+        }
+
+        .purchase_total {
+            margin: 0;
+            text-align: right;
+            font-weight: bold;
+            color: #333333;
+        }
+
+        .purchase_total--label {
+            padding: 0 15px 0 0;
+        }
+
+        body {
+            background-color: #F2F4F6;
+            color: #51545E;
+        }
+
+        p {
+            color: #51545E;
+        }
+
+        .email-wrapper {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            -premailer-width: 100%;
+            -premailer-cellpadding: 0;
+            -premailer-cellspacing: 0;
+            background-color: #F2F4F6;
+        }
+
+        .email-content {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            -premailer-width: 100%;
+            -premailer-cellpadding: 0;
+            -premailer-cellspacing: 0;
+        }
+
+        .email-masthead {
+            padding: 25px 0;
+            text-align: center;
+        }
+
+        .email-masthead_logo {
+            width: 94px;
+        }
+
+        .email-masthead_name {
+            font-size: 30px;
+            font-weight: bold;
+            color: #A8AAAF;
+            text-decoration: none;
+            text-shadow: 0 1px 0 white;
+        }
+
+        .email-body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            -premailer-width: 100%;
+            -premailer-cellpadding: 0;
+            -premailer-cellspacing: 0;
+        }
+
+        .email-body_inner {
+            width: 570px;
+            margin: 0 auto;
+            padding: 0;
+            -premailer-width: 570px;
+            -premailer-cellpadding: 0;
+            -premailer-cellspacing: 0;
+            background-color: #FFFFFF;
+        }
+
+        .email-footer {
+            width: 570px;
+            margin: 0 auto;
+            padding: 0;
+            -premailer-width: 570px;
+            -premailer-cellpadding: 0;
+            -premailer-cellspacing: 0;
+            text-align: center;
+        }
+
+        .email-footer p {
+            color: #A8AAAF;
+        }
+
+        .body-action {
+            width: 100%;
+            margin: 30px auto;
+            padding: 0;
+            -premailer-width: 100%;
+            -premailer-cellpadding: 0;
+            -premailer-cellspacing: 0;
+            text-align: center;
+        }
+
+        .body-sub {
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid #EAEAEC;
+        }
+
+        .content-cell {
+            padding: 45px;
+        }
+
+        .email-main-title {
+            width: 100%;
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        @media only screen and (max-width: 600px) {
+
+            .email-body_inner,
+            .email-footer {
+                width: 100% !important;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+
+            body,
+            .email-body,
+            .email-body_inner,
+            .email-content,
+            .email-wrapper,
+            .email-masthead,
+            .email-footer {
+                background-color: #333333 !important;
+                color: #FFF !important;
+            }
+
+            p,
+            ul,
+            ol,
+            blockquote,
+            h1,
+            h2,
+            h3,
+            span,
+            .purchase_item {
+                color: #FFF !important;
+            }
+
+            .attributes_content,
+            .discount {
+                background-color: #222 !important;
+            }
+
+            .email-masthead_name {
+                text-shadow: none !important;
+            }
+        }
+
+        :root {
+            color-scheme: light dark;
+            supported-color-schemes: light dark;
+        }
+    </style>
+    <!--[if mso]>
+<style type="text/css">
+.f-fallback  {
+font-family: Arial, sans-serif;
+}
+</style>
+<![endif]-->
+</head>
+
+<body style="background-color: white; background: white;">
+    <table class="email-content" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+        <tr>
+            <td align="center">
+                <br><img src="https://africanconnections-usa.com/images/aclogo.png" height="75" width="210">
+                <h1 class="email-main-title">TOUR REGISTRATION FORM</h1>
+            </td>
+        </tr>
+        <td class="content-cell"  align="center">
+            <div class="f-fallback">
+                <p>
+                    Thank you for booking a tour with African Connections. We look forward to hosting you in
+                    Africa!
+                    <br><br>
+                    <strong>PREPARE TO BE AMAZED!</strong></p>
+
+                <table class="purchase" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+                    <tr>
+                        <td>
+                            <h3>First Name : </h3>
+                        </td>
+                        <td>
+                            <h3 class="align-right">{{firstname_filled}}</h3>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h3>Last Name :</h3>
+                        </td>
+                        <td>
+                            <h3 class="align-right">{{lastname_filled}}</h3>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h3>Middle Name :</h3>
+                        </td>
+                        <td>
+                            <h3 class="align-right">{{middlename_filled}}</h3>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h3>Date Of Birth (YYYY/MM/DD) : </h3>
+                        </td>
+                        <td>
+                            <h3 class="align-right">{{dob_filled}}</h3>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h3>Phone Number : </h3>
+                        </td>
+                        <td>
+                            <h3 class="align-right">{{phonenumber_filled}}</h3>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h3>Email Address : </h3>
+                        </td>
+                        <td>
+                            <h3 class="align-right">{{joineremail}}</h3>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h3>Address : </h3>
+                        </td>
+                        <td>
+                            <h3 class="align-right">{{address_filled}}</h3>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h3>Apt #/Second Address Line : </h3>
+                        </td>
+                        <td>
+                            <h3 class="align-right">{{address_secline_filled}}</h3>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h3>City : </h3>
+                        </td>
+                        <td>
+                            <h3 class="align-right">{{city_filled}}</h3>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h3>State : </h3>
+                        </td>
+                        <td>
+                            <h3 class="align-right">{{state_filled}}</h3>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h3>Zipcode : </h3>
+                        </td>
+                        <td>
+                            <h3 class="align-right">{{zipcode_filled}}</h3>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="purchase_heading" align="left">
+                            <br><br>
+                            <p class="f-fallback">Installment Payments</p>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="purchase_item">
+                            <span class="f-fallback">
+                                After paying your deposit, you can pay your balance in flexible installment payments.
+                                <br><br>
+                                Tell us how much you would like to pay and the payment interval you prefer.
+                            </span>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="purchase_item">
+                            <span class="f-fallback">
+                                {{payments_amt_and_interval_filled}}
+                            </span>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br>
+                            <h3>Day Of The Month : </h3>
+                        </td>
+                        <td>
+                            <h3 class="align-right">{{payments_day_filled}}</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>Payment Method : </h3>
+                        </td>
+                        <td>
+                            <h3 class="align-right">{{payment_method_filled}}</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="purchase_heading" align="left">
+                            <br><br>
+                            <p class="f-fallback">Medical Conditions</p>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="purchase_item">
+                            <span class="f-fallback">
+                                Do you have any questions, medical requirements or special needs?
+                            </span>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="purchase_item">
+                            <span class="f-fallback">
+                                {{medical_needs_filled}}
+                            </span>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="purchase_heading" align="left">
+                            <br><br>
+                            <p class="f-fallback">Roommate Requests</p>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="purchase_item">
+                            <span class="f-fallback">
+                                Our tour packages are priced based on double/twin occupancy in hotels. Do you want a room to yourself?
+                            </span>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="purchase_item">
+                            <span class="f-fallback">
+                                {{roommate_request_filled}}
+                            </span>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>Roommate Name : </h3>
+                        </td>
+                        <td>
+                            <h3 class="align-right">{{roommate_name_filled}}</h3>
+                        </td>
+                    </tr>
+                </table>
+
+                <table>
+                    <tr>
+                        <td align="center">
+                            <h1 class="email-main-title">GENERAL TERMS AND CONDITIONS</h1>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="left">
+                            <p class="textalignleft width100percent">
+                                Please read the General Terms and Conditions below and click the button below to submit
+                                your registration if you agree.
+                            </p>
+                            <br><br>
+                            <h4 class="textalignleft width100percent">Reservations and Payments</h4>
+                            <p class="textalignleft width100percent">
+                                A minimum deposit of $250 is required to reserve your space. You can then make regular
+                                installment payments. Due to ground cost increases, quoted tour prices are subject to
+                                change without notice. However, you will not be affected by any price increase after you
+                                have paid a minimum of $1000 towards your tour price. Final payment is due no later than
+                                90 days before your scheduled tour departure date.  We reserve the right to correct any
+                                pricing errors.
+                                <br><br>
+                                Quoted tour prices are per person and based on double or twin room occupancy. If you
+                                would like a single room, please indicate below. There will be a single room upgrade
+                                charge.
+                            </p>
+                            <br><br>
+                            <h4 class="textalignleft width100percent">Roommate Requests</h4>
+                            <p class="textalignleft width100percent">
+                                Our tour packages are priced based on double/twin occupancy in hotels. If we cannot
+                                match you within 60 days of the tour start date, you must upgrade to a single
+                                room and pay the single room surcharge.
+                            </p>
+                            <br><br>
+                            <h4 class="textalignleft width100percent">Cancellations and Refunds</h4>
+                            <p class="textalignleft width100percent">
+                                African Connections reserves the right to cancel any tour for any reason, including
+                                insufficient tour enrollment. African Connections is not responsible for expenses
+                                incurred
+                                by guests in preparing for a cancelled tour, including, but not limited to,
+                                non-refundable
+                                airline tickets, visa fees, immunizations, equipment, etc. We encourage you to contact
+                                our
+                                office before purchasing airline tickets to check the status of your tour.
+                                <br><br>
+                                If, for any reason, African Connections cancels or reschedules a tour for which you are
+                                registered, you will be entitled to full credit for all amounts you have paid without
+                                any
+                                deduction. This credit can be applied to any other African Connections tour. This credit
+                                must be utilized within 36 months of the cancellation date.
+                                <br><br>
+                                If you need to cancel your trip, email African Connections at
+                                reservations@africanconnections-usa.com. Certain fees will apply, calculated as of the
+                                date that African Connections receives written notification of your cancellation.
+                            </p>
+
+                            <br><br>
+                            <h4 class="textalignleft width100percent">Cancellation Fee Schedule</h4>
+                            <ul class="textalignleft width100percent">
+                                <li>
+                                    <strong>></strong> A $250 per person fee will apply to all cancellations, and that
+                                    is the only fee
+                                    applicable if the cancellation is more than 90 days prior to the scheduled
+                                    departure date.
+                                </li>
+                                <li>
+                                    <strong>></strong> 90-61 days prior to scheduled departure is 25% of the trip price
+                                </li>
+                                <li>
+                                    <strong>></strong> 60-46 days before scheduled departure is 50% of the trip price
+                                </li>
+                                <li>
+                                    <strong>></strong> 45-0 days before scheduled departure is 100% of the trip price
+                                </li>
+                            </ul>
+                            <br><br>
+                            <h4 class="textalignleft width100percent">Trip Cancellation Insurance</h4>
+                            <p class="textalignleft width100percent">
+                                We strongly recommend that all tour members buy travel insurance. This will provide an
+                                extra layer of security and peace of mind and ensure you are covered in the event of any
+                                unexpected circumstances.
+                                <br><br><strong>Our company offers travel insurance through Allianz Global, a
+                                    leader in the travel industry.</strong> Click on the link below for a no-obligation
+                                quote:
+                                <br><br>
+                                If, for any reason, African Connections cancels or reschedules a tour for which you are
+                                registered, you will be entitled to full credit for all amounts you have paid without
+                                any
+                                deduction. This credit can be applied to any other African Connections tour. This credit
+                                must be utilized within 36 months of the cancellation date.
+                                <br><br>
+                                If you need to cancel your trip, email African Connections at
+                                reservations@africanconnections-usa.com. Certain fees will apply, calculated as of the
+                                date that African Connections receives written notification of your cancellation.
+                            </p>
+
+                            <br><br>
+                            <h4 class="textalignleft width100percent">What Your Tour Package Includes:</h4>
+                            <p class="textalignleft width100percent">
+                                The land portion of your tour includes the following:
+                            </p>
+                            <ul class="textalignleft width100percent">
+                                <li>
+                                    <strong>></strong> Expert tour management and support services
+                                </li>
+                                <li>
+                                    <strong>></strong> Knowledgeable tour guides
+                                </li>
+                                <li>
+                                    <strong>></strong> Deluxe Hotel accommodations during your tour
+                                </li>
+                                <li>
+                                    <strong>></strong> Meals as outlined in your itinerary
+                                </li>
+                                <li>
+                                    <strong>></strong> Comfortable air-conditioned ground transportation
+                                </li>
+                                <li>
+                                    <strong>></strong> Airport transfers
+                                </li>
+                                <li>
+                                    <strong>></strong> Luggage transport
+                                </li>
+                                <li>
+                                    <strong>></strong> Entrance fees to all sites visited and to all events included in
+                                    your itinerary.
+                                </li>
+                            </ul>
+
+                            <br><br>
+                            <h4 class="textalignleft width100percent">Your Tour Package Does Not Include:</h4>
+                            <ul class="textalignleft width100percent">
+                                <li>
+                                    <strong>></strong> Airfare
+                                </li>
+                                <li>
+                                    <strong>></strong> Passport
+                                </li>
+                                <li>
+                                    <strong>></strong> Visa
+                                </li>
+                                <li>
+                                    <strong>></strong> Any required immunization
+                                </li>
+                                <li>
+                                    <strong>></strong> Travel Insurance (recommended)
+                                </li>
+                                <li>
+                                    <strong>></strong> Any meals not specified in the itinerary
+                                </li>
+                                <li>
+                                    <strong>></strong> Gratuities for tour guides, drivers, hotel porters and others
+                                </li>
+                                <li>
+                                    <strong>></strong> Any other item not specifically included in the itinerary.
+                                </li>
+                            </ul>
+
+                            <br><br>
+                            <h4 class="textalignleft width100percent">Photography and Videography</h4>
+                            <p class="textalignleft width100percent">
+                                During your tour, African Connections might take photographs or videos of activities. 
+                                African Connections might use these photographs and videos on its website or on other
+                                marketing tools.
+                            </p>
+                            <br><br>
+                            <h4 class="textalignleft width100percent">Passports and Visas</h4>
+                            <p class="textalignleft width100percent">
+                                A valid passport is required for all international travel. It must be valid for at least
+                                six
+                                months from the date of your arrival back in your home country. Check your passport
+                                expiration date to be sure it meets this requirement, and if necessary, apply for a
+                                renewal
+                                as soon as possible. You will not be allowed to board your departure flight if your
+                                passport expiration date is within six months of your scheduled return to your home
+                                country.
+                                <br><br>
+                                You must also have a valid visa to enter most countries. If you need assistance with
+                                such
+                                requirements, African Connections recommends that you contact a visa service provider.
+                                <br><br>
+                                It is your responsibility to comply with all passport, visa, and other travel
+                                requirements of any country visited.
+                                <br><br>
+                                African Connections assumes no responsibility for travelers who fail to comply with the
+                                passport, visa, or other travel requirements of any country visited.
+                            </p>
+                            <br><br>
+                            <h4 class="textalignleft width100percent">Immunization and Medical Information</h4>
+                            <p class="textalignleft width100percent">
+                                Some of our tour destinations have specified immunization requirements. African
+                                Connections will advise you of any requirements that are applicable.
+                                <br><br>
+                                African Connections assumes no responsibility for travelers who fail to comply with
+                                immunization requirements. Your doctor might also recommend other vaccinations which are
+                                not mandatory for travel to the host country.
+                                <br><br>
+                                If you have any further questions regarding the above or any other aspect of your tour,
+                                feel free to contact us at info@africanconnections-usa.com.
+                            </p>
+
+                            <br><br>
+                            <h4 class="textalignleft width100percent">Responsibility</h4>
+                            <p class="textalignleft width100percent">
+                                African Connections' responsibility is strictly limited. As an inbound tour operator,
+                                African
+                                Connections organizes, promotes, and sells tour packages consisting of certain travel
+                                services, including, but not limited to, ground transportation, sightseeing excursions,
+                                and
+                                hotel accommodations. African Connections purchases these services from various
+                                suppliers.
+                                <br><br>
+                                The suppliers providing travel services for African Connections’ tour programs are
+                                independent contractors, not agents or employees of African Connections. In addition,
+                                African Connections does not act as an agent for any party. African Connections is not
+                                responsible for the willful or negligent acts and/or omissions of such suppliers or of
+                                their
+                                respective employees, agents, servants, or representatives, including, without
+                                limitation,
+                                their failure to deliver or their partial or inadequate delivery of services.
+                                <br><br>
+                                By utilizing the travel services of the suppliers, you agree that African Connections
+                                shall not be liable for any accident, injury,
+                                property damage, or personal loss to you or to those
+                                traveling with you in connection with any accommodation, transportation, or another
+                                travel service, or resulting directly or indirectly
+                                from any occurrence or condition beyond African Connections’ control, including, but not
+                                limited to, acts of terrorism, war, defects in vehicles,
+                                breakdown in equipment, strikes, theft, or delay or changes in itinerary or schedules.
+                                All pricing is subject to change. Hotels and other accommodations are subject to change.
+                            </p>
+
+
+                            <br><br>
+                            <h4>$100 Credit For Subscribers' List Signup</h4>
+                            <p>
+                                You will receive a one-time credit of $100 if you join our Subscribers' list.
+                                This credit can be used on the first tour that you book with us. The credit must be used
+                                within 36 months of your sign up.
+                            </p>
+
+
+                            <br><br>
+                            <h4>Air Arrangements</h4>
+                            <p>
+                                In our commitment to keeping your tour costs low, while providing you the best tour
+                                experience, we take advantage of the promotional fares offered by several different
+                                airlines. This might result in our changing travel schedules and or changing listed
+                                airlines.
+                                However, African Connections will not change the airline or travel schedule within 30
+                                days of your scheduled travel date.
+                                <br><br>
+                                Despite African Connections’ commitment not to change the travel schedule within 30
+                                days of your scheduled travel date, international air schedules are subject to change at
+                                any time. If you are responsible for purchasing domestic tickets to connect with an
+                                international flight, you must be sure you arrange for a flight that will not compromise
+                                your on-time arrival for your international flight.
+                                <br><br>
+                                We recommend that you do not purchase domestic air tickets with high penalty charges
+                                for changes. We further recommend that you wait to purchase your domestic air ticket
+                                until 29 days before your departure.
+                                <br><br>
+                                We also recommend that you contact your airline at least 30 days prior to your
+                                departure to determine its pre-departure procedures and requirements for boarding
+                                and travel to your destination. You should further note that airline pre-departure
+                                procedures and requirement are subject to change at any time.
+                                <br><br>
+                                It is your responsibility to comply with all airline pre-departure procedures and
+                                requirements.
+                                <br><br>
+                                African Connections assumes no responsibility for travelers who fail to comply with
+                                airline pre-departure procedures and requirements.
+                                <br><br>
+                                <strong>By signing, I, {{firstname_filled}} {{middlename_filled}} {{lastname_filled}}, agree to the Terms and Conditions and submit my
+                                    registration</strong>
+                            </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="center">
+                            <br><img src="{{signature_base64}}" height="225" width="630">
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </td>
+    </table>
+</body>
+
+</html>

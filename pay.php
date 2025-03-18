@@ -39,7 +39,7 @@ if(!empty($_GET["transactionId"]) && !empty($_GET["s"])){
       })(window,document,'script','dataLayer','GTM-TKNXWNL');</script>
       <!-- End Google Tag Manager -->
 
-    <title>Make A Payment</title>
+    <title>Make A Payment For A Tour | African Connections USA</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,6 +47,8 @@ if(!empty($_GET["transactionId"]) && !empty($_GET["s"])){
     <meta name="description" content="Customize A Tour With African Connections. Send Customized Tour Details">
     <meta name="keywords" content="Customize A Tour With African Connections, African Connections USA, Tours Ghana,  Tours to Ghana, Tour Operator Ghana,Tour Operators Ghana, Ghana Tour Agency, Ghana Tour Agencies, Travel To Ghana, Ghana Tour, Experience Ghana">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="https://africanconnections-usa.com/pay.php"/>
+
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7CPoppins:400%7CTeko:300,400">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -58,12 +60,6 @@ if(!empty($_GET["transactionId"]) && !empty($_GET["s"])){
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
     <!--src="https://secure.transactiongateway.com/token/collect.js"-->
-    <!--     
-    <script
-      src="https://secure.magicpaygateway.com/token/Collect.js" 
-      data-tokenization-key="jA26QR-fsSNCA-Ub4286-4ff5xN"
-     ></script>
-    -->
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
     <!-- Meta Pixel Code -->
     <script>
@@ -83,7 +79,7 @@ if(!empty($_GET["transactionId"]) && !empty($_GET["s"])){
 
     <script
     src="https://secure.magicpaygateway.com/token/Collect.js"
-    data-tokenization-key="jA26QR-fsSNCA-Ub4286-4ff5xN"
+    data-tokenization-key="cGdNy3-GStb47-VaVWTC-H8hE7t"
     data-variant="inline"
     data-field-ccnumber-placeholder = '0000 0000 0000 0000'
     data-field-ccexp-placeholder = '10 / 22'
@@ -150,6 +146,11 @@ if(!empty($_GET["transactionId"]) && !empty($_GET["s"])){
                       </div>
                     </li>
                     -->
+                    <li>
+                      <div class="unit unit-spacing-xs">
+                        <div class="unit-body"><a class="link-phone" href="/referral-program.html">Referral Program</a></div>
+                      </div>
+                    </li>
                     <li>
                       <div class="unit unit-spacing-xs">
                         <div class="unit-left"><span class="icon fa fa-phone"></span></div>
@@ -233,18 +234,40 @@ if(!empty($_GET["transactionId"]) && !empty($_GET["s"])){
                   <span class="discover"></span>
                 </div>
                 <?php echo $message; ?>          
-                <form  action="serverside/payment-process.php" method="post" class="validate">
+                <form  action="serverside/payment-process.php" id="payform" method="post" class="validate">
                   <div class="form-group textalignleft">
+                  <div class="form-group hidecontent">
+                    <input type="text" name="wtf" id="wtf">
+                  </div>
                     <label for="ordTour"><strong>Choose Tour</strong></label>
                     <div class="select-wrapper mr-0 ml-0 mt-0 mb-0 pr-0 pl-0 pt-0 pb-0">
                       <select class="select" id="ordTour" name="refcode" required>
                         <option value="">Choose Tour</option>
-                        <option value="Grafton-Johnson Ghana Tour">Grafton-Johnson Ghana Tour</option>
+                        <option value="Chi Town Ghana Adventure November 2025">Chi Town Ghana Adventure November 2025</option>
                         <option value="Egypt October 2025">Egypt October 2025</option>
-                        <option value="PANAFEST 2025">PANAFEST 2025</option>
-                        <option value="Black History Month February 2025">Black History Month February 2025</option>
-                        <option value="Juneteenth Ghana 2025">Juneteenth Ghana 2025</option>
+                        <option value="Juneteenth Ghana Tour 2025">Juneteenth Ghana Tour 2025</option>
+                        <option value="Bradford Ghana July 2025 Tour">Bradford Ghana July 2025 Tour</option>
+                        <option value="Ghana Festival Tour September 2025">Ghana Festival Tour September 2025</option>
+                        <option value="PANAFEST Ghana July 2025">PANAFEST Ghana July 2025</option>
+                        <option value="November 2025 Ghana">November 2025 Ghana</option>
+                        <option value="February 2026 Ghana Black History Month">February 2026 Ghana Black History Month</option>
+                        <option value="Ghana, Togo, Benin September 2025">Ghana, Togo, Benin September 2025</option>
+                        <option value="Ghana, Togo, Benin January 2026">Ghana, Togo, Benin January 2026</option>
+                        <option value="The Cyres Family Tour">The Cyres Family Tour</option>
+                        <option value="South Africa March 2026">South Africa March 2026</option>
+                        <option value="Grafton Johnson Ghana July 2026 Tour">Grafton Johnson Ghana July 2026 Tour</option>
+                        <option value="Kenya, Tanzania, Zanzibar August 2026">Kenya, Tanzania, Zanzibar August 2026</option>
+                        <option value="Ethiopia And Ghana September 2026">Ethiopia And Ghana September 2026</option>
+                        <option value="Senegal September 2026">Senegal September 2026</option>
                         <option value="Other">Other</option>
+                      </select>
+                    </div>
+                    <br>
+                    <label for="regform"><strong>Have You Completed Your Tour Registration Form</strong></label>
+                    <div class="select-wrapper mr-0 ml-0 mt-0 mb-0 pr-0 pl-0 pt-0 pb-0">
+                      <select class="select" id="regform" name="regform" required>
+                      <option value="Yes">Yes</option>
+                        <option value="No">No</option>
                       </select>
                     </div>
                   </div>
@@ -287,9 +310,12 @@ if(!empty($_GET["transactionId"]) && !empty($_GET["s"])){
                     </div>
                   </div>
                   
-                  <div class="form-group">
-                    <button class="btn btn-primary btn-lg btn-block"  id="payButton">Pay</button>
+                  <div class="g-recaptcha" data-sitekey="6LebVZcpAAAAAM6qn9xfl2oa3wxeXLdVroT5z3Yq" data-callback="recaptchaCheckCompleted" data-expired-callback="recaptchaCheckExpired"></div>
+
+                  <div class="form-group hideconten mt-4" id="finalbtnholder">
+                  <button class="btn btn-primary btn-lg btn-block"  id="payButton" disabled>PAY</button>
                   </div>
+
                 </form>
               <div id="paymentTokenInfo"></div>
             </div>
@@ -351,14 +377,7 @@ if(!empty($_GET["transactionId"]) && !empty($_GET["s"])){
                   <div class="wow slideInRight" data-wow-delay="0s">
                     <h6 class="text-spacing-100 text-uppercase">Socials</h6>
                     <ul class="footer-contacts d-inline-block d-sm-block">
-                      <li>
-                        <div class="unit">
-                          <div class="unit-left"><span class="icon fa fa-envelope"></span></div>
-                          <div class="unit-body">
-                            <a class="link-aemail" href="mailto:info@africanconnections-usa.com?subject=Tour Enquiry&body=Hi,I would like to know more about....">info@africanconnections-usa.com</a>
-                          </div>
-                        </div>
-                      </li>
+                      
                       <li>
                         <div class="unit">
                           <div class="unit-left"><span class="icon fa fa-facebook"></span></div>
@@ -443,64 +462,20 @@ if(!empty($_GET["transactionId"]) && !empty($_GET["s"])){
   </body>
 
   <script>
+    function recaptchaCheckCompleted() { 
+      const recaptcha_box_checked = (grecaptcha.getResponse()) ? true : false;
 
-    var form_used = "0";
-    function onSubmit(token) {
-      if(form_used.trim() == "1"){
-          console.log("1 token : " + token);
-          $("#g-recaptcha-1").val(token);
-          sendForm('customize', 'inquiry_form', 'response_msg_holder');
-      } else if(form_used.trim() == "2"){
-          console.log("2 token : " + token);
-          console.log("form submitted Footer");
-          document.getElementById("g-recaptcha-2").value = token;
-          //$("#g-recaptcha-2").val(token);
-          $("#newsletter_form").submit();
-          //sendForm("joinlist", "newsletter_form", "")
-
+      if (recaptcha_box_checked) { 
+        $("#payButton").attr('disabled', false);
+      } else {
+        alert("You must check the 'I am not a robot' box to proceed!");
+        $("#payButton").attr('disabled', true);
+        return false;
       }
     }
 
-    function validateRecaptchaCustomizeTourForm() {
-        form_used = "1";
-        if(
-            $('#traveldate_filled').val().trim() != "" 
-            && $('#travelduration_filled').val().trim() != "" 
-            && $('#travelersnumber_filled').val().trim() != "" 
-            && $('#interests_filled').val().trim() != "" 
-            && $('#fullname_filled').val().trim() != "" 
-            && $('#phone_filled').val().trim() != "" 
-            && $('#joineremail').val().trim() != "" 
-          ){
-          var response = grecaptcha.execute();
-          console.log(response);
-        } else {
-              alert("Please complete the form");
-        }
-    }
-    
-    function validateRecaptchaNewsletter() {
-        form_used = "2";
-        event.preventDefault();
-        if($('#newsletter_email').val().trim() != "" && $('#newsletter_firstname').val().trim() != ""){
-          var response = grecaptcha.execute();
-          console.log(response);
-        } else {
-              alert("Please complete the form");
-        }
-    }
-
-
-    function showFounder() {
-      $('#tabs-7-1').removeClass('show active')
-      //$('#tabs-7-2').removeClass('show active');
-      $('#tabs-7-3').removeClass('fade');
-      $('#tabs-7-1').addClass('fade');
-      //$('#tabs-7-2').addClass('fade');
-      $('#tabs-7-3').addClass('show active');
-      $('#menu-tabs-7-1').removeClass('active');
-      //$('#menu-tabs-7-2').removeClass('active');
-      $('#menu-tabs-7-3').addClass('active');
+    function recaptchaCheckExpired() {
+      $("#payButton").attr('disabled', true);
     }
   </script>
 </html>

@@ -60,7 +60,7 @@ if ($conn->connect_error) {
       })(window,document,'script','dataLayer','GTM-TKNXWNL');</script>
       <!-- End Google Tag Manager -->
 
-    <title>Blog | African Connections</title>
+    <title>Exciting Blog With Articles By African Connections</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -68,6 +68,8 @@ if ($conn->connect_error) {
     <meta name="description" content="Blog Articles By African Connections About Ghana, African Traditions, Tours And More...">
     <meta name="keywords" content="African Connections Blog Article, African Connections, African Connections USA, Travel To Ghana, Ghana Tour, Experience Ghana">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="https://africanconnections-usa.com/blog-list.php"/>
+
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7CPoppins:400%7CTeko:300,400">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
@@ -140,6 +142,11 @@ if ($conn->connect_error) {
                       </div>
                     </li>
                     -->
+                    <li>
+                      <div class="unit unit-spacing-xs">
+                        <div class="unit-body"><a class="link-phone" href="/referral-program.html">Referral Program</a></div>
+                      </div>
+                    </li>
                     <li>
                       <div class="unit unit-spacing-xs">
                         <div class="unit-left"><span class="icon fa fa-phone"></span></div>
@@ -272,14 +279,6 @@ if ($conn->connect_error) {
                           <div class="unit-left"><span class="icon fa fa-phone"></span></div>
                           <div class="unit-body">
                             <a class="link-phone" href="tel:+18479563319"> +1 (847) 956-3319</a>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="unit">
-                          <div class="unit-left"><span class="icon fa fa-envelope"></span></div>
-                          <div class="unit-body">
-                            <a class="link-aemail" href="mailto:info@africanconnections-usa.com?subject=Tour Enquiry&body=Hi,I would like to know more about....">info@africanconnections-usa.com</a>
                           </div>
                         </div>
                       </li>

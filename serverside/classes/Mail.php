@@ -3,6 +3,7 @@ class mailing {
 
     function setFromAddress(){
         return "info@africanconnections-usa.com";
+        //return "annodankyikwaku@gmail.com";
     }
 
     function sendMail($subject, $message){
@@ -19,7 +20,7 @@ class mailing {
         $headers .= "Cc: " . $this->setFromAddress() . "\r\n";
         $receipt_email = file_get_contents('views/payment-email');
 
-        $oldsvals = array("{{ purchase_date }}", "{{name}}", "{{receipt_id}}", "{{date}}", "{{tour_reference}}", "{{amount}}");
+        $oldsvals = array("{{purchase_date}}", "{{name}}", "{{receipt_id}}", "{{date}}", "{{tour_reference}}", "{{amount}}");
         $newvals   = array($payment_date, $payer_name, $order_id, $payment_date, $tour_reference, $payment_amt);
         
         $receipt_email = str_replace($oldsvals, $newvals, $receipt_email);        
