@@ -15,9 +15,9 @@ if(!empty($_GET["h"])){
 }
 if(!isset($partner)){
     $partner = "African Connecions";
-    $heading = "Save $400 On These Tours";
-    $subheading = 'We just made it easier to <strong>Return To The Motherland</strong>. Sign up for any of these tours and save $400.';
-    $tours = array(1, 5, 3);
+    $heading = "Save $500 On These Tours";
+    $subheading = 'We just made it easier to <strong>Return To The Motherland</strong>. Sign up for any of these tours and save $500.';
+    $tours = array(1, 5);
     //1, //Ghana, Togo, Benin Ouidah Voodoo Festival Tour 2026
     //2, //Black History Month, Return To The Motherland Tour 2026
     //3, //Celebrate Juneteenth, Return To The Motherland Tour
