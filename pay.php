@@ -254,6 +254,7 @@ if(!empty($_GET["transactionId"]) && !empty($_GET["s"])){
                         <option value="Ghana, Togo, Benin September 2025">Ghana, Togo, Benin September 2025</option>
                         <option value="Ghana, Togo, Benin January 2026">Ghana, Togo, Benin January 2026</option>
                         <option value="The Cyres Family Tour">The Cyres Family Tour</option>
+                        <option value="T&T's 60th Ghana Adventure">T&T's 60th Ghana Adventure</option>
                         <option value="South Africa March 2026">South Africa March 2026</option>
                         <option value="Grafton Johnson Ghana July 2026 Tour">Grafton Johnson Ghana July 2026 Tour</option>
                         <option value="Kenya, Tanzania, Zanzibar August 2026">Kenya, Tanzania, Zanzibar August 2026</option>

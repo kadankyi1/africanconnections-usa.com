@@ -17,7 +17,8 @@ if(!isset($partner)){
     $partner = "African Connecions";
     $heading = "Save $500 On These Tours";
     $subheading = 'We just made it easier to <strong>Return To The Motherland</strong>. Sign up for any of these tours and save $500.';
-    $tours = array(1, 5);
+    $tours = array(0, 5);
+    //0, //Ghana, Togo, Benin Ouidah Voodoo Festival Tour 2025
     //1, //Ghana, Togo, Benin Ouidah Voodoo Festival Tour 2026
     //2, //Black History Month, Return To The Motherland Tour 2026
     //3, //Celebrate Juneteenth, Return To The Motherland Tour
@@ -214,6 +215,35 @@ if(!isset($partner)){
               <?php echo $subheading; ?>
                </p>
             </div>
+
+            <?php if(in_array(0, $tours)){ ?>
+            <div class="col-sm-6 col-md-12 wow fadeInLeft">
+              <!-- Product Big-->
+              <article class="product-big">
+                <div class="unit flex-column flex-md-row align-items-md-stretch">
+                  <div class="unit-left"><a class="product-big-figure" href="#"><img src="img/tours/ghana_togo_benin.jpg" alt="Ghana Togo Benin Tour Banner" width="600" height="366"/></a></div>
+                  <div class="unit-body">
+                    <div class="product-big-body">
+                      <h5 class="product-big-title"><a href="brochures/promo_ghana_togo_benin_2025.pdf">Ghana, Togo, Benin Ouidah Voodoo Festival Tour</a></h5>
+                      <div class="group-sm group-middle justify-content-start">
+                        <div class="product-big-rating"><a class="product-big-reviews" href="brochures/promo_ghana_togo_benin_2025.pdf"><strong>September 24th – October 5th 2025 <br>11 Nights</strong></a></div>
+                      </div>
+                      <p class="product-big-text">
+                        Benin is considered by many to be the birthplace of voodoo. Every year, on the 10 th of January, the Ouidah region celebrates the Voodoo Festival, an important event dedicated to this religion. On this occasion, ceremonies, sacrifices, songs, dances, and large banquets are held; and faith, magic and the supernatural are revealed through complex rituals and spectacular performances. 
+                      </p>
+                      
+                      <a class="button button-black-outline button-ujarak" href="tel:+18479563319">Call For Details</a>
+
+                      <div class="product-big-price-wrap"><span class="product-big-price">$4,299</span></div>
+                      <a class="button button-secondary-outline button-pipaluk" href="brochures/promo_ghana_togo_benin_2025.pdf">Read More</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <? } ?>
+
+
 
             <?php if(in_array(1, $tours)){ ?>
             <div class="col-sm-6 col-md-12 wow fadeInLeft">
