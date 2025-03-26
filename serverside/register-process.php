@@ -124,8 +124,8 @@ if (
     $password = "Sk1n!sK1n.~";
     $dbname = "african1_aclist";
 
-    $to = "info@africanconnections-usa.com";
-    //$to = "annodankyikwaku@gmail.com";
+    //$to = "info@africanconnections-usa.com";
+    $to = "annodankyikwaku@gmail.com";
 
     //echo "<br> here 1";
     try {
@@ -159,9 +159,9 @@ if (
         $headers = "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
         $headers .= "From: <$to>";
-        $subject = "TOUR REGISTRATION COMPLETED";
+        $subject =  $firstname_filled . " " . $lastname_filled . " TOUR REGISTRATION COMPLETED";
         $message = "";
-        $message = $message . "\n\n<br><br> VIEW AND PRINT FORM FROM: https://africanconnections-usa.com/regform.php?fn=$joineremail";
+        $message = $message . "\n\n<br><br>" . $firstname_filled . " " . $lastname_filled . " has completed their tour registration form. View and print the form on this link: https://africanconnections-usa.com/regform.php?fn=$joineremail";
         mail($to,$subject,$message,$headers);
 
     
