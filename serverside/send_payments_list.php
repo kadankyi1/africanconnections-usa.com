@@ -13,7 +13,7 @@ $mail = new mailing;
 $oneMonthAgo = new \DateTime('1 week ago');
 $theFetchDate = $oneMonthAgo->format('Ymd');
 
-//echo $theFetchDate; exit;
+echo $theFetchDate; exit;
 
 try {
 

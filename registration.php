@@ -336,7 +336,7 @@
                 <br><br>
 
                 <p class="textalignleft width100percent">
-                  <strong>By signing, I agree to the <span class="termsClickLink"><a class="makeCursorPointer" onclick="showTerms()">Terms and Conditions</a></span> and submit my registration</strong>
+                  <strong>By submitting this form, I agree to the <span class="termsClickLink"><a class="makeCursorPointer" onclick="showTerms()">Terms and Conditions</a></span> and submit my registration</strong>
                 </p>
 
                 <div  class="textalignright width100percent cancelSignatureDiv">
