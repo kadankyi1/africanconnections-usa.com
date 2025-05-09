@@ -1,8 +1,4 @@
 <?php
-ini_set('display_errors', '1');
-ini_set('display_startup_errors', '1');
-error_reporting(E_ALL);
-
 $key = file_get_contents('../.env');
 include_once 'classes/Mail.php';
 include_once 'classes/Payment.php';
@@ -13,7 +9,7 @@ $mail = new mailing;
 $oneMonthAgo = new \DateTime('1 week ago');
 $theFetchDate = $oneMonthAgo->format('Ymd');
 
-echo $theFetchDate; exit;
+//echo $theFetchDate; exit;
 
 try {
 
@@ -37,7 +33,7 @@ try {
     $headers .= "From: <info@africanconnections-usa.com>";
     mail("annodankyikwaku@gmail.com","PAYMENT TRANSACTIONS FOR THE PAST WEEK",$payments_listing,$headers);
     //ashakeem@africanconnections-usa.com
-    echo "completed";
+    //echo "completed";
 } catch (Exception $e) {
 
     echo $e->getMessage();

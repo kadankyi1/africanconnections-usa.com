@@ -340,6 +340,19 @@ if(!empty($_GET["id"]) && intval($_GET["id"]) > 0){
                         </div>
                       </li>
                     </ul>
+                    <br><br><br>
+                    <h6 class="text-spacing-100 text-uppercase">USEFUL LINKS</h6>
+                    <ul class="footer-contacts d-inline-block d-sm-block">
+                      <li>
+                        <div class="unit">
+                          <div class="unit-body">
+                            <a class="d-flex justify-content-center" href="registration.php" >
+                              Tour Registration
+                            </a>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>

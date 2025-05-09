@@ -25435,3 +25435,23 @@ body {
 		background-size: cover; /* Resize the background image to cover the entire container*/
 	}
 }
+
+@viewport{
+    zoom: 1.0;
+    width: extend-to-zoom;
+}
+
+@-ms-viewport{
+    width: extend-to-zoom;
+    zoom: 1.0;
+}
+
+@font-face {
+    font-family: 'signatureFont'; /*a name to be used later*/
+    src: url('../fonts/Testimonia-3zp8X.ttf'); /*URL to font*/
+}
+
+.signatureHolder {
+    font-family: 'signatureFont';
+	font-size: 150px;
+}

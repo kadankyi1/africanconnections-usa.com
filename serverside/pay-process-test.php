@@ -88,7 +88,6 @@ if (
         $dbname = "african1_aclist";
     
         //$to = "info@africanconnections-usa.com";
-        $to = "annodankyikwaku@gmail.com";
     
         try {
             $con =  new PDO("mysql:host=$servername;dbname=$dbname;", $username, $password);

@@ -429,6 +429,16 @@
             color-scheme: light dark;
             supported-color-schemes: light dark;
         }
+
+        @font-face {
+            font-family: 'signatureFont'; /*a name to be used later*/
+            src: url('../../fonts/Testimonia-3zp8X.ttf'); /*URL to font*/
+        }
+        
+        .signatureHolder {
+            font-family: 'signatureFont';
+            font-size: 150px;
+        }
     </style>
     <!--[if mso]>
 <style type="text/css">
@@ -456,6 +466,14 @@ font-family: Arial, sans-serif;
                     <strong>PREPARE TO BE AMAZED!</strong></p>
 
                 <table class="purchase" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+                    <tr>
+                        <td>
+                            <h3>Tour Name : </h3>
+                        </td>
+                        <td>
+                            <h3 class="align-right">{{tourname_filled}}</h3>
+                        </td>
+                    </tr>
                     <tr>
                         <td>
                             <h3>First Name : </h3>
@@ -935,7 +953,7 @@ font-family: Arial, sans-serif;
 
                     <tr>
                         <td align="center">
-                            <br><img src="{{signature_base64}}" height="225" width="630">
+                            <br><p class="signatureHolder">{{firstname_filled}} {{lastname_filled}}</p>
                         </td>
                     </tr>
 

@@ -199,16 +199,45 @@
 
                 <br>
                 <div class="relative">
+                  <select required type="text" id="tourname_filled" name="tourname_filled" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer">
+                    <option value="">Choose Tour</option>
+                    <option value="Chi Town Travelers Ghana 2025">Chi Town Travelers Ghana 2025</option>
+                    <option value="Egypt October 2025">Egypt October 2025</option>
+                    <option value="Juneteenth Ghana Tour 2025">Juneteenth Ghana Tour 2025</option>
+                    <option value="Bradford Ghana July 2025 Tour">Bradford Ghana July 2025 Tour</option>
+                    <option value="Ghana Festival Tour September 2025">Ghana Festival Tour September 2025</option>
+                    <option value="PANAFEST Ghana July 2025">PANAFEST Ghana July 2025</option>
+                    <option value="November 2025 Ghana">November 2025 Ghana</option>
+                    <option value="February 2026 Ghana Black History Month">February 2026 Ghana Black History Month</option>
+                    <option value="Ghana, Togo, Benin September 2025">Ghana, Togo, Benin September 2025</option>
+                    <option value="Ghana, Togo, Benin January 2026">Ghana, Togo, Benin January 2026</option>
+                    <option value="The Cyres Family Tour">The Cyres Family Tour</option>
+                    <option value="South Africa March 2026">South Africa March 2026</option>
+                    <option value="Grafton Johnson Ghana July 2026 Tour">Grafton Johnson Ghana July 2026 Tour</option>
+                    <option value="Kenya, Tanzania, Zanzibar August 2026">Kenya, Tanzania, Zanzibar August 2026</option>
+                    <option value="Ethiopia And Ghana September 2026">Ethiopia And Ghana September 2026</option>
+                    <option value="Senegal September 2026">Senegal September 2026</option>
+                    <option value="3-G (Ghana, Grand and Glorious) 2026">3-G (Ghana, Grand and Glorious) 2026</option>
+                    <option value="Bucket List Options Ghana 2026">Bucket List Options Ghana 2026</option>
+                    <option value="Pan-Cultural Adventures Ghana 2027">Pan-Cultural Adventures Ghana 2027</option>
+                    <option value="Other">Other</option>
+                  </select>
+                  <label for="tourname_filled" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                    Choose Your Tour *
+                  </label>
+                </div>
+                <br>
+                <div class="relative">
                   <input type="text" id="firstname_filled" name="firstname_filled" required class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
                   <label for="firstname_filled" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
-                    First Name (As shown on Passport)
+                    First Name (As shown on Passport) *
                   </label>
                 </div>
                 <br>
                 <div class="relative">
                   <input type="text" id="lastname_filled" name="lastname_filled" required="required" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
                   <label for="lastname_filled" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
-                    Last Name (As shown on Passport)
+                    Last Name (As shown on Passport) *
                   </label>
                 </div>
                 <br>
@@ -220,30 +249,30 @@
                 </div>
                 <br>
                 <div class="relative">
-                  <input type="date" id="dob_filled" name="dob_filled" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                  <input required type="date" id="dob_filled" name="dob_filled" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
                   <label for="dob_filled" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
-                    Date Of Birth
+                    Date Of Birth *
                   </label>
                 </div>
                 <br>
                 <div class="relative">
-                  <input type="text" id="phonenumber_filled" name="phonenumber_filled" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                  <input required type="text" id="phonenumber_filled" name="phonenumber_filled" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
                   <label for="phonenumber_filled" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
-                    Phone Number
+                    Phone Number *
                   </label>
                 </div>
                 <br>
                 <div class="relative">
-                  <input type="email" id="joineremail" name="joineremail" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                  <input required type="email" id="joineremail" name="joineremail" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
                   <label for="joineremail" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
-                    Email
+                    Email *
                   </label>
                 </div>
                 <br>
                 <div class="relative">
-                  <input type="text" id="address_filled" name="address_filled" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                  <input required type="text" id="address_filled" name="address_filled" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
                   <label for="address_filled" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
-                    Address
+                    Address *
                   </label>
                 </div>
                 <br>
@@ -255,74 +284,87 @@
                 </div>
                 <br>
                 <div class="relative">
-                  <input type="text" id="city_filled" name="city_filled" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                  <input required type="text" id="city_filled" name="city_filled" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
                   <label for="city_filled" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
-                    City
+                    City *
                   </label>
                 </div>
                 <br>
                 <div class="relative">
-                  <input type="text" id="state_filled" maxlength="2" min="2" name="state_filled" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                  <input required type="text" id="state_filled" maxlength="2" min="2" name="state_filled" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
                   <label for="state_filled" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
-                    State
+                    State *
                   </label>
                 </div>
                 <br>
                 <div class="relative">
-                  <input type="text" id="zipcode_filled" name="zipcode_filled" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                  <input required type="text" id="zipcode_filled" name="zipcode_filled" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
                   <label for="zipcode_filled" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
-                    Zipcode
+                    Zipcode *
                   </label>
                 </div>
                 <br>
 
                 <h4 class="textalignleft width100percent">Installment Payments</h4>	
                 <div class="relative">
-                  <input type="text" id="payments_amt_and_interval_filled" name="payments_amt_and_interval_filled" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
-                  <label for="payments_amt_and_interval_filled" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
-                    How much you would like to pay and the payment interval you prefer. (Eg: $500 every month)
-                  </label>
-                </div>
-                <br>
-
-                <div class="relative">
-                  <input type="number" min="1" max="31" maxlength="2" id="payments_day_filled" name="payments_day_filled" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
-                  <label for="payments_day_filled" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
-                    What day of the month would you like to make your payment?
-                  </label>
-                </div>
-                <br>
-
-                <div class="relative">
-                  <select type="text" id="payment_method_filled" name="payment_method_filled" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer">
-                    <option value="">Choose Installment Payment Method?</option>
-                    <option value="Credit Card">Credit Card</option>
-                    <option value="Debit Card">Debit Card</option>
-                    <option value="ACH">ACH</option>
+                  <select required onChange="setInstallmentPayments(this)" type="text" id="payment_duration" name="payment_duration" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer">
+                    <option value="">Choose Payment Duration</option>
+                    <option value="One-Time Full Payment">One-Time Full Payment</option>
+                    <option value="Installment Payment">Installment Payment</option>
                   </select>
-                  <label for="payment_method_filled" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
-                    Will you pay by credit card, debit card or ACH?
+                  <label for="payment_duration" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                    Payment Duration *
                   </label>
                 </div>
                 <br>
-                <h4 class="textalignleft width100percent">Medical Conditions</h4>	
-                <div class="relative">
-                  <input type="text" id="medical_needs_filled" name="medical_needs_filled" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
-                  <label for="medical_needs_filled" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
-                    Do you have any questions, medical requirements or special needs?
-                  </label>
-                </div>
-                <br>
+                <span class="hidecontent" id="installment_holder">
+                  <div class="relative">
+                    <input type="text" id="payments_amt_and_interval_filled" name="payments_amt_and_interval_filled" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                    <label for="payments_amt_and_interval_filled" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                      How much you would like to pay and the payment interval you prefer. (Eg: $500 every month)
+                    </label>
+                  </div>
+                  <br>
+
+                  <div class="relative">
+                    <input type="number" min="1" max="31" maxlength="2" id="payments_day_filled" name="payments_day_filled" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                    <label for="payments_day_filled" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                      What day of the month would you like to make your payment?
+                    </label>
+                  </div>
+                  <br>
+
+                  <div class="relative">
+                    <select type="text" id="payment_method_filled" name="payment_method_filled" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer">
+                      <option value="">Choose Installment Payment Method?</option>
+                      <option value="Credit Card">Credit Card</option>
+                      <option value="Debit Card">Debit Card</option>
+                      <option value="ACH">ACH</option>
+                    </select>
+                    <label for="payment_method_filled" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                      Will you pay by credit card, debit card or ACH?
+                    </label>
+                  </div>
+                  <br>
+                  <h4 class="textalignleft width100percent">Medical Conditions</h4>	
+                  <div class="relative">
+                    <input type="text" id="medical_needs_filled" name="medical_needs_filled" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                    <label for="medical_needs_filled" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                      Do you have any questions, medical requirements or special needs?
+                    </label>
+                  </div>
+                  <br>
+                </span>
                 <h4 class="textalignleft width100percent">Roommate Requests</h4>	
 
                 <div class="relative">
                   <select type="text" id="roommate_request_filled" name="roommate_request_filled" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer">
                     <option value="">Do you want to have a room to yourself or a roommate?</option>
-                    <option value="I want a room to myself">I want a room to myself.</option>
+                    <option value="I want a room to myself and will pay the extra fee">I want a room to myself and will pay the extra fee.</option>
                     <option value="I want a roommate">I want a roommate</option>
                   </select>
                   <label for="roommate_request_filled" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
-                    Tour Packages are priced based on double/twin occupancy in hotels.
+                  Do you want to have a room to yourself or a roommate? *
                   </label>
                 </div>
                 <br><br>
@@ -336,14 +378,10 @@
                 <br><br>
 
                 <p class="textalignleft width100percent">
-                  <strong>By submitting this form, I agree to the <span class="termsClickLink"><a class="makeCursorPointer" onclick="showTerms()">Terms and Conditions</a></span> and submit my registration</strong>
+                  <strong>By submitting this form, I adopt the signature below, agree to the <span class="termsClickLink"><a class="makeCursorPointer" onclick="showTerms()">Terms and Conditions</a></span> and submit my registration</strong>
                 </p>
 
-                <div  class="textalignright width100percent cancelSignatureDiv">
-                  <img id="re_sign" class="cancelSignature" src="images/cancel.png" />
-                </div>
-                
-                <div id="signature" class="width100percent mr-0 ml-0 pr-0 pl-0 signaturePadDiv"></div>
+                <div id="signature_holder" class="signatureHolder width100percent"></div>
 
                 <div class="form-group">
                   <div class="g-recaptcha hidevisibility" data-sitekey="6LebVZcpAAAAAM6qn9xfl2oa3wxeXLdVroT5z3Yq" data-callback="onSubmit" data-size="invisible"></div>
@@ -354,7 +392,7 @@
                 <p id="response_msg_holder" class="messagesenttext"><strong> Message Sent </strong></p>
                 <br>
                 <div class="center textaligncenter">
-                  <span onclick="validateRecaptchaCustomizeTourForm()" type="submit" class="button button-secondary button-pipaluk"> Send</span>
+                  <span  onclick="validateRecaptchaRegisterForm();"  class="button button-secondary button-pipaluk">Send</span>
                 </div>
 
                 <br><br>
@@ -624,6 +662,19 @@
                         </div>
                       </li>
                     </ul>
+                    <br><br><br>
+                    <h6 class="text-spacing-100 text-uppercase">USEFUL LINKS</h6>
+                    <ul class="footer-contacts d-inline-block d-sm-block">
+                      <li>
+                        <div class="unit">
+                          <div class="unit-body">
+                            <a class="d-flex justify-content-center" href="registration.php" >
+                              Tour Registration
+                            </a>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -767,6 +818,16 @@
 
   <script>
 
+    function setInstallmentPayments(x){
+      if(x.value == "Installment Payment"){
+        $('#installment_holder').removeClass('hidecontent');
+        $('#payments_amt_and_interval_filled').val('');
+      } else {
+        $('#payments_amt_and_interval_filled').val('One-Time Full Payment');
+        $('#installment_holder').addClass('hidecontent');
+      }
+    }
+
     var form_used = "0";
     function onSubmit(token) {
       if(form_used.trim() == "1"){
@@ -784,7 +845,45 @@
 
       }
     }
+    function validateRecaptchaNewsletter() {
+        form_used = "2";
+        event.preventDefault();
+        if($('#newsletter_email').val().trim() != "" && $('#newsletter_firstname').val().trim() != ""){
+          var response = grecaptcha.execute();
+          console.log(response);
+        } else {
+              alert("Please complete the form");
+        }
+    }
+    function showTerms(){
+      $('#termsholder').show();
 
+      scrollTo($('#termsholder'), 3000);
+      //window.location.href = "#termsholder";
+    }
+
+    $("#firstname_filled").focusout(function(){
+      var fn = $("#firstname_filled").val();
+      var ln = $("#lastname_filled").val();
+      $("#signature_holder").html(fn.concat(ln));
+      console.log("here 1");
+    });
+
+    $("#lastname_filled").focusout(function(){
+      var fn = $("#firstname_filled").val();
+      var ln = $("#lastname_filled").val();
+      $("#signature_holder").html(fn.concat(ln));
+      console.log("here 2");
+    });
+
+    function validateRecaptchaRegisterForm() {
+          console.log("here q");
+          form_used = "1";
+          var response = grecaptcha.execute();
+          console.log(response);
+    }
+
+    /*
     function validateRecaptchaCustomizeTourForm() {
 
       // 'e.target' will refer to div with "#signature" 
@@ -817,36 +916,10 @@
               alert("Please complete the form and sign your signature");
         }
     }
-    
-    function validateRecaptchaNewsletter() {
-        form_used = "2";
-        event.preventDefault();
-        if($('#newsletter_email').val().trim() != "" && $('#newsletter_firstname').val().trim() != ""){
-          var response = grecaptcha.execute();
-          console.log(response);
-        } else {
-              alert("Please complete the form");
-        }
-    }
 
-
-    function showFounder() {
-      $('#tabs-7-1').removeClass('show active')
-      //$('#tabs-7-2').removeClass('show active');
-      $('#tabs-7-3').removeClass('fade');
-      $('#tabs-7-1').addClass('fade');
-      //$('#tabs-7-2').addClass('fade');
-      $('#tabs-7-3').addClass('show active');
-      $('#menu-tabs-7-1').removeClass('active');
-      //$('#menu-tabs-7-2').removeClass('active');
-      $('#menu-tabs-7-3').addClass('active');
-    }
-
-    /*
     $(document).ready(function() {
         $("#signature").jSignature()
     })
-    */
     var $sigdiv = $("#signature");
     function setSignatureCanvas(signature_canvas_has_not_been_set){
       if(signature_canvas_has_not_been_set){
@@ -873,11 +946,6 @@
         $("#final_signature").html("");
     });
 
-    function showTerms(){
-      $('#termsholder').show();
-
-      scrollTo($('#termsholder'), 3000);
-      //window.location.href = "#termsholder";
-    }
+    */
   </script>
 </html>

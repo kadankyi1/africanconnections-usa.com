@@ -351,7 +351,21 @@ if(!empty($_GET["transactionId"]) && !empty($_GET["s"])){
                   </div>
                 </div>
               </div>
-              <div class="col-sm-12 col-md-12 col-lg-3 col-xl-4">
+              <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
+                    <h6 class="text-spacing-100 text-uppercase">USEFUL LINKS</h6>
+                    <ul class="footer-contacts d-inline-block d-sm-block">
+                      <li>
+                        <div class="unit">
+                          <div class="unit-body">
+                            <a class="d-flex justify-content-center" href="registration.php" >
+                              Tour Registration
+                            </a>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
                 <div class="oh-desktop">
                   <div class="wow slideInRight" data-wow-delay="0s">
                     <h6 class="text-spacing-100 text-uppercase">Address</h6>
@@ -375,7 +389,7 @@ if(!empty($_GET["transactionId"]) && !empty($_GET["s"])){
                   </div>
                 </div>
               </div>
-              <div class="col-sm-12 col-md-12 col-lg-3 col-xl-4">
+              <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
                 <div class="oh-desktop">
                   <div class="wow slideInRight" data-wow-delay="0s">
                     <h6 class="text-spacing-100 text-uppercase">Socials</h6>
@@ -404,27 +418,7 @@ if(!empty($_GET["transactionId"]) && !empty($_GET["s"])){
                   </div>
                 </div>
               </div>
-              <!--
-                <div class="col-sm-6 col-md-5 col-lg-3 col-xl-4">
-                <div class="oh-desktop">
-                  <div class="wow slideInDown" data-wow-delay="0s">
-                    <h6 class="text-spacing-100 text-uppercase">Popular news</h6>
-                    <article class="post post-minimal-2">
-                      <p class="post-minimal-2-title"><a href="#">Your Personal Guide to 5 Best Places to Visit on Earth</a></p>
-                      <div class="post-minimal-2-time">
-                        <time datetime="2019-05-04">May 04, 2019</time>
-                      </div>
-                    </article>
-                    <article class="post post-minimal-2">
-                      <p class="post-minimal-2-title"><a href="#">Top 10 Hotels: Rating by Wonder Tour Travel Experts</a></p>
-                      <div class="post-minimal-2-time">
-                        <time datetime="2019-05-04">May 04, 2019</time>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-              </div>
-              -->
+              
             </div>
           </div>
         </div>

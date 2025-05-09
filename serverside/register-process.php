@@ -5,7 +5,7 @@ include_once 'classes/Mail.php';
 if (
   $_SERVER["REQUEST_METHOD"] == "POST" 
   && isset($_POST["wtf"]) && empty($_POST["wtf"])
-  && isset($_POST["final_signature_base64_image_svg"]) && !empty($_POST["final_signature_base64_image_svg"])
+  && isset($_POST["tourname_filled"]) && !empty($_POST["tourname_filled"])
   && isset($_POST["firstname_filled"]) && !empty($_POST["firstname_filled"])
   && isset($_POST["lastname_filled"]) && !empty($_POST["lastname_filled"])
   && isset($_POST["dob_filled"]) && !empty($_POST["dob_filled"])
@@ -54,7 +54,7 @@ if (
   //var_dump($result); exit;
   if($result->success && $_SERVER['SERVER_NAME'] == $result->hostname) {
 
-    $final_signature_base64_image_svg = $_POST["final_signature_base64_image_svg"];
+    $tourname_filled = $_POST["tourname_filled"];
     $firstname_filled = $_POST["firstname_filled"];
     $lastname_filled = $_POST["lastname_filled"];
     $middlename_filled = $_POST["middlename_filled"];
@@ -76,6 +76,7 @@ if (
     $registration_content = file_get_contents('views/registration-email');
 
     $oldsvals = array(
+        "{{tourname_filled}}", 
         "{{firstname_filled}}", 
         "{{lastname_filled}}", 
         "{{middlename_filled}}", 
@@ -92,10 +93,10 @@ if (
         "{{payment_method_filled}}", 
         "{{medical_needs_filled}}", 
         "{{roommate_request_filled}}", 
-        "{{roommate_name_filled}}", 
-        "{{signature_base64}}"
+        "{{roommate_name_filled}}"
     );
     $newvals   = array(
+        $tourname_filled,
         $firstname_filled,
         $lastname_filled,
         $middlename_filled,
@@ -112,8 +113,7 @@ if (
         $payment_method_filled,
         $medical_needs_filled,
         $roommate_request_filled,
-        $roommate_name_filled,
-        $final_signature_base64_image_svg
+        $roommate_name_filled
     );
     
     $registration_content = str_replace($oldsvals, $newvals, $registration_content);        
@@ -124,11 +124,12 @@ if (
     $password = "Sk1n!sK1n.~";
     $dbname = "african1_aclist";
 
-    $to = "info@africanconnections-usa.com";
-    //$to = "annodankyikwaku@gmail.com";
+    //$to = "info@africanconnections-usa.com";
+    $to = "annodankyikwaku@gmail.com";
 
     //echo "<br> here 1";
     try {
+        $full_name = $firstname_filled . $lastname_filled;
         $con =  new PDO("mysql:host=$servername;dbname=$dbname;", $username, $password);
         $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -137,7 +138,7 @@ if (
         $stmt->bindParam(2, $lastname_filled, PDO::PARAM_STR);
         $stmt->bindParam(3, $middlename_filled, PDO::PARAM_STR);
         $stmt->bindParam(4, $joineremail, PDO::PARAM_STR);
-        $stmt->bindParam(5, $final_signature_base64_image_svg, PDO::PARAM_STR);
+        $stmt->bindParam(5, $full_name, PDO::PARAM_STR);
         $stmt->bindParam(6, $registration_content, PDO::PARAM_STR);
         if ($stmt->execute() !== TRUE) {
           //echo "<br> here 3";

@@ -3,7 +3,6 @@ class mailing {
 
     function setFromAddress(){
         return "info@africanconnections-usa.com";
-        //return "annodankyikwaku@gmail.com";
     }
 
     function sendMail($subject, $message){
