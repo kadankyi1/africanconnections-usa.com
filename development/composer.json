@@ -1,0 +1,10 @@
+{
+    "name": "kadankyi1/africanconnectionsusa",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Config\\": "config/",
+            "Database\\": "database/"
+        }
+    }
+}
