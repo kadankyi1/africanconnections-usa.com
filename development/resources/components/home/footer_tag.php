@@ -24,7 +24,7 @@
                       <li>
                         <div class="unit">
                           <div class="unit-body">
-                            <a class="d-flex justify-content-center" href="registration.php" >
+                            <a class="d-flex justify-content-center" href="<?php echo $page_controller->getOnePageDetails('tour_registration')->url; ?>" >
                               Tour Registration
                             </a>
                           </div>
@@ -50,7 +50,7 @@
                         <div class="unit">
                           <div class="unit-left"><span class="icon fa fa-phone"></span></div>
                           <div class="unit-body">
-                            <a class="link-phone" href="tel:+18479563319"> +1 (847) 956-3319</a>
+                            <a class="link-phone" href="tel:<?php echo $app->getPhone(); ?>"> <?php echo $app->getPhone(); ?></a>
                           </div>
                         </div>
                       </li>
@@ -84,7 +84,7 @@
 
                     <p>                      <strong>Get $100 off any tour you book with us.</strong>
                       <br>Join our Subscriber list, receive our Monthly Newsletter, special discounts, travel updates and more...
-                      <br><a href="terms.html#newsletterpromo" class="tandcstext">Terms & Conditions Apply</a>
+                      <br><a href="<?php echo $page_controller->getOnePageDetails('terms')->url; ?>#newsletterpromo" class="tandcstext">Terms & Conditions Apply</a>
                     </p>
                     <form class="max-w-sm mx-auto" action="serverside/joinlist.php" method="POST" id="newsletter_form">
                       <br>
@@ -151,7 +151,7 @@
                 <p class="rights texttowhite"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>African Connections North America.</span>. All Rights Reserved.</p>
               </div>
               <div class="col-sm-6 col-md-4 text-md-right">
-                <p class="rights texttowhite"><a href="terms.html" target="_blank">Terms & Conditions</a></p>
+                <p class="rights texttowhite"><a href="<?php echo $page_controller->getOnePageDetails('terms')->url; ?>" target="_blank">Terms & Conditions</a></p>
               </div>
             </div>
           </div>

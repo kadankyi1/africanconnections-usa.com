@@ -14,12 +14,13 @@ class ToursData
                 'name' => 'Ghana, Togo, Benin Ouidah Voodoo Festival Tour',
                 'date' => 'January 4th – 16th 2026',
                 'duration' => '12 Nights',
+                'countries' => 'Ghana|Togo|Benin',
                 'price' => '$4,299',
                 'card_photo' => 'ghana_togo_benin.jpg',
                 'full_photo' => '3sliderbeninn.jpg',
                 'image_links' => '1.jpg 2.jpg 3.jpg 4.jpg 5.jpg 6.jpg',
                 'brochure_url' => 'ghana_togo_benin.pdf',
-                'page_url' => 'ghana_togo_benin.html',
+                'page_url' => 'ghana_togo_benin_tour',
                 'short_description' => 'Benin is considered by many to be the birthplace of voodoo. Every year, on the 10 th of January, 
                 the Ouidah region celebrates the Voodoo Festival, an important event dedicated to this religion. On this occasion, 
                 ceremonies, sacrifices, songs, dances, and large banquets are held; and faith, magic and the supernatural are 
@@ -99,12 +100,13 @@ class ToursData
                 'name' => 'Black History Month,Return To The Motherland Tour',
                 'date' => 'February 11th - 20th 2026',
                 'duration' => '9 Nights',
+                'countries' => 'Ghana',
                 'price' => '$3,699',
                 'card_photo' => 'src/img/tours/blackhistorymonth.jpg',
                 'full_photo' => 'src/img/bhm/bhm.png',
                 'image_links' => 'src/img/bhm/new/1.jpg src/img/bhm/new/2.jpg src/img/bhm/new/3.jpg src/img/bhm/new/4.jpg src/img/bhm/new/5.jpg src/img/bhm/new/6.jpg',
                 'brochure_url' => 'brochures/blackhistorymonth.pdf',
-                'page_url' => 'blackhistory.html',
+                'page_url' => 'black_history_month_tour',
                 'short_description' => 'February is Black History Month and as we all know; Black History begins in Africa! We invite you to come to Ghana to 
                 explore this country’s unique links to African American history. Our Black History Month Tour is coupled with our Return to the Motherland',
                 'highlights_description_html' => '<strong>Day 1 - 4 : Accra, the capital city of Ghana</strong> <br><br>
@@ -157,60 +159,146 @@ class ToursData
             ],
             2 => [
                 /*************************************************************************************************************************
-                                                xxxxxxxxxxxx
+                                                JUNETEENTH
                 *************************************************************************************************************************/
-                'name' => 'xxxxxxxxxxxx',
-                'date' => 'xxxxxxx',
-                'duration' => 'xxxxx',
-                'price' => 'xxxxx',
-                'card_photo' => 'xxxxxxx',
-                'full_photo' => 'xxxxxxx',
-                'image_links' => 'xxxxxxxx',
-                'brochure_url' => 'xxxxxxxx',
-                'page_url' => 'xxxxxxxx',
-                'short_description' => 'xxxxxxxx',
-                'highlights_description_html' => 'xzzzxxxxx',
-                'package_includes_description_html' => 'xxxxxxxx',
-                'package_excludes_description_html' => 'xxxxxxxxxx',
-                'full_description_html' => 'xxxxxx'
+                'name' => 'JuneTeenth, Return To The Motherland',
+                'date' => 'June 17th - 28th 2025',
+                'duration' => '9 Nights',
+                'countries' => 'Ghana',
+                'price' => '$3,599',
+                'card_photo' => 'src/img/juneteenth/banner.jpg',
+                'full_photo' => 'src/img/juneteenth/banner.jpg',
+                'image_links' => 'src/img/juneteenth/gallery/1.jpg src/img/juneteenth/gallery/2.jpg src/img/juneteenth/gallery/3.png src/img/juneteenth/gallery/4.jpg src/img/juneteenth/gallery/5.jpg src/img/returntomotherland/gallery/6.jpg',
+                'brochure_url' => 'brochures/juneteenth_2025.pdf',
+                'page_url' => 'juneteenth_tour',
+                'short_description' => 'June 19th 1865 marks the end of slavery in the United States. Juneteenth is a time to celebrate liberation with joy and hope for better to come. We invite you to come to Ghana to explore this country’s unique links to African American history...',
+                'highlights_description_html' => '<strong>Day 1 - 4 : Travel to Ghana and Accra City Tours.</strong> <br><br>
+                    <strong>></strong> We will visit the home of Dr. W.E.B. Dubois which is now a museum and his final resting place<br><br>
+                    <strong>></strong> Visit Ghana’s National Museum, which houses the largest and oldest of Ghana’s six museums.<br><br>
+                    <strong>></strong> Visit Independence Square (where Ghanaians celebrate the nation’s Independence Day each year)<br><br>
+                    <strong>></strong> Visit the Kwame Nkrumah Mausoleum, which is the final resting place of the first President of Ghana<br><br>
+                    <strong>></strong> Visit Shai Hills Reserve, a natural habitat of Baboons, green monkeys, antelopes, zebras, numerous tropical mammals, reptiles and over 172 bird species.<br><br>
+                    <strong>></strong> Visit the Asenema Waterfall, one of the hidden gems in the rainforest of the Akuapem Hills.<br><br>
+                    <strong>></strong> Celebrate Juneteenth in Ghana. Our Juneteenth Celebration in Ghana will be a day to remember.<br><br>
+                    <strong>Day 5 - 7 : Tour Kumasi (Capital city of the ancient Asante Kingdom) and its Surrounding Towns.</strong> <br><br>
+                    <strong>></strong> Explore Kumasi, the capital city of the ancient Asante Kingdom<br><br>
+                    <strong>></strong> Visit Manhyia Palace, the traditional home of the Asantehene “the king of kings,” the king of all the Asante.<br><br>
+                    <strong>></strong> Visit the woodcarving village of Ahwiaa where you will see craftsmen carving wood masterpieces<br><br>
+                    <strong>></strong> Partake in Traditional Naming Ceremony, where each tour member will be given a traditional Asante name based on their day of birth<br><br>
+                    <strong>Day 8 - 10 : Central Region Tour.</strong> <br><br>
+                    <strong>></strong> Stop at Assin Manso to participate in a Ceremony of Remembrance at “Slave River”<br><br>
+                    <strong>></strong> Guided tour through Elmina Slave Dungeon and Cape Coast Slave Dungeon',
+                'package_includes_description_html' => '<strong class="texttogreen">Tour Package Includes</strong> <br><br>
+                    <strong>></strong> Accommodation in Deluxe Hotels (twin/double room occupancy)<br><br>
+                    <strong>></strong> Breakfast Daily<br><br>
+                    <strong>></strong> Juneteenth Celebration Party<br><br>
+                    <strong>></strong> Departure Dinner with Cultural Performances<br><br>
+                    <strong>></strong> Daily Nightlife Options<br><br>
+                    <strong>></strong> Ceremony of Remembrance at “Slave River”<br><br>
+                    <strong>></strong> Traditional Naming Ceremony<br><br>
+                    <strong>></strong> Transportation throughout on comfortable air- conditioned bus<br><br>
+                    <strong>></strong> Experienced, Licensed Driver<br><br>
+                    <strong>></strong> Knowledgeable Tour Guide<br><br>
+                    <strong>></strong> Tours and Entry Fees to all sites visited<br><br>
+                    <strong>></strong> Expert tour management and destination support services to help you prepare and to assist throughout your visit<br><br>
+                    <strong> Single Room Upgrade Price $800</strong><br><br>',
+                'package_excludes_description_html' => '<strong class="texttored">Tour Package Does Not Include</strong> <br><br>
+                    <strong>></strong> Airfare<br><br>
+                    <strong>></strong> COVID 19 Immunization or PCR Test prior to arrival and again upon arrival<br><br>
+                    <strong>></strong> Passport<br><br>
+                    <strong>></strong> Travel Insurance (recommended)<br><br>
+                    <strong>></strong> Visa<br><br>
+                    <strong>></strong> Any meals not specified in the itinerary<br><br>
+                    <strong>></strong> Yellow Fever Immunization Certificate(required)<br><br>
+                    <strong>></strong> Any other item not specifically included in the tour itinerary',
+                'full_description_html' => '<strong>Travel to Ghana for Juneteenth. Join our African Heritage Tour and Celebrate Juneteenth in the Motherland</strong><br><br><strong>June 19th 1865, marks the 
+                    end of slavery in the United States. Juneteenth is a time to celebrate liberation with joy and hope for better to come.</strong>We invite you to come to Ghana to explore this country’s unique 
+                    links to African American history.<br><br>Over a period of 400 years millions of Africans were shipped from the dungeons on Ghana’s
+                    coast. While many died on the high seas, those that reached the Americas entered a life of servitude under the system of chattel slavery that attempted to dehumanize them and break them 
+                    physically and spiritually <br><strong>—And yet, their descendants have survived and flourished.</strong><br><br><strong>Visit Ghana and explore its connections to African American history.
+                    Whether you want a Ghana vacation or want to immerse yourself in the culture and history, you will not be disappointed.</strong><br><br>We know all the best places to visit in Ghana so we will 
+                    make your trip to Ghana an amazing travel experience.<br><br>'
             ],
             3 => [
                 /*************************************************************************************************************************
-                                                xxxxxxxxxxxx
+                                                PANAFEST
                 *************************************************************************************************************************/
-                'name' => 'xxxxxxxxxxxx',
-                'date' => 'xxxxxxx',
-                'duration' => 'xxxxx',
-                'price' => 'xxxxx',
-                'card_photo' => 'xxxxxxx',
-                'full_photo' => 'xxxxxxx',
-                'image_links' => 'xxxxxxxx',
-                'brochure_url' => 'xxxxxxxx',
-                'page_url' => 'xxxxxxxx',
-                'short_description' => 'xxxxxxxx',
-                'highlights_description_html' => 'xzzzxxxxx',
-                'package_includes_description_html' => 'xxxxxxxx',
-                'package_excludes_description_html' => 'xxxxxxxxxx',
-                'full_description_html' => 'xxxxxx'
+                'name' => 'PANAFEST, African Festival Tour',
+                'date' => 'July 22nd - August 2nd 2025',
+                'duration' => '11 Days',
+                'countries' => 'Ghana',
+                'price' => '$3,699',
+                'card_photo' => 'src/img/home/1hottours.jpg',
+                'full_photo' => 'src/img/panafest/banner.jpg',
+                'image_links' => 'src/img/panafest/new/1.jpg src/img/panafest/new/2.jpg src/img/panafest/new/3.jpg src/img/panafest/new/4.jpg src/img/panafest/new/5.jpg src/img/panafest/new/6.jpg',              
+                'brochure_url' => 'src/brochures/panafest.pdf',
+                'page_url' => 'panafest_tour',
+                'short_description' => 'The Pan African Historical Theatre Festival (PANAFEST) is a biennial cultural festival of art and culture attended by people 
+                    of African descent who convene in Ghana from all over the continent, the United States, the Caribbean and the entire African diaspora, to celebrate 
+                    the music, art and theatre of the African experience.',
+                'highlights_description_html' => '<strong>Day 1 - 3 : Accra, the capital city of Ghana</strong> <br><br>
+                    <strong>></strong> We will visit the home of Dr. W.E.B. Dubois which is now a museum and his final resting place<br><br>
+                    <strong>></strong> See Christiansburg Castle (Former fort and slave dungeon and until recently, the
+                    official residence of the President of Ghana<br><br>
+                    <strong>></strong> See Jubilee House which is now theofficial residence and office of the President of Ghan<br><br>
+                    <strong>></strong> Visit Independence Square (where Ghanaians celebrate the nation’s Independence Day each year<br><br>
+                    <strong>></strong> Visit the Kwame Nkrumah Mausoleum, which is the final resting place of the first President of Ghan<br><br>
+                    <strong>Day 4 - 6 : Kumasi, and its Surrounding Towns</strong> <br><br>
+                    <strong>></strong> Visit Manhyia Palace, the traditional home of the Asantehene “the king of kings,” the King of all the Asant<br><br>
+                    <strong>></strong> Visit the woodcarving village of Ahwiaa where you will see craftsmen carving wood masterpiece<br><br>
+                    <strong>></strong> Partake in Traditional Naming Ceremony, where each tour member will be given a traditional Asante name based on their day of birt<br><br>
+                    <strong>Day 7 - 10 : Tour Central Region and participate in PANAFEST</strong> <br><br>
+                    <strong>></strong> The Grand Durbar of Chiefs and Queen<br><br>
+                    <strong>></strong> Participate in the Candlelight procession and Reverential Night ceremonies that will take place inside the Cape Coast Slave Dungeon<br><br>
+                    <strong>></strong> Stop at Assin Manso to participate in a Ceremony of Remembrance at “Slave River<br><br>
+                    <strong>></strong> Guided tour through Elmina Slave Dungeon and Cape Coast Slave Dungeons',
+                'package_includes_description_html' => '<strong class="texttogreen">Tour Package Includes</strong><br><br>
+                    <strong>></strong> Double/Twin Accommodation in 3-4 Star Hotel<br><br>
+                    <strong>></strong> Breakfast Dail<br><br>
+                    <strong>></strong> Welcome Dinner with Cultural Performance<br><br>
+                    <strong>></strong> Experienced Drive<br><br>
+                    <strong>></strong> Transportation throughout with comfortable air-conditioned bu<br><br>
+                    <strong>></strong> Traditional Naming Ceremon<br><br>
+                    <strong>></strong> Knowledgeable English-Speaking Tour Guid<br><br>
+                    <strong>></strong> Entry Fees to all sites visite<br><br>
+                    <strong>></strong> VIP Admission to PANAFEST event<br><br>
+                    <strong>></strong> Expert tour management and destination support will be available throughout your visit<br><br>
+                    <strong> Single Room Upgrade Price $800</strong>',
+                'package_excludes_description_html' => '<strong class="texttored">Tour Package Does Not Include</strong> <br><br>
+                    <strong>></strong> Airfare<br><br>
+                    <strong>></strong> COVID 19 Immunization or PCR Test prior to arrival and again upon arrival<br><br>
+                    <strong>></strong> Passport<br><br>
+                    <strong>></strong> Travel Insurance (recommended)<br><br>
+                    <strong>></strong> Visa<br><br>
+                    <strong>></strong> Any meals not specified in the itinerary<br><br>
+                    <strong>></strong> Yellow Fever Immunization Certificate(required)<br><br>
+                    <strong>></strong> Any other item not specifically included in the tour itinerary',
+                'full_description_html' => '<strong>Travel to Ghana and Attend PANAFEST, Africa’s Most Exciting International Festival</strong><br><br><strong>PANAFEST is a 
+                    cultural event dedicated to the enhancement of the ideals of Pan Africanism and the development of the African continent.</strong>ANAFEST is a 
+                    biennial cultural festival of art and culture attended by people of African descent who convene in Ghana from all over the continent and the 
+                    Diaspora to celebrate the music, art and theatre of the African experience.<br><br>Join our African Heritage Tour. We know the best places to 
+                    visit in Ghana and our tour will make your trip to Ghana an amazing travel experience.<br><br><strong>Whether you want a Ghana vacation or want 
+                    to immerse yourself in the culture and history, Visit Ghana and experience all the excitement of the PANAFEST festival!</strong><br><br>'
             ],
             4 => [
                 /*************************************************************************************************************************
-                                                xxxxxxxxxxxx
+                                                RETURN TO THE MOTHERLAND AFRICAN FESTIVAL TOUR
                 *************************************************************************************************************************/
-                'name' => 'xxxxxxxxxxxx',
-                'date' => 'xxxxxxx',
-                'duration' => 'xxxxx',
-                'price' => 'xxxxx',
-                'card_photo' => 'xxxxxxx',
-                'full_photo' => 'xxxxxxx',
-                'image_links' => 'xxxxxxxx',
-                'brochure_url' => 'xxxxxxxx',
-                'page_url' => 'xxxxxxxx',
-                'short_description' => 'xxxxxxxx',
-                'highlights_description_html' => 'xzzzxxxxx',
-                'package_includes_description_html' => 'xxxxxxxx',
-                'package_excludes_description_html' => 'xxxxxxxxxx',
-                'full_description_html' => 'xxxxxx'
+                'name' => 'Return To The Motherland African Festival Tour',
+                'date' => 'September 3rd – 13th 2025',
+                'duration' => '10 Nights',
+                'countries' => 'Ghana',
+                'price' => '$4,199',
+                'card_photo' => 'src/img/promo/festival.jpg',
+                'full_photo' => '',
+                'image_links' => '',
+                'brochure_url' => 'brochures/promo_ghana_september_2025.pdf',
+                'page_url' => '',
+                'short_description' => 'Our African Festival Tour gives you the opportunity to experience one of Ghana’s most exciting events which is the Cape Coast Festival. Go inside slave dungeons and see the Door Of No Return.',
+                'highlights_description_html' => '',
+                'package_includes_description_html' => '',
+                'package_excludes_description_html' => '',
+                'full_description_html' => ''
             ],
             5 => [
                 /*************************************************************************************************************************
@@ -219,12 +307,13 @@ class ToursData
                 'name' => 'Egypt African Heritage Tour',
                 'date' => 'October 14th – 25th, 2025',
                 'duration' => '12 Days',
+                'countries' => 'Egypt',
                 'price' => '$3,599',
                 'card_photo' => 'src/img/tours/egypt.jpg',
                 'full_photo' => 'src/img/egypt/bg2.jpg',
                 'image_links' => 'src/img/egypt/new/1.jpg src/img/egypt/new/2.jpg src/img/egypt/new/3.jpg src/img/egypt/new/4.jpg src/img/egypt/new/5.jpg src/img/egypt/new/6.jpg',
                 'brochure_url' => 'brochures/egyptt.pdf',
-                'page_url' => 'egypt.html',
+                'page_url' => 'egypt_tour',
                 'short_description' => 'Our Egypt "Land Of Pharaohs" African Heritage Tour includes an unforgettable 4-Day luxury cruise on the River Nile; visits to 
                 the Great Pyramids and a close up look at the famous Sphinx. We will explore the Egyptian Museum of Antiquities where over 250,000 artifacts 
                 illustrating over 5000 years of Egyptian history are on display.',
@@ -293,12 +382,13 @@ class ToursData
                 'name' => 'Return to the Motherland,African Heritage Tour',
                 'date' => 'November 4th – 15th 2025',
                 'duration' => '12 Days',
+                'countries' => 'Ghana',
                 'price' => '$3,499',
                 'card_photo' => 'src/img/home/2hottours.jpg',
                 'full_photo' => 'src/img/returntomotherland/returntomotherland2.jpg',
                 'image_links' => 'src/img/returntomotherland/new/1.jpg src/img/returntomotherland/new/2.jpg src/img/returntomotherland/new/3.jpg src/img/returntomotherland/new/4.jpg src/img/returntomotherland/new/5.jpg src/img/returntomotherland/new/6.jpg',
                 'brochure_url' => 'brochures/returntomotherland.pdf',
-                'page_url' => 'returntomotherland.html',
+                'page_url' => 'return_to_the_motherland_tour',
                 'short_description' => 'Ghana has many exciting traditional festivals and our African Heritage Tour gives you the opportunity to experience one of 
                     Ghana’s most exciting events.',
                 'highlights_description_html' => '<br><br><strong>Day 1 - 4 : Accra, the capital city of Ghana</strong> <br><br>
@@ -346,79 +436,218 @@ class ToursData
             ],
             7 => [
                 /*************************************************************************************************************************
-                                                xxxxxxxxxxxx
+                                                SOUTH AFRICA TOUR
                 *************************************************************************************************************************/
-                'name' => 'xxxxxxxxxxxx',
-                'date' => 'xxxxxxx',
-                'duration' => 'xxxxx',
-                'price' => 'xxxxx',
-                'card_photo' => 'xxxxxxx',
-                'full_photo' => 'xxxxxxx',
-                'image_links' => 'xxxxxxxx',
-                'brochure_url' => 'xxxxxxxx',
-                'page_url' => 'xxxxxxxx',
-                'short_description' => 'xxxxxxxx',
-                'highlights_description_html' => 'xzzzxxxxx',
-                'package_includes_description_html' => 'xxxxxxxx',
-                'package_excludes_description_html' => 'xxxxxxxxxx',
-                'full_description_html' => 'xxxxxx'
+                'name' => 'South Africa Return To The Motherland Tour',
+                'date' => 'March 7th - 17th 2026',
+                'duration' => '9 Nights',
+                'countries' => 'South Africa',
+                'price' => '$3,999',
+                'card_photo' => 'src/img/south_africa/sa_banner.jpg',
+                'full_photo' => 'src/img/south_africa/sa_banner.jpg',
+                'image_links' => '',
+                'brochure_url' => 'src/brochures/south_africa_2026.pdf',
+                'page_url' => 'south_africa_tour',
+                'short_description' => 'The South Africa Return To The Motherland Tour will take your through the various sites in Johannesburg and Cape Town to experience the history and and nature of South Africa.',
+                'highlights_description_html' => '<strong>DAY 1-5: Travel to Johannesburg, and explore the sites</strong> <br><br>
+                    <strong>></strong> Visit the Apartheid Museum, a powerful glimpse into South Africa’s history of racial segregation.<br><br>
+                    <strong>></strong> Visit Constitution Hill which is a historic site that embodies South Africa’s journey from oppression to democracy.<br><br>
+                    <strong>></strong> Visit Soweto Tour. This is epicenter of the anti-apartheid struggle, and today, it stands as a symbol of resilience and hope.<br><br>
+                    <strong>></strong> Visit the Mandela House, a national heritage site and museum dedicated to the life of Nelson Mandela, South Africa’s first black president.<br><br>
+                    <strong>></strong> Tour the Hector Pieterson Museum, two blocks away from where student protester Hector Pieterson was shot and killed on 16 June 1976.<br><br>
+                    <strong>></strong> Explore the Pilanesberg National Park, South Africa’s most fascinating game reserve. <br><br>
+                    <strong>></strong> Visit Lesidi Cultural Village. Celebrates the cultural traditions of several different peoples of Southern Africa<br><br>
+                    <strong>Days 6-8: Travel to Cape Town and explore sites.</strong> <br><br>
+                    <strong>></strong> Visit Table Mountain, one of South Africa’s most iconic landmarks.<br><br>
+                    <strong>></strong> Cape Point Nature Reserve with its dramatic cliffs, pristine beaches, and breathtaking views<br><br>
+                    <strong>></strong> Tour District Six Museum,  the “Soul of Cape Town”.<br><br>
+                    <strong>></strong> Take a boat to Robben Island, where Nelson Mandela was imprisoned for 18 of the 27 years of his imprisonment<br><br>
+                    <strong>Days 9 Fly back to Johannesburg and prepare for your flight</strong> <br><br>',
+                'package_includes_description_html' => '<strong class="texttogreen">Tour Package Includes</strong> <br><br>
+                    <strong>></strong> Deluxe hotels (twin/double occupancy)<br><br>
+                    <strong>></strong> Breakfast Daily<br><br>
+                    <strong>></strong> 4 Other Meals<br><br>
+                    <strong>></strong> Round-trip Domestic Airfare Johannesburg - Cape Town<br><br>
+                    <strong>></strong> Experience Authentic Zulu Village<br><br>
+                    <strong>></strong> Experience Amazing Big-Game Safari<br><br>
+                    <strong>></strong> Visit Mandela House, explore Soweto and the Apartheid Museum<br><br>
+                    <strong>></strong> Boat ride to Robbin Island (where Mandela was imprisoned)<br><br>
+                    <strong>></strong> Explore Table Mountain National Park<br><br>
+                    <strong>></strong> Tours and Entry Fees to all sites visited<br><br>
+                    <strong>></strong> Airport transfers and air-conditioned ground transportation throughout<br><br>
+                    <strong>></strong> Experienced Licensed Eglish-Speaking Driver<br><br>
+                    <strong>></strong> Knowledgeable English-Speaking Tour Guide<br><br>
+                    <strong>></strong> Expert tour management, to plan your trip, help with pre-departure preparations; and destination support throughout your journey<br><br>
+                    <strong> Single Room Upgrade Price $1,000</strong><br><br>',
+                'package_excludes_description_html' => '<strong class="texttored">Tour Package Does Not Include</strong> <br><br>
+                    <strong>></strong> Roundtrip air-fare from U.S.A.<br><br>
+                    <strong>></strong> Passport<br><br>
+                    <strong>></strong> Travel Insurance (recommended)<br><br>
+                    <strong>></strong> Visa<br><br>
+                    <strong>></strong> Any meals not specified in the itinerary<br><br>
+                    <strong>></strong> Yellow Fever Immunization Certificate(required)<br><br>
+                    <strong>></strong> Any other item not specifically included in the tour itinerary.',
+                'full_description_html' => '<strong>South Africa</strong> is a country located at the southern tip of the African continent and one of Africa&#39;s major tourist attraction sites<br><br>Our <strong>
+                    South Africa Return To The Motherland Tour </strong> will take your through the various sites in Johannesburg and Cape Town to experience the history and nature of South Africa.<br><br>'
             ],
             8 => [
                 /*************************************************************************************************************************
-                                                xxxxxxxxxxxx
+                                                KENYA, TANZANIA, ZANZIBAR TOUR
                 *************************************************************************************************************************/
-                'name' => 'xxxxxxxxxxxx',
-                'date' => 'xxxxxxx',
-                'duration' => 'xxxxx',
-                'price' => 'xxxxx',
-                'card_photo' => 'xxxxxxx',
-                'full_photo' => 'xxxxxxx',
-                'image_links' => 'xxxxxxxx',
-                'brochure_url' => 'xxxxxxxx',
-                'page_url' => 'xxxxxxxx',
-                'short_description' => 'xxxxxxxx',
-                'highlights_description_html' => 'xzzzxxxxx',
-                'package_includes_description_html' => 'xxxxxxxx',
-                'package_excludes_description_html' => 'xxxxxxxxxx',
-                'full_description_html' => 'xxxxxx'
+                'name' => 'Kenya, Tanzania, Zanzibar Return To The Motherland Tour',
+                'date' => 'August 10th – 20th 2026',
+                'duration' => '10 Nights',
+                'countries' => 'Kenya|Tanzania|Zanzibar',
+                'price' => '$4,199',
+                'card_photo' => 'src/img/kenya_tanzania_zanzibar/banner.jpg',
+                'full_photo' => 'src/img/kenya_tanzania_zanzibar/banner.jpg',
+                'image_links' => '',
+                'brochure_url' => 'brochures/kenya_tanzania_zanibar_2026.pdf',
+                'page_url' => 'kenya_tanzania_zanzibar_tour',
+                'short_description' => 'Discover the rich history and cultural heritage of Kenya and Tanzania. In Zanzibar, relax at their world famous beaches and let the world float away.',
+                'highlights_description_html' => '<strong>DAY 1-4: Arrival in Kenya and Nairobi City Tours</strong> <br><br>
+                    <strong>></strong> Visit Nairobi National Museum to discover Kenya’s rich history and cultural heritage<br><br>
+                    <strong>></strong> Visit the Maasai Village to have a glimpse of East Africa’s most famous indigenous communities<br><br>
+                    <strong>></strong> Visit the Nairobi National Park to experience an authentic safari with the Nairobi skyline<br><br>
+                    <strong>Days 5-7: We Tour Tanzania</strong> <br><br>
+                    <strong>></strong> Enjoy Zanzibar’s world famous beaches. Rest, relax, enjoy the hotel amenities, get a massage and let the world float away.<br><br>',
+                'package_includes_description_html' => '<strong class="texttogreen">Tour Package Includes</strong> <br><br>
+                    <strong>></strong> Deluxe Hotels (twin/double occupancy)<br><br>
+                    <strong>></strong> Domestic airfare to Zanzibar<br><br>
+                    <strong>></strong> Breakfast Daily<br><br>
+                    <strong>></strong> Visit Traditional Maasai Village<br><br>
+                    <strong>></strong> Big Game Safari at all inclusive luxury lodge<br><br>
+                    <strong>></strong> Experience Traditional Cultural Village<br><br>
+                    <strong>></strong> See breathtaking Materuni Waterfall<br><br>
+                    <strong>></strong> Enjoy 4 nights at luxury 5 Star all inclusive resort in Zanzibar<br><br>
+                    <strong>></strong> Relax on some of the world’s most beautiful beaches<br><br>
+                    <strong>></strong> Tours and Entry Fees to all sites visited<br><br>
+                    <strong>></strong> Knowledgeable English-Speaking Tour Guide<br><br>
+                    <strong>></strong> Airport transfers and air-conditioned ground transportation throughout<br><br>
+                    <strong>></strong> Visa Assistance and expert tour management, help with pre-departure preparations; and destination support throughout your journey<br><br>
+                    <strong> Single Room Upgrade Price $1,100</strong><br><br>',
+                'package_excludes_description_html' => '<strong class="texttored">Tour Package Does Not Include</strong> <br><br>
+                    <strong>></strong> Roundtrip air-fare from U.S.A.<br><br>
+                    <strong>></strong> Passport<br><br>
+                    <strong>></strong> Travel Insurance (recommended)<br><br>
+                    <strong>></strong> Visa<br><br>
+                    <strong>></strong> Any meals not specified in the itinerary<br><br>
+                    <strong>></strong> Yellow Fever Immunization Certificate(required)<br><br>
+                    <strong>></strong> Any other item not specifically included in the tour itinerary.',
+                'full_description_html' => 'Our <strong>Kenya, Tanzania, Zanzibar Tour</strong> lets you experience these three destinations with the best tour operator 
+                    with over 20 years of experience in Africa. <br><br>Discover the rich history and cultural heritage of Kenya and Tanzania. In Zanzibar, relax at their world famous beaches and let the world 
+                    float away.<br><br>'
             ],
             9 => [
                 /*************************************************************************************************************************
-                                                xxxxxxxxxxxx
+                                                ETHIOPIA & GHANA TOUR
                 *************************************************************************************************************************/
-                'name' => 'xxxxxxxxxxxx',
-                'date' => 'xxxxxxx',
-                'duration' => 'xxxxx',
-                'price' => 'xxxxx',
-                'card_photo' => 'xxxxxxx',
-                'full_photo' => 'xxxxxxx',
-                'image_links' => 'xxxxxxxx',
-                'brochure_url' => 'xxxxxxxx',
-                'page_url' => 'xxxxxxxx',
-                'short_description' => 'xxxxxxxx',
-                'highlights_description_html' => 'xzzzxxxxx',
-                'package_includes_description_html' => 'xxxxxxxx',
-                'package_excludes_description_html' => 'xxxxxxxxxx',
-                'full_description_html' => 'xxxxxx'
+                'name' => 'Ethiopia & Ghana Return to the Motherland',
+                'date' => 'September 6th - 15th 2026',
+                'duration' => '9 Nights',
+                'countries' => 'Ethiopia|Ghana',
+                'price' => '$4,199',
+                'card_photo' => 'src/img/ethiopia_ghana/banner.jpg',
+                'full_photo' => 'src/img/ethiopia_ghana/banner.jpg',
+                'image_links' => 'src/img/returntomotherland/new/1.jpg src/img/returntomotherland/new/2.jpg src/img/returntomotherland/new/3.jpg src/img/returntomotherland/new/4.jpg src/img/returntomotherland/new/5.jpg src/img/returntomotherland/new/6.jpg',
+                'brochure_url' => 'brochures/ethiopia_ghana_2026.pdf',
+                'page_url' => 'ethiopia_ghana_tour',
+                'short_description' => 'The Ethiopia & Ghana Return To The Motherland Tour lets your experience the rich and glorious history, time-honored traditions, art and natural scenic beauty of both destinations.',
+                'highlights_description_html' => '<strong>DAY 1-4: Arrival in Addis Ababa and City Tour</strong> <br><br>
+                    <strong>></strong> Visit the National Museum home to many incredible archaeological treasures including the famous Lucy, a tiny human believed to have lived over 3 million years ago.<br><br>
+                    <strong>></strong> See the Merkato Market, largest open-air market in Africa<br><br>
+                    <strong>></strong> Ascend Mount Entoto and see panoramic views of the city from the top of the mountain<br><br>
+                    <strong>></strong> Visit Holy Trinity Cathedral, the main cathedral of Ethiopia’s orthodox church and the burial place of the last King of Ethiopia, Haile Selassie.<br><br>
+                    <strong>Days 5-6: Travel to Ghana and begin Accra City Tours</strong> <br><br>
+                    <strong>></strong> We will visit Independence Square (where Ghanaians celebrate the nation’s Independence Day each year)<br><br>
+                    <strong>></strong> Tour members will visit the Kwame Nkrumah Mausoleum, which is the final resting place of the first President of Ghana and one of Africa’s most renowned Statesmen<br><br>
+                    <strong>></strong> We will drive through the commercial districts of Accra and see the amazing development and growth of Accra;<br><br>
+                    <strong>Days 7-8 We Tour the Central Region</strong> <br><br>
+                    <strong>></strong> Stop at Assin Manso to participate in a Ceremony of Remembrance at “Slave River” where our ancestors were forced to bathe after their long march to the coast of Ghana<br><br>
+                    <strong>></strong> You will have a guided tour through the Cape Coast Slave Dungeon, the place where the largest number of enslaved Africans were housed before shipment to the Americas.<br><br>
+                    <strong>Days 9 Travel to Accra and Prepare for your Flight</strong> <br><br>
+                    <strong>></strong> Travel back to Accra and have time to rest, relax, enjoy the hotel amenities, have a spa day; or if you choose, do nothing at all!<br><br>',
+                'package_includes_description_html' => '<strong class="texttogreen">Tour Package Includes</strong> <br><br>
+                    <strong>></strong> Deluxe Hotels (twin/double occupancy)<br><br>
+                    <strong>></strong> Breakfast Daily<br><br>
+                    <strong>></strong> Dinner and Cultural Performances in Ethiopia<br><br>
+                    <strong>></strong> Dinner and Cultural Performances in Ghana<br><br>
+                    <strong>></strong> Ascend Mount Entoto, see spectacular views<br><br>
+                    <strong>></strong> See the burial place of Emperor Haile Selassie<br><br>
+                    <strong>></strong> Explore Merkato Market, the largest open-air market in Africa<br><br>
+                    <strong>></strong> Ceremony of Remembrance at “Slave River”<br><br>
+                    <strong>></strong> Traditional Asante Naming Ceremony<br><br>
+                    <strong>></strong> Go inside Slave Dungeons<br><br>
+                    <strong>></strong> See Door of No Return<br><br>
+                    <strong>></strong> Tours and Entry Fees to all sites visited<br><br>
+                    <strong>></strong> Airport transfers and comfortable air-conditioned ground transportation throughout<br><br>
+                    <strong>></strong> Experienced Licensed English-Speaking Drivers<br><br>
+                    <strong>></strong> Knowledgeable English-Speaking Tour Guides<br><br>
+                    <strong>></strong> Visa Assistance and expert tour management, help with pre-departure preparations; and destination support throughout your journey<br><br>
+                    <strong> Single Room Upgrade Price $1,000</strong><br><br>',
+                'package_excludes_description_html' => '<strong class="texttored">Tour Package Does Not Include</strong> <br><br>
+                    <strong>></strong> Roundtrip air-fare from U.S.A.<br><br>
+                    <strong>></strong> Passport<br><br>
+                    <strong>></strong> Travel Insurance (recommended)<br><br>
+                    <strong>></strong> Visa<br><br>
+                    <strong>></strong> Any meals not specified in the itinerary<br><br>
+                    <strong>></strong> Yellow Fever Immunization Certificate(required)<br><br>
+                    <strong>></strong> Any other item not specifically included in the tour itinerary.',
+                'full_description_html' => 'The <strong>Ethiopia & Ghana Return To The Motherland Tour</strong> lets your experience the rich and glorious history, time-honored traditions, art and natural scenic 
+                    beauty of both destinations. <br><br>Enjoy our warm hospitality. Immerse yourself in the traditions and lifestyles and explore the beauty of Ethiopia and Ghana.<br><br>'
             ],
             10 => [
                 /*************************************************************************************************************************
-                                                xxxxxxxxxxxx
+                                                SENEGAL TOUR
                 *************************************************************************************************************************/
-                'name' => 'xxxxxxxxxxxx',
-                'date' => 'xxxxxxx',
-                'duration' => 'xxxxx',
-                'price' => 'xxxxx',
-                'card_photo' => 'xxxxxxx',
-                'full_photo' => 'xxxxxxx',
-                'image_links' => 'xxxxxxxx',
-                'brochure_url' => 'xxxxxxxx',
-                'page_url' => 'xxxxxxxx',
-                'short_description' => 'xxxxxxxx',
-                'highlights_description_html' => 'xzzzxxxxx',
-                'package_includes_description_html' => 'xxxxxxxx',
-                'package_excludes_description_html' => 'xxxxxxxxxx',
-                'full_description_html' => 'xxxxxx'
+                'name' => 'Senegal, African Culture & Safari Tour',
+                'date' => 'September 18th – 28th 2026',
+                'duration' => '',
+                'countries' => 'Senegal',
+                'price' => '$3,799',
+                'card_photo' => 'src/img/tours/senegal.jpg',
+                'full_photo' => 'src/img/senegal/bg.jpg',
+                'image_links' => '',
+                'brochure_url' => 'brochures/senegal.pdf',
+                'page_url' => 'senegal_tour',
+                'short_description' => 'Our Senegal tour includes visits to Dakar and St. Louis, Senegal’s most modern cities as well as visits to some of Senegal’s most isolated villages, where life has remained virtually unchanged for centuries.',
+                'highlights_description_html' => '<strong>Days 1-2 Arrival and Dakar City Tours</strong><br><br>
+                    <strong>></strong> We will visit many of Dakar’s most significant sites including: Independence Plaza, the Presidential Palace, the Cathedral of Dakar, the Grand Mosque, the Gate of the 3 rd Millennium, Dakar University and the Statute of the African Renaissance, the tallest statute in Africa.<br><br>
+                    <strong>Day 3: Visit Goree Island</strong><br><br>
+                    <strong>></strong> Take a ferry cruise to Goree Island, which is about 2 miles from Dakar.<br><br>
+                    <strong>></strong> Stand at the “Door-of-no-return” in the “House of Slaves” and hear Goree’s story from a uniquely African perspective. This brief history will give you a sense of Senegal’s vital connections to African American history.<br><br>
+                    <strong>Day 4: Bandia Animal Reserve</strong><br><br>
+                    <strong>></strong> This tour will allow you to see some of the best-known African animals, including white rhinoceros, zebra, giraffe, buffalo, monkeys, crocodiles, and many more; as well as over 120 species of tropical birds.<br><br>
+                    <strong>Day 5: Visit Pink Lake</strong><br><br>
+                    <strong>></strong> Visit Pink Lake, one of the most beautiful natural phenomena in the world. Stick your toes in this amazing pink salty water or sit back and watch salt collectors harvesting salt from the lake.<br><br>
+                    <strong>Days 6-7: Optional Tour: Safari in Fathala Nature Reserve</strong><br><br>
+                    <strong>></strong> With our Safari Guide, we will be able to follow the animal tracks through the wilderness in search of some of the many species that roam the area. Have your cameras ready! You will have the opportunity to walk with lions!<br><br>
+                    <strong>Day 8: Dakar-Goree Swim Contest</strong><br><br>
+                    <strong>></strong> Witness the exciting annual Dakar / Gorée Swim Contest. The Dakar-Gorée Crossing is a prestigious annual open-water swimming event that pays tribute to the resilience of enslaved Africans who historically sought freedom through this challenging swim.<br><br>
+                    <strong>Day 9: Prepare and depart for the US</strong><br><br>
+                    <strong>></strong> Activities on this day will depend on your departure time.',
+                'package_includes_description_html' => '<strong class="texttogreen">Tour Package Includes</strong> <br><br>
+                    <strong>></strong> Accommodation in Deluxe Hotels (twin/double room occupancy)<br><br>
+                    <strong>></strong> Breakfast Daily<br><br>
+                    <strong>></strong> Five other meals (Lunch/Dinner)<br><br>
+                    <strong>></strong> Comfortable air-conditioned bus<br><br>
+                    <strong>></strong> Experienced, Licensed Driver<br><br>
+                    <strong>></strong> Airport Transfers<br><br>
+                    <strong>></strong> Knowledgeable Tour Guide<br><br>
+                    <strong>></strong> Entry Fees to all sites visited<br><br>
+                    <strong>></strong> Expert tour management and destination support to assist you throughout your journey<br><br>
+                    <strong> Single Room Upgrade Price $1,100</strong><br><br>',
+                'package_excludes_description_html' => '<strong class="texttored">Tour Package Does Not Include</strong> <br><br>
+                    <strong>></strong> Roundtrip air-fare from U.S.A.<br><br>
+                    <strong>></strong> Passport<br><br>
+                    <strong>></strong> Travel Insurance (recommended)<br><br>
+                    <strong>></strong> Visa<br><br>
+                    <strong>></strong> Any meals not specified in the itinerary<br><br>
+                    <strong>></strong> Yellow Fever Immunization Certificate(required)<br><br>
+                    <strong>></strong> Any other item not specifically included in the tour itinerary.',
+                'full_description_html' => '<strong>The Senegal, African Culture & Safari Tour</strong> includes visits to Dakar and St. Louis, Senegal’s most modern cities as well as visits to some of Senegal’s 
+                    most isolated villages, where life has remained virtually unchanged for centuries.<br><br>We will explore Goree Island, infamous for its role in the Trans-Atlantic Slave Trade. oree Island for 
+                    over 300 years was one of the largest slave trading centers in West Africa, with millions of captured Africans being warehoused there as they waited for the ships that would take them to the Americas.<br><br>'
             ],
         ];
     }

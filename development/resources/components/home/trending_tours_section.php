@@ -22,7 +22,7 @@
               </ul>
               <!-- Tab panes-->
               <div class="tab-content">
-                <div class="tab-pane fade show active" id="tabs-7-1">
+                <div class="tab-pane fade show active  text-md-left" id="tabs-7-1">
                   <p>
                     <strong>With over 20 years of Africa tour experience-- We know Africa Best!</strong>
                     
@@ -31,7 +31,7 @@
                     landscapes. Founded by African Americans who have lived on the continent for
                     decades and accumulated travel experiences and deep ties to Africa that cannot be
                     matched...
-                    <br><br><a href="about.html">Read More</a>
+                    <br><br><a href="<?php echo $page_controller->getOnePageDetails('about_us')->url; ?>">Read More</a>
                   </p>
                 </div>
               </div>

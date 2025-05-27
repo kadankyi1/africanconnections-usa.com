@@ -11,8 +11,8 @@
             </div>
             <p class="product-big-text"><?php echo $this_tour->short_description; ?></p>
             
-            <a class="button button-black-outline button-ujarak" href="tel:+18479563319">Call For Details</a>
-            <a class="button button-secondary-outline button-pipaluk" href="<?php echo $this_tour->page_url; ?>" target="_blank">Read More</a>
+            <a class="button button-black-outline button-ujarak" href="tel:<?php echo $app->getPhone(); ?>">Call For Details</a>
+            <a class="button button-secondary-outline button-pipaluk" href="<?php echo $page_controller->getOnePageDetails($this_tour->page_url)->url; ?>" target="_blank">Read More</a>
 
             <div class="product-big-price-wrap"><span class="product-big-price"><?php echo $this_tour->price; ?></span></div>
         </div>

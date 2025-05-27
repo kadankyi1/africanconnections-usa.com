@@ -6,6 +6,7 @@ class Tour
     public $name;
     public $date;
     public $duration;
+    public $countries;
     public $price;
     public $card_photo;
     public $full_photo;

@@ -3,16 +3,19 @@ require '../../config/app.php';
 use App\Controllers\PageController;
 use App\Controllers\TourController;
 
-$app = new Config\App();
-$root_folder = '../../';
-$page_name = "Home";
-$page_controller = new PageController();
-$tour_controller_1 = new TourController();
+$app = new Config\App(); // UNIVERSAL
+$root_folder = '../../'; // UNIVERSAL
+$page_name = "About Us"; // UNIVERSAL
+$page_controller = new PageController(); // UNIVERSAL
+$tour_controller = new TourController(); // UNIVERSAL
 
-$page_this = $page_controller->getOnePageDetails('home');
-$tour_black_history = $tour_controller_1->getOneTour(1);
-$tour_egypt = $tour_controller_1->getOneTour(5);
-$tour_return_to_the_motherland = $tour_controller_1->getOneTour(6);
+
+$page_banner_class = "abtpagebanner";
+$page_banner_text = "WE KNOW AFRICA BEST";
+
+$page_this = $page_controller->getOnePageDetails('about_us');
+$page_tours = $page_controller->getOnePageDetails('tours');
+
 ?>
 
 <!DOCTYPE html>
@@ -27,25 +30,16 @@ $tour_return_to_the_motherland = $tour_controller_1->getOneTour(6);
   height="0" width="0" class="hidecontentandvisibility"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <?php include('../components/home/newsletter_modal_div.php'); ?>
-
     <div class="page">
 
       <!-- HEADER SECTION-->
       <?php include('../components/general/header_with_menu_tag.php'); ?>
 
       <!-- CAROUSEL SECTION-->
-      <?php include('../components/home/carousel_section.php'); ?>
+      <?php include('../components/general/top_banner_section.php'); ?>
 
-      <!-- COUNTRIES SECTION-->
-      <?php include('../components/home/countries_section.php'); ?>
-
-      <!-- WHY CHOOSE US SECTION-->
-      <?php include('../components/home/why_choose_us.php'); ?>
-
-      
-      <!-- TRENDING TOURS & ABOUT US SECTION-->
-      <?php include('../components/home/trending_tours_section.php'); ?>
+      <!-- DESCRIPTION SECTION-->
+      <?php include('../components/about/description_section.php'); ?>
 
       <!-- FOOTER TAG-->
       <?php include('../components/home/footer_tag.php'); ?>
