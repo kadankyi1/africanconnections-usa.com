@@ -11,25 +11,27 @@ class mailing {
 
     private $main_address;
     private $reservations_address;
-    private $developer_address_address;
+    private $developer_address;
 
-    function setFromAddress(){
-        return "info@africanconnections-usa.com";
+    public function __construct(){
+        $this->main_address = "info@africanconnections-usa.com";
+        $this->reservations_address = "reservations@africanconnections-usa.com";
+        $this->developer_address = "annodankyikwaku@gmail.comm";
     }
 
-    function sendMail($subject, $message){
+    function sendMail($from_address, $subject, $message){
         $headers = "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-        $headers .= "Cc: " . $this->setFromAddress() . "\r\n";
-        $headers .= "From: <" . $this->setFromAddress() . ">";
+        $headers .= "Cc: " . $from_address . "\r\n";
+        $headers .= "From: <" . $this->developer_address . ">";
         mail($this->setFromAddress(),$subject,$message,$headers);
     }
     
-    function sendReceiptMail($subject, $payer_email, $payment_date, $payer_name, $order_id, $tour_reference, $payment_amt){
+    function sendReceiptMail($from_address, $subject, $payer_email, $payment_date, $payer_name, $order_id, $tour_reference, $payment_amt){
         $headers = "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-        $headers .= "From: " . $this->setFromAddress() . "\r\n";
-        $headers .= "Cc: " . $this->setFromAddress() . "\r\n";
+        $headers .= "From: " . $from_address . "\r\n";
+        $headers .= "Cc: " . $this->developer_address . "\r\n";
         $receipt_email = file_get_contents('views/payment-email');
 
         $oldsvals = array("{{purchase_date}}", "{{name}}", "{{receipt_id}}", "{{date}}", "{{tour_reference}}", "{{amount}}");
@@ -40,7 +42,7 @@ class mailing {
     
     }
 
-    public static function sendEmailWithPHPMailer($smtp, $priority, $msg_id, $to_email, $to_name, $add_cc_email = null, $subject_emoji = null, $subject_text, $mail_body_html, $mail_body_text, $getAcopy, $origin) {
+    public static function sendEmailWithPHPMailer($from_address, $smtp, $priority, $msg_id, $to_email, $to_name, $add_cc_email = null, $subject_emoji = null, $subject_text, $mail_body_html, $mail_body_text, $getAcopy, $origin) {
         $mail = new PHPMailer();
         if ($smtp) {
             $mail->isSMTP();
@@ -53,7 +55,7 @@ class mailing {
             $mail->ContentType = "text/html; charset=utf-8\r\n";
         }
         $mail->Priority = $priority;
-        $mail->setFrom('info@africanconnections-usa.com', 'African Connections');
+        $mail->setFrom($from_address, 'African Connections');
         $mail->addAddress($to_email, $to_name);
         if ($getAcopy) {
             $mail->addBCC($to_email, $to_name);
