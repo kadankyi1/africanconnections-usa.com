@@ -1,8 +1,7 @@
 <?php
 namespace App\Controllers;
 
-require '../../vendor/autoload.php';
-require_once('../../config/app.php');
+require_once('../../config/App.php');
 
 use Config\App;
 use App\Models\Page;

@@ -1,0 +1,24 @@
+#USING ROUTER.PHP https://stackoverflow.com/questions/74604568/htaccess-php-parameter-friendly-url
+
+DirectoryIndex development/src/pages/home.php
+
+RewriteEngine On
+RewriteCond %{THE_REQUEST} /([^.]+)\.php [NC]
+RewriteRule ^ /%1 [NC,L,R]
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^ %{REQUEST_URI}.php [NC,L]
+
+RewriteRule ^home$ http://africanconnections-usa.com/development/src/pages/home [R=301,L]
+RewriteRule ^tours$ http://africanconnections-usa.com/development/src/pages/tours [R=301,L]
+RewriteRule ^about$ http://africanconnections-usa.com/development/src/pages/about [R=301,L]
+RewriteRule ^reviews$ http://africanconnections-usa.com/development/src/pages/reviews [R=301,L]
+RewriteRule ^pay$ http://africanconnections-usa.com/development/src/pages/pay [R=301,L]
+RewriteRule ^travel_insurance$ http://africanconnections-usa.com/development/src/pages/travel_insurance [R=301,L]
+RewriteRule ^blog$ http://africanconnections-usa.com/development/src/pages/blog [R=301,L]
+RewriteRule ^contact$ http://africanconnections-usa.com/development/src/pages/contact_us [R=301,L]
+RewriteRule ^youth-program$ http://africanconnections-usa.com/development/src/pages/youth_program [R=301,L]
+
+
+RewriteRule ^thank-you-newsletter$ http://africanconnections-usa.com/development/src/pages/thank-you-newsletter [QSA,L,R=307]
+
+

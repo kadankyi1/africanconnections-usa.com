@@ -260,6 +260,17 @@ class PagesData
                 'url' =>'/terms',
                 
             ],
+            "thank_you_newsletter" => [
+                /*************************************************************************************************************************
+                                                TERMS AND CONDITIONS
+                *************************************************************************************************************************/
+                'name' =>'Thank You - Newsletter',
+                'title' =>'Thank you | African Connection Newsletter',
+                'description' =>'Thank You For Joining Your Newsletter. We will send you our monthly newsletter with tour updates, exciting new tours and discount offers.',
+                'keywords' =>'',
+                'url' =>'/thank-you-newsletter',
+                
+            ],
             "customize_tour" => [
                 /*************************************************************************************************************************
                                                 CUSTOMIZE A TOUR
