@@ -51,32 +51,32 @@
                 <div class="rd-navbar-nav-wrap">
                   <!-- RD Navbar Nav-->
                   <ul class="rd-navbar-nav">
-                    <li class="rd-nav-item <?php ($page_name == "Home") ? print("active") :  ''; ?>">
+                    <li class="rd-nav-item <?php ($page_name == "home") ? print("active") :  ''; ?>">
                       <a class="rd-nav-link" href="<?php echo $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('home')->url; ?>">Home</a>
                     </li>
-                    <li class="rd-nav-item <?php ($page_name == "Tours") ?  print("active"):  ''; ?>">
+                    <li class="rd-nav-item <?php ($page_name == "tours") ?  print("active"):  ''; ?>">
                       <a class="rd-nav-link" href="<?php echo $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('tours')->url; ?>">Tours</a>
                     </li>
                     
-                    <li class="rd-nav-item <?php ($page_name == "About Us") ?  print("active"):  ''; ?>">
+                    <li class="rd-nav-item <?php ($page_name == "about_us") ?  print("active"):  ''; ?>">
                       <a class="rd-nav-link" href="<?php echo $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('about_us')->url; ?>">About Us</a>
                     </li>
-                    <li class="rd-nav-item <?php ($page_name == "Reviews") ?  print("active"):  ''; ?>">
+                    <li class="rd-nav-item <?php ($page_name == "reviews") ?  print("active"):  ''; ?>">
                       <a class="rd-nav-link" href="<?php echo $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('reviews')->url; ?>">Reviews</a>
                     </li>
-                    <li class="rd-nav-item <?php ($page_name == "Make A Payment") ?  print("active"):  ''; ?>">
+                    <li class="rd-nav-item <?php ($page_name == "make_a_payment") ?  print("active"):  ''; ?>">
                       <a class="rd-nav-link" href="<?php echo $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('make_a_payment')->url; ?>">Make A Payment</a>
                     </li>
-                    <li class="rd-nav-item <?php ($page_name == "Travel Insurance") ?  print("active"):  ''; ?>">
+                    <li class="rd-nav-item <?php ($page_name == "travel_insurance") ?  print("active"):  ''; ?>">
                       <a class="rd-nav-link" href="<?php echo $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('travel_insurance')->url; ?>">Travel Insurance</a>
                     </li>
-                    <li class="rd-nav-item <?php ($page_name == "Blog") ?  print("active"):  ''; ?>">
+                    <li class="rd-nav-item <?php ($page_name == "blog") ?  print("active"):  ''; ?>">
                       <a class="rd-nav-link" href="<?php echo $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('blog')->url; ?>">Blog</a>
                     </li>
-                    <li class="rd-nav-item <?php ($page_name == "Contact Us") ?  print("active"):  ''; ?>">
+                    <li class="rd-nav-item <?php ($page_name == "contact_us") ?  print("active"):  ''; ?>">
                       <a class="rd-nav-link" href="<?php echo $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('contact_us')->url; ?>">Contact Us</a>
                     </li>
-                    <li class="rd-nav-item <?php ($page_name == "Youth Program") ?  print("active"):  ''; ?>">
+                    <li class="rd-nav-item <?php ($page_name == "youth_program") ?  print("active"):  ''; ?>">
                       <a class="rd-nav-link" href="<?php echo $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('youth_program')->url; ?>">Youth Program</a>
                     </li>
                   </ul>

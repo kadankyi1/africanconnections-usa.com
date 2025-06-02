@@ -2,6 +2,15 @@
     <div class="snackbars" id="form-output-global"></div>
     <!-- Javascript-->
     <script src="<?php echo $root_folder; ?>resources/js/core.min.js"></script>
+    <?php if($page_name == "reviews") { ?>
+      <script type="text/javascript">
+        var player = new Plyr('.container video', {
+          muted: false,
+          volume: 1,
+          controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen'],
+        });
+      </script>
+    <?php } ?>
     <script src="<?php echo $root_folder; ?>resources/js/script.js"></script>
     <script type="text/javascript">
       var form_used = "0";

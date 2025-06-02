@@ -5,11 +5,11 @@ use App\Controllers\TourController;
 
 $app = new Config\App(); // UNIVERSAL
 $root_folder = '../../'; // UNIVERSAL
-$page_name = "Tours"; // UNIVERSAL
+$page_name = "tours"; // UNIVERSAL
 $page_controller = new PageController(); // UNIVERSAL
 $tour_controller = new TourController(); // UNIVERSAL
 
-$page_this = $page_controller->getOnePageDetails('tours');
+$page_this = $page_controller->getOnePageDetails($page_name);
 ?>
 
 <!DOCTYPE html>

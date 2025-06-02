@@ -5,13 +5,13 @@ use App\Controllers\PageController;
 use App\Controllers\TourController;
 
 $app = new Config\App();
-$page_name = "Home";
+$page_name = "home";
 $page_controller = new App\Controllers\PageController();
 $tour_controller_1 = new TourController();
 $tour_controller_2 = new TourController();
 $tour_controller_3 = new TourController();
 
-$page_this = $page_controller->getOnePageDetails('home');
+$page_this = $page_controller->getOnePageDetails($page_name);
 $tour_black_history = $tour_controller_1->getOneTour(1);
 $tour_egypt = $tour_controller_2->getOneTour(5);
 $tour_return_to_the_motherland = $tour_controller_3->getOneTour(6);

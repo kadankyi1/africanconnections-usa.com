@@ -9,7 +9,9 @@
           </div>
           <!-- Reviews -->
           <br><br>
-          <div class="elfsight-app-6f3643ee-085f-4fec-8390-c389d1019520"></div>  
+
+          <!-- GOOGLE REVIEWS-->
+          <?php include('../components/general/google_reviews_div.php'); ?> 
 
 
           <br><br>

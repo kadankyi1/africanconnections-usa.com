@@ -5,16 +5,11 @@ use App\Controllers\TourController;
 
 $app = new Config\App(); // UNIVERSAL
 $root_folder = '../../'; // UNIVERSAL
-$page_name = "about_us"; // UNIVERSAL
+$page_name = "reviews"; // UNIVERSAL
 $page_controller = new PageController(); // UNIVERSAL
-$tour_controller = new TourController(); // UNIVERSAL
 
-
-$page_banner_class = "abtpagebanner";
-$page_banner_text = "WE KNOW AFRICA BEST";
 
 $page_this = $page_controller->getOnePageDetails($page_name);
-$page_tours = $page_controller->getOnePageDetails('tours');
 
 ?>
 
@@ -35,11 +30,20 @@ $page_tours = $page_controller->getOnePageDetails('tours');
       <!-- HEADER SECTION-->
       <?php include('../components/general/header_with_menu_tag.php'); ?>
 
-      <!-- TOP SECTION-->
-      <?php include('../components/general/top_banner_section.php'); ?>
+        <section class="section section-sm bg-default  mt-0 pt-0">
+            <div class="container">
+                <div class="col-sm-12 col-md-12  col-lg-12 wow fadeInRight">
+                    <video controls crossorigin playsinline class="fullwidth minwidth100percent" poster="<?php echo $root_folder; ?>/resources/img/try1.png">
+                        <source src="<?php echo $root_folder; ?>/resources/videos/review1.mp4" type="video/mp4" size="576" seek>
+                    </video>
+                </div>
+            </div>
+        </section>
 
-      <!-- DESCRIPTION SECTION-->
-      <?php include('../components/about/description_section.php'); ?>
+      <?php include('../components/general/google_reviews_div.php'); ?> 
+
+      <!-- WHY CHOOSE US SECTION-->
+      <?php include('../components/general/why_choose_us.php'); ?>
 
       <!-- FOOTER TAG-->
       <?php include('../components/home/footer_tag.php'); ?>
