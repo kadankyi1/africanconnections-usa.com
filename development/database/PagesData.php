@@ -125,7 +125,7 @@ class PagesData
                 'title' =>'Egypt African Heritage Tour | African Connections USA',
                 'description' =>'Egypt Tour With African Connections. Learn About Pricing, Packages And More',
                 'keywords' =>'Egypt Tour, Egypt Pyramids Tour, Egypt Tour African Connections, African Connections, African Connections USA, Tours Egypt,  Tours to Egypt, Tour Operator Egypt, Tour Operators Egypt, Egypt Tour Agency, Egypt Tour Agencies, Travel To Egypt, Egypt Tour, Experience Egypt',
-                'url' =>'/tours/egypt',
+                'url' =>'/egypt',
                 
             ],
             "black_history_month_tour" => [
@@ -136,7 +136,7 @@ class PagesData
                 'title' =>'Black History Month, Return To The Motherland Tour',
                 'description' =>'Get A Feel Of Our Black History Month Tour. Learn About Pricing, Packages & More',
                 'keywords' =>'Black History Month, Black History Month Ghana, African Connections, African Connections USA, Travel To Ghana, Ghana Tour, Experience Ghana',
-                'url' =>'/tours/black-history-month',
+                'url' =>'/black-history-month',
                 
             ],
             "juneteenth_tour" => [
@@ -147,7 +147,7 @@ class PagesData
                 'title' =>'JuneTeenth, Return To The Motherland | African Connections',
                 'description' =>'Juneteenth Tour To Ghana With African Connections. Learn About Pricing, Packages And More',
                 'keywords' =>'Juneteenth, Juneteenth Tour, Juneteenth Tour African Connections, Return To The Motherland, Year of Return, Beyond The Return,  African Connections, African Connections USA, Tours Ghana,  Tours to Ghana, Tour Operator Ghana,Tour Operators Ghana, Ghana Tour Agency, Ghana Tour Agencies, Travel To Ghana, Ghana Tour, Experience Ghana',
-                'url' =>'/tours/juneteenth',
+                'url' =>'/juneteenth',
                 
             ],
             "panafest_tour" => [
@@ -158,7 +158,7 @@ class PagesData
                 'title' =>'PANAFEST, African Heritage Tour | African Connections',
                 'description' =>'PANAFEST Tour To Ghana With African Connections. Learn About Pricing, Packages And More',
                 'keywords' =>'PANAFEST, PANAFEST Ghana, PANAFEST Tour African Connections, Return To The Motherland, Year of Return, Beyond The Return,  African Connections, African Connections USA, Tours Ghana,  Tours to Ghana, Tour Operator Ghana,Tour Operators Ghana, Ghana Tour Agency, Ghana Tour Agencies, Travel To Ghana, Ghana Tour, Experience Ghana',
-                'url' =>'/tours/panafest',
+                'url' =>'/panafest',
                 
             ],
             "kenya_tanzania_zanzibar_tour" => [
@@ -169,7 +169,7 @@ class PagesData
                 'title' =>'Kenya, Tanzania, Zanzibar Return To The Motherland Tour | African Connections USA',
                 'description' =>'Kenya, Tanzania, Zanzibar Tour With African Connections. Learn About Pricing, Packages And More',
                 'keywords' =>'Kenya Tour, Tanzania Tour, Zanzibar Tour,  African Connections, African Connections, African Connections USA, Tours Kenya Tanzania Zanzibar,  Tours to Kenya Tanzania Zanzibar, Tour Operator Kenya Tanzania Zanzibar, Tour Operators Kenya Tanzania Zanzibar, Kenya Tanzania Zanzibar Tour Agency, Kenya Tanzania Zanzibar Tour Agencies, Travel To Kenya Tanzania Zanzibar, Kenya Tanzania Zanzibar Tour, Experience Kenya Tanzania Zanzibar',
-                'url' =>'/tours/kenya-tanzania-zanzibar',
+                'url' =>'/kenya-tanzania-zanzibar',
                 
             ],
             "south_africa_tour" => [
@@ -180,7 +180,7 @@ class PagesData
                 'title' =>'South Africa, Return To The Motherland Tour | African Connections',
                 'description' =>'South Africa Tour With African Connections. Learn About Pricing, Packages And More',
                 'keywords' =>'South Africa Tour, South Africa Tour African Connections, African Connections, African Connections USA, Tours South Africa,  Tours to South Africa, Tour Operator South Africa, Tour Operators South Africa, South Africa Tour Agency, South Africa Tour Agencies, Travel To EgSouth Africaypt, South Africa Tour, Experience South Africa',
-                'url' =>'/tours/south-africa',
+                'url' =>'/south-africa',
                 
             ],
             "ghana_togo_benin_tour" => [
@@ -191,7 +191,7 @@ class PagesData
                 'title' =>'Ghana, Togo, Benin Ouidah Voodoo Festival Tour | AC',
                 'description' =>'Ghana, Togo, Benin Ouidah Voodoo Festival Tour. Learn About Pricing, Packages And More',
                 'keywords' =>'Togo Tour, Benin Tour, Voodoo Festival Tour, Return To The Motherland, Year of Return, Beyond The Return,  African Connections, African Connections USA, Ghana Tours,  Tours to Ghana, Tour Operator Ghana,Tour Operators Ghana, Ghana Tour Agency, Ghana Tour Agencies, Travel To Ghana, Ghana Tour, Experience Ghana',
-                'url' =>'/tours/ghana-togo-benin',
+                'url' =>'/ghana-togo-benin',
                 
             ],
             "senegal_tour" => [
@@ -202,7 +202,7 @@ class PagesData
                 'title' =>'Senegal, African Culture & Safari Tour | African Connections',
                 'description' =>'Senegal Safari Tour With African Connections. Learn About Pricing, Packages And More',
                 'keywords' =>'Senegal Tour, Senegal Safari Tour, Senegal Tour African Connections, Senegal Safari Tour African Connections, African Connections USA, Tours Senegal,  Tours to Senegal, Tour Operator Senegal, Tour Operators Senegal, Senegal Tour Agency, Senegal Tour Agencies, Travel To Senegal, Senegal Tour, Experience Senegal',
-                'url' =>'/tours/senegal',
+                'url' =>'/senegal',
                 
             ],
             "ethiopia_ghana_tour" => [
@@ -213,7 +213,7 @@ class PagesData
                 'title' =>'Ethiopia & Ghana Return to the Motherland | African Connections USA',
                 'description' =>'Ethiopia & Ghana Tour With African Connections. Learn About Pricing, Packages And More',
                 'keywords' =>'Ethiopia Tour, Ghana Tour, Ethiopia & Ghana Tour African Connections, African Connections, African Connections USA, Tours Ethiopia, Tour Operator Ethiopia, Travel To Ethiopia',
-                'url' =>'/tours/ethiopia-ghana',
+                'url' =>'/ethiopia-ghana',
                 
             ],
             "morocco_tour" => [
@@ -224,7 +224,7 @@ class PagesData
                 'title' =>'Morocco Tour | African Connections USA',
                 'description' =>'Morocco Tour With African Connections. Learn About Pricing, Packages And More',
                 'keywords' =>'Morocco Tour, Morocco Tour African Connections, African Connections, African Connections USA, Tours Morocco, Tour Operator Morocco, Travel To Ethiopia',
-                'url' =>'/tours/morocco',
+                'url' =>'/morocco',
                 
             ],
             "return_to_the_motherland_tour" => [
@@ -235,7 +235,18 @@ class PagesData
                 'title' =>'Return To The Motherland, African Heritage Tour | AC',
                 'description' =>'Return To The Motherland Tour To Ghana With African Connections. Learn About Pricing, Packages And More',
                 'keywords' =>'Return To The Motherland, Return To Motherland Tour Ghana, Return To The Mother Tour African Connections, Return To The Motherland, Year of Return, Beyond The Return,  African Connections, African Connections USA, Tours Ghana,  Tours to Ghana, Tour Operator Ghana,Tour Operators Ghana, Ghana Tour Agency, Ghana Tour Agencies, Travel To Ghana, Ghana Tour, Experience Ghana',
-                'url' =>'/tours/return-to-the-motherland',
+                'url' =>'/return-to-the-motherland',
+                
+            ],
+            "return_to_the_motherland_festival_tour" => [
+                /*************************************************************************************************************************
+                                            FESTIVAL TOUR - RETURN TO THE MOTHERLAND, GHANA TOUR
+                *************************************************************************************************************************/
+                'name' =>'Return To The Motherland Tour',
+                'title' =>'Return To The Motherland, African Heritage Tour | AC',
+                'description' =>'Return To The Motherland Tour To Ghana With African Connections. Learn About Pricing, Packages And More',
+                'keywords' =>'Return To The Motherland, Return To Motherland Tour Ghana, Return To The Mother Tour African Connections, Return To The Motherland, Year of Return, Beyond The Return,  African Connections, African Connections USA, Tours Ghana,  Tours to Ghana, Tour Operator Ghana,Tour Operators Ghana, Ghana Tour Agency, Ghana Tour Agencies, Travel To Ghana, Ghana Tour, Experience Ghana',
+                'url' =>'/return_to_the_motherland_african_festival.pdf',
                 
             ],
             "tour_registration" => [

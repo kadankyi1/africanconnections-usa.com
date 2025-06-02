@@ -86,7 +86,7 @@
                       <br>Join our Subscriber list, receive our Monthly Newsletter, special discounts, travel updates and more...
                       <br><a href="<?php echo $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('terms')->url; ?>#newsletterpromo" class="tandcstext">Terms & Conditions Apply</a>
                     </p>
-                    <form class="max-w-sm mx-auto" action="<?php echo $app->getProtocol() . '://' . $app->getDomain() . "/src/pages" . $page_controller->getOnePageDetails('thank_you_newsletter')->url; ?>" method="POST" id="newsletter_form"> <!-- serverside/joinlist.php -->
+                    <form class="max-w-sm mx-auto" action="<?php echo $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('thank_you_newsletter')->url; ?>" method="POST" id="newsletter_form"> <!-- serverside/joinlist.php -->
                       <br>
                       <div class="form-group hidecontent">
                         <input type="text" name="wtf" id="wtf">
@@ -102,7 +102,6 @@
                       </div>
                       <div class="g-recaptcha hidevisibility" data-sitekey="6LebVZcpAAAAAM6qn9xfl2oa3wxeXLdVroT5z3Yq" data-callback="onSubmit" data-size="invisible"></div>
                       <span id="submit_newsletter_signup" onclick="validateRecaptchaNewsletter()" class="button button-black-outline button-ujarak">Join</span>
-                      <input type="submit" />
                     </form>
                     
                   </div>

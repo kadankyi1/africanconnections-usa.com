@@ -54,7 +54,7 @@ class App
     public function getDomain()
     {
         //return $this->domain;
-        return "africanconnections-usa.local/development";
+        return "africanconnections-usa.local/development/src/pages";
     }
 
     public function getPhone()

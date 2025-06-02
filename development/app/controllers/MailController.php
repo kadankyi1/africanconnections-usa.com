@@ -1,17 +1,16 @@
 <?php
+namespace App\Controllers;
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
 
-require 'PHPMailer/PHPMailer/src/Exception.php';
-require 'PHPMailer/PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/PHPMailer/src/SMTP.php';
 
-class mailing {
+class MailController {
 
-    private $main_address;
-    private $reservations_address;
-    private $developer_address;
+    public $main_address;
+    public $reservations_address;
+    public $developer_address;
 
     public function __construct(){
         $this->main_address = "info@africanconnections-usa.com";
@@ -24,7 +23,8 @@ class mailing {
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
         $headers .= "Cc: " . $from_address . "\r\n";
         $headers .= "From: <" . $this->developer_address . ">";
-        mail($this->setFromAddress(),$subject,$message,$headers);
+        mail($this->main_address,$subject,$message,$headers);
+        //var_dump("Mail sent");
     }
     
     function sendReceiptMail($from_address, $subject, $payer_email, $payment_date, $payer_name, $order_id, $tour_reference, $payment_amt){
@@ -42,7 +42,7 @@ class mailing {
     
     }
 
-    public static function sendEmailWithPHPMailer($from_address, $smtp, $priority, $msg_id, $to_email, $to_name, $add_cc_email = null, $subject_emoji = null, $subject_text, $mail_body_html, $mail_body_text, $getAcopy, $origin) {
+    public static function sendEmailWithPHPMailer($from_address, $smtp, $priority, $msg_id, $to_email, $to_name, $subject_text, $mail_body_html, $mail_body_text, $getAcopy, $origin) {
         $mail = new PHPMailer();
         if ($smtp) {
             $mail->isSMTP();

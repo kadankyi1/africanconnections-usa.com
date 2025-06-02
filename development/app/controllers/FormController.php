@@ -57,11 +57,12 @@ class FormController
 
     public function addNewsletterSubscriber($form_details)
     {
-    //var_dump($form_details); 
-    //var_dump($this->validateReCaptcha((empty($form_details["g-recaptcha-response"])) ? $form_details["g-recaptcha-2"] : $form_details["g-recaptcha-response"]));
-    //var_dump($this->reCaptcha->hostname);
-    //var_dump($_SERVER['SERVER_NAME']);
-    //exit;
+        $query = new Query();
+        $mail_controller = new MailController();
+        $input_data_array = array();
+        $joineremail = "";
+        $fullname_filled = "";
+
         if (
         !empty($form_details["wtf"])
         || empty($form_details["joineremail"])
@@ -76,53 +77,18 @@ class FormController
         $joineremail = $form_details["joineremail"];
         $fullname_filled = $form_details["fullname_filled"];
 
-        $query = new Query();
 
         if(empty($query->selectWithOneCondition("subscribers", "subscriber_email", $joineremail))){
-            echo "Nothing found";
+            $input_data_array = [
+                0 => ['name' =>'subscriber_name','value' => $fullname_filled,'type' => "s"],
+                1 => ['name' =>'subscriber_email','value' => $joineremail,'type' => "s",]
+            ];
+            $query->insertTwoValues("subscribers", $input_data_array);
+            $message = "\n\n FIRST NAME: $fullname_filled \n\n<br><br> EMAIL: $joineremail";
+            $mail_controller->sendMail($mail_controller->main_address, "SOMESOMEONE NEW JOINED MAILING LIST FOR AC USA WEBSITE", $message);
+        } else {
+            return "Awesome. You are already on our mailing list.";
         }
-        return;
-
-        try {
-
-            
-            $headers = "MIME-Version: 1.0" . "\r\n";
-            $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-            $headers .= "From: <$to>";
-            if(empty($phone_filled) || empty($msg_filled)) {
-            $subject = "SOMEONE NEW JOINED MAILING LIST FOR AC USA WEBSITE";
-            $message = "\n\n FIRST NAME: $fullname_filled";
-            $message = $message . "\n\n<br><br> EMAIL: $joineremail";
-            mail($to,$subject,$message,$headers);
-            header("Location: ../email-list-thankyou.html");
-            } else {
-            $subject = "NEW INQUIRY ON " . $tourname_filled;
-            $message = "\n\n TOUR NAME: $tourname_filled";
-            $message = $message . "\n\n<br><br> LEAD NAME: $fullname_filled";
-            $message = $message . "\n\n<br><br> LEAD PHONE NUMBER: $phone_filled";
-            $message = $message . "\n\n<br><br> LEAD EMAIL: $joineremail";
-            $message = $message . "\n\n<br><br> HOW DID YOU HEAR ABOUT US: $hearaboutus_filled";
-            $message = $message . "\n\n<br><br> MESSAGE: $msg_filled";
-            mail($to,$subject,$message,$headers);
-            }
-
-
-        } catch(PDOException $e){
-            //echo $e->getMessage();
-            //**********************************************//
-            //**********************************************//
-            $subject = "ERROR 1 IN NEWSLETTER SIGNUP";
-            $message = "\n\n Someone tried to signup and there was a database connection error. <br><br> LEAD NAME: $fullname_filled <br><br> EMAIL: $joineremail";
-            $headers = "MIME-Version: 1.0" . "\r\n";
-            $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-            $headers .= "From: <$to>";
-            mail($to,$subject,$message,$headers);
-            //**********************************************//
-            //**********************************************//
-            die();
-        }
-
-        return $tour;
     }
 
 }

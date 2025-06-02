@@ -68,4 +68,23 @@ class TourController
         //var_dump($this->tour_countries);
         return $this->tour;
     }
+
+
+    public function getToursInOrderOfDatesAscending()
+    {
+        $tour_dates_array = array();
+        $arranged_tours = array();
+        foreach ($this->tours as $tour_index => $current_tour) {
+            $tour_dates_array[$tour_index] = $current_tour["start_date"];
+        }
+        asort($tour_dates_array);
+
+        foreach ($tour_dates_array as $key => $tour_date) {
+            array_push($arranged_tours, $this->tours[$key]);
+        }
+        //var_dump($tour_dates_array);
+        //var_dump("<br><br>");
+        //var_dump($arranged_tours);
+        return $arranged_tours;
+    }
 }

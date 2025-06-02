@@ -6,5 +6,8 @@
             "Config\\": "config/",
             "Database\\": "database/"
         }
+    },
+    "require": {
+        "phpmailer/phpmailer": "^6.10"
     }
 }

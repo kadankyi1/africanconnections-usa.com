@@ -12,11 +12,12 @@ class ToursData
                                                 Ghana, Togo, Benin Ouidah Voodoo Festival Tour
                 *************************************************************************************************************************/
                 'name' => 'Ghana, Togo, Benin Ouidah Voodoo Festival Tour',
+                'start_date' => '2026-01-04',
                 'date' => 'January 4th – 16th 2026',
                 'duration' => '12 Nights',
                 'countries' => 'Ghana|Togo|Benin',
                 'price' => '$4,299',
-                'card_photo' => 'ghana_togo_benin.jpg',
+                'card_photo' => 'resources/img/tours/ghana_togo_benin.jpg',
                 'full_photo' => '3sliderbeninn.jpg',
                 'image_links' => '1.jpg 2.jpg 3.jpg 4.jpg 5.jpg 6.jpg',
                 'brochure_url' => 'ghana_togo_benin.pdf',
@@ -98,6 +99,7 @@ class ToursData
                                                 Black History Month,Return To The Motherland Tour
                 *************************************************************************************************************************/
                 'name' => 'Black History Month,Return To The Motherland Tour',
+                'start_date' => '2026-02-11',
                 'date' => 'February 11th - 20th 2026',
                 'duration' => '9 Nights',
                 'countries' => 'Ghana',
@@ -162,6 +164,7 @@ class ToursData
                                                 JUNETEENTH
                 *************************************************************************************************************************/
                 'name' => 'JuneTeenth, Return To The Motherland',
+                'start_date' => '2025-06-17',
                 'date' => 'June 17th - 28th 2025',
                 'duration' => '9 Nights',
                 'countries' => 'Ghana',
@@ -224,6 +227,7 @@ class ToursData
                                                 PANAFEST
                 *************************************************************************************************************************/
                 'name' => 'PANAFEST, African Festival Tour',
+                'start_date' => '2025-07-22',
                 'date' => 'July 22nd - August 2nd 2025',
                 'duration' => '11 Days',
                 'countries' => 'Ghana',
@@ -285,6 +289,7 @@ class ToursData
                                                 RETURN TO THE MOTHERLAND AFRICAN FESTIVAL TOUR
                 *************************************************************************************************************************/
                 'name' => 'Return To The Motherland African Festival Tour',
+                'start_date' => '2025-09-03',
                 'date' => 'September 3rd – 13th 2025',
                 'duration' => '10 Nights',
                 'countries' => 'Ghana',
@@ -293,7 +298,7 @@ class ToursData
                 'full_photo' => '',
                 'image_links' => '',
                 'brochure_url' => 'brochures/promo_ghana_september_2025.pdf',
-                'page_url' => '',
+                'page_url' => 'return_to_the_motherland_festival_tour',
                 'short_description' => 'Our African Festival Tour gives you the opportunity to experience one of Ghana’s most exciting events which is the Cape Coast Festival. Go inside slave dungeons and see the Door Of No Return.',
                 'highlights_description_html' => '',
                 'package_includes_description_html' => '',
@@ -305,6 +310,7 @@ class ToursData
                                                 Egypt African Heritage Tour
                 *************************************************************************************************************************/
                 'name' => 'Egypt African Heritage Tour',
+                'start_date' => '2025-10-14',
                 'date' => 'October 14th – 25th, 2025',
                 'duration' => '12 Days',
                 'countries' => 'Egypt',
@@ -380,6 +386,7 @@ class ToursData
                                                 Return to the Motherland,African Heritage Tour
                 *************************************************************************************************************************/
                 'name' => 'Return to the Motherland,African Heritage Tour',
+                'start_date' => '2025-11-04',
                 'date' => 'November 4th – 15th 2025',
                 'duration' => '12 Days',
                 'countries' => 'Ghana',
@@ -439,6 +446,7 @@ class ToursData
                                                 SOUTH AFRICA TOUR
                 *************************************************************************************************************************/
                 'name' => 'South Africa Return To The Motherland Tour',
+                'start_date' => '2026-03-07',
                 'date' => 'March 7th - 17th 2026',
                 'duration' => '9 Nights',
                 'countries' => 'South Africa',
@@ -495,6 +503,7 @@ class ToursData
                                                 KENYA, TANZANIA, ZANZIBAR TOUR
                 *************************************************************************************************************************/
                 'name' => 'Kenya, Tanzania, Zanzibar Return To The Motherland Tour',
+                'start_date' => '2026-08-10',
                 'date' => 'August 10th – 20th 2026',
                 'duration' => '10 Nights',
                 'countries' => 'Kenya|Tanzania|Zanzibar',
@@ -543,6 +552,7 @@ class ToursData
                                                 ETHIOPIA & GHANA TOUR
                 *************************************************************************************************************************/
                 'name' => 'Ethiopia & Ghana Return to the Motherland',
+                'start_date' => '2026-09-06',
                 'date' => 'September 6th - 15th 2026',
                 'duration' => '9 Nights',
                 'countries' => 'Ethiopia|Ghana',
@@ -601,6 +611,7 @@ class ToursData
                                                 SENEGAL TOUR
                 *************************************************************************************************************************/
                 'name' => 'Senegal, African Culture & Safari Tour',
+                'start_date' => '2026-09-18',
                 'date' => 'September 18th – 28th 2026',
                 'duration' => '',
                 'countries' => 'Senegal',

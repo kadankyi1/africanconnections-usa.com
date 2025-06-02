@@ -8,7 +8,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <form id="popupform" action="serverside/joinlist.php" method="post">
+            <form id="popupform" action="<?php echo $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('thank_you_newsletter')->url; ?>" method="post">
               <div class="g-recaptcha hidevisibility" data-sitekey="6LebVZcpAAAAAM6qn9xfl2oa3wxeXLdVroT5z3Yq" data-callback="onSubmit" data-size="invisible"></div>
                 <!--<div class="g-recaptcha" data-sitekey="6LfI2pwlAAAAAImVmPrhyV0B1zxmnHQIXO79vC6A"></div>-->
               <p>                      <strong>Get $100 off any tour you book with us.</strong>
@@ -26,6 +26,7 @@
               <div class="form-group">
                 <input type="email" name="joineremail" id="joineremail" class="form-control" placeholder="Email">
               </div>
+              <input type="submit" />
             </form>
           </div>
           <div class="modal-footer">

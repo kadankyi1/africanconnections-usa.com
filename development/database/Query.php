@@ -29,22 +29,62 @@ class Query
             $stmt->bindParam(1, $column_value);
             $stmt->execute(array($column_value));
             $result = $stmt->fetchAll();
-            var_dump($result); 
+            return $result;
+            //var_dump($result); 
             //echo count($result);
         } catch(\PDOException $e){
-            var_dump($e);
+            //var_dump($e);
+            return null;
         }
     }
 
-    public function insertTwoValues()
+    /*
+    $input_data_array = [
+        0 => [
+            'name' =>'resources/img/home/sliderghana.jpg',
+            'value' => 'January 1, 2025',                
+            'type' => false,                
+        ]
+    ];
+    */
+    public function insertTwoValues($table_name, $input_data_array)
     {
-        $stmt = $this->con->prepare("INSERT INTO subscribers (subscriber_name, subscriber_email) VALUES (?, ?)");
-        $stmt->bindParam(1, $fullname_filled, \PDO::PARAM_STR);
-        $stmt->bindParam(2, $joineremail, \PDO::PARAM_STR);
-        //$stmt->bindParam("ss", $fullname_filled, $joineremail);
-        if ($stmt->execute() === TRUE) {
-            //echo "<br><br>here 1";
+
+        try {
+            $column_names_str = "";
+            $column_values_placeholder_str = "";
+            for ($i=0; $i < count($input_data_array); $i++) { 
+                if($i == 0){
+                    $column_names_str = $input_data_array[$i]["name"];
+                    $column_values_placeholder_str ="?";
+                } else {
+                    $column_names_str = $column_names_str . ", " . $input_data_array[$i]["name"];
+                    $column_values_placeholder_str = $column_values_placeholder_str . ", ?";
+                }
+            }
+            $query_str = "INSERT INTO $table_name ($column_names_str) VALUES ($column_values_placeholder_str)";
+            //var_dump($query_str);
+            $stmt = $this->con->prepare($query_str);
+
+            for ($i=0; $i < count($input_data_array); $i++) { 
+                if($input_data_array[$i]["type"] == "s"){
+                    $stmt->bindParam($i+1, $input_data_array[$i]["value"], \PDO::PARAM_STR);
+                }
+            }
+            if ($stmt->execute() === TRUE) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch(\PDOException $e){
+            //var_dump($e);
+            return null;
         }
+    }
+
+
+    public function closeDBConn()
+    {
         $stmt = null;
         $this->con = null;
 

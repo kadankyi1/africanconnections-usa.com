@@ -6,7 +6,7 @@ use App\Controllers\FormController;
 
 $app = new Config\App(); // UNIVERSAL
 $root_folder = '../../'; // UNIVERSAL
-$page_name = "Thank You | African Connections Newsletter"; // UNIVERSAL
+$page_name = "Thank You Newsletter"; // UNIVERSAL
 $page_controller = new PageController(); // UNIVERSAL
 $tour_controller = new TourController(); // UNIVERSAL
 $form_controller = new FormController();
@@ -14,10 +14,10 @@ $form_controller = new FormController();
 $page_banner_class = "emailthankyoupagebanner";
 $page_banner_text = "";
 
-$page_this = $page_controller->getOnePageDetails('about_us');
+$page_this = $page_controller->getOnePageDetails('thank_you_newsletter');
 
-echo "RESPONSE <br>";
-var_dump($form_controller->addNewsletterSubscriber($_POST));
+//echo "RESPONSE <br>";
+$form_controller->addNewsletterSubscriber($_POST);
 ?>
 
 <!DOCTYPE html>
