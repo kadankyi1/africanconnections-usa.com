@@ -85,6 +85,10 @@
     <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
 
     <?php } ?>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js'></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css'>
+    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -106,4 +110,31 @@
     </script>
     <noscript><img alt="facebook image" height="1" width="1" class="hidecontent" src="https://www.facebook.com/tr?id=705561148188440&ev=PageView&noscript=1"/></noscript>
     <!-- End Meta Pixel Code -->
+    <?php if($page_name == "make_a_payment") { ?>
+
+      <script
+    src="https://secure.magicpaygateway.com/token/Collect.js"
+    data-tokenization-key="cGdNy3-GStb47-VaVWTC-H8hE7t"
+    data-variant="inline"
+    data-field-ccnumber-placeholder = '0000 0000 0000 0000'
+    data-field-ccexp-placeholder = '10 / 22'
+    data-field-cvv-placeholder= '123'
+    data-custom-css = '{
+      "display": "block",
+      "width": "100%",
+      "height": "calc(2.25rem + 2px)",
+      "padding": "0.375rem 0.75rem",
+      "font-size": "1rem",
+      "line-height": "1.5",
+      "color": "#495057",
+      "background-color": "#fff",
+      "background-clip": "padding-box",
+      "border": "1px solid #ced4da",
+      "border-radius": "0.25rem",
+      "transition": "border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out"
+    }'
+    ></script>
+    <link rel="stylesheet" href="<?php echo $root_folder; ?>resources/css/pay.css">
+
+    <?php } ?>
   </head>

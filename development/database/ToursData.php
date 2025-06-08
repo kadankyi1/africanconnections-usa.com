@@ -7,7 +7,7 @@ class ToursData
 
     public function __construct(){
         $this->tours_data = [
-            0 => [
+            'ghana_togo_benin_tour' => [
                 /*************************************************************************************************************************
                                                 Ghana, Togo, Benin Ouidah Voodoo Festival Tour
                 *************************************************************************************************************************/
@@ -17,9 +17,10 @@ class ToursData
                 'duration' => '12 Nights',
                 'countries' => 'Ghana|Togo|Benin',
                 'price' => '$4,299',
+                'banner' =>'ghanatogobeninpagebanner',
                 'card_photo' => 'resources/img/tours/ghana_togo_benin.jpg',
                 'full_photo' => '3sliderbeninn.jpg',
-                'image_links' => '1.jpg 2.jpg 3.jpg 4.jpg 5.jpg 6.jpg',
+                'image_links' => 'resources/img/ghana_togo_benin_tour/gallery/1.jpg resources/img/ghana_togo_benin_tour/gallery/2.jpg resources/img/ghana_togo_benin_tour/gallery/3.jpg resources/img/ghana_togo_benin_tour/gallery/4.jpg resources/img/ghana_togo_benin_tour/gallery/5.jpg resources/img/ghana_togo_benin_tour/gallery/6.jpg',
                 'brochure_url' => 'ghana_togo_benin.pdf',
                 'page_url' => 'ghana_togo_benin_tour',
                 'short_description' => 'Benin is considered by many to be the birthplace of voodoo. Every year, on the 10 th of January, 
@@ -94,7 +95,7 @@ class ToursData
                 Kumasi, the famous capital of the Asante Empire, Cape Coast and Elmina in the historic Central Region.<br><br><strong> This trip will be unforgettable! 
                 Have your cameras ready! Prepare to be amazed! </strong> <br><br> <br><br>'
             ],
-            1 => [
+            'black_history_month_tour' => [
                 /*************************************************************************************************************************
                                                 Black History Month,Return To The Motherland Tour
                 *************************************************************************************************************************/
@@ -104,6 +105,7 @@ class ToursData
                 'duration' => '9 Nights',
                 'countries' => 'Ghana',
                 'price' => '$3,699',
+                'banner' =>'bhmpagebanner',
                 'card_photo' => 'resources/img/tours/blackhistorymonth.jpg',
                 'full_photo' => 'resources/img/bhm/bhm.png',
                 'image_links' => 'resources/img/bhm/new/1.jpg resources/img/bhm/new/2.jpg resources/img/bhm/new/3.jpg resources/img/bhm/new/4.jpg resources/img/bhm/new/5.jpg resources/img/bhm/new/6.jpg',
@@ -159,7 +161,7 @@ class ToursData
                     to visit in Ghana. Let us make your trip to Ghana, whether a Ghana vacation or you want to immerse yourself in the culture and history, our tour 
                     will amaze you!<br><br>'
             ],
-            2 => [
+            'juneteenth_tour' => [
                 /*************************************************************************************************************************
                                                 JUNETEENTH
                 *************************************************************************************************************************/
@@ -169,9 +171,10 @@ class ToursData
                 'duration' => '9 Nights',
                 'countries' => 'Ghana',
                 'price' => '$3,599',
+                'banner' =>'juneteenthpagebanner',
                 'card_photo' => 'resources/img/juneteenth/banner.jpg',
                 'full_photo' => 'resources/img/juneteenth/banner.jpg',
-                'image_links' => 'resources/img/juneteenth/gallery/1.jpg resources/img/juneteenth/gallery/2.jpg resources/img/juneteenth/gallery/3.png resources/img/juneteenth/gallery/4.jpg resources/img/juneteenth/gallery/5.jpg resources/img/returntomotherland/gallery/6.jpg',
+                'image_links' => 'resources/img/juneteenth/gallery/1.jpg resources/img/juneteenth/gallery/2.jpg resources/img/juneteenth/gallery/3.png resources/img/juneteenth/gallery/4.jpg resources/img/juneteenth/gallery/5.jpg resources/img/juneteenth/gallery/6.jpg',
                 'brochure_url' => 'brochures/juneteenth_2025.pdf',
                 'page_url' => 'juneteenth_tour',
                 'short_description' => 'June 19th 1865 marks the end of slavery in the United States. Juneteenth is a time to celebrate liberation with joy and hope for better to come. We invite you to come to Ghana to explore this country’s unique links to African American history...',
@@ -222,7 +225,7 @@ class ToursData
                     Whether you want a Ghana vacation or want to immerse yourself in the culture and history, you will not be disappointed.</strong><br><br>We know all the best places to visit in Ghana so we will 
                     make your trip to Ghana an amazing travel experience.<br><br>'
             ],
-            3 => [
+            'panafest_tour' => [
                 /*************************************************************************************************************************
                                                 PANAFEST
                 *************************************************************************************************************************/
@@ -232,6 +235,7 @@ class ToursData
                 'duration' => '11 Days',
                 'countries' => 'Ghana',
                 'price' => '$3,699',
+                'banner' =>'panafestpagebanner',
                 'card_photo' => 'resources/img/home/1hottours.jpg',
                 'full_photo' => 'resources/img/panafest/banner.jpg',
                 'image_links' => 'resources/img/panafest/new/1.jpg resources/img/panafest/new/2.jpg resources/img/panafest/new/3.jpg resources/img/panafest/new/4.jpg resources/img/panafest/new/5.jpg resources/img/panafest/new/6.jpg',              
@@ -278,13 +282,13 @@ class ToursData
                     <strong>></strong> Yellow Fever Immunization Certificate(required)<br><br>
                     <strong>></strong> Any other item not specifically included in the tour itinerary',
                 'full_description_html' => '<strong>Travel to Ghana and Attend PANAFEST, Africa’s Most Exciting International Festival</strong><br><br><strong>PANAFEST is a 
-                    cultural event dedicated to the enhancement of the ideals of Pan Africanism and the development of the African continent.</strong>ANAFEST is a 
+                    cultural event dedicated to the enhancement of the ideals of Pan Africanism and the development of the African continent. </strong>PANAFEST is a 
                     biennial cultural festival of art and culture attended by people of African descent who convene in Ghana from all over the continent and the 
                     Diaspora to celebrate the music, art and theatre of the African experience.<br><br>Join our African Heritage Tour. We know the best places to 
                     visit in Ghana and our tour will make your trip to Ghana an amazing travel experience.<br><br><strong>Whether you want a Ghana vacation or want 
                     to immerse yourself in the culture and history, Visit Ghana and experience all the excitement of the PANAFEST festival!</strong><br><br>'
             ],
-            4 => [
+            'return_to_the_motherland_festival_tour' => [
                 /*************************************************************************************************************************
                                                 RETURN TO THE MOTHERLAND AFRICAN FESTIVAL TOUR
                 *************************************************************************************************************************/
@@ -294,6 +298,7 @@ class ToursData
                 'duration' => '10 Nights',
                 'countries' => 'Ghana',
                 'price' => '$4,199',
+                'banner' =>'',
                 'card_photo' => 'resources/img/promo/festival.jpg',
                 'full_photo' => '',
                 'image_links' => '',
@@ -305,7 +310,7 @@ class ToursData
                 'package_excludes_description_html' => '',
                 'full_description_html' => ''
             ],
-            5 => [
+            'egypt_tour' => [
                 /*************************************************************************************************************************
                                                 Egypt African Heritage Tour
                 *************************************************************************************************************************/
@@ -315,6 +320,7 @@ class ToursData
                 'duration' => '12 Days',
                 'countries' => 'Egypt',
                 'price' => '$3,599',
+                'banner' =>'egyptpagebanner',
                 'card_photo' => 'resources/img/tours/egypt.jpg',
                 'full_photo' => 'resources/img/egypt/bg2.jpg',
                 'image_links' => 'resources/img/egypt/new/1.jpg resources/img/egypt/new/2.jpg resources/img/egypt/new/3.jpg resources/img/egypt/new/4.jpg resources/img/egypt/new/5.jpg resources/img/egypt/new/6.jpg',
@@ -381,7 +387,7 @@ class ToursData
                     Kings, Aswan and Karnak. We will visit the Temple of Karnak, the Temple of Luxor, the Valley of the Kings, the Temple of Nefertari; visit the 
                     colossal Temple of Abu Simbel, stand under the granite statues of Ramses the Great; and so much more!<br><br>'
             ],
-            6 => [
+            'return_to_the_motherland_tour' => [
                 /*************************************************************************************************************************
                                                 Return to the Motherland,African Heritage Tour
                 *************************************************************************************************************************/
@@ -391,6 +397,7 @@ class ToursData
                 'duration' => '12 Days',
                 'countries' => 'Ghana',
                 'price' => '$3,499',
+                'banner' =>'gfg-div',
                 'card_photo' => 'resources/img/home/2hottours.jpg',
                 'full_photo' => 'resources/img/returntomotherland/returntomotherland2.jpg',
                 'image_links' => 'resources/img/returntomotherland/new/1.jpg resources/img/returntomotherland/new/2.jpg resources/img/returntomotherland/new/3.jpg resources/img/returntomotherland/new/4.jpg resources/img/returntomotherland/new/5.jpg resources/img/returntomotherland/new/6.jpg',
@@ -441,7 +448,7 @@ class ToursData
                     are to celebrate in their ancestral homes. Festivals reunite the entire ethnic group and are giant multi-day, sometimes week long celebrations 
                     with parades, parties and feasting all over town.'
             ],
-            7 => [
+            'south_africa_tour' => [
                 /*************************************************************************************************************************
                                                 SOUTH AFRICA TOUR
                 *************************************************************************************************************************/
@@ -451,6 +458,7 @@ class ToursData
                 'duration' => '9 Nights',
                 'countries' => 'South Africa',
                 'price' => '$3,999',
+                'banner' =>'sapagebanner',
                 'card_photo' => 'resources/img/south_africa/sa_banner.jpg',
                 'full_photo' => 'resources/img/south_africa/sa_banner.jpg',
                 'image_links' => '',
@@ -498,7 +506,7 @@ class ToursData
                 'full_description_html' => '<strong>South Africa</strong> is a country located at the southern tip of the African continent and one of Africa&#39;s major tourist attraction sites<br><br>Our <strong>
                     South Africa Return To The Motherland Tour </strong> will take your through the various sites in Johannesburg and Cape Town to experience the history and nature of South Africa.<br><br>'
             ],
-            8 => [
+            'kenya_tanzania_zanzibar_tour' => [
                 /*************************************************************************************************************************
                                                 KENYA, TANZANIA, ZANZIBAR TOUR
                 *************************************************************************************************************************/
@@ -508,6 +516,7 @@ class ToursData
                 'duration' => '10 Nights',
                 'countries' => 'Kenya|Tanzania|Zanzibar',
                 'price' => '$4,199',
+                'banner' =>'kenyatanzaniazanzibarpagebanner',
                 'card_photo' => 'resources/img/kenya_tanzania_zanzibar/banner.jpg',
                 'full_photo' => 'resources/img/kenya_tanzania_zanzibar/banner.jpg',
                 'image_links' => '',
@@ -547,7 +556,7 @@ class ToursData
                     with over 20 years of experience in Africa. <br><br>Discover the rich history and cultural heritage of Kenya and Tanzania. In Zanzibar, relax at their world famous beaches and let the world 
                     float away.<br><br>'
             ],
-            9 => [
+            'ethiopia_ghana_tour' => [
                 /*************************************************************************************************************************
                                                 ETHIOPIA & GHANA TOUR
                 *************************************************************************************************************************/
@@ -557,6 +566,7 @@ class ToursData
                 'duration' => '9 Nights',
                 'countries' => 'Ethiopia|Ghana',
                 'price' => '$4,199',
+                'banner' =>'ethiopiaghanapagebanner',
                 'card_photo' => 'resources/img/ethiopia_ghana/banner.jpg',
                 'full_photo' => 'resources/img/ethiopia_ghana/banner.jpg',
                 'image_links' => 'resources/img/returntomotherland/new/1.jpg resources/img/returntomotherland/new/2.jpg resources/img/returntomotherland/new/3.jpg resources/img/returntomotherland/new/4.jpg resources/img/returntomotherland/new/5.jpg resources/img/returntomotherland/new/6.jpg',
@@ -606,7 +616,7 @@ class ToursData
                 'full_description_html' => 'The <strong>Ethiopia & Ghana Return To The Motherland Tour</strong> lets your experience the rich and glorious history, time-honored traditions, art and natural scenic 
                     beauty of both destinations. <br><br>Enjoy our warm hospitality. Immerse yourself in the traditions and lifestyles and explore the beauty of Ethiopia and Ghana.<br><br>'
             ],
-            10 => [
+            'senegal_tour' => [
                 /*************************************************************************************************************************
                                                 SENEGAL TOUR
                 *************************************************************************************************************************/
@@ -616,6 +626,7 @@ class ToursData
                 'duration' => '',
                 'countries' => 'Senegal',
                 'price' => '$3,799',
+                'banner' =>'senegalpagebanner',
                 'card_photo' => 'resources/img/tours/senegal.jpg',
                 'full_photo' => 'resources/img/senegal/bg.jpg',
                 'image_links' => '',

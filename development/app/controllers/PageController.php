@@ -24,10 +24,19 @@ class PageController
 
 
 
+    public function getPages()
+    {
+        return $this->pages;
+    }
+
+
     public function getOnePageDetails($index_name)
     {
-        $page = (object) $this->pages[$index_name];
-        //var_dump($page);
+        if(!empty($this->pages[$index_name])){
+            $page = (object) $this->pages[$index_name];
+        } else {
+            $page = (object) $this->pages['error'];
+        }
         return $page;
     }
 
@@ -65,5 +74,26 @@ class PageController
         return new CarouselData();
     }
  
+    public static function getIP() {
+        $ip = '';
+        if (isset($_SERVER['HTTP_CLIENT_IP'])){
+            $ip = $_SERVER['HTTP_CLIENT_IP'];
+        }else if(isset($_SERVER['HTTP_X_FORWARDED_FOR'])){
+            $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        }else if(isset($_SERVER['HTTP_X_FORWARDED'])){
+            $ip = $_SERVER['HTTP_X_FORWARDED'];
+        }else if(isset($_SERVER['HTTP_FORWARDED_FOR'])){
+            $ip = $_SERVER['HTTP_FORWARDED_FOR'];
+        }else if(isset($_SERVER['HTTP_FORWARDED'])){
+            $ip = $_SERVER['HTTP_FORWARDED'];
+        }else if(isset($_SERVER['REMOTE_ADDR'])){
+            $ip = $_SERVER['REMOTE_ADDR'];
+        }
+        if( empty($ip) || $ip == '0.0.0.0' || substr( $ip, 0, 2 ) == '::' ){
+            $ip = file_get_contents('https://api.ipify.org/');
+            $ip = ($ip===false?$ip:'');
+        }
+        return $ip;
+    }
 
 }

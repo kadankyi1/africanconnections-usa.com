@@ -34,7 +34,7 @@
                     <li>
                       <div class="unit unit-spacing-xs">
                         <div class="unit-left"><span class="icon fa fa-phone"></span></div>
-                        <div class="unit-body"><a class="link-phone" href="tel:<?php echo $app->getPhone(); ?>"><?php echo $app->getPhone(); ?></a></div>
+                        <div class="unit-body"><a class="link-phone" href="tel:<?php echo $app->getPhone(); ?>"><?php echo $app->localizeUsPhoneNumber($app->getPhone()); ?></a></div>
                       </div>
                     </li>
                   </ul>

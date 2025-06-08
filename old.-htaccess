@@ -8,6 +8,9 @@ RewriteRule ^ /%1 [NC,L,R]
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^ %{REQUEST_URI}.php [NC,L]
 
+
+
+
 #RewriteRule ^home$ http://africanconnections-usa.local/development/src/pages/home [R=301,L]
 #RewriteRule ^tours$ http://africanconnections-usa.local/development/src/pages/tours [R=301,L]
 #RewriteRule ^about$ http://africanconnections-usa.local/development/src/pages/about [R=301,L]
@@ -20,5 +23,7 @@ RewriteRule ^ %{REQUEST_URI}.php [NC,L]
 
 
 #RewriteRule ^thank-you-newsletter$ http://africanconnections-usa.local/development/src/pages/thank-you-newsletter [QSA,L,R=307]
+
+
 
 

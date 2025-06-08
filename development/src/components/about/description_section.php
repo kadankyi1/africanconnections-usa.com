@@ -49,8 +49,8 @@
                         <br><br>
                         We offer carefully curated tour packages that allow you to experience the best of Africa.
                         Travel with us to:
-                        <?php foreach ($tour_controller->getAllTourCountries() as $key => $tour_country) { print('<br>-&gt; <a href="' . $page_controller->getTourCountryPageObjectForPageUrl($tour_country)->url . '">' .  $tour_country . '</a>'); } ?>
-                        <br><a href="<?php print($page_tours->url); ?>"><strong class="texttoblack">View our tours.</strong></a>
+                        <?php foreach ($tour_controller->getAllTourCountries() as $key => $tour_country) { echo '<br>-&gt; <a href="' . $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getTourCountryPageObjectForPageUrl($tour_country)->url . '">' .  $tour_country . '</a>'; } ?>
+                        <br><a href="<?php echo $app->getProtocol() . '://' . $app->getDomain() . $page_tours->url; ?>"><strong class="texttoblack">View our tours.</strong></a>
                         <br><br>
                         While we specialize in group travel, we welcome couples and solo travelers. We customize tours to meet your interests, budget and time constraints. 
                         Contact us for a quote. <a class="link-phone" href="tel:<?php print($app->getPhone()); ?>"><strong class="texttoblack">Click Here To Call Us</strong></a>

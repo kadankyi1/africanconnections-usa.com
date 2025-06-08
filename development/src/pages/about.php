@@ -42,12 +42,12 @@ $page_tours = $page_controller->getOnePageDetails('tours');
       <?php include('../components/about/description_section.php'); ?>
 
       <!-- FOOTER TAG-->
-      <?php include('../components/home/footer_tag.php'); ?>
+      <?php include('../components/general/footer_tag.php'); ?>
 
     </div>
 
     <!-- FOOTER TAG-->
-    <?php include('../components/home/bottom_script_call.php'); ?>
+    <?php include('../components/general/bottom_script_call.php'); ?>
 
   </body>
 </html>

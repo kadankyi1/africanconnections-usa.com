@@ -6,7 +6,7 @@ require '../../vendor/autoload.php';
 
 use Config\App;
 use App\Models\Tour;
-use Database\ToursData;
+use Database\Query;
 
 
 
@@ -19,38 +19,40 @@ class TourController
 
     public function __construct()
     {
-        $tours_data = new ToursData();
+        $query = new Query();
+        $tours_data = $query->selectWithOneCondition("tours", "tour_active", "=", true, "");
+
+        //var_dump($tours_data);
         $this->tour = new Tour();
         $this->tour_countries = array();;
-        $this->tours = $tours_data->tours_data;
+        $this->tours = $tours_data;
 
-        //var_dump($tours);
     }
 
     public function getOneTour($tour_index_number)
     {
-        $tour = new Tour();
-        $tour->name = $this->tours[$tour_index_number]["name"];
-        $tour->date = $this->tours[$tour_index_number]["date"];
-        $tour->duration = $this->tours[$tour_index_number]["duration"];
-        $tour->price = $this->tours[$tour_index_number]["price"];
-        $tour->card_photo = $this->tours[$tour_index_number]["card_photo"];
-        $tour->full_photo = $this->tours[$tour_index_number]["full_photo"];
-        $tour->image_links = $this->tours[$tour_index_number]["image_links"];
-        $tour->brochure_url = $this->tours[$tour_index_number]["brochure_url"];
-        $tour->page_url = $this->tours[$tour_index_number]["page_url"];
-        $tour->short_description = $this->tours[$tour_index_number]["short_description"];
-        $tour->highlights_description_html = $this->tours[$tour_index_number]["highlights_description_html"];
-        $tour->package_includes_description_html = $this->tours[$tour_index_number]["package_includes_description_html"];
-        $tour->package_excludes_description_html = $this->tours[$tour_index_number]["package_excludes_description_html"];
-        $tour->full_description_html = $this->tours[$tour_index_number]["full_description_html"];
+
+        $query = new Query();
+        $tour = $query->selectWithOneCondition("tours", "tour_sys_id", "=", $tour_index_number, "");
+        if(count($tour) != 1){
+            return false;
+        }
+        $tour = (object) $tour[0];
+        //var_dump($tour);
         return $tour;
     }
+
+    public function formatUrlIdToGetTourPage($url_id)
+    {
+        return str_replace("-", "_", $url_id) . "_tour";
+    }
+ 
 
     public function getAllTourCountries()
     {
         foreach ($this->tours as $tour_index => $current_tour) {
-            $this->tour_countries = array_merge($this->tour_countries, explode("|", $current_tour["countries"]));
+            //var_dump($current_tour["tour_countries"]);
+            $this->tour_countries = array_merge($this->tour_countries, explode("|", $current_tour["tour_countries"]));
             $this->tour_countries = array_unique($this->tour_countries);
             sort($this->tour_countries);
         }
@@ -58,10 +60,19 @@ class TourController
         return $this->tour_countries;
     }
 
+
+    public function getTourGalleryPhotos($tour_photo_str)
+    {
+        $photos_array = explode(" ", $tour_photo_str);
+        //var_dump($this->tour_countries);
+        return $photos_array;
+    }
+
+
     public function getAllTourCountriesWith()
     {
         foreach ($this->tours as $tour_index => $current_tour) {
-            $this->tour_countries = array_merge($this->tour_countries, explode("|", $current_tour["countries"]));
+            $this->tour_countries = array_merge($this->tour_countries, explode("|", $current_tour["tour_countries"]));
             $this->tour_countries = array_unique($this->tour_countries);
             sort($this->tour_countries);
         }
@@ -75,7 +86,7 @@ class TourController
         $tour_dates_array = array();
         $arranged_tours = array();
         foreach ($this->tours as $tour_index => $current_tour) {
-            $tour_dates_array[$tour_index] = $current_tour["start_date"];
+            $tour_dates_array[$tour_index] = $current_tour["tour_start_date"];
         }
         asort($tour_dates_array);
 

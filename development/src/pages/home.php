@@ -8,13 +8,12 @@ $app = new Config\App();
 $page_name = "home";
 $page_controller = new App\Controllers\PageController();
 $tour_controller_1 = new TourController();
-$tour_controller_2 = new TourController();
-$tour_controller_3 = new TourController();
 
 $page_this = $page_controller->getOnePageDetails($page_name);
-$tour_black_history = $tour_controller_1->getOneTour(1);
-$tour_egypt = $tour_controller_2->getOneTour(5);
-$tour_return_to_the_motherland = $tour_controller_3->getOneTour(6);
+$tour_black_history = $tour_controller_1->getOneTour('black_history_month_tour');
+$tour_egypt = $tour_controller_1->getOneTour('egypt_tour');
+$tour_return_to_the_motherland = $tour_controller_1->getOneTour('return_to_the_motherland_tour');
+
 ?>
 
 <!DOCTYPE html>
@@ -50,12 +49,12 @@ $tour_return_to_the_motherland = $tour_controller_3->getOneTour(6);
       <?php include('../components/home/trending_tours_section.php'); ?>
 
       <!-- FOOTER TAG-->
-      <?php include('../components/home/footer_tag.php'); ?>
+      <?php include('../components/general/footer_tag.php'); ?>
 
     </div>
 
     <!-- FOOTER TAG-->
-    <?php include('../components/home/bottom_script_call.php'); ?>
+    <?php include('../components/general/bottom_script_call.php'); ?>
 
   </body>
 </html>

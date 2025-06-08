@@ -50,7 +50,7 @@
                         <div class="unit">
                           <div class="unit-left"><span class="icon fa fa-phone"></span></div>
                           <div class="unit-body">
-                            <a class="link-phone" href="tel:<?php echo $app->getPhone(); ?>"> <?php echo $app->getPhone(); ?></a>
+                            <a class="link-phone" href="tel:<?php echo $app->getPhone(); ?>"> <?php echo $app->localizeUsPhoneNumber($app->getPhone()); ?></a>
                           </div>
                         </div>
                       </li>

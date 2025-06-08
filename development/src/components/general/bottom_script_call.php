@@ -25,7 +25,13 @@
 
           //console.log($('#fullname_filled').val().trim());
           //console.log($('#joineremail').val().trim());
-          $("#popupform").submit();
+          <?php if($page_name == "home"){ ?>
+            $("#popupform").submit();
+          <?php } else if($page_name == "customize_tour") { ?>
+            sendForm('customize', 'inquiry_form', 'response_msg_holder');
+          <?php } else { ?>
+            addToMailList('inquiry_form', 'response_msg_holder');
+          <?php } ?>
       } else if(form_used.trim() == "2"){
           console.log("2 token : " + token);
           console.log("form submitted Footer");
@@ -39,6 +45,40 @@
 
       }
     }
+
+
+    function validateRecaptchaCustomizeTourForm() {
+        form_used = "1";
+        if(
+            $('#traveldate_filled').val().trim() != "" 
+            && $('#travelduration_filled').val().trim() != "" 
+            && $('#travelersnumber_filled').val().trim() != "" 
+            && $('#interests_filled').val().trim() != "" 
+            && $('#fullname_filled').val().trim() != "" 
+            && $('#phone_filled').val().trim() != "" 
+            && $('#joineremail').val().trim() != "" 
+          ){
+          var response = grecaptcha.execute();
+          console.log(response);
+        } else {
+              alert("Please complete the form");
+        }
+    }
+
+    function validateRecaptchaSideForm() {
+          form_used = "1";
+          if(
+            $('#fullname_filled').val().trim() != "" 
+            && $('#phone_filled').val().trim() != "" 
+            && $('#joineremail').val().trim() != "" 
+            && $('#msg_filled').val().trim() != ""
+            ){
+            var response = grecaptcha.execute();
+            console.log(response);
+          } else {
+                alert("Please complete the form");
+          }
+      }
 
     function validateRecaptchaPopUp() {
         form_used = "1";
@@ -60,7 +100,21 @@
         }
     }
 
+    <?php if($page_name == "about_us") { ?>
     
+      function showFounder() {
+        $('#tabs-7-1').removeClass('show active')
+        //$('#tabs-7-2').removeClass('show active');
+        $('#tabs-7-3').removeClass('fade');
+        $('#tabs-7-1').addClass('fade');
+        //$('#tabs-7-2').addClass('fade');
+        $('#tabs-7-3').addClass('show active');
+        $('#menu-tabs-7-1').removeClass('active');
+        //$('#menu-tabs-7-2').removeClass('active');
+        $('#menu-tabs-7-3').addClass('active');
+      }
+
+    <?php } ?>
     
     </script>
     <div class="elfsight-app-56c0baaf-15bf-4139-ae0f-952721a02fab"></div>

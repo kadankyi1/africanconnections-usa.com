@@ -26,7 +26,6 @@
               <div class="form-group">
                 <input type="email" name="joineremail" id="joineremail" class="form-control" placeholder="Email">
               </div>
-              <input type="submit" />
             </form>
           </div>
           <div class="modal-footer">

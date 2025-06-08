@@ -7,7 +7,7 @@ require '../../vendor/autoload.php';
 use Config\App;
 use App\Models\Tour;
 use Database\Query;
-use Database\ToursData;
+//use Controllers\PageController;
 
 
 
@@ -15,21 +15,6 @@ class FormController
 {
 
     private $reCaptcha;
-    /*
-    private $tours;
-    private $tour;
-    private $tour_countries;
-
-    public function __construct()
-    {
-        $tours_data = new ToursData();
-        $this->tour = new Tour();
-        $this->tour_countries = array();;
-        $this->tours = $tours_data->tours_data;
-
-        //var_dump($tours);
-    }
-    */
 
     public function validateReCaptcha($captchaResponse)
     {
@@ -58,6 +43,7 @@ class FormController
     public function addNewsletterSubscriber($form_details)
     {
         $query = new Query();
+        $page_controller = new PageController();
         $mail_controller = new MailController();
         $input_data_array = array();
         $joineremail = "";
@@ -78,16 +64,19 @@ class FormController
         $fullname_filled = $form_details["fullname_filled"];
 
 
-        if(empty($query->selectWithOneCondition("subscribers", "subscriber_email", $joineremail))){
+        if(empty($query->selectWithOneCondition("leads", "lead_email", "=", $joineremail, ""))){
             $input_data_array = [
-                0 => ['name' =>'subscriber_name','value' => $fullname_filled,'type' => "s"],
-                1 => ['name' =>'subscriber_email','value' => $joineremail,'type' => "s",]
+                0 => ['name' =>'lead_name','value' => $fullname_filled,'type' => "s"],
+                1 => ['name' =>'lead_email','value' => $joineremail,'type' => "s"],
+                2 => ['name' =>'lead_ip','value' => $page_controller->getIP(),'type' => "s"]
             ];
-            $query->insertTwoValues("subscribers", $input_data_array);
+            $query->insertToTable("leads", $input_data_array);
             $message = "\n\n FIRST NAME: $fullname_filled \n\n<br><br> EMAIL: $joineremail";
-            $mail_controller->sendMail($mail_controller->main_address, "SOMESOMEONE NEW JOINED MAILING LIST FOR AC USA WEBSITE", $message);
+            $mail_controller->sendMail($mail_controller->main_address, "leadsSOMEONE NEW JOINED MAILING LIST FOR AC USA WEBSITE", $message);
+
+            return (object) ["status" => 1, "heading" => "THANK YOU FOR JOINING OUR SUBSCRIBERS' LIST", "message" => "We will send you our monthly newsletter with tour updates, exciting new tours and discount offers. African Connections looks forward to hosting you on one of our African tours soon."];
         } else {
-            return "Awesome. You are already on our mailing list.";
+            return (object) ["status" => 0, "heading" => "THANK YOU..", "message" => "Awesome. You are already on our mailing list."];
         }
     }
 

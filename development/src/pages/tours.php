@@ -46,12 +46,12 @@ $page_this = $page_controller->getOnePageDetails($page_name);
         </section>
 
       <!-- FOOTER TAG-->
-      <?php include('../components/home/footer_tag.php'); ?>
+      <?php include('../components/general/footer_tag.php'); ?>
 
     </div>
 
     <!-- FOOTER TAG-->
-    <?php include('../components/home/bottom_script_call.php'); ?>
+    <?php include('../components/general/bottom_script_call.php'); ?>
 
   </body>
 </html>

@@ -2,12 +2,10 @@
   <div class="container mt-0 pt-0">
     <div class="row row-sm row-40 row-md-50 mt-0 pt-0">
       <div class="col-sm-12 col-md-12  col-lg-12 wow fadeInRight mt-0 pt-0">
-        <h3><strong>THANK YOU FOR JOINING OUR SUBSCRIBERS' LIST</strong></h3>
+        <h3><strong><?php echo $result->heading; ?></strong></h3>
 
-        <p class="product-big-text textalignleft texttoblack">
-          <strong>We will send you our monthly newsletter with tour updates, exciting new tours and discount offers.
-
-          African Connections looks forward to hosting you on one of our African tours soon.</strong>
+        <p class="product-big-text texttoblack">
+          <?php echo $result->message; ?>
           </p>
       </div>
     </div>

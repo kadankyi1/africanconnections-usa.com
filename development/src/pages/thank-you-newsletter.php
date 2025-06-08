@@ -10,14 +10,16 @@ $page_name = "thank_you_newsletter"; // UNIVERSAL
 $page_controller = new PageController(); // UNIVERSAL
 $tour_controller = new TourController(); // UNIVERSAL
 $form_controller = new FormController();
+$result = (object) ["status" => 0, "heading" => "OOPS. ", "message" => "Not sure how you got here. If you are joining our newsletter, please complete the entire form at the bottom of the page"]; 
 
 $page_banner_class = "emailthankyoupagebanner";
 $page_banner_text = "";
 
 $page_this = $page_controller->getOnePageDetails($page_name);
 
-//echo "RESPONSE <br>";
-$form_controller->addNewsletterSubscriber($_POST);
+if(!empty($_POST["joineremail"])){
+  $result = $form_controller->addNewsletterSubscriber($_POST);
+}
 ?>
 
 <!DOCTYPE html>
@@ -47,12 +49,12 @@ $form_controller->addNewsletterSubscriber($_POST);
       <?php include('../components/general/why_choose_us.php'); ?>
 
       <!-- FOOTER TAG-->
-      <?php include('../components/home/footer_tag.php'); ?>
+      <?php include('../components/general/footer_tag.php'); ?>
 
     </div>
 
     <!-- FOOTER TAG-->
-    <?php include('../components/home/bottom_script_call.php'); ?>
+    <?php include('../components/general/bottom_script_call.php'); ?>
 
   </body>
 </html>

@@ -63,10 +63,15 @@ class App
         return "+18479563319";
     }
 
+    public function localizeUsPhoneNumber($phone) {
+        $numbers_only = preg_replace("/[^\d]/", "", $phone);
+        return "+1 " . preg_replace("/^1?(\d{3})(\d{3})(\d{4})$/", "($1) $2-$3", $numbers_only);
+    }
+
     public function getDbName()
     {
         //return $this->phone;
-        return "african1_aclist";
+        return "new_ac";
     }
 
     public function getDbUser()

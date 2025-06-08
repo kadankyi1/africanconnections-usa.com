@@ -21,11 +21,11 @@ class Query
     
 
 
-    public function selectWithOneCondition($table_name, $column_name, $column_value)
+    public function selectWithOneCondition($table_name, $column_name, $condition, $column_value, $sorting_and_limiting)
     {
         try {
             $this->con->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
-            $stmt = $this->con->prepare("SELECT * FROM $table_name WHERE $column_name = ?");
+            $stmt = $this->con->prepare("SELECT * FROM $table_name WHERE $column_name $condition ? $sorting_and_limiting");
             $stmt->bindParam(1, $column_value);
             $stmt->execute(array($column_value));
             $result = $stmt->fetchAll();
@@ -47,7 +47,7 @@ class Query
         ]
     ];
     */
-    public function insertTwoValues($table_name, $input_data_array)
+    public function insertToTable($table_name, $input_data_array)
     {
 
         try {
