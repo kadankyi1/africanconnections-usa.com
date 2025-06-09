@@ -2,14 +2,24 @@
 require '../../config/App.php';
 use App\Controllers\PageController;
 use App\Controllers\TourController;
+use App\Controllers\FormController;
 
 $app = new Config\App(); // UNIVERSAL
 $root_folder = '../../'; // UNIVERSAL
-$page_name = "tours"; // UNIVERSAL
+$page_name = "thank_you_customize"; // UNIVERSAL
 $page_controller = new PageController(); // UNIVERSAL
 $tour_controller = new TourController(); // UNIVERSAL
+$form_controller = new FormController();
+$result = (object) ["status" => 0, "heading" => "OOPS. ", "message" => "Not sure how you got here."]; 
+
+$page_banner_class = "emailthankyoupagebanner";
+$page_banner_text = "";
 
 $page_this = $page_controller->getOnePageDetails($page_name);
+
+if(!empty($_POST["fullname_filled"])){
+  $result = $form_controller->addCustomizationRequest($_POST);
+}
 ?>
 
 <!DOCTYPE html>
@@ -29,21 +39,14 @@ $page_this = $page_controller->getOnePageDetails($page_name);
       <!-- HEADER SECTION-->
       <?php include('../components/general/header_with_menu_tag.php'); ?>
 
-      <!-- TOP SECTION-->
-      <?php include('../components/general/top_description_with_text.php'); ?>
+      <!-- CAROUSEL SECTION-->
+      <?php include('../components/general/top_banner_section.php'); ?>
 
-      <!-- TOURS LISTING SECTION-->
-      <section class="section section-sm bg-default pb-0">
-            <div class="container mt-0 pt-0">
-                <div class="row row-sm row-40 row-md-50">
-                    <?php foreach ($tour_controller->getToursInOrderOfDatesAscending(false, false) as $key => $tour) { 
-                            $this_tour = (object) $tour;//var_dump($this_tour);
-                            include('../components/general/tourcard.php'); 
-                        }
-                    ?>
-                </div>
-            </div>
-        </section>
+      <!-- MESSAGE - THANK YOU SECTION-->
+      <?php include('../components/thank/message.php'); ?>
+
+      <!-- WHY CHOOSE US SECTION-->
+      <?php include('../components/general/why_choose_us.php'); ?>
 
       <!-- FOOTER TAG-->
       <?php include('../components/general/footer_tag.php'); ?>

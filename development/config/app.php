@@ -17,6 +17,8 @@ class App
     private $db_name;
     private $db_user;
     private $db_pass;
+    private $payment_key;
+    private $gcaptcha;
     
     function __construct() {
         $key = file_get_contents('../../.env');
@@ -33,9 +35,11 @@ class App
         $this->protocol = $this->env_data["protocol"];
         $this->domain = $this->env_data["domain"];
         $this->phone = $this->env_data["phone"];
-        //$this->db_name = $this->env_data["db_name"];
-        //$this->db_user = $this->env_data["db_user"];
-        //$this->db_pass = $this->env_data["db_pass"];
+        $this->db_name = $this->env_data["db_name"];
+        $this->db_user = $this->env_data["db_user"];
+        $this->db_pass = $this->env_data["db_pass"];
+        $this->payment_key = $this->env_data["payment_key"];
+        $this->gcaptcha = $this->env_data["gcaptcha"];
       }
 
 
@@ -84,6 +88,19 @@ class App
     {
         //return $this->phone;
         return "";
+    }
+
+
+    public function getPaymentKey()
+    {
+        //return $this->payment_key;
+        return "sample_key";
+    }
+
+    public function getGCaptchaServerKey()
+    {
+        //return $this->gcaptcha;
+        return "gcaptcha";
     }
 
     public static function isDatePassed($date)

@@ -69,6 +69,8 @@ class Query
             for ($i=0; $i < count($input_data_array); $i++) { 
                 if($input_data_array[$i]["type"] == "s"){
                     $stmt->bindParam($i+1, $input_data_array[$i]["value"], \PDO::PARAM_STR);
+                } else if($input_data_array[$i]["type"] == "i"){
+                    $stmt->bindParam($i+1, $input_data_array[$i]["value"], \PDO::PARAM_INT);
                 }
             }
             if ($stmt->execute() === TRUE) {

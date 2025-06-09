@@ -19,28 +19,10 @@
                     <div class="select-wrapper mr-0 ml-0 mt-0 mb-0 pr-0 pl-0 pt-0 pb-0">
                       <select class="select" id="ordTour" name="refcode" required>
                         <option value="">Choose Tour</option>
-                        <option value="T&T 60th Ghana Adventure">T&T 60th Ghana Adventure</option>
-                        <option value="Chi Town Travelers Ghana 2025">Chi Town Travelers Ghana 2025</option>
-                        <option value="Egypt October 2025">Egypt October 2025</option>
-                        <option value="Juneteenth Ghana Tour 2025">Juneteenth Ghana Tour 2025</option>
-                        <option value="Bradford Ghana July 2025 Tour">Bradford Ghana July 2025 Tour</option>
-                        <option value="Ghana Festival Tour September 2025">Ghana Festival Tour September 2025</option>
-                        <option value="PANAFEST Ghana July 2025">PANAFEST Ghana July 2025</option>
-                        <option value="November 2025 Ghana">November 2025 Ghana</option>
-                        <option value="February 2026 Ghana Black History Month">February 2026 Ghana Black History Month</option>
-                        <option value="Ghana, Togo, Benin September 2025">Ghana, Togo, Benin September 2025</option>
-                        <option value="Ghana, Togo, Benin January 2026">Ghana, Togo, Benin January 2026</option>
-                        <option value="The Cyres Family Tour">The Cyres Family Tour</option>
-                        <option value="South Africa March 2026">South Africa March 2026</option>
-                        <option value="Grafton Johnson Ghana July 2026 Tour">Grafton Johnson Ghana July 2026 Tour</option>
-                        <option value="Kenya, Tanzania, Zanzibar August 2026">Kenya, Tanzania, Zanzibar August 2026</option>
-                        <option value="Ethiopia And Ghana September 2026">Ethiopia And Ghana September 2026</option>
-                        <option value="Senegal September 2026">Senegal September 2026</option>
-                        <option value="3-G (Ghana, Grand and Glorious) 2026">3-G (Ghana, Grand and Glorious) 2026</option>
-                        <option value="Bucket List Options Ghana 2026">Bucket List Options Ghana 2026</option>
-                        <option value="Travel with Linda Boyd Ghana 2026">Travel with Linda Boyd Ghana 2026</option>
-                        <option value="Pan-Cultural Adventures Ghana 2027">Pan-Cultural Adventures Ghana 2027</option>
-                        <option value="Other">Other</option>
+
+                        <?php foreach ($tour_controller->getToursInOrderOfDatesAscending(false, true) as $key => $tour) { ?>
+                          <option value="<?php echo $tour['tour_sys_id']; ?>"><?php echo $tour['tour_name']; ?></option>
+                        <?php } ?>
                       </select>
                     </div>
                     <br>

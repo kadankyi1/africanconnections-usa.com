@@ -299,9 +299,31 @@ class PagesData
                 *************************************************************************************************************************/
                 'name' =>'Thank You - Newsletter',
                 'title' =>'Thank you | African Connection Newsletter',
-                'description' =>'Thank You For Joining Your Newsletter. We will send you our monthly newsletter with tour updates, exciting new tours and discount offers.',
+                'description' =>'',
                 'keywords' =>'',
                 'url' =>'/thank-you-newsletter.php',
+                
+            ],
+            "thank_you_customize" => [
+                /*************************************************************************************************************************
+                                                TERMS AND CONDITIONS
+                *************************************************************************************************************************/
+                'name' =>'Thank You - Customize Tour',
+                'title' =>'Thank you | African Connection Newsletter',
+                'description' =>'',
+                'keywords' =>'',
+                'url' =>'/thank-you-customize.php',
+                
+            ],
+            "thank_you_payment" => [
+                /*************************************************************************************************************************
+                                                TERMS AND CONDITIONS
+                *************************************************************************************************************************/
+                'name' =>'Thank You - Payment',
+                'title' =>'Thank you | African Connection Newsletter',
+                'description' =>'',
+                'keywords' =>'',
+                'url' =>'/thank-you-payment.php',
                 
             ],
             "customize_tour" => [

@@ -52,6 +52,7 @@ class TourController
     {
         foreach ($this->tours as $tour_index => $current_tour) {
             //var_dump($current_tour["tour_countries"]);
+            if(empty($current_tour["tour_countries"])){continue;}
             $this->tour_countries = array_merge($this->tour_countries, explode("|", $current_tour["tour_countries"]));
             $this->tour_countries = array_unique($this->tour_countries);
             sort($this->tour_countries);
@@ -68,24 +69,16 @@ class TourController
         return $photos_array;
     }
 
-
-    public function getAllTourCountriesWith()
-    {
-        foreach ($this->tours as $tour_index => $current_tour) {
-            $this->tour_countries = array_merge($this->tour_countries, explode("|", $current_tour["tour_countries"]));
-            $this->tour_countries = array_unique($this->tour_countries);
-            sort($this->tour_countries);
-        }
-        //var_dump($this->tour_countries);
-        return $this->tour;
-    }
-
-
-    public function getToursInOrderOfDatesAscending()
+    public function getToursInOrderOfDatesAscending($show_non_active, $show_payment_only)
     {
         $tour_dates_array = array();
         $arranged_tours = array();
         foreach ($this->tours as $tour_index => $current_tour) {
+            //var_dump($current_tour["tour_active"]);
+            //var_dump($current_tour["for_payment_only"]);
+            //echo "<br><br>";
+            if($current_tour["tour_active"] != 1 && $show_non_active == false){continue;}
+            if($current_tour["for_payment_only"] == 1 && $show_payment_only == false){continue;}
             $tour_dates_array[$tour_index] = $current_tour["tour_start_date"];
         }
         asort($tour_dates_array);
