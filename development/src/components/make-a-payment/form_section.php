@@ -9,8 +9,8 @@
                   <span class="amex"></span>
                   <span class="discover"></span>
                 </div>
-                <?php echo $message; ?>          
-                <form  action="serverside/payment-process.php" id="payform" method="post" class="validate">
+                <?php //echo $message; ?>          
+                <form  action="<?php echo $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('thank_you_payment')->url; ?>" id="payform" method="post" class="validate">
                   <div class="form-group textalignleft">
                   <div class="form-group hidecontent">
                     <input type="text" name="wtf" id="wtf">
@@ -77,6 +77,7 @@
 
                   <div class="form-group hideconten mt-4" id="finalbtnholder">
                   <button class="btn btn-primary btn-lg btn-block"  id="payButton" disabled>PAY</button>
+                  <button class="btn btn-primary btn-lg btn-block"  type="submit">SUBMIT</button>
                   </div>
 
                 </form>

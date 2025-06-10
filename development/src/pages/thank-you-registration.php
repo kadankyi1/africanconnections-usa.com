@@ -17,15 +17,14 @@ $page_banner_text = "";
 
 $page_this = $page_controller->getOnePageDetails($page_name);
 
-//var_dump($_POST);
-if(!empty($_POST["payment_token"])){
-  $result = $form_controller->processPaymentForm($_POST, $root_folder);
+if(!empty($_POST["joineremail_filled1"])){
+  $result = $form_controller->processRegistrationForm($_POST, $root_folder);
 }
 
-if($result->status == 2){
+if($result->status == 0){
   header('Location: ' . $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('tour_registration')->url);
 }
-
+//exit;
 ?>
 
 <!DOCTYPE html>

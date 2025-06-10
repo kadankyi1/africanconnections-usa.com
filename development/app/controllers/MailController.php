@@ -27,12 +27,12 @@ class MailController {
         //var_dump("Mail sent");
     }
     
-    function sendReceiptMail($from_address, $subject, $payer_email, $payment_date, $payer_name, $order_id, $tour_reference, $payment_amt){
+    function sendReceiptMail($root_folder, $from_address, $subject, $payer_email, $payment_date, $payer_name, $order_id, $tour_reference, $payment_amt){
         $headers = "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
         $headers .= "From: " . $from_address . "\r\n";
         $headers .= "Cc: " . $this->developer_address . "\r\n";
-        $receipt_email = file_get_contents('views/payment-email');
+        $receipt_email = file_get_contents($root_folder . 'resources/views/payment-email');
 
         $oldsvals = array("{{purchase_date}}", "{{name}}", "{{receipt_id}}", "{{date}}", "{{tour_reference}}", "{{amount}}");
         $newvals   = array($payment_date, $payer_name, $order_id, $payment_date, $tour_reference, $payment_amt);

@@ -1,18 +1,23 @@
 <?php
+namespace App\Controllers;
+//namespace Config;
+
+require '../../vendor/autoload.php';
 
 define("APPROVED", 1);
 define("DECLINED", 2);
 define("ERROR", 3);
 
-class PaymentController {
+class PaymentController 
+{
 
 // Initial Setting Functions
 
-  function setLogin($security_key) {
+  public function setLogin($security_key) {
     $this->login['security_key'] = $security_key;
   }
 
-  function setOrder($orderid,
+  public function setOrder($orderid,
         $orderdescription,
         $tax,
         $shipping,
@@ -26,7 +31,7 @@ class PaymentController {
     $this->order['ipaddress']        = $ipaddress;
   }
 
-  function setBilling($firstname,
+  public function setBilling($firstname,
         $lastname,
         $company,
         $address1,
@@ -54,7 +59,7 @@ class PaymentController {
     $this->billing['website']   = $website;
   }
 
-  function setShipping($firstname,
+  public function setShipping($firstname,
         $lastname,
         $company,
         $address1,
@@ -78,8 +83,8 @@ class PaymentController {
 
   // Transaction Functions
 
-  //function doSale($amount, $ccnumber, $ccexp, $cvv="") {
-  function doSale($amount, $payment_token) {
+  //public function doSale($amount, $ccnumber, $ccexp, $cvv="") {
+  public function doSale($amount, $payment_token) {
 
     $query  = "";
     // Login Information
@@ -130,7 +135,7 @@ class PaymentController {
     return $this->_doPost($query);
   }
 
-  function doAuth($amount, $ccnumber, $ccexp, $cvv="") {
+  public function doAuth($amount, $ccnumber, $ccexp, $cvv="") {
 
     $query  = "";
     // Login Information
@@ -176,7 +181,7 @@ class PaymentController {
     return $this->_doPost($query);
   }
 
-  function doCredit($amount, $ccnumber, $ccexp) {
+  public function doCredit($amount, $ccnumber, $ccexp) {
 
     $query  = "";
     // Login Information
@@ -210,7 +215,7 @@ class PaymentController {
     return $this->_doPost($query);
   }
 
-  function doOffline($authorizationcode, $amount, $ccnumber, $ccexp) {
+  public function doOffline($authorizationcode, $amount, $ccnumber, $ccexp) {
 
     $query  = "";
     // Login Information
@@ -256,7 +261,7 @@ class PaymentController {
     return $this->_doPost($query);
   }
 
-  function doCapture($transactionid, $amount =0) {
+  public function doCapture($transactionid, $amount =0) {
 
     $query  = "";
     // Login Information
@@ -270,7 +275,7 @@ class PaymentController {
     return $this->_doPost($query);
   }
 
-  function doVoid($transactionid) {
+  public function doVoid($transactionid) {
 
     $query  = "";
     // Login Information
@@ -281,7 +286,7 @@ class PaymentController {
     return $this->_doPost($query);
   }
 
-  function doRefund($transactionid, $amount = 0) {
+  public function doRefund($transactionid, $amount = 0) {
 
     $query  = "";
     // Login Information
@@ -295,7 +300,7 @@ class PaymentController {
     return $this->_doPost($query);
   }
 
-  function _doPost($query) {
+  public function _doPost($query) {
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, "https://secure.magicpaygateway.com/api/transact.php");
     curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 30);
@@ -322,7 +327,7 @@ class PaymentController {
     //return $this->responses;
   }
 
-  function testXmlQuery($security_key,$constraints)
+  public function testXmlQuery($security_key,$constraints)
 {
     // transactionFields has all of the fields we want to validate
     // in the transaction tag in the XML output

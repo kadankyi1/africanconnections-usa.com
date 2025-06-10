@@ -147,9 +147,9 @@ class FormController
     }
 
 
-    public function processPaymentForm($form_details)
+    public function processPaymentForm($form_details, $root_folder)
     {
-        $app = new Config\App();
+        $app = new App();
         $query = new Query();
         $page_controller = new PageController();
         $payment_controller = new PaymentController();
@@ -157,16 +157,16 @@ class FormController
         $input_data_array = array();
         $order_id = uniqid();
         $client_id = uniqid();
-        $tour_this = "";
+        $tour_this = array();;
 
         if (
-            isset($_POST["amt"]) && !empty($_POST["amt"])
-            && isset($_POST["fname"]) && !empty($_POST["fname"])
-            && isset($_POST["lname"]) && !empty($_POST["lname"])
-            && isset($_POST["payeremail"]) && !empty($_POST["payeremail"])
-            && isset($_POST["payment_token"]) && !empty($_POST["payment_token"])
-            && isset($_POST["refcode"]) && !empty($_POST["refcode"])
-            && isset($_POST["regform"]) && !empty($_POST["regform"])
+            empty($_POST["amt"])
+            || empty($_POST["fname"])
+            || empty($_POST["lname"])
+            || empty($_POST["payeremail"])
+            //|| empty($_POST["payment_token"])
+            || empty($_POST["refcode"])
+            || empty($_POST["regform"])
             //|| (empty($form_details["g-recaptcha-response"]) && empty($form_details["g-recaptcha-2"]))
             //|| !$this->validateReCaptcha((empty($form_details["g-recaptcha-response"])) ? $form_details["g-recaptcha-2"] : $form_details["g-recaptcha-response"])->success
             //|| empty($this->reCaptcha->hostname) || $_SERVER['SERVER_NAME'] != $this->reCaptcha->hostname
@@ -175,6 +175,9 @@ class FormController
         }
 
         $tour_this = $query->selectWithOneCondition("tours", "tour_sys_id", "=", $form_details['refcode'], "");
+
+        //var_dump($tour_this);
+
         if(empty($tour_this)){
             return (object) ["status" => 0, "heading" => "OOPS", "message" => "Tour not found"];
         }
@@ -190,12 +193,12 @@ class FormController
         //    return (object) ["status" => 0, "heading" => "OOPS", "message" => "Payment failed"];
         //}
 
-        $mail_controller->sendReceiptMail("Tour Payment Receipt - African Connections", $_POST["payeremail"], date('F j, Y'), $_POST["fname"] . " " . $_POST["lname"], $order_id, $_POST["refcode"], "$" . $_POST["amt"]);
+        $mail_controller->sendReceiptMail($root_folder, $mail_controller->main_address, "Tour Payment Receipt - African Connections", $_POST["payeremail"], date('F j, Y'), $_POST["fname"] . " " . $_POST["lname"], $order_id, $_POST["refcode"], "$" . $_POST["amt"]);
 
-
+    
         if(empty($query->selectWithOneCondition("leads", "lead_email", "=", $form_details['payeremail'], ""))){
             $input_data_array = [
-                0 => ['name' =>'lead_name','value' => $form_details["fname"] . $form_details["lname"],'type' => "s"],
+                0 => ['name' =>'lead_name','value' => $form_details["fname"] . " " . $form_details["lname"],'type' => "s"],
                 1 => ['name' =>'lead_email','value' => $form_details["payeremail"],'type' => "s"],
                 2 => ['name' =>'lead_ip','value' => $page_controller->getIP(),'type' => "s"]
             ];
@@ -214,9 +217,9 @@ class FormController
         } 
 
         $input_data_array = [
-            0 => ['name' =>'payment_orderid','value' => $order_id,'type' => "s"],
+            0 => ['name' =>'payment_order_id','value' => $order_id,'type' => "s"],
             1 => ['name' =>'client_sys_id','value' => $client_id,'type' => "s"],
-            2 => ['name' =>'tour_id','value' => $page_controller->getIP(),'type' => "s"]
+            2 => ['name' =>'tour_sys_id','value' => $_POST["regform"],'type' => "s"]
         ];
         $query->insertToTable("payments", $input_data_array);
 
@@ -226,6 +229,127 @@ class FormController
             return (object) ["status" => 2, "heading" => "PAYMENT SUCCESSFUL", "message" => "We have received your payment"];
         }
     }
+
+    public function processRegistrationForm($form_details, $root_folder)
+    {
+        $query = new Query();
+        $page_controller = new PageController();
+        $mail_controller = new MailController();
+        $input_data_array = array();
+        $client_id = uniqid();
+        $message = "";
+
+        if (
+        empty($_POST["tourname_filled1"])
+        || empty($_POST["firstname_filled1"])
+        || empty($_POST["lastname_filled1"])
+        || empty($_POST["dob_filled1"])
+        || empty($_POST["phonenumber_filled1"])
+        || empty($_POST["joineremail_filled1"])
+        || empty($_POST["address_filled1"])
+        || empty($_POST["city_filled1"])
+        || empty($_POST["state_filled1"])
+        || empty($_POST["roommate_request_filled1"])
+        //|| (empty($form_details["g-recaptcha-response"]) && empty($form_details["g-recaptcha-2"]))
+        //|| !$this->validateReCaptcha((empty($form_details["g-recaptcha-response"])) ? $form_details["g-recaptcha-2"] : $form_details["g-recaptcha-response"])->success
+        //|| empty($this->reCaptcha->hostname) || $_SERVER['SERVER_NAME'] != $this->reCaptcha->hostname
+        ){
+            return (object) ["status" => 0, "heading" => "OOPS", "message" => "You have to complete the form"];
+        }
+
+        for ($i=1; $i < 5; $i++) { 
+            if(empty($form_details['joineremail_filled' . $i])){
+                break;
+            }
+            if(empty($query->selectWithOneCondition("leads", "lead_email", "=", $form_details['joineremail_filled' . $i], ""))){
+                $input_data_array = [
+                    0 => ['name' =>'lead_name','value' => $form_details["firstname_filled" . $i] . " " . $form_details["lastname_filled" . $i],'type' => "s"],
+                    1 => ['name' =>'lead_email','value' => $form_details["joineremail_filled" . $i],'type' => "s"],
+                    2 => ['name' =>'lead_ip','value' => $page_controller->getIP(),'type' => "s"]
+                ];
+                $query->insertToTable("leads", $input_data_array);
+            } 
+
+            if(empty($query->selectWithOneCondition("clients", "email", "=", $form_details['joineremail_filled' . $i], ""))){
+                $input_data_array = [
+                    0 => ['name' =>'client_id','value' => $client_id,'type' => "s"],
+                    1 => ['name' =>'first_name','value' => $form_details["firstname_filled" . $i],'type' => "s"],
+                    2 => ['name' =>'last_name','value' => $form_details["lastname_filled" . $i],'type' => "s"],
+                    3 => ['name' =>'date_of_birth','value' => $form_details["dob_filled" . $i],'type' => "s"],
+                    4 => ['name' =>'email','value' => $form_details["joineremail_filled" . $i],'type' => "s"],
+                    5 => ['name' =>'tour_ids','value' => $form_details["tourname_filled" . $i],'type' => "s"]
+                ];
+                //var_dump($input_data_array);
+                //echo "<br><br>";
+                $query->insertToTable("clients", $input_data_array);
+            } 
+
+
+            $client_this = $query->selectWithOneCondition("clients", "email", "=", $form_details['joineremail_filled' . $i], "");
+            if(!empty($client_this)){$client_id = $client_this[0]['client_id'];} 
+            $this_tour = $query->selectWithOneCondition("tours", "tour_sys_id", "=", $form_details['tourname_filled' . $i], "");
+
+            $registration_content = file_get_contents($root_folder . 'resources/views/registration-email');
+
+            $oldsvals = array(
+                "{{tourname_filled}}", 
+                "{{firstname_filled}}", 
+                "{{lastname_filled}}", 
+                "{{middlename_filled}}", 
+                "{{dob_filled}}", 
+                "{{phonenumber_filled}}", 
+                "{{joineremail}}", 
+                "{{address_filled}}", 
+                "{{address_secline_filled}}", 
+                "{{city_filled}}", 
+                "{{state_filled}}", 
+                "{{zipcode_filled}}", 
+                "{{payments_amt_and_interval_filled}}", 
+                "{{payments_day_filled}}", 
+                "{{payment_method_filled}}", 
+                "{{medical_needs_filled}}", 
+                "{{roommate_request_filled}}", 
+                "{{roommate_name_filled}}"
+            );
+            $newvals   = array(
+                empty($this_tour) ? "" : $this_tour[0]["tour_name"],
+                $form_details['firstname_filled' . $i],
+                $form_details['lastname_filled' . $i],
+                $form_details['middlename_filled' . $i],
+                $form_details['dob_filled' . $i],
+                $form_details['phonenumber_filled' . $i],
+                $form_details['joineremail_filled' . $i],
+                $form_details['address_filled' . $i],
+                $form_details['address_secline_filled' . $i],
+                $form_details['city_filled' . $i],
+                $form_details['state_filled' . $i],
+                $form_details['zipcode_filled' . $i],
+                $form_details['payments_amt_and_interval_filled' . $i],
+                $form_details['payments_day_filled' . $i],
+                $form_details['payment_method_filled' . $i],
+                $form_details['medical_needs_filled' . $i],
+                $form_details['roommate_request_filled' . $i],
+                $form_details['roommate_name_filled' . $i]
+            );
+            
+            $registration_content = str_replace($oldsvals, $newvals, $registration_content);        
+
+            
+            $input_data_array = [
+                0 => ['name' =>'printable_form','value' => $registration_content,'type' => 's'],
+                1 => ['name' =>'client_id','value' => $client_id, 'type' => 's'],
+                2 => ['name' =>'tour_id','value' => $form_details['tourname_filled' . $i],'type' => 's']
+            ];
+            $query->insertToTable("registrations", $input_data_array);
+
+            $message = "\n\n<br><br> VIEW AND PRINT FORM FROM: https://africanconnections-usa.com/regform.php?fn=" . $client_id;
+            $mail_controller->sendMail($mail_controller->main_address, "TOUR REGISTRATION COMPLETED", $message);
+        }
+        
+        return (object) ["status" => 1, "heading" => "THANK YOU..", "message" => "Awesome. Tour registration completed"];
+
+    }
+
 
 
 }

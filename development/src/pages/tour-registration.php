@@ -1,4 +1,4 @@
-<<?php
+<?php
 require '../../config/App.php';
 use App\Controllers\PageController;
 use App\Controllers\TourController;
@@ -6,7 +6,7 @@ use App\Controllers\FormController;
 
 $app = new Config\App(); // UNIVERSAL
 $root_folder = '../../'; // UNIVERSAL
-$page_name = "thank_you_customize"; // UNIVERSAL
+$page_name = "tour_registration"; // UNIVERSAL
 $page_controller = new PageController(); // UNIVERSAL
 $tour_controller = new TourController(); // UNIVERSAL
 $form_controller = new FormController();
@@ -17,7 +17,7 @@ $page_banner_text = "";
 
 $page_this = $page_controller->getOnePageDetails($page_name);
 
-if(!empty($_POST["fullname_filled"])){
+if(!empty($_POST["joineremail_filled1"])){
   $result = $form_controller->addCustomizationRequest($_POST);
 }
 ?>
@@ -39,14 +39,8 @@ if(!empty($_POST["fullname_filled"])){
       <!-- HEADER SECTION-->
       <?php include('../components/general/header_with_menu_tag.php'); ?>
 
-      <!-- CAROUSEL SECTION-->
-      <?php include('../components/general/top_banner_section.php'); ?>
-
-      <!-- MESSAGE - THANK YOU SECTION-->
-      <?php include('../components/thank/message.php'); ?>
-
-      <!-- WHY CHOOSE US SECTION-->
-      <?php include('../components/general/why_choose_us.php'); ?>
+      <!-- FORM SECTION-->
+      <?php include('../components/registration/form_section.php'); ?>
 
       <!-- FOOTER TAG-->
       <?php include('../components/general/footer_tag.php'); ?>

@@ -8,10 +8,9 @@ $root_folder = '../../'; // UNIVERSAL
 $page_name = "make_a_payment"; // UNIVERSAL
 $page_controller = new PageController(); // UNIVERSAL
 $tour_controller = new TourController(); // UNIVERSAL
-$message = "";
 
 
-$page_banner_class = "";
+$page_banner_class = "abtpagebanner";
 $page_banner_text = "";
 
 $page_this = $page_controller->getOnePageDetails($page_name);

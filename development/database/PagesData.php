@@ -326,6 +326,17 @@ class PagesData
                 'url' =>'/thank-you-payment.php',
                 
             ],
+            "thank_you_registration" => [
+                /*************************************************************************************************************************
+                                                TERMS AND CONDITIONS
+                *************************************************************************************************************************/
+                'name' =>'Thank You - Registration',
+                'title' =>'Thank you | African Connection Newsletter',
+                'description' =>'',
+                'keywords' =>'',
+                'url' =>'/thank-you-registration.php',
+                
+            ],
             "customize_tour" => [
                 /*************************************************************************************************************************
                                                 CUSTOMIZE A TOUR
