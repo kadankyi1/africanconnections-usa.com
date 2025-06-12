@@ -15,16 +15,16 @@
 
 
           <br><br>
-          <div class="text-md-left">
+          <div class="text-left">
             <h3 class="oh-desktop fontsize2em"><span class="d-inline-block wow slideInDown"><strong>About Us</strong></span></h3>
             <!-- Bootstrap tabs-->
-            <div class="tabs-custom tabs-horizontal tabs-line tabs-line-big tabs-line-style-2 text-center text-md-left" id="tabs-7">
+            <div class="tabs-custom tabs-horizontal tabs-line tabs-line-big tabs-line-style-2 text-center text-left" id="tabs-7">
               <!-- Nav tabs-->
               <ul class="nav nav-tabs">
               </ul>
               <!-- Tab panes-->
               <div class="tab-content">
-                <div class="tab-pane fade show active  text-md-left" id="tabs-7-1">
+                <div class="tab-pane fade show active  text-left" id="tabs-7-1">
                   <p>
                     <strong>With over 20 years of Africa tour experience-- We know Africa Best!</strong>
                     

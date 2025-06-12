@@ -1,5 +1,5 @@
       <!--  tours-->
-      <section class="section section-sm section-first bg-default text-md-left mt-0 pt-0">
+      <section class="section section-sm section-first bg-default text-left mt-0 pt-0">
         <div class="container">
           <div class="row">
               <div class="col-sm-12 col-md-12 col-lg-12 wow fadeInRight" data-wow-delay=".1s">
@@ -13,7 +13,7 @@
                   </ul>
                   <!-- Tab panes-->
                   <div class="tab-content">
-                    <div class="tab-pane fade show active  text-md-left" id="tabs-7-1">
+                    <div class="tab-pane fade show active  text-left" id="tabs-7-1">
                       <h4><strong>With over 20 years of Africa tour experience-- We know Africa Best!</strong></h4>
                       <p>
                         We provide exceptional service at the best price!

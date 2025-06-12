@@ -17,6 +17,8 @@ $article_img_root_folder = '../../'; // UNIVERSAL
 
 $page_this = $page_controller->getOnePageDetails($page_name);
 
+
+//var_dump($_GET["id"]);
 if(!empty($_GET["id"])){
     $article = $blog_controller->getSingleBlogArticle(intval($_GET["id"]));
     (count($article) == 1) ? $error = false: $error = true;

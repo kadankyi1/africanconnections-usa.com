@@ -38,7 +38,6 @@
         <br>
         <div class="center textaligncenter">
             <span  onclick="validateRecaptchaRegisterForm();"  class="button button-secondary button-pipaluk">Send</span>
-            <input  type="submit"  value="SUBMIT">
         </div>
 
         <br><br>      

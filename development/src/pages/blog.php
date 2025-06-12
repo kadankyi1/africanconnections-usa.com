@@ -34,11 +34,7 @@ $page_this = $page_controller->getOnePageDetails($page_name);
         <section class="blog-posts grid-system">
             <div class="container">
                 <div class="row">
-                    <?php foreach ($blog_controller->getBlogArticles("ORDER BY id DESC") as $key => $post) { 
-                            //var_dump($post);
-                            include('../components/blog/post-card.php'); 
-                        }
-                    ?>
+                  <?php foreach ($blog_controller->getBlogArticles("ORDER BY id DESC") as $key => $post) {include('../components/blog/post-card.php');}?>
                 </div>
             </div>
         </section>
