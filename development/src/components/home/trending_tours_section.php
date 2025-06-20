@@ -3,15 +3,15 @@
         <div class="container">
           <h3 class="oh-desktop fontsize2em"><span class="d-inline-block wow slideInDown"><strong>Trending Tours</strong></span></h3>
           <div class="row row-sm row-40 row-md-50">
-            <?php $this_tour = $tour_black_history; include('../components/general/tourcard.php'); ?>
-            <?php $this_tour = $tour_egypt; include('../components/general/tourcard.php'); ?>
-            <?php $this_tour = $tour_return_to_the_motherland; include('../components/general/tourcard.php'); ?>            
+            <?php $this_tour = $tour_black_history; include('src/components/general/tourcard.php'); ?>
+            <?php $this_tour = $tour_egypt; include('src/components/general/tourcard.php'); ?>
+            <?php $this_tour = $tour_return_to_the_motherland; include('src/components/general/tourcard.php'); ?>            
           </div>
           <!-- Reviews -->
           <br><br>
 
           <!-- GOOGLE REVIEWS-->
-          <?php include('../components/general/google_reviews_div.php'); ?> 
+          <?php include('src/components/general/google_reviews_div.php'); ?> 
 
 
           <br><br>

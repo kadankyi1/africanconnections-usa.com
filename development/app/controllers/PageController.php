@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers;
 
-require_once('../../config/App.php');
+require_once('config/App.php');
 
 use Config\App;
 use App\Models\Page;

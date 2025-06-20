@@ -1,15 +1,17 @@
 <?php
-require '../../config/App.php';
+$root_folder = ''; // UNIVERSAL
+require $root_folder . 'config/App.php';
 use App\Controllers\PageController;
 use App\Controllers\TourController;
 use App\Controllers\FormController;
+use App\Controllers\TrackingController;
 
 $app = new Config\App(); // UNIVERSAL
-$root_folder = '../../'; // UNIVERSAL
 $page_name = "thank_you_payment"; // UNIVERSAL
 $page_controller = new PageController(); // UNIVERSAL
 $tour_controller = new TourController(); // UNIVERSAL
 $form_controller = new FormController();
+$tracking_controller = new TrackingController(); // UNIVERSAL
 $result = (object) ["status" => 0, "heading" => "OOPS. ", "message" => "Not sure how you got here."]; 
 
 $page_banner_class = "emailthankyoupagebanner";
@@ -17,22 +19,23 @@ $page_banner_text = "";
 
 $page_this = $page_controller->getOnePageDetails($page_name);
 
-//var_dump($_POST);
-if(!empty($_POST["payment_token"])){
-  $result = $form_controller->processPaymentForm($_POST, $root_folder);
+$tracking_controller->addUserActivity(0, "Viewed Page - " . $page_this->name, "", ""); // Logging View
+
+if(!empty($_POST["joineremail_filled1"])){
+  $result = $form_controller->processRegistrationForm($_POST, $root_folder);
 }
 
-if($result->status == 2){
+if($result->status == 0){
   header('Location: ' . $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('tour_registration')->url);
 }
-
+//exit;
 ?>
 
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
 
 <!-- HEAD TAG CONTENTS -->
-<?php include('../components/general/head_tag.php'); ?>
+<?php include('src/components/general/head_tag.php'); ?>
 
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -43,24 +46,24 @@ if($result->status == 2){
     <div class="page">
 
       <!-- HEADER SECTION-->
-      <?php include('../components/general/header_with_menu_tag.php'); ?>
+      <?php include('src/components/general/header_with_menu_tag.php'); ?>
 
       <!-- CAROUSEL SECTION-->
-      <?php include('../components/general/top_banner_section.php'); ?>
+      <?php include('src/components/general/top_banner_section.php'); ?>
 
       <!-- MESSAGE - THANK YOU SECTION-->
-      <?php include('../components/thank/message.php'); ?>
+      <?php include('src/components/thank/message.php'); ?>
 
       <!-- WHY CHOOSE US SECTION-->
-      <?php include('../components/general/why_choose_us.php'); ?>
+      <?php include('src/components/general/why_choose_us.php'); ?>
 
       <!-- FOOTER TAG-->
-      <?php include('../components/general/footer_tag.php'); ?>
+      <?php include('src/components/general/footer_tag.php'); ?>
 
     </div>
 
     <!-- FOOTER TAG-->
-    <?php include('../components/general/bottom_script_call.php'); ?>
+    <?php include('src/components/general/bottom_script_call.php'); ?>
 
   </body>
 </html>

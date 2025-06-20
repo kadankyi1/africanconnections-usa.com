@@ -13,9 +13,9 @@ class MailController {
     public $developer_address;
 
     public function __construct(){
-        $this->main_address = "info@africanconnections-usa.com";
-        $this->reservations_address = "reservations@africanconnections-usa.com";
-        $this->developer_address = "annodankyikwaku@gmail.comm";
+        $this->main_address = "annodankyikwaku@gmail.com"; //info@africanconnections-usa.com
+        $this->reservations_address = "annodankyikwaku@gmail.com"; //reservations@africanconnections-usa.com
+        $this->developer_address = "annodankyikwaku@gmail.com";
     }
 
     function sendMail($from_address, $subject, $message){

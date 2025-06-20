@@ -1,21 +1,25 @@
 <?php
-require '../../config/App.php';
+$root_folder = ''; // UNIVERSAL
+require $root_folder . 'config/App.php';
 use App\Controllers\PageController;
 use App\Controllers\TourController;
 use App\Controllers\FormController;
+use App\Controllers\TrackingController;
 
 $app = new Config\App(); // UNIVERSAL
-$root_folder = '../../'; // UNIVERSAL
 $page_name = "tour_registration"; // UNIVERSAL
 $page_controller = new PageController(); // UNIVERSAL
 $tour_controller = new TourController(); // UNIVERSAL
 $form_controller = new FormController();
+$tracking_controller = new TrackingController(); // UNIVERSAL
 $result = (object) ["status" => 0, "heading" => "OOPS. ", "message" => "Not sure how you got here."]; 
 
 $page_banner_class = "emailthankyoupagebanner";
 $page_banner_text = "";
 
 $page_this = $page_controller->getOnePageDetails($page_name);
+
+$tracking_controller->addUserActivity(0, "Viewed Page - " . $page_this->name, "", ""); // Logging View
 
 if(!empty($_POST["joineremail_filled1"])){
   $result = $form_controller->addCustomizationRequest($_POST);
@@ -26,7 +30,7 @@ if(!empty($_POST["joineremail_filled1"])){
 <html class="wide wow-animation" lang="en">
 
 <!-- HEAD TAG CONTENTS -->
-<?php include('../components/general/head_tag.php'); ?>
+<?php include('src/components/general/head_tag.php'); ?>
 
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -37,18 +41,18 @@ if(!empty($_POST["joineremail_filled1"])){
     <div class="page">
 
       <!-- HEADER SECTION-->
-      <?php include('../components/general/header_with_menu_tag.php'); ?>
+      <?php include('src/components/general/header_with_menu_tag.php'); ?>
 
       <!-- FORM SECTION-->
-      <?php include('../components/registration/form_section.php'); ?>
+      <?php include('src/components/registration/form_section.php'); ?>
 
       <!-- FOOTER TAG-->
-      <?php include('../components/general/footer_tag.php'); ?>
+      <?php include('src/components/general/footer_tag.php'); ?>
 
     </div>
 
     <!-- FOOTER TAG-->
-    <?php include('../components/general/bottom_script_call.php'); ?>
+    <?php include('src/components/general/bottom_script_call.php'); ?>
 
   </body>
 </html>

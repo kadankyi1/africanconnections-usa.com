@@ -1,7 +1,7 @@
 <?php
 namespace Database;
 
-require '../../vendor/autoload.php';
+require 'vendor/autoload.php';
 use Config\App;
 
 
@@ -28,6 +28,24 @@ class Query
             $stmt = $this->con->prepare("SELECT * FROM $table_name WHERE $column_name $condition ? $sorting_and_limiting");
             $stmt->bindParam(1, $column_value);
             $stmt->execute(array($column_value));
+            $result = $stmt->fetchAll();
+            return $result;
+            //var_dump($result); 
+            //echo count($result);
+        } catch(\PDOException $e){
+            //var_dump($e);
+            return null;
+        }
+    }
+
+    public function select($query, $input_data_array)
+    {
+        try {
+            $this->con->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+            $stmt = $this->con->prepare($query);
+            $stmt->bindParam(1, $input_data_array[0]);
+            $stmt->bindParam(2, $input_data_array[1]);
+            $stmt->execute($input_data_array);
             $result = $stmt->fetchAll();
             return $result;
             //var_dump($result); 
@@ -78,6 +96,27 @@ class Query
             } else {
                 return false;
             }
+        } catch(\PDOException $e){
+            //var_dump($e);
+            return null;
+        }
+    }
+
+
+    public function update($query, $input_data_array)
+    {
+        try {
+            $this->con->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+            $stmt = $this->con->prepare($query);
+            for ($i=0; $i < count($input_data_array); $i++) { 
+                if($input_data_array[$i]["type"] == "s"){
+                    $stmt->bindParam($i+1, $input_data_array[$i]["value"], \PDO::PARAM_STR);
+                } else if($input_data_array[$i]["type"] == "i"){
+                    $stmt->bindParam($i+1, $input_data_array[$i]["value"], \PDO::PARAM_INT);
+                }
+            }
+            $status = $stmt->execute();
+            return $status;
         } catch(\PDOException $e){
             //var_dump($e);
             return null;

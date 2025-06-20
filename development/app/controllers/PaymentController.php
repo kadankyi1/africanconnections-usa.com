@@ -2,7 +2,9 @@
 namespace App\Controllers;
 //namespace Config;
 
-require '../../vendor/autoload.php';
+require 'vendor/autoload.php';
+
+use Config\App;
 
 define("APPROVED", 1);
 define("DECLINED", 2);
@@ -13,16 +15,13 @@ class PaymentController
 
 // Initial Setting Functions
 
-  public function setLogin($security_key) {
+  public function setLogin($security_key) 
+  {
     $this->login['security_key'] = $security_key;
   }
 
-  public function setOrder($orderid,
-        $orderdescription,
-        $tax,
-        $shipping,
-        $ponumber,
-        $ipaddress) {
+  public function setOrder($orderid, $orderdescription, $tax, $shipping, $ponumber, $ipaddress) 
+  {
     $this->order['orderid']          = $orderid;
     $this->order['orderdescription'] = $orderdescription;
     $this->order['tax']              = $tax;
@@ -31,19 +30,8 @@ class PaymentController
     $this->order['ipaddress']        = $ipaddress;
   }
 
-  public function setBilling($firstname,
-        $lastname,
-        $company,
-        $address1,
-        $address2,
-        $city,
-        $state,
-        $zip,
-        $country,
-        $phone,
-        $fax,
-        $email,
-        $website) {
+  public function setBilling($firstname, $lastname, $company,$address1,$address2, $city, $state, $zip, $country, $phone, $fax, $email, $website, $client_id) 
+  {
     $this->billing['firstname'] = $firstname;
     $this->billing['lastname']  = $lastname;
     $this->billing['company']   = $company;
@@ -57,18 +45,11 @@ class PaymentController
     $this->billing['fax']       = $fax;
     $this->billing['email']     = $email;
     $this->billing['website']   = $website;
+    $this->billing['merchant_defined_field_1']   = $website;
   }
 
-  public function setShipping($firstname,
-        $lastname,
-        $company,
-        $address1,
-        $address2,
-        $city,
-        $state,
-        $zip,
-        $country,
-        $email) {
+  public function setShipping($firstname, $lastname, $company, $address1, $address2, $city, $state, $zip, $country, $email) 
+  {
     $this->shipping['firstname'] = $firstname;
     $this->shipping['lastname']  = $lastname;
     $this->shipping['company']   = $company;
@@ -83,8 +64,9 @@ class PaymentController
 
   // Transaction Functions
 
-  //public function doSale($amount, $ccnumber, $ccexp, $cvv="") {
-  public function doSale($amount, $payment_token) {
+  //public function doSale($amount, $ccnumber, $ccexp, $cvv="")
+  public function doSale($amount, $payment_token) 
+  {
 
     $query  = "";
     // Login Information
@@ -135,7 +117,8 @@ class PaymentController
     return $this->_doPost($query);
   }
 
-  public function doAuth($amount, $ccnumber, $ccexp, $cvv="") {
+  public function doAuth($amount, $ccnumber, $ccexp, $cvv="") 
+  {
 
     $query  = "";
     // Login Information
@@ -181,7 +164,8 @@ class PaymentController
     return $this->_doPost($query);
   }
 
-  public function doCredit($amount, $ccnumber, $ccexp) {
+  public function doCredit($amount, $ccnumber, $ccexp) 
+  {
 
     $query  = "";
     // Login Information
@@ -215,7 +199,8 @@ class PaymentController
     return $this->_doPost($query);
   }
 
-  public function doOffline($authorizationcode, $amount, $ccnumber, $ccexp) {
+  public function doOffline($authorizationcode, $amount, $ccnumber, $ccexp) 
+  {
 
     $query  = "";
     // Login Information
@@ -261,7 +246,8 @@ class PaymentController
     return $this->_doPost($query);
   }
 
-  public function doCapture($transactionid, $amount =0) {
+  public function doCapture($transactionid, $amount =0) 
+  {
 
     $query  = "";
     // Login Information
@@ -275,7 +261,8 @@ class PaymentController
     return $this->_doPost($query);
   }
 
-  public function doVoid($transactionid) {
+  public function doVoid($transactionid) 
+  {
 
     $query  = "";
     // Login Information
@@ -300,7 +287,8 @@ class PaymentController
     return $this->_doPost($query);
   }
 
-  public function _doPost($query) {
+  public function _doPost($query) 
+  {
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, "https://secure.magicpaygateway.com/api/transact.php");
     curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 30);
@@ -328,7 +316,7 @@ class PaymentController
   }
 
   public function testXmlQuery($security_key,$constraints)
-{
+  {
     // transactionFields has all of the fields we want to validate
     // in the transaction tag in the XML output
     $transactionFields = array(
@@ -443,28 +431,28 @@ class PaymentController
     curl_close($mycurl);
     //var_dump($responseXML);
 
-    $testXmlSimple= new SimpleXMLElement($responseXML);
+    $testXmlSimple= new \SimpleXMLElement($responseXML);
 
     if (!isset($testXmlSimple->transaction)) {
-            throw new Exception('No transactions returned');
+            throw new \Exception('No transactions returned');
     }
 
     $transNum = 1;
     foreach($testXmlSimple->transaction as $transaction) {
         foreach ($transactionFields as $xmlField) {
             if (!isset($transaction->{$xmlField}[0])){
-                throw new Exception('Error in transaction_id:'. $transaction->transaction_id[0] .' id  Transaction tag is missing  field ' . $xmlField);
+                throw new \Exception('Error in transaction_id:'. $transaction->transaction_id[0] .' id  Transaction tag is missing  field ' . $xmlField);
             }
         }
         if (!isset ($transaction->action)) {
-            throw new Exception('Error, Action tag is missing from transaction_id '. $transaction->transaction_id[0]);
+            throw new \Exception('Error, Action tag is missing from transaction_id '. $transaction->transaction_id[0]);
         }
 
         $actionNum = 1;
         foreach ($transaction->action as $action){
             foreach ($actionFields as $xmlField){
                 if (!isset($action->{$xmlField}[0])){
-                    throw new Exception('Error with transaction_id'.$transaction->transaction_id[0].'
+                    throw new \Exception('Error with transaction_id'.$transaction->transaction_id[0].'
                                         Action number '. $actionNum . ' Action tag is missing field ' . $xmlField);
                 }
             }
@@ -474,6 +462,27 @@ class PaymentController
     }
 
     return $testXmlSimple;
-}
+  }
 
+  public function getPaymentsReport($start_date) //Ymd format
+  {
+    $mail_controller = new MailController();
+    $app = new App();
+    
+    $constraints = "&action_type=sale&start_date=$start_date";
+    $testXmlSimple = $this->testXmlQuery($app->getPaymentKey(),$constraints);
+    //var_dump($testXmlSimple);
+
+    $transNum = 1;
+    $payments_listing = '<table style="width:100%"> <tr> <th>ID</th> <th>DATE</th> <th>STATUS</th> <th>TOUR NAME</th> <th>FULL NAME</th> <th>EMAIL</th> <th>CARD NO.</th> <th>AMT</th> </tr>';
+    foreach($testXmlSimple->transaction as $transaction) {
+        $payments_listing =  $payments_listing . '<tr><td>'.$transaction->transaction_id.'</td> <td>'.date_format(date_create($transaction->action->date),"Y/m/d H:i:s").'</td> <td>'.$transaction->action->response_text.'</td> <td>'.$transaction->order_description.'</td> <td>'. $transaction->first_name . " " . $transaction->last_name . '</td> <td>'.$transaction->email.'</td> <td>'.$transaction->cc_number.'</td> <td>'.$transaction->action->amount.'</td></tr>';
+    }
+
+    $payments_listing =  $payments_listing . '</table>';
+
+    $mail_controller->sendMail($mail_controller->main_address, "PAYMENTS REPORT", $payments_listing);
+
+    return $payments_listing;
+  }
 }

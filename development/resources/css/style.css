@@ -25486,8 +25486,7 @@ body {
 	border-right: none; /* Prevent double borders */
   }
   
-
-.collapsible {
+  .collapsible {
 	background-color: #777;
 	color: white;
 	cursor: pointer;
@@ -25500,27 +25499,13 @@ body {
 	margin-top: 20px;
   }
   
-  .activeform, .collapsible:hover {
-	background-color: #555;
-  }
-  
-  .collapsible:after {
-	content: '\002B';
-	color: white;
-	font-weight: bold;
-	float: right;
-	margin-left: 5px;
-  }
-  
-  .activeform:after {
-	content: "\2212";
+  .active, .collapsible:hover {
+	
   }
   
   .content {
 	padding: 0 18px;
-	max-height: 0;
+	display: none;
 	overflow: hidden;
-	transition: max-height 0.2s ease-out;
 	background-color: #f1f1f1;
   }
-

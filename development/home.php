@@ -1,18 +1,22 @@
 <?php
-$root_folder = '../../';
+$root_folder = ''; // UNIVERSAL
 require $root_folder . 'config/App.php';
 use App\Controllers\PageController;
 use App\Controllers\TourController;
+use App\Controllers\TrackingController;
 
 $app = new Config\App();
 $page_name = "home";
 $page_controller = new App\Controllers\PageController();
 $tour_controller_1 = new TourController();
+$tracking_controller = new TrackingController(); // UNIVERSAL
 
 $page_this = $page_controller->getOnePageDetails($page_name);
 $tour_black_history = $tour_controller_1->getOneTour('black_history_month_tour');
 $tour_egypt = $tour_controller_1->getOneTour('egypt_tour');
 $tour_return_to_the_motherland = $tour_controller_1->getOneTour('return_to_the_motherland_tour');
+
+$tracking_controller->addUserActivity(0, "Viewed Page - " . $page_this->name, "", ""); // Logging View
 
 ?>
 
@@ -20,7 +24,7 @@ $tour_return_to_the_motherland = $tour_controller_1->getOneTour('return_to_the_m
 <html class="wide wow-animation" lang="en">
 
 <!-- HEAD TAG CONTENTS -->
-<?php include('../components/general/head_tag.php'); ?>
+<?php include('src/components/general/head_tag.php'); ?>
 
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -28,33 +32,33 @@ $tour_return_to_the_motherland = $tour_controller_1->getOneTour('return_to_the_m
   height="0" width="0" class="hidecontentandvisibility"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <?php include('../components/home/newsletter_modal_div.php'); ?>
+  <?php include('src/components/home/newsletter_modal_div.php'); ?>
 
     <div class="page">
 
       <!-- HEADER SECTION-->
-      <?php include('../components/general/header_with_menu_tag.php'); ?>
+      <?php include('src/components/general/header_with_menu_tag.php'); ?>
 
       <!-- CAROUSEL SECTION-->
-      <?php include('../components/home/carousel_section.php'); ?>
+      <?php include('src/components/home/carousel_section.php'); ?>
 
       <!-- COUNTRIES SECTION-->
-      <?php include('../components/home/countries_section.php'); ?>
+      <?php include('src/components/home/countries_section.php'); ?>
 
       <!-- WHY CHOOSE US SECTION-->
-      <?php include('../components/general/why_choose_us.php'); ?>
+      <?php include('src/components/general/why_choose_us.php'); ?>
 
       
       <!-- TRENDING TOURS & ABOUT US SECTION-->
-      <?php include('../components/home/trending_tours_section.php'); ?>
+      <?php include('src/components/home/trending_tours_section.php'); ?>
 
       <!-- FOOTER TAG-->
-      <?php include('../components/general/footer_tag.php'); ?>
+      <?php include('src/components/general/footer_tag.php'); ?>
 
     </div>
 
     <!-- FOOTER TAG-->
-    <?php include('../components/general/bottom_script_call.php'); ?>
+    <?php include('src/components/general/bottom_script_call.php'); ?>
 
   </body>
 </html>

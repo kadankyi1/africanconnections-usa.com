@@ -2,7 +2,7 @@
 namespace App\Controllers;
 //namespace Config;
 
-require '../../vendor/autoload.php';
+require 'vendor/autoload.php';
 
 use Config\App;
 use App\Models\Tour;

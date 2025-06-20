@@ -1409,7 +1409,7 @@ $(document).ready(function(){
 //---------------------------------
 
 
-function addToMailList(form_id, response_msg_holder_id) {
+function addToMailList(form_id, response_msg_holder_id, this_url) {
 
 	var values = $('#'+form_id).serialize();
 	$('#'+form_id).trigger('reset');
@@ -1417,13 +1417,15 @@ function addToMailList(form_id, response_msg_holder_id) {
 	console.log(values);
 
 	$.ajax({
-        url: "serverside/joinlist.php",
+        url: this_url,
         type: "post",
         data: values ,
         success: function (response) {
 			console.log("response");
 			console.log(response);
-			$('#'+response_msg_holder_id).text('Message sent');
+			var response_json = JSON.parse(response);
+			console.log(response_json.message);
+			$('#'+response_msg_holder_id).text(response_json.message);
 			$('#'+response_msg_holder_id).show();
            // You will get response from your PHP page (what you echo or print)
         },
@@ -1461,6 +1463,25 @@ function sendForm(this_url, form_id, response_msg_holder_id) {
 				$('#'+response_msg_holder_id).text('Failed. Please reload page and try again');
 				$('#'+response_msg_holder_id).show();
 			}
+			console.log("errorThrown");
+           	console.log(errorThrown);
+        }
+    });
+}
+
+function sendAjaxRequest(this_url, this_data) {
+	console.log("sendAjaxRequest");
+	$.ajax({
+		traditional: true,
+        url: this_url,
+        type: "POST",
+        data: this_data ,
+        success: function (response) {
+			console.log("response");
+			console.log(response);
+           // You will get response from your PHP page (what you echo or print)
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
 			console.log("errorThrown");
            	console.log(errorThrown);
         }

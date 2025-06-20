@@ -19,7 +19,7 @@
                                 <?php echo $tour_this->tour_full_description_html; ?>
                                 <strong>Date: </strong> <?php echo $tour_this->tour_date; ?> <strong>(<?php echo $tour_this->tour_duration; ?>)</strong>
                                 <br><br>
-                                <strong>Price: </strong> Only <?php echo $tour_this->tour_price; ?> per person, with double room occupancy, without air-fare 
+                                <strong>Price: </strong> Only $<?php echo $tour_this->tour_price; ?> per person, with double room occupancy, without air-fare 
 
                             </p>
                         </div>
@@ -28,14 +28,14 @@
                                 <strong>Find detailed tour information in our brochure. <a class="link-aemail" href="<?php echo $root_folder .  "resources/" . $tour_this->tour_brochure_url ?>">Download our <?php echo $tour_this->tour_name; ?> tour brochure.</a></strong>
 
                                 
-                                <br><br><strong><a class="link-aemail">Price: Only <?php echo $tour_this->tour_price; ?> per person, with double room occupancy, without air-fare</a></strong>
+                                <br><br><strong><a class="link-aemail">Price: Only $<?php echo $tour_this->tour_price; ?> per person, with double room occupancy, without air-fare</a></strong>
 
                                 <br><br>
                                 <?php echo $tour_this->tour_highlights_description_html; ?>
                             </p>
                         </div>
                         <div class="tab-pane fade" id="tabs-7-3">
-                            <strong><a class="link-aemail" href="#">Price: Only $3,699 per person, with double room occupancy, without air-fare</a></strong>
+                            <strong><a class="link-aemail" href="#">Price: Only $<?php echo $tour_this->tour_price; ?> per person, with double room occupancy, without air-fare</a></strong>
                             <br><br>
 
                             <div class="row">
@@ -60,14 +60,16 @@
                     </div>
                 </div>
 
-                <br>
-                <div class="main">
-                    <hr>
-                    <div class="container imagegalleryholder">
-                        <?php foreach ($tour_controller->getTourGalleryPhotos($tour_this->tour_image_links) as $key => $this_photo) { include('../components/tour/tour_gallery_photo.php');} ?>
-                    </div>
+                <?php if(!empty($tour_this->tour_image_links)){ ?>
+                  <br>
+                  <div class="main">
+                      <hr>
+                      <div class="container imagegalleryholder">
+                          <?php foreach ($tour_controller->getTourGalleryPhotos($tour_this->tour_image_links) as $key => $this_photo) { include('src/components/tour/tour_gallery_photo.php');} ?>
+                      </div>
 
-                </div>
+                  </div>
+                <?php } ?>
             </div>
 
             <div class="col-sm-12 col-md-3 col-lg-3 wow fadeInRight quickqinquiryform" data-wow-delay=".1s">
@@ -77,7 +79,7 @@
               </div>
 
               <form id="inquiry_form" action="serverside/joinlist.php" method="post" class="paddingallsides10px">
-                <input type="hidden" id="tourname_filled" name="tourname_filled" readonly value="PANAFEST, AFRICAN FESTIVAL TOUR"/>
+                <input type="hidden" id="tourname_filled" name="tourname_filled" readonly value="<?php echo $tour_this->tour_sys_id;?>"/>
                 <div class="form-group hidecontent">
                   <input type="text" name="wtf" id="wtf">
                   <input type="text" name="g-recaptcha-response" id="g-recaptcha-1">

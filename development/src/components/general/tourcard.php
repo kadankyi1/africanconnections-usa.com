@@ -12,9 +12,9 @@
             <p class="product-big-text"><?php echo $this_tour->tour_short_description; ?></p>
             
             <a class="button button-black-outline button-ujarak" href="tel:<?php echo $app->getPhone(); ?>">Call For Details</a>
-            <a class="button button-secondary-outline button-pipaluk" href="<?php echo  $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails($this_tour->tour_page_url)->url; ?>" target="_blank">Read More</a>
+            <a class="button button-secondary-outline button-pipaluk" href="<?php echo  $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails($this_tour->tour_page_url)->url; ?>">Read More</a>
 
-            <div class="product-big-price-wrap"><span class="product-big-price"><?php echo $this_tour->tour_price; ?></span></div>
+            <div class="product-big-price-wrap"><span class="product-big-price">$<?php echo number_format($this_tour->tour_price); ?></span></div>
         </div>
         </div>
     </div>

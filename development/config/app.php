@@ -3,7 +3,7 @@ namespace Config;
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-require_once __DIR__ . '../../vendor/autoload.php';
+require_once 'vendor/autoload.php';
 
 use \DateTime;
 
@@ -21,7 +21,8 @@ class App
     private $gcaptcha;
     
     function __construct() {
-        $key = file_get_contents('../../.env');
+        $this->startSession();
+        $key = file_get_contents('.env');
         $env_data = explode("\n",str_replace("\r\n","\n",$key));
         //var_dump();
 
@@ -45,26 +46,26 @@ class App
 
     public function getIsLive()
     {
-        //return $this->is_live;
-        return "1";
+        return $this->is_live;
+        //return "1";
     }
 
     public function getProtocol()
     {
-        //return $this->protocol;
-        return "http";
+        return $this->protocol;
+        //return "http";
     }
 
     public function getDomain()
     {
-        //return $this->domain;
-        return "africanconnections-usa.local/development/src/pages";
+        return $this->domain;
+        //return "africanconnections-usa.com";
     }
 
     public function getPhone()
     {
-        //return $this->phone;
-        return "+18479563319";
+        return $this->phone;
+        //return "+18479563319";
     }
 
     public function localizeUsPhoneNumber($phone) {
@@ -74,33 +75,33 @@ class App
 
     public function getDbName()
     {
-        //return $this->phone;
-        return "new_ac";
+        return $this->db_name;
+        //return "new_ac";
     }
 
     public function getDbUser()
     {
-        //return $this->phone;
-        return "root";
+        return $this->db_user;
+        //return "root";
     }
 
     public function getDbPass()
     {
-        //return $this->phone;
-        return "";
+        return $this->db_pass;
+        //return "";
     }
 
 
     public function getPaymentKey()
     {
-        //return $this->payment_key;
-        return "sample_key";
+        return $this->payment_key;
+        //return "sample_key";
     }
 
     public function getGCaptchaServerKey()
     {
-        //return $this->gcaptcha;
-        return "gcaptcha";
+        return $this->gcaptcha;
+        //return "gcaptcha";
     }
 
     public static function isDatePassed($date)
@@ -114,6 +115,14 @@ class App
         } else {
             return false;
             //echo 'FUTURE COMING';
+        }
+    }
+
+    public function startSession()
+    {
+        if(session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_NONE) {
+            // session isn't started
+            session_start();
         }
     }
 }

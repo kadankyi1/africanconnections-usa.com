@@ -20,7 +20,7 @@ class CarouselData
             2 => [
                 'img_src' =>'resources/img/home/slider_banner.jpg',
                 'start' => 'January 1, 2025',  
-                'expire' => 'May 26, 2025',                
+                'expire' => 'June 26, 2025',                
             ],
         ];
     }

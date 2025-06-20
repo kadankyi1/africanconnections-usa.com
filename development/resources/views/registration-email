@@ -9,6 +9,11 @@
     <meta name="color-scheme" content="light dark" />
     <meta name="supported-color-schemes" content="light dark" />
     <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kapakana:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/testimonia" rel="stylesheet">
+
     <style type="text/css" rel="stylesheet" media="all">
         @import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&display=swap");
 
@@ -19,7 +24,13 @@
             -webkit-text-size-adjust: none;
             background-color: white;
         }
-
+        .sign {
+            font-family: "Kapakana", cursive;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-size: 100px;
+            font-style: normal;
+          }
         a {
             color: #3869D4;
         }
@@ -432,7 +443,7 @@
 
         @font-face {
             font-family: 'signatureFont'; /*a name to be used later*/
-            src: url('../../fonts/Testimonia-3zp8X.ttf'); /*URL to font*/
+            src: url('{{font}}'); /*URL to font*/
         }
         
         .signatureHolder {
@@ -453,7 +464,7 @@ font-family: Arial, sans-serif;
     <table class="email-content" width="100%" cellpadding="0" cellspacing="0" role="presentation">
         <tr>
             <td align="center">
-                <br><img src="https://africanconnections-usa.com/images/aclogo.png" height="75" width="210">
+                <br><img src="{{logo}}" height="75" width="210"/>
                 <h1 class="email-main-title">TOUR REGISTRATION FORM</h1>
             </td>
         </tr>
@@ -945,15 +956,14 @@ font-family: Arial, sans-serif;
                                 African Connections assumes no responsibility for travelers who fail to comply with
                                 airline pre-departure procedures and requirements.
                                 <br><br>
-                                <strong>By submitting this form, I agree to the Terms and Conditions and submit my
-                                    registration</strong>
+                                <strong>By submitting this form, I adopt the signature below, agree to the Terms and Conditions and submit my registration</strong>
                             </p>
                         </td>
                     </tr>
 
                     <tr>
                         <td align="center">
-                            <br><p class="signatureHolder">{{firstname_filled}} {{lastname_filled}}</p>
+                            <br><p class="sign">{{firstname_filled}} {{lastname_filled}}</p>
                         </td>
                     </tr>
 

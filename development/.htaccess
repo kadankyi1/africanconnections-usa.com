@@ -1,32 +1,7 @@
-# mod_rewrite 
-# directive
-<IfModule mod_headers.c>
-    Header set Cache-Control "no-cache, no-store, must-revalidate"
-    Header set Pragma "no-cache"
-    Header set Expires 0
-</IfModule>
-RewriteEngine On
-Options -MultiViews
-
-RewriteCond %{REQUEST_METHOD} POST
-RewriteRule ^ - [L]
-
-DirectoryIndex src/pages/home  
-RewriteRule ^src/pages/process src/pages/process.php [NC,L]
-RewriteRule ^src/pages/error src/pages/error.php [NC,L]
-RewriteRule ^src/pages/home src/pages/home.php [NC,L]
-RewriteRule ^src/pages/tours src/pages/tours.php [NC,L]
-RewriteRule ^src/pages/about src/pages/about.php [NC,L]
-RewriteRule ^src/pages/reviews src/pages/reviews.php [NC,L]
-RewriteRule ^src/pages/make-a-payment src/pages/make-a-payment.php [NC,L]
-RewriteRule ^src/pages/pay src/pages/pay.php [NC,L]
-RewriteRule ^src/pages/travel-insurance src/pages/travel-insurance.php [NC,L]
-RewriteRule ^src/pages/blog src/pages/blog.php [NC,L]
-RewriteRule ^src/pages/contact-us src/pages/contact-us.php [NC,L]
-RewriteRule ^src/pages/youth-program src/pages/youth-program.php [NC,L]
-RewriteRule ^src/pages/referral-program src/pages/referral-program.php [NC,L]
-RewriteRule ^src/pages/customize-tour src/pages/customize-tour.php [NC,L]
-RewriteRule ^src/pages/post/([0-9]+) src/pages/post.php?id=$1 [NC,L]
-RewriteRule ^src/pages/tour/([-a-z]+) src/pages/tour.php?id=$1 [NC,L]
-RewriteRule ^src/pages/tour-registration src/pages/tour-registration.php [NC,L]
-#RewriteRule ^src/pages/thank-you-newsletter src/pages/thank-you-newsletter.php [NC,L]
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+RewriteRule ^post/([0-9]+) post.php?id=$1 [NC,L]
+RewriteRule ^tour/([-a-z]+) tour.php?id=$1 [NC,L]
+RewriteRule ^cron/([-a-z]+) cron.php?id=$1 [NC,L]
