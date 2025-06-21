@@ -14,6 +14,7 @@ class ActivityTypesData
             4 => "Tour Registration",
             5 => "Tour Enquiry",
             6 => "Click",
+            7 => "Birthday"
         ];
     }
 }

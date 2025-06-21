@@ -22,6 +22,8 @@ if(isset($_GET["id"]) && $_GET["id"] == "payments"){
 } else if(isset($_POST["id"]) && $_POST["id"] == "click" && !empty($_POST["type"]) && !empty($_POST["href"])){
     $tracking_controller->addUserActivity(intval($_POST["type"]), "Clicked - " . $_POST["href"], "", "");
 } else if(isset($_GET["id"]) && $_GET["id"] == "birthday"){
-    //$generic_controller->generateAndSendBirthdayCard($root_folder);
+    $generic_controller->generateAndSendBirthdayCard($root_folder);
+}  else if(isset($_GET["id"]) && $_GET["id"] == "leads"){
+    $generic_controller->sendLeadsToTeam($root_folder);
 } 
 ?>

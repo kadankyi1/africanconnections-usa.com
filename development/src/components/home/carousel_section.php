@@ -5,7 +5,7 @@
           <?php foreach ($page_controller->getCarouselData()->carousel_data as $key => $carousel_item) { 
             if($carousel_item['expire'] != false && $app->isDatePassed($carousel_item['expire'])) {continue;}; 
           ?>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" <?php ($key == 0) ? print('class="active"'): ''; ?> aria-current="true" aria-label="Slide <?php print($key+1); ?>"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="<?php print($key); ?>" <?php ($key == 0) ? print('class="active" aria-current="true"'): ' class=""'; ?> aria-label="Slide <?php print($key+1); ?>"></button>
           <?php } ?>
 
           </div>

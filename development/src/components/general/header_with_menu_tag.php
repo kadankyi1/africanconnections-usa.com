@@ -11,7 +11,7 @@
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!-- RD Navbar Brand-->
                   <div class="rd-navbar-brand">
-                    <!--Brand--><a class="brand" href="<?php echo $app->getProtocol() . '://' . $app->getDomain(); ?>"><img src="<?php echo $root_folder; ?>resources/images/aclogo.png" alt="African Connections Logo" class="aclogo"/></a>
+                    <!--Brand--><a class="brand" href="<?php echo $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('home')->url; ?>"><img src="<?php echo $root_folder; ?>resources/images/aclogo.png" alt="African Connections Logo" class="aclogo"/></a>
                   </div>
                 </div>
                 <div class="rd-navbar-aside-right rd-navbar-collapse">

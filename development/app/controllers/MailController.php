@@ -11,11 +11,13 @@ class MailController {
     public $main_address;
     public $reservations_address;
     public $developer_address;
+    public $marketor_address;
 
     public function __construct(){
         $this->main_address = "annodankyikwaku@gmail.com"; //info@africanconnections-usa.com
         $this->reservations_address = "annodankyikwaku@gmail.com"; //reservations@africanconnections-usa.com
         $this->developer_address = "annodankyikwaku@gmail.com";
+        $this->marketor_address = "nnortey@africanconnections.biz";
     }
 
     function sendMail($from_address, $subject, $message){

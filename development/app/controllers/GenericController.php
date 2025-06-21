@@ -15,15 +15,16 @@ class GenericController
 
     public function generateAndSendBirthdayCard($root_folder)
     {
+        $app = new App();
         $query = new Query();
         $this_activities_types = new ActivityTypesData();
+        $tracking_controller = new TrackingController();
         $page_controller = new PageController();
         $mail_controller = new MailController();
 
-        foreach ($query->selectWithOneCondition("clients", "birthday_wish_date", "<=", "now()", "") as $key => $client) {
-
+        foreach ($query->select("SELECT * FROM clients WHERE DAYOFMONTH(date_of_birth) = " . date('d') . " AND MONTH(date_of_birth) =  " . date('m'), array()) as $key => $client) {
+            
             $card = $query->selectWithOneCondition("birthday_cards", "image_name", "!=", "", "ORDER BY RAND() LIMIT 1;");
-            var_dump($card); exit;
 
             $email_content = file_get_contents($root_folder . 'resources/views/birthday-email');
 
@@ -48,19 +49,49 @@ class GenericController
             
             $email_content = str_replace($oldsvals, $newvals, $email_content);        
 
-            $tracking_controller->addUserActivity(4, "Completed a tour registration form", $form_details["joineremail_filled"], $form_details["phonenumber_filled"]); 
+            $tracking_controller->addUserActivity(7, "Sent Birthday Wish To " . $client["first_name"] . " " . $client["last_name"], $client["email"], $client["phone"]); 
 
             $mail_controller->sendMail($client['email'], $card[0]['message_title'], $email_content);
             
+            //var_dump($email_content); exit;
 
-            $input_data_array = [
-                0 => ['value' => $client["client_id"],'type' => "s"]
-            ];
-            $query->update("UPDATE clients SET birthday_wish_date = " . date('Y-m-d') . " WHERE client_id = ?", $input_data_array);
         }
         
     }
 
+    public static function  createFile($path_and_name, $file_content)
+    {
+        $myfile = fopen($path_and_name, "wb") or die("Unable to open file!");
+        //$txt = "John Doe\n";
+        fwrite($myfile, $file_content);
+        fclose($myfile);
+    }
+
+    public function sendLeadsToTeam($root_folder)
+    {
+        $app = new App();
+        $query = new Query();
+        $this_activities_types = new ActivityTypesData();
+        $tracking_controller = new TrackingController();
+        $page_controller = new PageController();
+        $mail_controller = new MailController();
+
+        $leads_this =  '"id","subscriber_name","subscriber_email","created_at","updated_at"'.PHP_EOL;
+
+        foreach ($query->select("SELECT * FROM leads WHERE MONTH(created_at) =  " . date('m'), array()) as $key => $lead) {
+            $leads_this = $leads_this . '"' . $lead['id'] .'","' . $lead['lead_name'] .'","' . $lead['lead_email'] .'","' . $lead['created_at'] .'","' . $lead['updated_at'] .'"'.PHP_EOL;
+        }
+        
+        $this->createFile('leads_generated_file.csv', $leads_this);
+        
+        $message = '<br><br> Download the CSV file of the subscribers from the link below.';
+        $message = $message . '<br><br><a href="' . $app->getProtocol() . '://' . $app->getDomain() . '/leads_generated_file.csv' . '" download>CSV FILE</a>';
+        
+        $mail_controller->sendMail($mail_controller->marketor_address, "LEADS/SUBSCRIBERS' LIST FOR " . date('F Y'), $message);
+        
+        //echo $message; exit;
+
+    }
 
 
 }

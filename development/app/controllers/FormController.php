@@ -184,6 +184,7 @@ class FormController
         $query = new Query();
         $page_controller = new PageController();
         $payment_controller = new PaymentController();
+        $tracking_controller = new TrackingController();
         $mail_controller = new MailController();
         $input_data_array = array();
         $order_id = uniqid();
@@ -251,11 +252,15 @@ class FormController
             ];
             $query->insertToTable("clients", $input_data_array);
         } else {
+            //echo str_contains($client[0]['tour_ids'], $form_details["refcode"]); 
+            //var_dump(str_contains($client[0]['tour_ids'], $form_details["refcode"]));
+            //exit;
+
             if (!str_contains($client[0]['tour_ids'], $form_details["refcode"])) {
                 $tour_ids = $client[0]['tour_ids'] . '|' . $form_details["refcode"];
                 $input_data_array = [
                     0 => ['value' => $tour_ids,'type' => "s"],
-                    0 => ['value' => $client[0]["client_id"],'type' => "s"]
+                    1 => ['value' => $client[0]["client_id"],'type' => "s"]
                 ];
                 $query->update("UPDATE clients SET tour_ids = ? WHERE client_id = ?", $input_data_array);
             }
@@ -264,8 +269,8 @@ class FormController
         $input_data_array = [
             0 => ['name' =>'payment_order_id','value' => $order_id,'type' => "s"],
             1 => ['name' =>'client_sys_id','value' => $client_id,'type' => "s"],
-            2 => ['name' =>'tour_sys_id','value' => $_POST["regform"],'type' => "s"],
-            2 => ['name' =>'payment_amt','value' => $_POST["amt"],'type' => "s"]
+            2 => ['name' =>'tour_sys_id','value' => $_POST["refcode"],'type' => "s"],
+            3 => ['name' =>'payment_amt','value' => $_POST["amt"],'type' => "s"]
         ];
         $query->insertToTable("payments", $input_data_array);
 

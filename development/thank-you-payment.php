@@ -22,12 +22,12 @@ $page_this = $page_controller->getOnePageDetails($page_name);
 $tracking_controller->addUserActivity(0, "Viewed Page - " . $page_this->name, "", ""); // Logging View
 
 //var_dump($_POST);
-if(!empty($_POST["payment_token"])){
+//if(!empty($_POST["payment_token"])){
   $result = $form_controller->processPaymentForm($_POST, $root_folder);
-}
+//}
 
-if($result->status != 2){
-  header('Location: ' . $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('make_a_payment')->url);
+if($result->status == 2){
+  header('Location: ' . $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('tour_registration')->url);
 }
 
 ?>

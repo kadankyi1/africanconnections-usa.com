@@ -43,8 +43,9 @@ class Query
         try {
             $this->con->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
             $stmt = $this->con->prepare($query);
-            $stmt->bindParam(1, $input_data_array[0]);
-            $stmt->bindParam(2, $input_data_array[1]);
+            for ($i=0; $i < count($input_data_array); $i++) { 
+                $stmt->bindParam($i+1, $input_data_array[$i]);
+            }
             $stmt->execute($input_data_array);
             $result = $stmt->fetchAll();
             return $result;
