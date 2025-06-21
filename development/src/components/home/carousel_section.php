@@ -14,7 +14,7 @@
           <?php foreach ($page_controller->getCarouselData()->carousel_data as $key => $carousel_item) { 
             if($carousel_item['expire'] != false && $app->isDatePassed($carousel_item['expire'])) {continue;}; 
           ?>
-            <div class="carousel-item <?php ($key == 0) ? print('active'): ''; ?>">
+            <div class="carousel-item <?php ($key == 0) ? print('active'): ''; ?>" <?php (empty($carousel_item['onclick'])) ? '' : print('onclick="' . $carousel_item['onclick'] . '"'); ?>>
               <img src="<?php echo $root_folder . $carousel_item['img_src']; ?>" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
                 <h5></h5>

@@ -94,7 +94,7 @@
 
               </div>
             </div>
-          </div><a class="link-classic wow fadeInUp" href="tours.html">View Tours<span></span></a>
+          </div><a class="link-classic wow fadeInUp" href="<?php echo $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('tours')->url; ?>">View Tours<span></span></a>
           <!-- Owl Carousel-->
         </div>
       </section>
