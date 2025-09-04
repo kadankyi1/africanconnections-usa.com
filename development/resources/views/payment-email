@@ -475,6 +475,7 @@
                                   <td width="80%" class="purchase_item"><span class="f-fallback">{{tour_reference}}</span></td>
                                   <td class="align-right" width="20%" class="purchase_item"><span class="f-fallback">{{amount}}</span></td>
                                 </tr>
+                                {{discount}}
                               </table>
                             </td>
                           </tr>

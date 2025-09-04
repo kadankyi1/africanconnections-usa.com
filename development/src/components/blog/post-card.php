@@ -1,8 +1,8 @@
 <div class="col-md-4 col-sm-12">
     <div class="blog-post mt-0">
-        <a href="<?php echo $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('blog_post')->url; ?>/<?php echo $post['id'];?>;?>">
+        <a href="<?php echo $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('blog_post')->url; ?>/<?php echo $post['id'];?>">
         <div class="blog-thumb">
-            <img src="<?php echo $root_folder. "/resources" . $post['article_small_image'];?>" alt="Blog Article Banner">
+            <img src="<?php echo $app->getProtocol() . '://' . $app->getDomain() . "/resources" . $post['article_small_image'];?>" alt="Blog Article Banner">
         </div>
         </a>
         <div class="down-content">

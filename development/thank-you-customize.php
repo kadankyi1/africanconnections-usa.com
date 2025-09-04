@@ -12,7 +12,7 @@ $page_name = "thank_you_customize"; // UNIVERSAL
 $page_controller = new PageController(); // UNIVERSAL
 $tour_controller = new TourController(); // UNIVERSAL
 $form_controller = new FormController();
-$result = (object) ["status" => 0, "heading" => "OOPS. ", "message" => "Not sure how you got here."]; 
+$result = (object) ["status" => 0, "heading" => "", "message" => ""]; 
 
 $page_banner_class = "emailthankyoupagebanner";
 $page_banner_text = "";

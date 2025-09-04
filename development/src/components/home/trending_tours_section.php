@@ -1,14 +1,15 @@
-      <!-- Trending tours-->
-      <section class="section section-sm bg-default pt-0">
-        <div class="container">
+
+    <!-- Trending tours-->
+      <section class="section section-sm bg-default pt-0 mt-0">
+        <div class="container pt-0 mt-0">
+        <?php $trending_tours = $tour_controller_1->getTrendingTours(); if(count($trending_tours) > 0) { ?>
           <h3 class="oh-desktop fontsize2em"><span class="d-inline-block wow slideInDown"><strong>Trending Tours</strong></span></h3>
           <div class="row row-sm row-40 row-md-50">
-            <?php $this_tour = $tour_black_history; include('src/components/general/tourcard.php'); ?>
-            <?php $this_tour = $tour_egypt; include('src/components/general/tourcard.php'); ?>
-            <?php $this_tour = $tour_return_to_the_motherland; include('src/components/general/tourcard.php'); ?>            
+          <?php foreach ($trending_tours as $key => $value) { $this_tour = (object) $value; include('src/components/general/tourcard.php'); } ?>
           </div>
           <!-- Reviews -->
           <br><br>
+          <?php } ?>
 
           <!-- GOOGLE REVIEWS-->
           <?php include('src/components/general/google_reviews_div.php'); ?> 
@@ -33,7 +34,7 @@
                     landscapes. Founded by African Americans who have lived on the continent for
                     decades and accumulated travel experiences and deep ties to Africa that cannot be
                     matched...
-                    <br><br><a href="<?php echo $page_controller->getOnePageDetails('about_us')->url; ?>">Read More</a>
+                    <br><br><a href="<?php echo $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('about_us')->url; ?>">Read More</a>
                   </p>
                 </div>
               </div>

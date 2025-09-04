@@ -16,7 +16,7 @@ $tracking_controller = new TrackingController(); // UNIVERSAL
 $error = true;
 $article = array();
 $articles = array();
-$article_img_root_folder = '../../'; // UNIVERSAL
+$article_img_root_folder = ''; // UNIVERSAL
 
 $page_this = $page_controller->getOnePageDetails($page_name);
 
@@ -26,7 +26,9 @@ if(!empty($_GET["id"])){
     $article = $blog_controller->getSingleBlogArticle(intval($_GET["id"]));
     (count($article) == 1) ? $error = false: $error = true;
     $articles = $blog_controller->getBlogArticles("ORDER BY id DESC LIMIT 15");
-    $tracking_controller->addUserActivity(0, "Viewed Blog Post - " . $article[0]['article_title'], "", ""); // Logging View
+    if(!empty($article[0]['article_title'])){
+      $tracking_controller->addUserActivity(0, "Viewed Blog Post - " . $article[0]['article_title'], "", ""); // Logging View
+    }
 } 
 //echo $article[0]['article_big_image']; 
 //var_dump($articles);
@@ -59,10 +61,10 @@ if(!empty($_GET["id"])){
             </div>
             </section>
 
-        <?php } ?>
+        <?php $tracking_controller->addUserActivity(0, "Viewed Page - Article Not Found", "", ""); } ?>
 
       <!-- FOOTER TAG-->
-      <?php $tracking_controller->addUserActivity(0, "Viewed Page - Article Not Found", "", ""); include('src/components/general/footer_tag.php'); ?>
+      <?php include('src/components/general/footer_tag.php'); ?>
 
     </div>
 

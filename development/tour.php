@@ -16,7 +16,7 @@ $error = true;
 
 //var_dump($_GET["id"]);
 if(!empty($_GET["id"])){
-  //var_dump($tour_controller->formatUrlIdToGetTourPage($_GET["id"]));
+  //var_dump($tour_controller->formatUrlIdToGetTourPage($_GET["id"])); exit;
   $page_this = $page_controller->getOnePageDetails($tour_controller->formatUrlIdToGetTourPage($_GET["id"]));
   $tour_this = $tour_controller->getOneTour($tour_controller->formatUrlIdToGetTourPage($_GET["id"]));
   $page_name = $page_this->name;

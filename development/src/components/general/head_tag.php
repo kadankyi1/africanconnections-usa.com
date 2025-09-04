@@ -85,6 +85,9 @@
     <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
 
     <?php } ?>
+    <?php if ($page_name == "home"){?>
+
+    <?php } ?>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js'></script>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css'>

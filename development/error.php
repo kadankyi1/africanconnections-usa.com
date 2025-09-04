@@ -17,8 +17,12 @@ $page_banner_text = "WE KNOW AFRICA BEST";
 
 $page_this = $page_controller->getOnePageDetails($page_name);
 
-$tracking_controller->addUserActivity(0, "Viewed Page - " . $page_this->name, "", ""); // Logging View
-
+$tracking_controller->addUserActivity(0, "Viewed Pagee - " . $page_this->name, "", ""); // Logging View
+if(substr("https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" , -1) =='/'){
+  $root_folder = '../'; // UNIVERSAL
+} else {
+  $root_folder = ''; // UNIVERSAL
+}
 ?>
 
 <!DOCTYPE html>

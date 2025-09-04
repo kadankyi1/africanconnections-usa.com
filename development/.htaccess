@@ -1,8 +1,103 @@
+
+RewriteOptions inherit
 RewriteEngine on
-ErrorDocument 404 /development/error.php
+DirectoryIndex home.php
+#ErrorDocument 404 /error.php
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^(.*)$ $1.php
+RewriteRule ^make-a-payment/([-a-z]+) make-a-payment.php?id=$1 [NC,L]
 RewriteRule ^post/([0-9]+) post.php?id=$1 [NC,L]
 RewriteRule ^tour/([-a-z]+) tour.php?id=$1 [NC,L]
+RewriteRule ^country/([-a-z]+) country.php?id=$1 [NC,L]
 RewriteRule ^cron/([-a-z]+) cron.php?id=$1 [NC,L]
+RewriteRule ^croncaller/([-a-z]+) croncaller.php?id=$1 [NC,L]
+RewriteCond %{HTTP_HOST} ^africanconnections\-usa\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.africanconnections\-usa\.com$
+RewriteRule ^terms\.html$ "https\:\/\/africanconnections\-usa\.com\/terms" [R=301,L]
+RewriteCond %{HTTP_HOST} ^africanconnections\-usa\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.africanconnections\-usa\.com$
+RewriteRule ^index\.html$ "https\:\/\/africanconnections\-usa\.com\/home" [R=301,L]
+RewriteCond %{HTTP_HOST} ^africanconnections\-usa\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.africanconnections\-usa\.com$
+RewriteRule ^customize\.html$ "https\:\/\/africanconnections\-usa\.com\/customize\-tour" [R=301,L]
+RewriteCond %{HTTP_HOST} ^africanconnections\-usa\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.africanconnections\-usa\.com$
+RewriteRule ^tours\.html$ "https\:\/\/africanconnections\-usa\.com\/tours" [R=301,L]
+RewriteCond %{HTTP_HOST} ^africanconnections\-usa\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.africanconnections\-usa\.com$
+RewriteRule ^about\.html$ "https\:\/\/africanconnections\-usa\.com\/about" [R=301,L]
+RewriteCond %{HTTP_HOST} ^africanconnections\-usa\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.africanconnections\-usa\.com$
+RewriteRule ^reviews\.html$ "https\:\/\/africanconnections\-usa\.com\/reviews" [R=301,L]
+RewriteCond %{HTTP_HOST} ^africanconnections\-usa\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.africanconnections\-usa\.com$
+RewriteRule ^pay\.php$ "https\:\/\/africanconnections\-usa\.com\/make\-a\-payment" [R=301,L]
+RewriteCond %{HTTP_HOST} ^africanconnections\-usa\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.africanconnections\-usa\.com$
+RewriteRule ^travelinsurance\.html$ "https\:\/\/africanconnections\-usa\.com\/travel\-insurance" [R=301,L]
+RewriteCond %{HTTP_HOST} ^africanconnections\-usa\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.africanconnections\-usa\.com$
+RewriteRule ^blog\-list\.php$ "https\:\/\/africanconnections\-usa\.com\/blog" [R=301,L]
+RewriteCond %{HTTP_HOST} ^africanconnections\-usa\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.africanconnections\-usa\.com$
+RewriteRule ^contact\-us\.html$ "https\:\/\/africanconnections\-usa\.com\/contact\-us" [R=301,L]
+RewriteCond %{HTTP_HOST} ^africanconnections\-usa\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.africanconnections\-usa\.com$
+RewriteRule ^youth\-program\.html$ "https\:\/\/africanconnections\-usa\.com\/youth\-program" [R=301,L]
+RewriteCond %{HTTP_HOST} ^africanconnections\-usa\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.africanconnections\-usa\.com$
+RewriteRule ^egypt\.html$ "https\:\/\/africanconnections\-usa\.com\/tour\/egypt" [R=301,L]
+RewriteCond %{HTTP_HOST} ^africanconnections\-usa\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.africanconnections\-usa\.com$
+RewriteRule ^senegal\.html$ "https\:\/\/africanconnections\-usa\.com\/tour\/senegal" [R=301,L]
+RewriteCond %{HTTP_HOST} ^africanconnections\-usa\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.africanconnections\-usa\.com$
+RewriteRule ^ghana_togo_benin\.html$ "https\:\/\/africanconnections\-usa\.com\/tour\/ghana\-togo\-benin" [R=301,L]
+RewriteCond %{HTTP_HOST} ^africanconnections\-usa\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.africanconnections\-usa\.com$
+RewriteRule ^south\-africa\.html$ "https\:\/\/africanconnections\-usa\.com\/tour\/south\-africa" [R=301,L]
+RewriteCond %{HTTP_HOST} ^africanconnections\-usa\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.africanconnections\-usa\.com$
+RewriteRule ^kenya_tanzania_zanzibar\.html$ "https\:\/\/africanconnections\-usa\.com\/tour\/kenya\-tanzania\-zanzibar" [R=301,L]
+RewriteCond %{HTTP_HOST} ^africanconnections\-usa\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.africanconnections\-usa\.com$
+RewriteRule ^ethiopia_ghana\.html$ "https\:\/\/africanconnections\-usa\.com\/tour\/ethiopia\-ghana" [R=301,L]
+RewriteCond %{HTTP_HOST} ^africanconnections\-usa\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.africanconnections\-usa\.com$
+RewriteRule ^blackhistory\.html$ "https\:\/\/africanconnections\-usa\.com\/tour\/black\-history\-month" [R=301,L]
+RewriteCond %{HTTP_HOST} ^africanconnections\-usa\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.africanconnections\-usa\.com$
+RewriteRule ^returntomotherland\.html$ "https\:\/\/africanconnections\-usa\.com\/tour\/return\-to\-the\-motherland" [R=301,L]
+RewriteCond %{HTTP_HOST} ^africanconnections\-usa\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.africanconnections\-usa\.com$
+RewriteRule ^juneteenth\.html$ "https\:\/\/africanconnections\-usa\.com\/tour\/juneteenth" [R=301,L]
+RewriteCond %{HTTP_HOST} ^africanconnections\-usa\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.africanconnections\-usa\.com$
+RewriteRule ^panafest\.html$ "https\:\/\/africanconnections\-usa\.com\/tour\/panafest" [R=301,L]
+RewriteCond %{HTTP_HOST} ^africanconnections\-usa\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.africanconnections\-usa\.com$
+RewriteRule ^blog\-article\.php$ "https\:\/\/africanconnections\-usa\.com\/post\/19" [R=301,L]
+RewriteCond %{HTTP_HOST} ^africanconnections\-usa\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.africanconnections\-usa\.com$
+RewriteRule ^brochures\/promo_ghana_september_2025\.pdf$ "https\:\/\/africanconnections\-usa\.com\/resources\/brochures\/promo_ghana_september_2025\.pdf" [R=301,L]
+RewriteCond %{HTTP_HOST} ^africanconnections\-usa\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.africanconnections\-usa\.com$
+RewriteRule ^brochures\/egyptt\.pdf$ "https\:\/\/africanconnections\-usa\.com\/resources\/brochures\/egyptt\.pdf" [R=301,L]
+RewriteCond %{HTTP_HOST} ^africanconnections\-usa\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.africanconnections\-usa\.com$
+RewriteRule ^brochures\/ghana_togo_benin\.pdf$ "https\:\/\/africanconnections\-usa\.com\/resources\/brochures\/ghana_togo_benin\.pdf" [R=301,L]
+RewriteCond %{HTTP_HOST} ^africanconnections\-usa\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.africanconnections\-usa\.com$
+RewriteRule ^brochures\/south_africa_2026\.pdf$ "https\:\/\/africanconnections\-usa\.com\/resources\/brochures\/south_africa_2026\.pdf" [R=301,L]
+RewriteCond %{HTTP_HOST} ^africanconnections\-usa\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.africanconnections\-usa\.com$
+RewriteRule ^brochures\/blackhistorymonth\.pdf$ "https\:\/\/africanconnections\-usa\.com\/resources\/brochures\/blackhistorymonth\.pdf" [R=301,L]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# This domain inherits the “PHP” package.
+# php -- END cPanel-generated handler, do not edit
+RewriteCond %{HTTP_HOST} ^africanconnections\-usa\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.africanconnections\-usa\.com$
+RewriteRule ^ghana\-home\.html$ "https\:\/\/africanconnections\-usa\.com\/country\/ghana" [R=301,L]
+

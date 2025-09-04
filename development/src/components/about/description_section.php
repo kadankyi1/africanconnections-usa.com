@@ -14,48 +14,63 @@
                   <!-- Tab panes-->
                   <div class="tab-content">
                     <div class="tab-pane fade show active  text-left" id="tabs-7-1">
-                      <h4><strong>With over 20 years of Africa tour experience-- We know Africa Best!</strong></h4>
+                      <h4><strong>With over 20 years of Africa tour experience -- We know Africa Best!</strong></h4>
                       <p>
-                        We provide exceptional service at the best price!
-                        <br><br>
-                        African Connections North America (AC-USA) is your trusted gateway to Africa,
-                        connecting travelers to the continent’s rich history, vibrant cultures, and stunning
-                        landscapes. Founded by African Americans who have lived on the continent for
-                        decades and accumulated travel experiences and deep ties to Africa that cannot be
-                        matched.
-                        <br><br>
-                        With over 20 years in the industry, including organizing our first USA-to-Africa Tour in
-                        2002, we have guided countless travelers on transformative journeys. Our founder, a
-                        scholar of African and African American history, infuses each tour with deep
-                        historical insights and a unique perspective.
-                        <strong class="showcursor" onclick="showFounder();" data-toggle="tab">View our founder's profile</strong>
-                        <br><br>
-                        <strong>What sets us apart?</strong> We handle every aspect of your journey—from preparation to
-                        personalized support during your trip—without intermediaries. With us, there are no
-                        middlemen. We don’t book you in the United States and then hand you off to
-                        contracted service providers in Africa.
-                        <br><br>
-                        Partnering with our sister company, African Connections Ghana Ltd., headquartered
-                        in Ghana, we ensure exceptional service and seamless execution of every itinerary.
-                        <br><br>
-                        We help you prepare for your trip to Africa, providing information and assistance to
-                        facilitate each step of your preparation. Our staff is there to meet you upon arrival at
-                        the airport, and we are with you each day of your tour.
-                        <br><br>
-                        Whether you want to explore ancient pyramids, experience the exhilaration of a
-                        wildlife safari, experience the culture and enduring traditions of your African heritage,
-                        relax on some of the world’s most beautiful beaches or just soak in the vibrant
-                        rhythms of Africa; our tours deliver unforgettable experiences at competitive prices.
-                        <br><br>
-                        We offer carefully curated tour packages that allow you to experience the best of Africa.
-                        Travel with us to:
-                        <?php foreach ($tour_controller->getAllTourCountries() as $key => $tour_country) { echo '<br>-&gt; <a href="' . $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getTourCountryPageObjectForPageUrl($tour_country)->url . '">' .  $tour_country . '</a>'; } ?>
-                        <br><a href="<?php echo $app->getProtocol() . '://' . $app->getDomain() . $page_tours->url; ?>"><strong class="texttoblack">View our tours.</strong></a>
-                        <br><br>
-                        While we specialize in group travel, we welcome couples and solo travelers. We customize tours to meet your interests, budget and time constraints. 
-                        Contact us for a quote. <a class="link-phone" href="tel:<?php print($app->getPhone()); ?>"><strong class="texttoblack">Click Here To Call Us</strong></a>
-                        <br><br>
-                        <strong>Discover Africa with African Connections and create memories that last a lifetime.</strong>
+                      African Connections North America (AC-USA) is your premier gateway to Africa, offering tailored experiences that connect travelers to 
+                      the continent’s rich history, vibrant cultures, and awe-inspiring landscapes. Founded by African Americans with decades of travel 
+                      expertise and a deep commitment to reconnecting the African Diaspora with its roots, African Connections is more than a tour 
+                      operator—it’s a bridge to Africa, offering life-changing journeys and transformative opportunities. 
+                      <br><br>
+
+                      <strong>Over Two Decades of Expertise</strong>
+                      <br>
+                      Since organizing our inaugural USA-to-Africa tour in 2002, African Connections has been a pioneer in delivering authentic travel 
+                      experiences that celebrate Africa’s beauty and diversity. With over 20 years of experience, we’ve guided countless individuals, 
+                      families, and groups on journeys that combine adventure, education, and cultural immersion.
+                      <br><br>
+
+                      Our founder, a distinguished scholar of African and African American history, brings a wealth of knowledge and passion to every tour. 
+                      This academic foundation ensures that each itinerary is deeply rooted in historical authenticity, cultural relevance, and a 
+                      profound understanding of the African Diaspora.
+                      <br><br>
+
+                      <strong>A Fully Integrated Service Provider</strong>
+                      <br>
+                      Unlike many travel companies, African Connections handles every aspect of your journey without intermediaries. From pre-trip 
+                      consultations to on-the-ground support, we provide a seamless and stress-free experience. Our operations are bolstered by our sister 
+                      company, African Connections Ghana Ltd., headquartered in Accra. This partnership enables us to provide unparalleled local expertise 
+                      and a personal touch, ensuring every trip is exceptional.
+                      <br><br>
+
+                      <strong>Curated Tours Across Africa</strong>
+                      <br>
+                      Whether you’re drawn to Africa for its history, cultural heritage, or its natural wonders, African Connections has something for 
+                      everyone. Our meticulously crafted tours include destinations such as 
+                      <?php foreach ($tour_controller->getAllTourCountries() as $key => $tour_country) { echo '<a href="' . $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getTourCountryPageObjectForPageUrl($tour_country)->url . '">' .  $tour_country . '</a>, '; } ?>
+                      and more.
+                      <br><br>
+
+                      <strong>A Mission Rooted in Reconnection</strong>
+                      <br>
+                      At African Connections, we believe that every journey is an opportunity to strengthen ties between the African Diaspora and the 
+                      continent. Whether you’re tracing your heritage, embarking on a spiritual journey, or seeking a fresh start, we are here to guide 
+                      you every step of the way.
+                      <br><br>
+
+                      <strong>Why Choose African Connections?</strong>
+                      <br>
+                      -> Authenticity: Tours and services are designed by people with a deep personal and professional connection to Africa.
+                      <br>
+                      -> Expertise: A proven track record spanning over two decades.
+                      <br>
+                      -> Personalized Support: Tailored solutions for both travelers and those relocating.  
+                      <br>
+                      -> Local Partnerships: A dedicated team based in Ghana ensures a seamless experience.  
+                      <br><br>
+
+                      Embark on your journey with African Connections North America—your trusted partner in creating memories, discovering heritage, 
+                      and building a future in Africa. 
+
                       </p>
                     </div>
                     <div class="tab-pane fade" id="tabs-7-3">

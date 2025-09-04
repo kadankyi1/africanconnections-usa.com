@@ -7,7 +7,7 @@
                 <div class="col-lg-12">
                   <div class="blog-post">
                     <div class="blog-thumb">
-                      <img src="<?php echo $root_folder. "resources" .  $article[0]['article_big_image']; ?>" alt="Blog Article Banner">
+                      <img src="<?php echo $app->getProtocol() . '://' . $app->getDomain() .  "/resources" .  $article[0]['article_big_image']; ?>" alt="Blog Article Banner">
                     </div>
                     <div class="down-content">
                       <a><h1 class="fontsize35"><strong><?php echo $article[0]['article_title']; ?></strong></h1></a>
@@ -47,11 +47,11 @@
                     <div class="sidebar-heading mt-0">
                       <h2>Other Posts</h2>
                     </div>
-                    <div class="content">
+                    <div>
                       <ul>
                         <?php for ($i=0; $i < count($articles); $i++) { ?>
                         <li>
-                          <a href="blog-article.php?id=<?php echo $articles[$i]['id']; ?>">
+                          <a href="<?php echo $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('blog_post')->url; ?>/<?php echo $articles[$i]['id'];?>">
                             <h5><?php echo $articles[$i]['article_title']; ?></h5>
                             <span><?php $date=date_create($articles[$i]['article_date']); echo date_format($date,"m.d.Y H:i"); ?></span>
                           </a>

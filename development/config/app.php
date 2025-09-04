@@ -123,6 +123,9 @@ class App
         if(session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_NONE) {
             // session isn't started
             session_start();
+            //echo "NEW SESSION STARTED";
+        } else {
+            //echo "SESSION EXISTS";
         }
     }
 }

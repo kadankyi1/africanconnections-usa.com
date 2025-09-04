@@ -38,11 +38,11 @@ class GenericController
                 "{{bodymessage}}", 
             );
             $newvals   = array(
-                $app->getProtocol() . '://' . $app->getDomain() . '/resources/images/aclogo.png',
-                $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('home')->url,
-                $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('tours')->url,
-                $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('contact_us')->url,
-                $app->getProtocol() . '://' . $app->getDomain() . '/resources/img/birthday_cards/' . $card[0]['image_name'],
+                $app->getProtocol() . '://www.' . $app->getDomain() . '/resources/images/aclogo.png',
+                $app->getProtocol() . '://www.' . $app->getDomain() . $page_controller->getOnePageDetails('home')->url,
+                $app->getProtocol() . '://www.' . $app->getDomain() . $page_controller->getOnePageDetails('tours')->url,
+                $app->getProtocol() . '://www.' . $app->getDomain() . $page_controller->getOnePageDetails('contact_us')->url,
+                $app->getProtocol() . '://www.' . $app->getDomain() . '/resources/img/birthday_cards/' . $card[0]['image_name'],
                 $card[0]['message_title'],
                 $card[0]['message_body']
             );
@@ -51,9 +51,10 @@ class GenericController
 
             $tracking_controller->addUserActivity(7, "Sent Birthday Wish To " . $client["first_name"] . " " . $client["last_name"], $client["email"], $client["phone"]); 
 
-            $mail_controller->sendMail($client['email'], $card[0]['message_title'], $email_content);
+            //$mail_controller->sendMail($client['email'], $card[0]['message_title'], $email_content);
+            $mail_controller->sendMail("kdankyi@africanconnections.biz", $card[0]['message_title'], $email_content);
             
-            //var_dump($email_content); exit;
+            var_dump($email_content); exit;
 
         }
         
@@ -78,8 +79,11 @@ class GenericController
 
         $leads_this =  '"id","subscriber_name","subscriber_email","created_at","updated_at"'.PHP_EOL;
 
-        foreach ($query->select("SELECT * FROM leads WHERE MONTH(created_at) =  " . date('m'), array()) as $key => $lead) {
+        //var_dump($query->select("SELECT * FROM leads WHERE MONTH(created_at) =  " . date("m", strtotime("first day of previous month")), array())); exit; 
+
+        foreach ($query->select("SELECT * FROM leads WHERE MONTH(created_at) =  " . date("m", strtotime("first day of previous month")), array()) as $key => $lead) {
             $leads_this = $leads_this . '"' . $lead['id'] .'","' . $lead['lead_name'] .'","' . $lead['lead_email'] .'","' . $lead['created_at'] .'","' . $lead['updated_at'] .'"'.PHP_EOL;
+            //echo $key . "<br>";
         }
         
         $this->createFile('leads_generated_file.csv', $leads_this);
@@ -87,8 +91,10 @@ class GenericController
         $message = '<br><br> Download the CSV file of the subscribers from the link below.';
         $message = $message . '<br><br><a href="' . $app->getProtocol() . '://' . $app->getDomain() . '/leads_generated_file.csv' . '" download>CSV FILE</a>';
         
-        $mail_controller->sendMail($mail_controller->marketor_address, "LEADS/SUBSCRIBERS' LIST FOR " . date('F Y'), $message);
+        $mail_controller->sendMail($mail_controller->marketor_address, "LEADS/SUBSCRIBERS' LIST FOR " . date("F Y", strtotime("first day of previous month")), $message);
+        //$mail_controller->sendMail("kdankyi@africanconnections.biz", "LEADS/SUBSCRIBERS' LIST FOR " . date("F Y", strtotime("first day of previous month")), $message);
         
+        //echo "LEADS/SUBSCRIBERS' LIST FOR " . date("F Y", strtotime("first day of previous month"));
         //echo $message; exit;
 
     }

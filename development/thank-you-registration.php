@@ -12,7 +12,12 @@ $page_controller = new PageController(); // UNIVERSAL
 $tour_controller = new TourController(); // UNIVERSAL
 $form_controller = new FormController();
 $tracking_controller = new TrackingController(); // UNIVERSAL
-$result = (object) ["status" => 0, "heading" => "OOPS. ", "message" => "Not sure how you got here."]; 
+if(isset($_SESSION['result'])){
+  $result = $_SESSION['result'];
+} else {
+  $_SESSION['result'] = (object) ['status' => 0, 'heading' => 'OOPS. ', 'message' => '<span style="color:red">Form submission error</span>']; 
+  $result = $_SESSION['result'];
+}
 
 $page_banner_class = "emailthankyoupagebanner";
 $page_banner_text = "";
@@ -23,6 +28,9 @@ $tracking_controller->addUserActivity(0, "Viewed Page - " . $page_this->name, ""
 
 if(!empty($_POST["joineremail_filled1"])){
   $result = $form_controller->processRegistrationForm($_POST, $root_folder);
+} else {
+  $_SESSION['result'] = (object) ['status' => 0, 'heading' => 'OOPS. ', 'message' => '<span style="color:red">Form submission error</span>']; 
+  $result = $_SESSION['result'];
 }
 
 if($result->status == 0){

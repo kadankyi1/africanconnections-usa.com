@@ -45,7 +45,7 @@ class PaymentController
     $this->billing['fax']       = $fax;
     $this->billing['email']     = $email;
     $this->billing['website']   = $website;
-    $this->billing['merchant_defined_field_1']   = $website;
+    $this->billing['merchant_defined_field_1']   = $client_id;
   }
 
   public function setShipping($firstname, $lastname, $company, $address1, $address2, $city, $state, $zip, $country, $email) 
@@ -469,7 +469,8 @@ class PaymentController
     $mail_controller = new MailController();
     $app = new App();
     
-    $constraints = "&action_type=sale&start_date=$start_date";
+    $constraints = "&action_type=sale&condition=complete&start_date=$start_date";
+    //$constraints = "&condition=complete&start_date=20230101";
     $testXmlSimple = $this->testXmlQuery($app->getPaymentKey(),$constraints);
     //var_dump($testXmlSimple);
 
@@ -481,7 +482,8 @@ class PaymentController
 
     $payments_listing =  $payments_listing . '</table>';
 
-    $mail_controller->sendMail($mail_controller->main_address, "PAYMENTS REPORT", $payments_listing);
+    $mail_controller->sendMail("ashakeem@africanconnections-usa.com", "PAYMENTS REPORT", $payments_listing);
+    //$mail_controller->sendMail("kdankyi@africanconnections.biz", "PAYMENTS REPORT", $payments_listing);
 
     return $payments_listing;
   }

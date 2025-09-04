@@ -12,7 +12,7 @@ $page_controller = new PageController(); // UNIVERSAL
 $tour_controller = new TourController(); // UNIVERSAL
 $form_controller = new FormController();
 $tracking_controller = new TrackingController(); // UNIVERSAL
-$result = ["status" => 0, "heading" => "OOPS. ", "message" => "Something went awry..."]; 
+$result = ["status" => 0, "heading" => "", "message" => ""]; 
 
 $page_banner_class = "emailthankyoupagebanner";
 $page_banner_text = "";

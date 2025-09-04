@@ -128,17 +128,19 @@ class PagesData
                 'url' =>'/youth-program',
                 
             ],
+            /*************************************************************************************************************************
+                                            GHANA COUNTRY PAGE
+            *************************************************************************************************************************/
+            
             "ghana_country" => [
-                /*************************************************************************************************************************
-                                                GHANA COUNTRY PAGE
-                *************************************************************************************************************************/
                 'name' =>'Ghana',
                 'title' =>'Ghana Tours | View Exciting Tours To Ghana By African Connections',
                 'description' =>'See All Our Tours To Ghana By African Connections. Learn About Tour Dates, Prices And More',
                 'keywords' =>'Return To The Motherland, Year of Return, Beyond The Return,  African Connections, African Connections USA, Ghana Tours,  Tours to Ghana, Tour Operator Ghana,Tour Operators Ghana, Ghana Tour Agency, Ghana Tour Agencies, Travel To Ghana, Ghana Tour, Experience Ghana',
-                'url' =>'/countries/ghana',
+                'url' =>'/country/ghana',
                 
             ],
+            
             "egypt_tour" => [
                 /*************************************************************************************************************************
                                                 EGYPT TOUR PAGE
@@ -227,6 +229,17 @@ class PagesData
                 'url' =>'/tour/senegal',
                 
             ],
+            "tdr" => [
+                /*************************************************************************************************************************
+                                                PARTNERSHIP- TOUR PAGE
+                *************************************************************************************************************************/
+                'name' =>'Return to the Motherland Tour & Experience Ghana',
+                'title' =>'After The Event, Join The Return to the Motherland Tour & Experience Ghana | African Connections',
+                'description' =>'Return to the Motherland Tour & Experience Ghana',
+                'keywords' =>'Return to the Motherland Tour & Experience Ghana, Return to the Motherland Tour & Experience Ghana African Connections, African Connections USA',
+                'url' =>'/tdr',
+                
+            ],
             "ethiopia_ghana_tour" => [
                 /*************************************************************************************************************************
                                                 ETHIOPIA, GHANA
@@ -258,6 +271,17 @@ class PagesData
                 'description' =>'Return To The Motherland Tour To Ghana With African Connections. Learn About Pricing, Packages And More',
                 'keywords' =>'Return To The Motherland, Return To Motherland Tour Ghana, Return To The Mother Tour African Connections, Return To The Motherland, Year of Return, Beyond The Return,  African Connections, African Connections USA, Tours Ghana,  Tours to Ghana, Tour Operator Ghana,Tour Operators Ghana, Ghana Tour Agency, Ghana Tour Agencies, Travel To Ghana, Ghana Tour, Experience Ghana',
                 'url' =>'/tour/return-to-the-motherland',
+                
+            ],
+            "return_to_the_motherland_heritage_twenty_twenty_six_tour" => [
+                /*************************************************************************************************************************
+                                                RETURN TO THE MOTHERLAND, GHANA TOUR
+                *************************************************************************************************************************/
+                'name' =>'Return To The Motherland Tour',
+                'title' =>'Return To The Motherland, African Heritage Tour | AC',
+                'description' =>'Return To The Motherland African Heritage Tour To Ghana With African Connections. Learn About Pricing, Packages And More',
+                'keywords' =>'Return To The Motherland, Return To Motherland Tour Ghana, Return To The Mother Tour African Connections, Return To The Motherland, Year of Return, Beyond The Return,  African Connections, African Connections USA, Tours Ghana,  Tours to Ghana, Tour Operator Ghana,Tour Operators Ghana, Ghana Tour Agency, Ghana Tour Agencies, Travel To Ghana, Ghana Tour, Experience Ghana',
+                'url' =>'/tour/return-to-the-motherland-heritage-twenty-twenty-six',
                 
             ],
             "return_to_the_motherland_festival_tour" => [

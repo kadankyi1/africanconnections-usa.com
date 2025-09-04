@@ -106,6 +106,18 @@ class Query
 
     public function update($query, $input_data_array)
     {
+        /*
+        $query = "UPDATE coupons SET user_email = ? WHERE coupon_id = ?";
+        $column1_value = "myem@em.co";
+        $column2_value = 'NEWSFLASH'; 
+        $con =  new \PDO("mysql:host=localhost;dbname=" . "african1_newac" . ";", "african1_newacu", "T{yipU9I{G#+");
+        $con->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+        $stmt = $con->prepare($query);
+        //$stmt->bindParam(1, $column1_value, PDO::PARAM_INT); // for integer
+        $stmt->bindParam(1, $column1_value, \PDO::PARAM_STR); // for string
+        $stmt->bindParam(2, $column2_value, \PDO::PARAM_STR); // for string
+        return $stmt->execute();
+        */
         try {
             $this->con->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
             $stmt = $this->con->prepare($query);

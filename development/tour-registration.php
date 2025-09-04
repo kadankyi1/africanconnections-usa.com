@@ -12,7 +12,6 @@ $page_controller = new PageController(); // UNIVERSAL
 $tour_controller = new TourController(); // UNIVERSAL
 $form_controller = new FormController();
 $tracking_controller = new TrackingController(); // UNIVERSAL
-$result = (object) ["status" => 0, "heading" => "OOPS. ", "message" => "Not sure how you got here."]; 
 
 $page_banner_class = "emailthankyoupagebanner";
 $page_banner_text = "";
@@ -21,11 +20,7 @@ $page_this = $page_controller->getOnePageDetails($page_name);
 
 $tracking_controller->addUserActivity(0, "Viewed Page - " . $page_this->name, "", ""); // Logging View
 
-if(!empty($_POST["joineremail_filled1"])){
-  $result = $form_controller->addCustomizationRequest($_POST);
-}
 ?>
-
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
 

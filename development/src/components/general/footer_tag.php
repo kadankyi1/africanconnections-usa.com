@@ -42,7 +42,7 @@
                         <li>
                           <div class="unit">
                             <div class="unit-left"><span class="icon fa fa-location-arrow"></span></div>
-                            <div class="unit-body"><a class="link-location" href="#">1600 Golf Road, Suite 1200
+                            <div class="unit-body"><a class="link-location">1600 Golf Road, Suite 1200
                             <br>Rolling Meadows, Illinois 60008</a></div>
                           </div>
                       </li>
@@ -84,7 +84,7 @@
 
                     <p>                      <strong>Get $100 off any tour you book with us.</strong>
                       <br>Join our Subscriber list, receive our Monthly Newsletter, special discounts, travel updates and more...
-                      <br><a href="<?php echo $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('terms')->url; ?>#newsletterpromo" class="tandcstext">Terms & Conditions Apply</a>
+                      <br><a href="<?php echo $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('terms')->url; ?>#promo0" class="tandcstext">Terms & Conditions Apply</a>
                     </p>
                     <form class="max-w-sm mx-auto" action="<?php echo $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('thank_you_newsletter')->url; ?>" method="POST" id="newsletter_form"> <!-- serverside/joinlist.php -->
                       <br>

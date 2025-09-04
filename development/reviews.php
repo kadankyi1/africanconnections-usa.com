@@ -37,8 +37,8 @@ $tracking_controller->addUserActivity(0, "Viewed Page - " . $page_this->name, ""
         <section class="section section-sm bg-default  mt-0 pt-0">
             <div class="container">
                 <div class="col-sm-12 col-md-12  col-lg-12 wow fadeInRight">
-                    <video controls crossorigin playsinline class="fullwidth minwidth100percent" poster="<?php echo $root_folder; ?>/resources/img/try1.png">
-                        <source src="<?php echo $root_folder; ?>/resources/videos/review1.mp4" type="video/mp4" size="576" seek>
+                    <video controls crossorigin playsinline class="fullwidth minwidth100percent" poster="<?php echo $app->getProtocol() . '://' . $app->getDomain() ?>/resources/img/try1.png">
+                        <source src="<?php echo $app->getProtocol() . '://' . $app->getDomain(); ?>/resources/videos/review1.mp4" type="video/mp4" size="576" seek>
                     </video>
                 </div>
             </div>

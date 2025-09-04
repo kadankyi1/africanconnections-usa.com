@@ -1487,3 +1487,5 @@ function sendAjaxRequest(this_url, this_data) {
         }
     });
 }
+
+/********************** PARTNERS *********************/

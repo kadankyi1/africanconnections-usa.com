@@ -1,0 +1,11 @@
+RewriteEngine on
+ErrorDocument 404 /development/error.php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+RewriteRule ^make-a-payment/([0-9]+) make-a-payment.php?id=$1 [NC,L]
+RewriteRule ^post/([0-9]+) post.php?id=$1 [NC,L]
+RewriteRule ^tour/([-a-z]+) tour.php?id=$1 [NC,L]
+RewriteRule ^country/([-a-z]+) country.php?id=$1 [NC,L]
+RewriteRule ^cron/([-a-z]+) cron.php?id=$1 [NC,L]
+RewriteRule ^croncaller/([-a-z]+) croncaller.php?id=$1 [NC,L]

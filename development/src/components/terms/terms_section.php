@@ -1,4 +1,7 @@
-<div class="textalignleft width100percent termsHolderRegistrationPage" id="termsholder">
+<section class="section section-sm bg-default pt-0">
+        <div class="container">
+
+        <div class="textalignleft width100percent" id="termsholder">
           <h4>GENERAL TERMS AND CONDITIONS</h4>				
           <p class="textalignleft width100percent">
           Please read the General Terms and Conditions below and click the button below to submit your registration if you agree.
@@ -67,7 +70,9 @@
             extra layer of security and peace of mind and ensure you are covered in the event of any
             unexpected circumstances. 
             <br><br><strong>Our company offers travel insurance through Allianz Global, a
-            leader in the travel industry.</strong> Click on the link below for a no-obligation quote:			
+            leader in the travel industry.</strong> Click on the link below for a no-obligation quote:
+              <br><br>
+          <a href="<?php echo $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('travel_insurance')->url; ?>"><?php echo $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('travel_insurance')->url; ?></a>
           <br><br>
           If, for any reason, African Connections cancels or reschedules a tour for which you are
           registered, you will be entitled to full credit for all amounts you have paid without any
@@ -199,11 +204,65 @@
           </p>
 
 
-          <br><br><h4>$100 Credit For Subscribers' List Signup</h4>	
-          <p>
-            You will receive a one-time credit of $100 if you join our Subscribers' list.
-            This credit can be used on the first tour that you book with us.  The credit must be used within 36 months of your sign up. 
-          </p>
+          <br><br>
+                            <p id="promo0"></p>
+                            <p id=""></p>
+                            <p id=""></p>
+                            <p id=""></p>
+                            <br><br><h4 id="promo1">General Promo Guidelines</h4>	
+                            <p>
+                              <strong>Participation Requirements</strong>
+                              <br>
+                              <strong>Non-Stackable Offers:</strong> Promotional discounts, including the “Share, Like &amp; Comment” offer, the
+                              newsletter subscription discount, or any other ongoing promotion, cannot be combined or stacked.
+                              <br><br>
+                              <strong>Single Tour Redemption:</strong> Only one promotional offer may be applied per tour booking. Multiple promo codes
+                              or discounts cannot be used for the same tour.
+                              <br><br>
+                              <strong>Eligibility:</strong> This promotion is open to new and returning clients of African Connections who
+                              comply with all terms outlined herein.
+                              <br><br>
+                              <strong>Right to Modify or Cancel:</strong> African Connections reserves the right to amend, suspend, or terminate this promotion
+                              at any time without prior notice in cases of fraud, abuse, or unforeseen circumstances.
+                              <br><br>            
+                            </p>
+              
+                            <br><br><h4 id="promo2">Newsletter Subscription Promo</h4>	
+                            <p>
+                              You will receive a one-time credit of $100 if you join our Subscribers' list before .
+                              This credit can be used on the first tour that you book with us.  The credit must be used within 6 months of your sign up. 
+                              <br><br><strong>Participation Requirements</strong>
+                              <br>
+                              <strong>Mandatory Actions:</strong> To qualify for the promotion, the following action is required:
+                              <br>- Join our newsletter subscribers' list before booking for a tour. Joining the newsletter subscribers' list after booking a tour does not qualify you for this promo.
+                              <br>- Book a tour within 6 months of joining the newsletter subscribers' list. 
+                              <br><br>
+                              <strong>Verification:</strong> African Connections reserves the right to request proof of all promotional actions
+                              taken. This may be a request for the email you used to sign up to the newsletter. The subscription date will also be verified.
+                              <br><br>
+                              <strong>Unique Participation:</strong> Each individual may only participate once using their email address.
+                              Duplicate entries, bot activities, or suspicious engagement will be disqualified.
+                              <br><br>            
+                            </p>
+                            <br><br><h4  id="promo3">Share, Like &amp; Follow Promo</h4>	
+                            <p>
+                              <strong>Participation Requirements</strong>
+                              <br>
+                              <strong>Eligible Platforms:</strong> Participants must complete the promotional activities on at least two (2) of African
+                              Connections’ official social media pages. These may include Facebook, Instagram or YouTube.
+                              <br><br>
+                              <strong>Mandatory Actions:</strong> To qualify for the promotion, the following actions are all required:
+                              <br>- Like at least one (1) promotional post
+                              <br>- Follow/subscribe to our page
+                              <br>- Share the promotional post publicly on your profile or story. Note: Private shares or hidden activity will not be counted.
+                              <br><br>
+                              <strong>Verification:</strong> African Connections reserves the right to request proof of all promotional actions
+                              taken. Failure to provide proof may result in disqualification from the promotion.
+                              <br><br>
+                              <strong>Unique Participation:</strong> Each individual may only participate once using their verified social media accounts.
+                              Duplicate entries, bot activities, or suspicious engagement will be disqualified.
+                              <br><br>            
+                            </p>
           
 
           <br><br><h4>Air Arrangements</h4>	
@@ -234,4 +293,6 @@
           African Connections assumes no responsibility for travelers who fail to comply with
           airline pre-departure procedures and requirements.
           </p>
-        </div>
+      </div>
+    </div>
+  </section>

@@ -14,30 +14,30 @@ class MailController {
     public $marketor_address;
 
     public function __construct(){
-        $this->main_address = "annodankyikwaku@gmail.com"; //info@africanconnections-usa.com
-        $this->reservations_address = "annodankyikwaku@gmail.com"; //reservations@africanconnections-usa.com
-        $this->developer_address = "annodankyikwaku@gmail.com";
-        $this->marketor_address = "nnortey@africanconnections.biz";
+        $this->main_address = "info@africanconnections-usa.com"; //kdankyi@africanconnections.biz
+        $this->reservations_address = "kdankyi@africanconnections.biz"; //reservations@africanconnections-usa.com
+        $this->developer_address = "kdankyi@africanconnections.biz";
+        $this->marketor_address = "marketing@africanconnections-usa.com";
     }
 
-    function sendMail($from_address, $subject, $message){
+    function sendMail($to, $subject, $message){
         $headers = "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-        $headers .= "Cc: " . $from_address . "\r\n";
-        $headers .= "From: <" . $this->developer_address . ">";
-        mail($this->main_address,$subject,$message,$headers);
+        $headers .= "Bcc: " . $this->developer_address . "\r\n";
+        $headers .= "From: <" . $this->main_address . ">";
+        mail($to,$subject,$message,$headers);
         //var_dump("Mail sent");
     }
     
-    function sendReceiptMail($root_folder, $from_address, $subject, $payer_email, $payment_date, $payer_name, $order_id, $tour_reference, $payment_amt){
+    function sendReceiptMail($root_folder, $from_address, $subject, $payer_email, $payment_date, $payer_name, $order_id, $tour_reference, $payment_amt, $discount){
         $headers = "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
         $headers .= "From: " . $from_address . "\r\n";
         $headers .= "Cc: " . $this->developer_address . "\r\n";
         $receipt_email = file_get_contents($root_folder . 'resources/views/payment-email');
 
-        $oldsvals = array("{{purchase_date}}", "{{name}}", "{{receipt_id}}", "{{date}}", "{{tour_reference}}", "{{amount}}");
-        $newvals   = array($payment_date, $payer_name, $order_id, $payment_date, $tour_reference, $payment_amt);
+        $oldsvals = array("{{purchase_date}}", "{{name}}", "{{receipt_id}}", "{{date}}", "{{tour_reference}}", "{{amount}}", "{{discount}}");
+        $newvals   = array($payment_date, $payer_name, $order_id, $payment_date, $tour_reference, $payment_amt, $discount);
         
         $receipt_email = str_replace($oldsvals, $newvals, $receipt_email);        
         mail($payer_email, $subject, $receipt_email, $headers);

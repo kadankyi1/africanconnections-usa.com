@@ -22,7 +22,7 @@
         <td class="v-container-padding-padding" style="overflow-wrap:break-word;word-break:break-word;padding:17px 0px 16px;font-family:'Montserrat',sans-serif;" align="left">
           
     <!--[if mso]><table width="100%"><tr><td><![endif]-->
-      <h1 class="v-text-align" style="margin: 0px; color: #000000; line-height: 140%; text-align: center; word-wrap: break-word; font-size: 22px; font-weight: 400;"><span><img src="{{logo}}" alt="African Connections Logo" heigh="150" width="220" class="aclogo"></span></h1>
+      <h1 class="v-text-align" style="margin: 0px; color: #000000; line-height: 140%; text-align: center; word-wrap: break-word; font-size: 22px; font-weight: 400;"><span><img src="{{logo}}" alt="African Connections Logo" title="African Connections Logo" heigh="150" width="220" style="display:block"></span></h1>
     <!--[if mso]></td></tr></table><![endif]-->
   
         </td>

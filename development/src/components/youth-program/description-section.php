@@ -14,7 +14,7 @@
                     <div class="tab-pane tab-pane fade show active" id="tabs-7-3">
                       <div class="row">
                         <div class="col-sm-12 col-md-4 col-lg-4">
-                          <img class="img-fluid" src="<?php echo $root_folder; ?>/resources/img/youth-program/sankofa_logo.png" alt="Photo of CEO">
+                          <img class="img-fluid" src="<?php echo $app->getProtocol() . '://' . $app->getDomain(); ?>/resources/img/youth-program/sankofa_logo.png" alt="Photo of Sankofa">
                         </div>
                         <div class="col-sm-12 col-md-8 col-lg-8  text-md-left">
                           <h3><strong>The Sankofa Bird is an Adinkra Symbol.</strong></h3>

@@ -5,7 +5,7 @@
         <h3><strong><?php echo $result->heading; ?></strong></h3>
 
         <p class="product-big-text texttoblack">
-          <?php echo $result->message; ?>
+          <?php echo $result->message; unset($_SESSION['result']);?>
           </p>
       </div>
     </div>

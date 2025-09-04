@@ -12,7 +12,7 @@ $page_controller = new PageController(); // UNIVERSAL
 $tour_controller = new TourController(); // UNIVERSAL
 $form_controller = new FormController();
 $tracking_controller = new TrackingController(); // UNIVERSAL
-$result = (object) ["status" => 0, "heading" => "OOPS. ", "message" => "Not sure how you got here. If you are joining our newsletter, please complete the entire form at the bottom of the page"]; 
+$result = (object) ["status" => 0, "heading" => "", "message" => ""]; 
 
 $page_banner_class = "emailthankyoupagebanner";
 $page_banner_text = "";

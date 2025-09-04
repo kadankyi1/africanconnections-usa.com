@@ -38,14 +38,14 @@ class BlogController
 
         for ($i=0; $i < 10; $i++) { 
             if(file_exists($article_img_root_folder . "resources/img/blog/article/bloglist_article_" . $article['id'] . "/bloglist_article_" . $article['id'] ."_extra" . $i+1 . ".png")){
-                $article['article_text'] = str_replace("[bloglist_article_" . $article['id'] . "_extra" . $i+1 . ".png]", $root_folder . "resources/img/blog/article/bloglist_article_" . $article['id'] . "/bloglist_article_" . $article['id'] ."_extra" . $i+1 . ".png", $article['article_text']); 
+                $article['article_text'] = str_replace("[bloglist_article_" . $article['id'] . "_extra" . $i+1 . ".png]", $app->getProtocol() . '://' . $app->getDomain() . "/resources/img/blog/article/bloglist_article_" . $article['id'] . "/bloglist_article_" . $article['id'] ."_extra" . $i+1 . ".png", $article['article_text']); 
             }
             
                 //echo "<br><br>[bloglist_article_" . $article['id'] . "_extra" . $i+1 . ".png]";
                 // "<br><br>" .  $root_folder . "resources/img/blog/article/bloglist_article_" . $article['id'] . "/bloglist_article_" . $article['id'] ."_extra" . $i+1 . ".png";
                 //echo "<br><br>" .  $new_article_text;
             if(file_exists($article_img_root_folder . "resources/img/blog/article/bloglist_article_" . $article['id'] . "/bloglist_article_" . $article['id'] ."_extra" . $i+1 . ".jpg")){
-                $article['article_text'] = str_replace("[bloglist_article_" . $article['id'] . "_extra" . $i+1 . ".jpg]", $root_folder . "resources/img/blog/article/bloglist_article_" . $article['id'] . "/bloglist_article_" . $article['id'] ."_extra" . $i+1 . ".jpg", $article['article_text']); 
+                $article['article_text'] = str_replace("[bloglist_article_" . $article['id'] . "_extra" . $i+1 . ".jpg]", $app->getProtocol() . '://' . $app->getDomain() . "/resources/img/blog/article/bloglist_article_" . $article['id'] . "/bloglist_article_" . $article['id'] ."_extra" . $i+1 . ".jpg", $article['article_text']); 
             }
             
         }

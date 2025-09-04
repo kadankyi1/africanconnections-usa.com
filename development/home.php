@@ -12,9 +12,6 @@ $tour_controller_1 = new TourController();
 $tracking_controller = new TrackingController(); // UNIVERSAL
 
 $page_this = $page_controller->getOnePageDetails($page_name);
-$tour_black_history = $tour_controller_1->getOneTour('black_history_month_tour');
-$tour_egypt = $tour_controller_1->getOneTour('egypt_tour');
-$tour_return_to_the_motherland = $tour_controller_1->getOneTour('return_to_the_motherland_tour');
 
 $tracking_controller->addUserActivity(0, "Viewed Page - " . $page_this->name, "", ""); // Logging View
 
@@ -48,7 +45,9 @@ $tracking_controller->addUserActivity(0, "Viewed Page - " . $page_this->name, ""
       <!-- WHY CHOOSE US SECTION-->
       <?php include('src/components/general/why_choose_us.php'); ?>
 
-      
+      <!-- PARTNERS SECTION-->
+      <?php include('src/components/general/partners.php'); ?>
+
       <!-- TRENDING TOURS & ABOUT US SECTION-->
       <?php include('src/components/home/trending_tours_section.php'); ?>
 
