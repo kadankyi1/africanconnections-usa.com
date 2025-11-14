@@ -15,13 +15,16 @@ $error = true;
 
 
 //var_dump($_GET["id"]);
+//echo "<br><br>";
 if(!empty($_GET["id"])){
-  //var_dump($tour_controller->formatUrlIdToGetTourPage($_GET["id"])); exit;
+  //var_dump($tour_controller->formatUrlIdToGetTourPage($_GET["id"]));
+  //echo "<br><br>";
   $page_this = $page_controller->getOnePageDetails($tour_controller->formatUrlIdToGetTourPage($_GET["id"]));
   $tour_this = $tour_controller->getOneTour($tour_controller->formatUrlIdToGetTourPage($_GET["id"]));
   $page_name = $page_this->name;
   //var_dump($page_this);
-  //var_dump($tour_this);
+  //echo "<br><br>";
+  //var_dump($tour_this); exit;
   if(!empty($tour_this->tour_name) && !empty($page_this->name)){
     $error = false;
     $page_banner_class = $tour_this->tour_banner;

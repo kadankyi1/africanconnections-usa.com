@@ -36,7 +36,7 @@ class TourController
         $tour = $query->selectWithOneCondition("tours", "tour_sys_id", "=", $tour_index_number, "");
         if(count($tour) != 1){return false;}
         
-        if($tour[0]["tour_active"] != 1){return false;}
+        if($tour[0]["tour_active"] == 0){return false;}
         //if($tour[0]["for_payment_only"] == 1){return false;}
 
         $tour = (object) $tour[0];

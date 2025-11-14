@@ -18,6 +18,7 @@
                             <p>
                                 <?php echo $tour_this->tour_full_description_html; ?>
                                 <strong>Date: </strong> <?php echo $tour_this->tour_date; ?> <strong>(<?php echo $tour_this->tour_duration; ?>)</strong>
+                                <br><a class="texttogreen" href="<?php echo $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('customize_tour')->url; ?>">Don't like the tour date? Click here to customize your tour and set your own dates.</a>
                                 <br><br>
                                 <strong>Price: </strong> Only $<?php echo number_format($tour_this->tour_price); ?> per person, with double room occupancy, without air-fare 
 

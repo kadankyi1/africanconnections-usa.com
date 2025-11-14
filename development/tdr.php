@@ -17,7 +17,7 @@ $page_banner_child_class = "child-overlay";
 $contact_title = "Got Questions? Contact Us";
 $page_banner_text = '<span style="font-size: 25px;">After the Event, Join The</span><br> Return to the Motherland: Experience Ghana Tour';
 $page_banner_text2 = '<a  style="width: 100%" class="button button-black-outline button-ujarak" href="' . $root_folder . 'resources/brochures/tdr.pdf">Open And Print Tour Brochure <span class="icon fa fa-print fa-5x maginallsides0px"></span></a>';
-$page_banner_event_text = '<strong style="font-size: 20px">February 9 - 14, 2026<br>5 nights/6 days</strong><br><a class="button button-white-outline button-ujarak" href="' . $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('make_a_payment')->url . '/' . $page_name . '">BOOK TOUR</a>';
+$page_banner_event_text = '<strong style="font-size: 20px">September 14 - 19, 2026<br>5 nights/6 days</strong><br><a class="button button-white-outline button-ujarak" href="' . $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('make_a_payment')->url . '/' . $page_name . '">BOOK TOUR</a>';
 $show_email_on_contact = true;
 
 $page_this = $page_controller->getOnePageDetails($page_name);

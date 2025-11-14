@@ -25144,8 +25144,16 @@ body {
 	background-image: url(../img/morocco/banner.jpg);
 }
 
+.ethiopiapagebanner {
+	background-image: url(../img/ethiopia/banner.jpg);
+}
+
 .egyptpagebanner {
 	background-image: url(../img/egypt/bg2.jpg);
+}
+
+.egypt_twenty_six_tour_banner {
+	background-image: url(../img/egypt/egypt_2026.jpg);
 }
 
 .ethiopiaghanapagebanner {

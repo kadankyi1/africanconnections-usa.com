@@ -107,10 +107,14 @@
 
 <section class="breadcrumbs-custom-inset breadcrumbs-custom context-dark bg-overlay-60  pt-6 pb-6" style="background-color: gray; width: 100%">
 <div class="container mt-0 mb-0  pt-0 pb-0"  >
-        <div class="row mt-0 mb-0 pt-0 pb-0">
+        <div class="row mt-0 mb-0 pt-0 pb-0 mr-1">
             <div class="col-sm-6 col-md-6 col-lg-6 wow fadeInLeft mt-0 mb-0" style="visibility: visible; animation-name: fadeInLeft; text-align: left; ">
             <h3 class="" style="text-align: left; "><strong>Only $2,350 per person</strong></h3>
             <p>Without airfare and with double room occupancy</p>
+            <br><br>
+            <hr><br>
+            <h3 class="fontsize20" style="text-align: left; "><strong>Single Room Upgrade - $600</strong></h3>
+            <br><hr><br>
             <h3 class="" style="text-align: left; "><strong>Prepare to be amazed</strong></h3>
             <a class="button button-white-outline button-ujarak" href="<?php echo $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('make_a_payment')->url . '/' .$page_name; ?>" style="width: 100%;">MAKE PAYMENT</a>
         </div>

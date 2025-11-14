@@ -99,7 +99,7 @@
                   <div class="form-group textalignleft">
                     <input type="checkbox" id="agreetandc" name="agreetandc" value="agreed" required onclick="updatePayButton()">
                     <label for="agreetandc" class="makeCursorPointer" >
-                          By paying, I have read and agree to the <a target="_blank" href="http://africanconnections-usa.local/development/terms">Terms and Conditions</a> of the service
+                          By paying, I have read and agree to the <a target="_blank" href="<?php echo $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('terms')->url; ?>">Terms and Conditions</a> of the service
                     </label>
                   </div>
                   
