@@ -3,19 +3,42 @@ $root_folder = ''; // UNIVERSAL
 require $root_folder . 'config/App.php';
 use App\Controllers\PageController;
 use App\Controllers\TourController;
+use App\Controllers\GenericController;
 use App\Controllers\TrackingController;
 
 $app = new Config\App(); // UNIVERSAL
-$page_name = "tours"; // UNIVERSAL
+$page_name = "campaign"; // UNIVERSAL
+$root_folder = '../'; // UNIVERSAL
 $page_controller = new PageController(); // UNIVERSAL
 $tour_controller = new TourController(); // UNIVERSAL
+$generic_controller = new GenericController(); // UNIVERSAL
 $tracking_controller = new TrackingController(); // UNIVERSAL
-
+$error = true;
 $page_this = $page_controller->getOnePageDetails($page_name);
+$main_heading = "";
+$intro_text = "";
+$page_banner_text = "";
 
-$tracking_controller->addUserActivity(0, "Viewed Page - " . $page_this->name, "", ""); // Logging View
-$main_heading = "Our Tours";
-$intro_text = 'We are <strong>"Your Gateway to Africa"</strong> offering travel and tour packages that allow you to experience the best of Africa. <br><br> <strong>We can customize a tour to meet your individual interests and time constraints.</strong> Whether you are interested in a cultural or historical tour, or just want a leisurely beach vacation; whatever your interests, we can customize a tour for you that will be the experience of a lifetime. <br><br> We specialize in group tours, but solo travelers are welcome!';
+//var_dump($_GET["id"]); exit;
+//echo "<br><br>";
+if(!empty($_GET["id"])){
+  $campaign_this = $generic_controller->getCampaign($_GET["id"]);
+  
+  //var_dump($campaign_this); exit;
+  if(!empty($campaign_this->campaign_name)){
+    $error = false;
+    $page_banner_class = $campaign_this->campaign_banner_class;
+    $main_heading = $campaign_this->campaign_heading;
+    $intro_text = $campaign_this->campaign_body;
+  }
+
+  $tracking_controller->addUserActivity(0, "Viewed Page - " . $page_this->name, "", ""); // Logging View
+} 
+
+if($error){
+  header("Location: " .  $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('error')->url);
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -36,13 +59,16 @@ $intro_text = 'We are <strong>"Your Gateway to Africa"</strong> offering travel 
       <?php include('src/components/general/header_with_menu_tag.php'); ?>
 
       <!-- TOP SECTION-->
+      <?php include('src/components/general/top_banner_section.php'); ?>
+
+      <!-- TOP SECTION-->
       <?php include('src/components/general/top_description_with_text.php'); ?>
 
       <!-- TOURS LISTING SECTION-->
       <section class="section section-sm bg-default pb-0">
             <div class="container mt-0 pt-0">
                 <div class="row row-sm row-40 row-md-50">
-                    <?php foreach ($tour_controller->getToursInOrderOfDatesAscending(false, false) as $key => $tour) { 
+                    <?php foreach ($tour_controller->getToursInAdCampaignInAlphabeticalOrder($_GET["id"], false, false) as $key => $tour) { 
                             $this_tour = (object) $tour;//var_dump($this_tour);
                             include('src/components/general/tourcard.php'); 
                         }

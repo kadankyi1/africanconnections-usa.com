@@ -36,7 +36,22 @@
             <?php if(!$this_tour->customize_only) { ?>
                 <a class="button button-secondary-outline button-pipaluk" href="<?php echo  $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails($this_tour->tour_page_url)->url; ?>">Read More</a>
             <?php } ?>
-            <div class="product-big-price-wrap"><span class="product-big-price"><?php ($this_tour->customize_only) ? print('Custom') : print( '$' . number_format($this_tour->tour_price)) ; ?></span></div>
+            <?php if($this_tour->promo_active && !$app->isDatePassed($this_tour->promo_end_date)) { ?>
+                <div class="product-big-price-wrap">
+                    <span class="product-big-price textstrikethrough">
+                        <?php ($this_tour->customize_only) ? print('Custom') : print( '$' . number_format($this_tour->tour_price)) ; ?>
+                    </span>
+                    <span class="product-big-price">
+                        <?php ($this_tour->customize_only) ? print('Custom') : print( '$' . number_format($this_tour->tour_price - $this_tour->promo_discount_amt)) ; ?>
+                    </span>
+                </div>
+            <?php } else { ?>
+                <div class="product-big-price-wrap">
+                    <span class="product-big-price">
+                        <?php ($this_tour->customize_only) ? print('Custom') : print( '$' . number_format($this_tour->tour_price)) ; ?>
+                    </span>
+                </div>
+            <?php } ?>
         </div>
         </div>
     </div>

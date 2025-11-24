@@ -99,5 +99,21 @@ class GenericController
 
     }
 
+    public function getCampaign($campaign_id)
+    {
+        $app = new App();
+        $query = new Query();
+        $query = new Query();
+
+        $input_data_array = [
+            0 => $campaign_id
+        ];
+        $campaign_data = $query->select("SELECT * FROM ad_campaigns WHERE sku_id = ? and campaign_active = 1 and campaign_end_date > now()", $input_data_array);
+
+        $campaign_data = (object) $campaign_data[0];
+        //var_dump($campaign_data); exit;
+        return $campaign_data;
+    }
+
 
 }

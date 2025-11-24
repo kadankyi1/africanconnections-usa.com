@@ -245,4 +245,39 @@ class TourController
 
     }
 
+
+    public function getToursInAdCampaignInAlphabeticalOrder($campaign_id, $show_non_active, $show_payment_only)
+    {
+
+        $query = new Query();
+        $input_data_array = [
+            0 => $campaign_id
+        ];
+        $tours_data = $query->select("SELECT * FROM tours WHERE campaign_id = ? AND  tour_active = 1 AND promo_active = 1 AND promo_end_date > now()", $input_data_array);
+        
+        //$tours_data = $query->selectWithOneCondition("tours", "tour_active", "!=", 0, "");
+
+        //var_dump($tours_data);
+        $this->tour = new Tour();
+        
+        $tour_names_array = array();
+        $arranged_tours = array();
+        foreach ($tours_data as $tour_index => $current_tour) {
+            //var_dump($current_tour["tour_active"]);
+            //var_dump($current_tour["for_payment_only"]);
+            //echo "<br><br>";
+            if($current_tour["tour_active"] != 1 && $show_non_active == false){continue;}
+            if($current_tour["for_payment_only"] == 1 && $show_payment_only == false){continue;}
+            $tour_names_array[$tour_index] = $current_tour["tour_name"];
+        }
+        asort($tour_names_array);
+
+        foreach ($tour_names_array as $key => $tour_name) {
+            array_push($arranged_tours, $tours_data[$key]);
+        }
+        //var_dump($tour_names_array);
+        //var_dump("<br><br>");
+        //var_dump($arranged_tours);
+        return $arranged_tours;
+    }
 }
