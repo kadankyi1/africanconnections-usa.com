@@ -46,7 +46,7 @@
                       <br>
                       Whether you’re drawn to Africa for its history, cultural heritage, or its natural wonders, African Connections has something for 
                       everyone. Our meticulously crafted tours include destinations such as 
-                      <?php foreach ($tour_controller->getAllTourCountries() as $key => $tour_country) { echo '<a href="' . $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getTourCountryPageObjectForPageUrl($tour_country)->url . '">' .  $tour_country . '</a>, '; } ?>
+                      <?php foreach ($tour_controller->getAllTourCountries() as $key => $tour_country) { echo $tour_country . ', '; /*echo '<a href="' . $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getTourCountryPageObjectForPageUrl($tour_country)->url . '">' .  $tour_country . '</a>, ';*/ } ?>
                       and more.
                       <br><br>
 
