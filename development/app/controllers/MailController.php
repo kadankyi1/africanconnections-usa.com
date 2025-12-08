@@ -28,6 +28,15 @@ class MailController {
         mail($to,$subject,$message,$headers);
         //var_dump("Mail sent");
     }
+
+    function sendMailBulkAsBCC($to, $subject, $message){
+        $headers = "MIME-Version: 1.0" . "\r\n";
+        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+        $headers .= "Bcc: " . $to . "\r\n";
+        $headers .= "From: <" . $this->main_address . ">";
+        mail($this->main_address,$subject,$message,$headers);
+        //var_dump("Mail sent");
+    }
     
     function sendReceiptMail($root_folder, $from_address, $subject, $payer_email, $payment_date, $payer_name, $order_id, $tour_reference, $payment_amt, $discount){
         $headers = "MIME-Version: 1.0" . "\r\n";

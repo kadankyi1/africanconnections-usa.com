@@ -53,6 +53,8 @@ if($error){
   height="0" width="0" class="hidecontentandvisibility"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
+  <?php include('src/components/home/newsletter_modal_div.php'); ?>
+  
     <div class="page">
 
       <!-- HEADER SECTION-->

@@ -245,7 +245,7 @@ class PagesData
                                                 SENEGAL TOUR PAGE
                 *************************************************************************************************************************/
                 'name' =>'Senegal Tour',
-                'title' =>'Senegal, African Culture & Safari Tour | African Connections',
+                'title' =>'Senegal Safari & African Heritage Tour | African Connections',
                 'description' =>'Senegal Safari Tour With African Connections. Learn About Pricing, Packages And More',
                 'keywords' =>'Senegal Tour, Senegal Safari Tour, Senegal Tour African Connections, Senegal Safari Tour African Connections, African Connections USA, Tours Senegal,  Tours to Senegal, Tour Operator Senegal, Tour Operators Senegal, Senegal Tour Agency, Senegal Tour Agencies, Travel To Senegal, Senegal Tour, Experience Senegal',
                 'url' =>'/tour/senegal',

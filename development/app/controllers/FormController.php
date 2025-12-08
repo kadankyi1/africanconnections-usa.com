@@ -285,9 +285,10 @@ class FormController
                 $tour_ids = $client[0]['tour_ids'] . '|' . $form_details["refcode"];
                 $input_data_array = [
                     0 => ['value' => $tour_ids,'type' => "s"],
-                    1 => ['value' => $client[0]["client_id"],'type' => "s"]
+                    1 => ['value' => date("Y-m-d H:i:s"),'type' => "s"],
+                    2 => ['value' => $client[0]["client_id"],'type' => "s"]
                 ];
-                $query->update("UPDATE clients SET tour_ids = ? WHERE client_id = ?", $input_data_array);
+                $query->update("UPDATE clients SET tour_ids = ?, insurance_ad_date = ? WHERE client_id = ?", $input_data_array);
             }
         }
 

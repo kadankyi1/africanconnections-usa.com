@@ -75,7 +75,7 @@
 
           //console.log($('#fullname_filled').val().trim());
           //console.log($('#joineremail').val().trim());
-          <?php if($page_name == "home"){ ?>
+          <?php if($page_name == "home" || $page_name == "campaign"){ ?>
             $("#popupform").submit();
           <?php } else if($page_name == "customize_tour") { ?>
             $("#inquiry_form").submit();

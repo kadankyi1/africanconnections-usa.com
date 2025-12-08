@@ -73,7 +73,7 @@
                 <div class="col-md-3 wow fadeInDown col-9 mt-4" data-wow-delay=".2s">
                   <ul class="list-marked-2 box-categories-list">
                     <li>
-                      <a href="<?php echo $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('ethiopia_twenty_twenty_seven_tour')->url; ?>">
+                      <a href="<?php echo $app->getProtocol() . '://' . $app->getDomain() . $page_controller->getOnePageDetails('ethiopia_twenty_twenty_six_tour')->url; ?>">
                         <img src="<?php echo $root_folder; ?>resources/img/home/7overlayonslider_ethiopia_ghana.jpg" alt="Ethiopia Tour Banner" width="368" height="420"/>
                       <h5 class="box-categories-title">Ethiopia</h5>
                       </a>

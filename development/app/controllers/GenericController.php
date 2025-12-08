@@ -103,7 +103,6 @@ class GenericController
     {
         $app = new App();
         $query = new Query();
-        $query = new Query();
 
         $input_data_array = [
             0 => $campaign_id
@@ -113,6 +112,55 @@ class GenericController
         $campaign_data = (object) $campaign_data[0];
         //var_dump($campaign_data); exit;
         return $campaign_data;
+    }
+
+    public function sendInsuranceAdEmail($root_folder)
+    {
+        $app = new App();
+        $query = new Query();
+        $mail_controller = new MailController();
+
+        // SELECT ALL CLIENTS WHO REGISTERED SEVEN DAYS AGO
+        $oneMonthAgo = new \DateTime('7 days ago');
+        $theFetchDate = $oneMonthAgo->format('Y-m-d');
+        //echo $theFetchDate . "<br><br>";
+
+
+        //SELECT CLIENTS WITH THEIR INSURANCE DATE BEING 7 DAYS AGO
+        $input_data_array = [
+            0 => $theFetchDate
+        ];
+        
+        $clients = $query->select("SELECT * FROM clients WHERE DATE(insurance_ad_date) = ?", $input_data_array);
+
+        $all_emails = "kdankyi@africanconnections.biz";
+        foreach ($clients as $clients_index => $current_client) {
+            //var_dump($current_client["email"]);
+            $all_emails = $all_emails . "," . $current_client["email"];
+            //echo "1<br><br>";
+        }
+
+        $email_content = file_get_contents($root_folder . 'resources/views/generic-email');
+
+        $oldsvals = array(
+            "{{logo}}", 
+            "{{title}}", 
+            "{{name}}", 
+            "{{message}}"
+        );
+        $newvals   = array(
+            $app->getProtocol() . '://' . $app->getDomain() . '/resources/images/aclogo.png',
+            "HAVE YOU BOUGHT TRAVEL INSURANCE?",
+            "",
+            "I hope this email finds you well. We would like to remind you that travel insurance is not included in your tour package. <strong>However, we strongly recommend that you purchase travel insurance to cover any unexpected events that may interrupt or prevent your travel.</strong> <br><br> If you haven’t purchased insurance, you might want to consider this. <br><br> Our company offers travel insurance through Allianz Global, a leader in the travel insurance field.  You can click on the link below or go to our website, https://africanconnections-usa.com/travel-insurance, to get a quote. <br><br> Direct Insurance Link : https://www.agentmaxonline.com/agentmaxweb/widgets/quotetool.html?widgetid=859099&accam=F212819&code=ABIYU4TLWGBGTNHC6ZWLRSKAR65GB6C5JLBJOIXR7QY3M6I5HDDHZDIECAM4JHS6KBOBIU5FYWBJM3BAHKTFTOR572B73AM4ZH74ZMNXVK3YLBWT3Z3F4X4R3Z53LEU4 <br><br> <strong>If you decide to purchase the insurance, note that in the section of the application that asks you to choose a supplier, just type in “not listed” and you will receive a competitive quote.</strong>"
+        );
+        
+        $email_content = str_replace($oldsvals, $newvals, $email_content);        
+
+        if($all_emails != "kdankyi@africanconnections.biz"){
+            $mail_controller->sendMailBulkAsBCC($all_emails, "HAVE YOU BOUGHT TRAVEL INSURANCE?", $email_content);
+        }
+
     }
 
 
